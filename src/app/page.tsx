@@ -1,4 +1,4 @@
-import Block from '@/component/module/block/block'
+import Block from '@/component/module/blogs/block'
 import Contact from '@/component/module/contact/contact'
 import Footer from '@/component/module/footer/footer'
 import Hero from '@/component/module/hero/hero'
