@@ -1,4 +1,4 @@
-import Block from '@/component/module/blogs/block'
+import Blog from '@/component/module/blogs/blog'
 import Contact from '@/component/module/contact/contact'
 import Footer from '@/component/module/footer/footer'
 import Hero from '@/component/module/hero/hero'
@@ -12,7 +12,7 @@ export default function Home() {
       <Hero/>
       <Investment/>
       <Potential/>
-      <Block/>
+      <Blog/>
       <Contact/>
       <Footer/>
     </main>
