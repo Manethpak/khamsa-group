@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CondiTion = () => {
+const Condition = () => {
   return (
     <div>CondiTion</div>
   )
 }
 
-export default CondiTion
+export default Condition;

@@ -6,4 +6,4 @@ const Investment = () => {
   )
 }
 
-export default Investment
+export default Investment;

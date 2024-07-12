@@ -1,9 +1,9 @@
 import React from 'react'
 
-const JourNey = () => {
+const Journey = () => {
   return (
-    <div>JourNey</div>
+    <div>Journey</div>
   )
 }
 
-export default JourNey
+export default Journey;
