@@ -2,8 +2,10 @@ import React from 'react'
 
 const AboutUs = () => {
   return (
-    <div>About</div>
+    <div>
+      About
+    </div>
   )
 }
 
-export default AboutUs;
+export default AboutUs
