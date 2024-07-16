@@ -3,7 +3,7 @@ import FooterContent from '@/component/global/footer/footer-content'
 
 const Footer = () => {
   return (
-    <div className="h-[450px] bg-slate-400">
+    <div className="h-[450px] items-center bg-slate-400">
       <FooterContent />
     </div>
   )
