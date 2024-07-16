@@ -2,8 +2,8 @@ import React from 'react'
 
 const Potential = () => {
   return (
-    <div>Potential</div>
+    <div >Potential</div>
   )
 }
 
-export default Potential
+export default Potential;
