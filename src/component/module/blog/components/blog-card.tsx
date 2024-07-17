@@ -1,8 +1,28 @@
-import React from 'react'
+import { useAnimation, useInView, motion } from 'framer-motion'
+import React, { useEffect, useRef } from 'react'
 
 const BlogCard = () => {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+  const controls = useAnimation()
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start('visible')
+    }
+  }, [isInView])
   return (
-    <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+    <motion.div
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, y: 75 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate={controls}
+      transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
+      className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2"
+    >
       {/* First Card */}
       <div className="card overflow-hidden rounded-xl bg-white shadow-lg">
         <figure className="h-[401.48px] w-full">
@@ -70,7 +90,7 @@ const BlogCard = () => {
           <div className="card-actions mt-4 text-gray-500">Sep 6, 2022</div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
