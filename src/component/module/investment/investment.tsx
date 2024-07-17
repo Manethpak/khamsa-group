@@ -46,7 +46,7 @@ const Investment = () => {
       <motion.div
         ref={ref}
         variants={{
-          hidden: { opacity: 0, y: 10000 },
+          hidden: { opacity: 0, y: 1000 },
           visible: { opacity: 1, y: 0 },
         }}
         initial="hidden"
