@@ -14,7 +14,7 @@ const Contact = () => {
     }
   }, [isInView])
   return (
-    <motion.div className="m-auto mt-5 flex min-h-screen max-w-screen-2xl items-center justify-center bg-[#8ACEC0]">
+    <motion.div className="m-auto flex min-h-screen max-w-screen-2xl items-center justify-center bg-[#8ACEC0]">
       <motion.div
         ref={ref}
         variants={{
