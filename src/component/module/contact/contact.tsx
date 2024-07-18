@@ -1,13 +1,34 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useRef } from 'react'
 import ContactContent from './components/contact-content'
+import { useAnimation, useInView, motion } from 'framer-motion'
 
 const Contact = () => {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+  const controls = useAnimation()
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start('visible')
+    }
+  }, [isInView])
   return (
-    <div className="m-auto  flex min-h-screen max-w-screen-2xl items-center justify-center bg-[#8ACEC0]">
-      <div className="w-full sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]">
+    <motion.div className="m-auto flex min-h-screen max-w-screen-2xl items-center justify-center bg-[#8ACEC0]">
+      <motion.div
+        ref={ref}
+        variants={{
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate={controls}
+        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
+        className="w-full sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]"
+      >
         <ContactContent />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 
