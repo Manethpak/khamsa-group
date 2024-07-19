@@ -20,9 +20,17 @@ const Navbar = () => {
 
   const dropdownBgColor = () => {
     if (pathname === '/') {
-      return 'bg-black text-white md:bg-white md:text-[#19154E] lg:bg-[#5B5E76]/50 lg:text-white'
+      return 'bg-black text-white mt-20'
     } else {
       return 'bg-white text-[#19154E] '
+    }
+  }
+
+  const contactBgColor = () => {
+    if (pathname === '/') {
+      return 'bg-white text-[#19154E]'
+    } else {
+      return 'bg-[#8ACEC0] text-white '
     }
   }
 
@@ -96,7 +104,7 @@ const Navbar = () => {
         </div>
       </div>
       <motion.div
-        className={`${dropdownBgColor()} absolute h-56 w-full text-white md:hidden`}
+        className={`${dropdownBgColor()} absolute h-56 w-full`}
         animate={open ? 'open' : 'closed'}
         variants={{
           open: {
@@ -126,7 +134,7 @@ const Navbar = () => {
             <li>
               <a href="/block">Blogs</a>
             </li>
-            <li className="flex h-10 w-24 items-center justify-center rounded-xl bg-white text-[#19154E]">
+            <li className={`${contactBgColor()} flex h-10 w-24 items-center justify-center rounded-xl`}>
               <a href="/contact">Contact</a>
             </li>
           </ul>
