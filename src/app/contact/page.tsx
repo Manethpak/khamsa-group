@@ -1,8 +1,11 @@
 import React from 'react'
+import ContactUs from '@/component/module/contact/components/contact-us'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div className="min-h-screen bg-[#8ACEC0]">
+      <ContactUs />
+    </div>
   )
 }
 
