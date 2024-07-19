@@ -104,7 +104,7 @@ const Navbar = () => {
         </div>
       </div>
       <motion.div
-        className={`${dropdownBgColor()} absolute h-56 w-full`}
+        className={`${dropdownBgColor()} absolute h-56 w-full md:hidden`}
         animate={open ? 'open' : 'closed'}
         variants={{
           open: {
