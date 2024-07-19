@@ -3,11 +3,28 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { IoClose, IoMenu } from 'react-icons/io5'
 import { motion, useAnimationControls } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
-
+  const pathname = usePathname()
   const containerControls = useAnimationControls()
+
+  const getBgColor = () => {
+    if (pathname === '/') {
+      return 'bg-black text-white md:bg-white md:text-[#19154E] lg:bg-[#5B5E76]/50 lg:text-white absolute top-0 z-[100] w-full'
+    } else {
+      return 'bg-white text-[#19154E] fixed relative'
+    }
+  }
+
+  const dropdownBgColor = () => {
+    if (pathname === '/') {
+      return 'bg-black text-white md:bg-white md:text-[#19154E] lg:bg-[#5B5E76]/50 lg:text-white'
+    } else {
+      return 'bg-white text-[#19154E] '
+    }
+  }
 
   useEffect(() => {
     if (open) {
@@ -16,6 +33,7 @@ const Navbar = () => {
       containerControls.start('closed')
     }
   }, [open])
+
   return (
     <motion.div
       initial="close"
@@ -31,18 +49,22 @@ const Navbar = () => {
         },
       }}
       transition={{ stiffness: 150 }}
+      className={`${getBgColor()} w-full`}
     >
-      <div className="flex h-20 w-full items-center justify-between bg-black px-5 text-white md:h-12 md:bg-white md:px-6 md:text-[#19154E] lg:h-20 lg:bg-[#5B5E7680] lg:px-28 lg:text-white 2xl:px-80">
-        <div className="flex h-9 items-center gap-2">
+      {/* navbar section */}
+      <div
+        className={`z-[1000] flex h-20 w-full items-center justify-between px-5 md:h-12 md:px-6 lg:h-20 lg:px-28 2xl:px-80 ${getBgColor()}`}
+      >
+        <a href="/" className="flex h-9 items-center gap-2">
           <Image
             src="/images/logo.avif"
-            alt=""
+            alt="Logo"
             width={250}
             height={250}
             className="h-9 w-9"
           />
           <h1 className="font-extrabold">Khamsa Group</h1>
-        </div>
+        </a>
         <div>
           <div className="hidden md:block">
             <ul className="flex items-center gap-7 font-semibold">
@@ -74,7 +96,7 @@ const Navbar = () => {
         </div>
       </div>
       <motion.div
-        className="h-56 w-full text-white md:hidden"
+        className={`${dropdownBgColor()} absolute h-56 w-full text-white md:hidden`}
         animate={open ? 'open' : 'closed'}
         variants={{
           open: {
@@ -93,7 +115,7 @@ const Navbar = () => {
           },
         }}
       >
-        <div className="h-full bg-black">
+        <div className="h-full">
           <ul className="flex flex-col items-center justify-center gap-7 font-semibold">
             <li>
               <a href="/journey">Our Journey</a>
