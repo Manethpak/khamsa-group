@@ -14,7 +14,7 @@ const Navbar = () => {
     if (pathname === '/') {
       return 'bg-black text-white md:bg-white md:text-[#19154E] lg:bg-[#5B5E76]/50 lg:text-white absolute top-0 z-[100] w-full'
     } else {
-      return 'bg-white text-[#19154E] fixed relative'
+      return 'bg-white text-[#19154E] fixed '
     }
   }
 
