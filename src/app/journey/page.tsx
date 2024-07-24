@@ -1,9 +1,10 @@
+import Journeys from '@/component/module/journey/journey'
 import React from 'react'
 
 const Journey = () => {
   return (
     <div>
-      Journey
+      <Journeys/>
     </div>
   )
 }

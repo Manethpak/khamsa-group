@@ -135,17 +135,14 @@ export const Partner = [
   {
     id: '1',
     Image: '/images/logodreamslab.avif',
-    special: true,
   },
   {
     id: '2',
     Image: '/images/logoloakha.avif',
-    special: true,
   },
   {
     id: '3',
     Image: '/images/logoaifarm.avif',
-    special: true,
   },
   {
     id: '4',
@@ -162,5 +159,56 @@ export const Partner = [
   {
     id: '7',
     Image: '/images/logonew.avif',
+  },
+]
+
+export const InOurs = [
+  {
+    id: '1',
+    Image: '/images/Phase1.svg',
+    title: "Phase 1 - Leisure and F&B",
+    description: "Raw Materials, Rare Commodity, Real Estate, Resort, Food Industrial Park,Pharmaceutical."
+  },
+  {
+    id: '2',
+    Image: '/images/Phase2.svg',
+    title: "Phase 2 - Internet of Values",
+    special: true,
+    description: "App, Web App, Big Data, Fintech, Software, Crypto, Digital, Infrastructure, Analytics, Blockchain, NFT,."
+  },
+  {
+    id: '3',
+    Image: '/images/Phase3.svg',
+    title: "Phase 3 - Artificial Intelligent & Robotics",
+    special: true,
+    description: "Auto-Bot, Humanoid, Cyborg, Micron, Bionic, Satellite, Space Science, Fly Sciences, 3D Factory, Quantum Mechanics, Nitride Chip (brainless-robot-chip)"
+  },
+  {
+    id: '4',
+    Image: '/images/Phase4.svg',
+    title: "Phase 4 - Invisible Energy",
+    description: "Biofuel, Biotech, Lightening Power, Hydrogen Power, Cosmo Power, Nano Power, Particle Power, Fusion Energy, Asteroid Mining, in Power Plant"
+  },
+  {
+    id: '5',
+    Image: '/images/Phase5.svg',
+    title: "Phase 5 - Khamsa-O Holding",
+    specials: true,
+    description: "High-Net-Worth-Individual Network, Investment Management, Financial Services, Asset Management, Portfolio Investment, Merger and Acquisition"
+  },
+]
+
+export const Question = [
+  {
+    title: 'What is Khamsa?',
+    description: 'Khamsa Group / សម្ព័ន្ធខាំសា. Khamsa (ख़मसा, خمسة , חַמְסָה, ⵜⴰⴼⵓⵙⵜ) from Arabic “Hamsa” means “five”, but also “the five fingers of the hand” and Romanized as “Khamsa” representing the open right hand, recognized and used as a sign of protection, blessings, power and strength in many times throughout history to provide defense against the bad luck and evil.  ',
+  },
+  {
+    title: 'Who started Khamsa?',
+    description: 'Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on     November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021.',
+  },
+  {
+    title: 'Who are our associates?',
+    description: 'Khamsa Group  is the conglomerate association with Khamsa Corp, Sunrise Rooster, Laoka, AI Farm, AutobotX, BadrobotX, Adone, Slum, Zox, Onecent, Lumpsum, Tongtin, CorporationK, VultureGO, and Tofu.',
   },
 ]

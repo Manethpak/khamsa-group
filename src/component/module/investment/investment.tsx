@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, { useEffect, useRef } from 'react'
 import { Investments } from '@/constants'
 import { motion, useAnimation, useInView } from 'framer-motion'
+import { Motion } from '@/component/ui/motion'
 
 const Investment = () => {
   const ref = useRef(null)
@@ -43,17 +44,7 @@ const Investment = () => {
           Our Investment Portfolio
         </h1>
       </motion.div>
-      <motion.div
-        ref={ref}
-        variants={{
-          hidden: { opacity: 0, y: 1000 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={controls}
-        transition={{ duration: 2, delay: 0.2 }}
-        className="-mt-3 grid h-[1457px] w-full max-w-xl grid-cols-1 justify-items-stretch overflow-auto p-5 md:h-[900px] md:max-w-fit md:grid-cols-2 md:gap-5 lg:h-fit lg:grid-cols-3 lg:gap-3"
-      >
+      <Motion className="-mt-3 grid h-[1457px] w-full max-w-xl grid-cols-1 justify-items-stretch overflow-auto p-5 md:h-[900px] md:max-w-fit md:grid-cols-2 md:gap-5 lg:h-fit lg:grid-cols-3 lg:gap-3">
         {Investments.map((data) => (
           <div
             key={data.id}
@@ -78,7 +69,7 @@ const Investment = () => {
             </div>
           </div>
         ))}
-      </motion.div>
+      </Motion>
     </motion.div>
   )
 }
