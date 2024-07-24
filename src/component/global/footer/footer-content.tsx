@@ -27,9 +27,9 @@ const footerLinks = [
         title: 'Building Location',
         description: (
           <p>
-            BUILDING FACTORY #3, RD. 39D, ST. 50M,<br></br> ANLUNGKONG VILLAGE,
-            DANGKOR COMMUNE, PREYSAR DISTRICT,<br></br> PHNOM PENH ROYAL
-            CAPITAL, KINGDOM OF CAMBODIA
+            BUILDING FACTORY #3, RD. 39D, ST. 50M,
+            <br /> ANLUNGKONG VILLAGE, DANGKOR COMMUNE, PREYSAR DISTRICT,
+            <br /> PHNOM PENH ROYAL CAPITAL, KINGDOM OF CAMBODIA
           </p>
         ),
         url: 'https://example.com/location',
@@ -44,21 +44,30 @@ const footerLinks = [
 
 const FooterContent = () => {
   return (
-    <footer className=" flex w-full flex-col items-center bg-black text-white shadow-md">
-      <div className="w-full max-w-screen-2xl">
-        <div className="mx-6 mt-16 flex flex-wrap justify-center gap-8 md:mx-4 lg:gap-28">
+    <footer className="flex w-full flex-col items-center bg-black text-white shadow-md">
+      <div className="w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+        {/* Title Section */}
+        <div className="mb-8 mt-5 flex justify-center  px-4 text-white">
+          <h1 className="text-2xl font-bold uppercase">KhamsaGroup</h1>
+        </div>
+        {/* Footer Links Sections */}
+        <div className="flex flex-wrap justify-start gap-8 lg:justify-center lg:gap-28">
           {footerLinks.map((item) => (
             <div
               key={item.title}
-              className="mt-3 flex flex-col items-center gap-6 text-center lg:mr-[150px] lg:items-start lg:text-left"
+              className="flex flex-col items-start gap-6 text-left lg:items-center lg:text-center"
             >
-              <h1 className="text-2xl font-medium uppercase">{item.title}</h1>
-              <div className="flex flex-col gap-5">
+              <h2 className="text-xl font-medium uppercase md:text-2xl">
+                {item.title}
+              </h2>
+              <div
+                className={`flex flex-col gap-5 ${item.title === 'Resources' || item.title === 'Company' ? 'text-justify' : ''}`}
+              >
                 {item.links.map((link) =>
                   link.description ? (
                     <div
                       key={link.title}
-                      className="text-base font-normal text-[#BCBCBC]"
+                      className="text-sm font-normal text-[#BCBCBC] md:text-base"
                     >
                       {link.description}
                     </div>
@@ -66,7 +75,7 @@ const FooterContent = () => {
                     <Link
                       key={link.title}
                       href={link.url}
-                      className="text-base font-normal text-[#BCBCBC] hover:text-[#3B82F6]"
+                      className="text-sm font-normal text-[#BCBCBC] hover:text-[#3B82F6] md:text-base"
                       target="_blank"
                     >
                       {link.title}
@@ -80,7 +89,9 @@ const FooterContent = () => {
       </div>
       <div className="mt-16 w-full border-t border-[#C1C1C180]"></div>
       <div className="mt-6 flex justify-center pb-6">
-        <span className="text-base font-normal">© KhamsaGroup 2023.</span>
+        <span className="text-sm font-normal md:text-base">
+          © KhamsaGroup 2023.
+        </span>
       </div>
     </footer>
   )
