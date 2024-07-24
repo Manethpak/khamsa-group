@@ -14,7 +14,7 @@ const Navbar = () => {
     if (pathname === '/') {
       return 'bg-black text-white md:bg-white md:text-[#19154E] lg:bg-[#5B5E76]/50 lg:text-white absolute top-0 z-[100] w-full'
     } else {
-      return 'bg-white text-[#19154E] fixed '
+      return 'bg-white z-[100] text-[#19154E] fixed '
     }
   }
 
@@ -83,7 +83,7 @@ const Navbar = () => {
                 <a href="/about-us">About Us</a>
               </li>
               <li>
-                <a href="/block">Blogs</a>
+                <a href="/blog">Blogs</a>
               </li>
               <li className="flex h-12 w-24 items-center justify-center rounded-xl bg-[#8ACEC0] text-white">
                 <a href="/contact">Contact</a>
@@ -132,7 +132,7 @@ const Navbar = () => {
               <a href="/about-us">About Us</a>
             </li>
             <li>
-              <a href="/block">Blogs</a>
+              <a href="/blog">Blogs</a>
             </li>
             <li className={`${contactBgColor()} flex h-10 w-24 items-center justify-center rounded-xl`}>
               <a href="/contact">Contact</a>
