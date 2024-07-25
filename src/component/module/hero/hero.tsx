@@ -24,7 +24,7 @@ const Hero = () => {
 
   return (
     <div>
-      <div className="h-[880px] w-full">
+      <div className="h-[880px] w-full flex justify-center items-center overflow-hidden relative">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -36,10 +36,10 @@ const Hero = () => {
             alt=""
             width={250}
             height={250}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-center"
           />
         </motion.div>
-        <div className="absolute inset-0 top-0 flex flex-col justify-end gap-24">
+        <div className="absolute flex flex-col justify-center h-full gap-24 mt-28 w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
