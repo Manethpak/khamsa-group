@@ -2,9 +2,8 @@ import Link from 'next/link'
 
 const footerLinks = [
   {
-    title: 'Resources',
+    title: 'Overview',
     links: [
-      { title: 'Overview', url: '/' },
       { title: 'Our Journey', url: '/journey' },
       { title: 'About Us', url: '/about-us' },
       { title: 'Blogs', url: '/blog' },
@@ -12,27 +11,26 @@ const footerLinks = [
     ],
   },
   {
-    title: 'Company',
+    title: 'More Informations',
     links: [
       {
         title: 'info@khamsagroup.com',
-        url: 'mailto:info@khamsagroup.com',
+        url: '/about-us',
       },
       {
         title: 'Linktr.ee/KhamsaGroup',
         url: 'https://linktr.ee/KhamsaGroup',
       },
-      { title: 'Careers', url: 'https://example.com/careers' },
+      { title: '+885(0)15686933', url: '/contact' },
       {
         title: 'Building Location',
         description: (
           <p>
-            BUILDING FACTORY #3, RD. 39D, ST. 50M,
-            <br /> ANLUNGKONG VILLAGE, DANGKOR COMMUNE, PREYSAR DISTRICT,
-            <br /> PHNOM PENH ROYAL CAPITAL, KINGDOM OF CAMBODIA
+            BUILDING FACTORY #3, RD. 39D, ST. 50M,ANLUNGKONG VILLAGE, DANGKOR
+            COMMUNE, PREYSAR DISTRICT, PHNOM PENH ROYAL CAPITAL, KINGDOM OF
+            CAMBODIA
           </p>
         ),
-        url: 'https://example.com/location',
       },
       {
         title: 'Terms and Conditions',
@@ -44,52 +42,32 @@ const footerLinks = [
 
 const FooterContent = () => {
   return (
-    <footer className="flex w-full flex-col items-center bg-black text-white shadow-md">
-      <div className="w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+    <footer className="flex w-full flex-col items-center bg-black p-10 text-white shadow-md">
+      <div className="flex w-full max-w-7xl flex-col gap-10">
         {/* Title Section */}
-        <div className="mb-8 mt-5 flex justify-center  px-4 text-white">
-          <h1 className="text-2xl font-bold uppercase">KhamsaGroup</h1>
-        </div>
+        <h1 className="text-2xl font-bold">KhamsaGroup</h1>
         {/* Footer Links Sections */}
-        <div className="flex flex-wrap justify-start gap-8 lg:justify-center lg:gap-28">
+        <div className="flex w-full flex-col gap-10 sm:flex-row">
           {footerLinks.map((item) => (
             <div
               key={item.title}
-              className="flex flex-col items-start gap-6 text-left lg:items-center lg:text-center"
+              className="flex w-full max-w-lg flex-col gap-3"
             >
-              <h2 className="text-xl font-medium uppercase md:text-2xl">
-                {item.title}
-              </h2>
-              <div
-                className={`flex flex-col gap-5 ${item.title === 'Resources' || item.title === 'Company' ? 'text-justify' : ''}`}
-              >
-                {item.links.map((link) =>
-                  link.description ? (
-                    <div
-                      key={link.title}
-                      className="text-sm font-normal text-[#BCBCBC] md:text-base"
-                    >
-                      {link.description}
-                    </div>
-                  ) : (
-                    <Link
-                      key={link.title}
-                      href={link.url}
-                      className="text-sm font-normal text-[#BCBCBC] hover:text-[#3B82F6] md:text-base"
-                      target="_blank"
-                    >
-                      {link.title}
-                    </Link>
-                  )
-                )}
-              </div>
+              {item.title}
+
+              {item.links.map((link) => (
+                <div
+                  key={link.title}
+                  className="text-sm font-normal text-white/70"
+                >
+                  <Link href="link.url">{link.title}</Link>
+                  <h1>{link.description}</h1>
+                </div>
+              ))}
             </div>
           ))}
         </div>
-      </div>
-      <div className="mt-16 w-full border-t border-[#C1C1C180]"></div>
-      <div className="mt-6 flex justify-center pb-6">
-        <span className="text-sm font-normal md:text-base">
+        <span className="text-xs font-normal text-white/70">
           © KhamsaGroup 2023.
         </span>
       </div>
