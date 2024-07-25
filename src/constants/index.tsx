@@ -1216,3 +1216,33 @@ export const Condition = [
     ),
   },
 ]
+export const blogData = [
+  {
+    title: 'Business Review',
+    description: 'The Message from the President',
+    imageUrl: '/images/AI Farm picture.png',
+    date: 'Sep 6, 2022',
+    link: '/path-to-first-card',
+  },
+  {
+    title: 'Drone',
+    description: 'AI FARM RFI UAVx DRONE LAB',
+    imageUrl: '/images/robotcon competition.png',
+    date: 'Sep 6, 2022',
+    link: '/path-to-second-card',
+  },
+  {
+    title: 'New Letter',
+    description: 'ABU Asia-Pacific Robot Contest (RoboconCompetition) 2023',
+    imageUrl: '/images/student.png',
+    date: 'Sep 6, 2022',
+    link: '/path-to-third-card',
+  },
+  {
+    title: 'Resources',
+    description: 'Stem',
+    imageUrl: '/images/stem.png',
+    date: 'Sep 6, 2022',
+    link: '/path-to-fourth-card',
+  },
+]

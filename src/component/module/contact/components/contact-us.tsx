@@ -2,9 +2,9 @@ import React from 'react'
 
 const ContactUs = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center gap-6 px-4 lg:mx-32 lg:overflow-hidden lg:rounded-lg">
+    <div className="flex min-h-screen flex-col items-center justify-center gap-6 px-4 lg:mx-32 lg:flex-row lg:overflow-hidden lg:rounded-lg">
       {/* Column 1: Image */}
-      <div className="card relative mt-4 lg:mt-0 lg:h-[544.53px] lg:w-[740px] lg:border-r-0">
+      <div className="card relative mt-4 w-full lg:mt-0 lg:h-[544.53px] lg:w-[740px] lg:border-r-0">
         <img
           src="/images/map.png" // Ensure the path to the image is correct
           alt="Descriptive Alt Text"
@@ -14,23 +14,23 @@ const ContactUs = () => {
       </div>
 
       {/* Column 2: Content */}
-      <div className="card flex flex-col items-center justify-center rounded-lg bg-[#8ACEC0] p-4 lg:w-[400px] lg:items-start lg:p-8">
+      <div className="card flex w-full flex-col items-center justify-center rounded-lg bg-[#8ACEC0] p-4 lg:w-[400px] lg:items-start lg:p-8">
         <div className="flex flex-col items-center gap-4 text-white opacity-100 lg:items-start">
-          <h2 className="font-manrope text-center text-sm lg:text-left lg:text-lg xl:text-xl">
+          <h2 className="font-manrope text-center text-base lg:text-left lg:text-xl">
             Get in touch
           </h2>
-          <p className="font-manrope text-left text-[16px] font-extrabold leading-[24px] tracking-[1px]">
+          <p className="font-manrope text-center text-sm lg:text-left lg:text-base xl:text-lg">
             We’re always here to help. Contact us if you are interested in our
             service. Let's cooperate and invest in the future of Cambodia.
           </p>
-          <h2 className="font-manrope text-center text-[24px] font-extrabold leading-[33.6px] tracking-[-0.5px] lg:text-left">
+          <h2 className="font-manrope text-center text-base lg:text-left lg:text-xl">
             Address:
           </h2>
           <p className="font-manrope text-center text-sm lg:text-left lg:text-base xl:text-lg">
             Building#3, St39D, Anlungkung village, Preysor District, Dangkor
             Commune, Phnom Penh, Cambodia
           </p>
-          <h2 className="font-manrope text-center text-sm lg:text-left lg:text-lg xl:text-xl">
+          <h2 className="font-manrope text-center text-base lg:text-left lg:text-xl">
             Contact:
           </h2>
           <p className="font-manrope text-center text-sm lg:text-left lg:text-base xl:text-lg">
