@@ -4,11 +4,11 @@ const footerLinks = [
   {
     title: 'Resources',
     links: [
-      { title: 'Overview', url: 'https://example.com/blog' },
-      { title: 'Our Journey', url: 'https://example.com/our-journey' },
-      { title: 'About Us', url: 'https://example.com/about' },
-      { title: 'Blogs', url: 'https://example.com/blogs' },
-      { title: 'Contact Us', url: 'https://example.com/contact' },
+      { title: 'Overview', url: '/' },
+      { title: 'Our Journey', url: '/journey' },
+      { title: 'About Us', url: '/about-us' },
+      { title: 'Blogs', url: '/blog' },
+      { title: 'Contact Us', url: '/contact' },
     ],
   },
   {
@@ -36,7 +36,7 @@ const footerLinks = [
       },
       {
         title: 'Terms and Conditions',
-        url: 'https://linktr.ee/KhamsaGroup',
+        url: '/terms-and-conditions',
       },
     ],
   },
@@ -67,7 +67,6 @@ const FooterContent = () => {
                       key={link.title}
                       href={link.url}
                       className="text-base font-normal text-[#BCBCBC] hover:text-[#3B82F6]"
-                      target="_blank"
                     >
                       {link.title}
                     </Link>

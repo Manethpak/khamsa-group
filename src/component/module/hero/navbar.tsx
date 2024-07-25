@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const dropdownBgColor = () => {
     if (pathname === '/') {
-      return 'bg-black text-white mt-20'
+      return 'bg-black text-white'
     } else {
       return 'bg-white text-[#19154E] '
     }
@@ -57,11 +57,11 @@ const Navbar = () => {
         },
       }}
       transition={{ stiffness: 150 }}
-      className={`${getBgColor()} w-full`}
+      className={`${getBgColor()} w-full flex flex-col items-center md:px-10`}
     >
       {/* navbar section */}
       <div
-        className={`z-[1000] flex h-20 w-full items-center justify-between px-5 md:h-12 md:px-6 lg:h-20 lg:px-28 2xl:px-80 ${getBgColor()}`}
+        className={`z-[1000] flex h-20 w-full items-center justify-between px-5 md:h-12 md:px-6 lg:h-20 max-w-7xl`}
       >
         <a href="/" className="flex h-9 items-center gap-2">
           <Image
@@ -104,7 +104,7 @@ const Navbar = () => {
         </div>
       </div>
       <motion.div
-        className={`${dropdownBgColor()} absolute h-56 w-full md:hidden`}
+        className={`${dropdownBgColor()} absolute h-56 w-full md:hidden mt-20`}
         animate={open ? 'open' : 'closed'}
         variants={{
           open: {
