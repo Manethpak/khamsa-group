@@ -20,8 +20,9 @@ const ContactUs = () => {
             Get in touch
           </h2>
           <p className="font-manrope text-center text-sm lg:text-left lg:text-base xl:text-lg">
-            We’re always here to help. Contact us if you are interested in our
-            service. Let's cooperate and invest in the future of Cambodia.
+            We&apos;re always here to help. Contact us if you are interested in
+            our service. Let&apos;s cooperate and invest in the future of
+            Cambodia.
           </p>
           <h2 className="font-manrope text-center text-base lg:text-left lg:text-xl">
             Address:

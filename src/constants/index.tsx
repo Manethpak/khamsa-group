@@ -167,14 +167,16 @@ export const InOurs = [
     id: '1',
     Image: '/images/Phase1.svg',
     title: 'Phase 1 - Leisure and F&B',
-    description:'Raw Materials, Rare Commodity, Real Estate, Resort, Food Industrial Park,Pharmaceutical.',
+    description:
+      'Raw Materials, Rare Commodity, Real Estate, Resort, Food Industrial Park,Pharmaceutical.',
   },
   {
     id: '2',
     Image: '/images/Phase2.svg',
     title: 'Phase 2 - Internet of Values',
     special: true,
-    description:'App, Web App, Big Data, Fintech, Software, Crypto, Digital, Infrastructure, Analytics, Blockchain, NFT,.',
+    description:
+      'App, Web App, Big Data, Fintech, Software, Crypto, Digital, Infrastructure, Analytics, Blockchain, NFT,.',
   },
   {
     id: '3',
@@ -188,29 +190,34 @@ export const InOurs = [
     id: '4',
     Image: '/images/Phase4.svg',
     title: 'Phase 4 - Invisible Energy',
-    descri: 'Biofuel, Biotech, Lightening Power, Hydrogen Power, Cosmo Power, Nano Power, Particle Power, Fusion Energy, Asteroid Mining, in Power Plant',
+    descri:
+      'Biofuel, Biotech, Lightening Power, Hydrogen Power, Cosmo Power, Nano Power, Particle Power, Fusion Energy, Asteroid Mining, in Power Plant',
   },
   {
     id: '5',
     Image: '/images/Phase5.svg',
     title: 'Phase 5 - Khamsa-O Holding',
     specials: true,
-    description:'High-Net-Worth-Individual Network, Investment Management, Financial Services, Asset Management, Portfolio Investment, Merger and Acquisition',
+    description:
+      'High-Net-Worth-Individual Network, Investment Management, Financial Services, Asset Management, Portfolio Investment, Merger and Acquisition',
   },
 ]
 
 export const Question = [
   {
     title: 'What is Khamsa?',
-    description:'Khamsa Group / សម្ព័ន្ធខាំសា. Khamsa (ख़मसा, خمسة , חַמְסָה, ⵜⴰⴼⵓⵙⵜ) from Arabic “Hamsa” means “five”, but also “the five fingers of the hand” and Romanized as “Khamsa” representing the open right hand, recognized and used as a sign of protection, blessings, power and strength in many times throughout history to provide defense against the bad luck and evil.  ',
+    description:
+      'Khamsa Group / សម្ព័ន្ធខាំសា. Khamsa (ख़मसा, خمسة , חַמְסָה, ⵜⴰⴼⵓⵙⵜ) from Arabic “Hamsa” means “five”, but also “the five fingers of the hand” and Romanized as “Khamsa” representing the open right hand, recognized and used as a sign of protection, blessings, power and strength in many times throughout history to provide defense against the bad luck and evil.  ',
   },
   {
     title: 'Who started Khamsa?',
-    description:'Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on     November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021.',
+    description:
+      'Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on     November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021.',
   },
   {
     title: 'Who are our associates?',
-    description:'Khamsa Group  is the conglomerate association with Khamsa Corp, Sunrise Rooster, Laoka, AI Farm, AutobotX, BadrobotX, Adone, Slum, Zox, Onecent, Lumpsum, Tongtin, CorporationK, VultureGO, and Tofu.',
+    description:
+      'Khamsa Group  is the conglomerate association with Khamsa Corp, Sunrise Rooster, Laoka, AI Farm, AutobotX, BadrobotX, Adone, Slum, Zox, Onecent, Lumpsum, Tongtin, CorporationK, VultureGO, and Tofu.',
   },
 ]
 
@@ -227,10 +234,10 @@ export const Condition = [
           Agreement consists of the terms and conditions set forth below and any
           Order Form. The
           <strong>“Effective</strong> Date” of this Agreement is the date which
-          is the earlier of (a) Customer’s initial access to the Services
+          is the earlier of (a) Customer&lsquo;s initial access to the Services
           through any online provisioning, registration or order process or (b)
           the Effective Date of the first Order Form. This Agreement will govern
-          Customer’s initial purchase on the Effective Date as well as any
+          Customer&lsquo;s initial purchase on the Effective Date as well as any
           future purchases made by Customer that reference this Agreement.
           Framer may modify this Agreement from time to time as permitted in
           Section 13.4 (Amendment).
@@ -263,10 +270,10 @@ export const Condition = [
           electronic form describing the use and operation of the Services.
         </p>
         <p>
-          <strong>1.4 “Services”</strong> Framer’s proprietary web-based
+          <strong>1.4 “Services”</strong> Framer&lsquo;s proprietary web-based
           products and services, along with downloadable desktop and mobile
-          apps. Each Order Form will identify details of Customer’s Services
-          subscription.
+          apps. Each Order Form will identify details of Customer&lsquo;s
+          Services subscription.
         </p>
         <p>
           <strong>1.5 “Order Form”</strong> means a document signed by both
@@ -278,9 +285,10 @@ export const Condition = [
           means add-on modules made available within the Services. Packages and
           Components may be created by Framer, Customer or other third parties.
           Packages and Components created by Framer are supported as part of the
-          Services. Framer will use reasonable efforts to support Customer’s use
-          of Packages and Components created by third parties but disclaims all
-          warranties as to such Packages and Components.
+          Services. Framer will use reasonable efforts to support
+          Customer&lsquo;s use of Packages and Components created by third
+          parties but disclaims all warranties as to such Packages and
+          Components.
         </p>
         <p>
           <strong>1.7 “User”</strong> means an employee, contractor or other
@@ -288,10 +296,10 @@ export const Condition = [
           Customer with access to the Services
         </p>
         <p>
-          <strong>1.8 “Services”</strong> means Framer’s SaaS product, web
+          <strong>1.8 “Services”</strong> means Framer&lsquo;s SaaS product, web
           design software, tools, along with downloadable desktop and mobile
-          apps. Each Order Form will identify details of Customer’s subscription
-          to the Services.
+          apps. Each Order Form will identify details of Customer&lsquo;s
+          subscription to the Services.
         </p>
       </>
     ),
@@ -305,10 +313,11 @@ export const Condition = [
           non-exclusive, non-transferable license during the Term (as defined in
           Section 12) to: (a) use the Services and to download and install
           desktop or mobile applications as applicable on the number and type of
-          Authorized Devices solely for Customer’s internal business purposes in
-          accordance with the Documentation, and/or (b) use our SaaS product,
-          hosted systems, design software, tools, and build websites under the
-          framer.app domain.. The Services are delivered electronically.
+          Authorized Devices solely for Customer&lsquo;s internal business
+          purposes in accordance with the Documentation, and/or (b) use our SaaS
+          product, hosted systems, design software, tools, and build websites
+          under the framer.app domain.. The Services are delivered
+          electronically.
         </p>
         <p>
           <strong>2.2 Provisioning the Services.</strong> Framer will provide to
@@ -319,8 +328,8 @@ export const Condition = [
           is permitted. Customer will provision its Users to access and use the
           features and functions of the Services through the Access Protocols.
           Customer may select one or more Users to act as administrators and
-          control, manage and use the Services on Customer’s behalf. Customer
-          shall be responsible for all acts and omissions of its Users.
+          control, manage and use the Services on Customer&lsquo;s behalf.
+          Customer shall be responsible for all acts and omissions of its Users.
         </p>
         <p>
           <strong>2.3 Registering for an account.</strong> To use the Services,
@@ -328,12 +337,12 @@ export const Condition = [
           disclosure of certain information (including their full name,
           password, and email address). Framer accounts will give Users access
           to the Services and functionality that Framer may establish and
-          maintain from time to time and in Framer's sole discretion. Users’
-          usernames and passwords are tied to them as a person, and cannot be
-          shared across teams nor can anybody except the User gain access to the
-          account by using their details. All Users must be human. Accounts
-          registered by “bots”, generic team accounts for sharing or other
-          automated methods are not permitted.
+          maintain from time to time and in Framer&apos;s sole discretion.
+          Users&lsquo; usernames and passwords are tied to them as a person, and
+          cannot be shared across teams nor can anybody except the User gain
+          access to the account by using their details. All Users must be human.
+          Accounts registered by “bots”, generic team accounts for sharing or
+          other automated methods are not permitted.
         </p>
         <p>
           <strong>2.4 Software Restrictions.</strong> Customer will not, and
@@ -363,7 +372,7 @@ export const Condition = [
           f) use any device, software, or process to interfere with, or attempt
           to interfere with, the proper working of the Services or any Content,
           or any systems or networks connected to the Service, or with any other
-          person's use of the Service;
+          person&apos;s use of the Service;
         </p>
         <p>
           g) conduct, engage in or otherwise process End User information or
@@ -393,8 +402,8 @@ export const Condition = [
         </p>
         <p>
           m) assign, sublicense, sell, resell, lease, rent or otherwise transfer
-          or convey, or pledge as security or otherwise encumber, Customer’s
-          rights under Sections 2.1 and 2.2;
+          or convey, or pledge as security or otherwise encumber,
+          Customer&lsquo;s rights under Sections 2.1 and 2.2;
         </p>
         <p>
           n) use the Services to build a similar or competitive product or
@@ -410,7 +419,7 @@ export const Condition = [
           of nuclear missiles or chemical or biological weapons;
         </p>
         <p>
-          q) use any "deep-link", "page-scrape", "robot", "spider" or other
+          q) use any {`"deep-link", "page-scrape", "robot", "spider"`} or other
           automatic device, program, algorithm or methodology, or any manual
           process to access, acquire, copy, or monitor any portion of the
           Services or any Content or obtain or attempt to obtain any materials,
@@ -430,10 +439,10 @@ export const Condition = [
         </p>
         <p>
           Customer will not conceal, remove, obscure or alter (i) any
-          proprietary notice or legend regarding Framer’s proprietary rights in
-          the Services; or (ii) trademarks or logos displayed as part of the
-          Services. Customer will ensure that its use of the Services complies
-          with all applicable laws, statutes, regulations or rules.
+          proprietary notice or legend regarding Framer&lsquo;s proprietary
+          rights in the Services; or (ii) trademarks or logos displayed as part
+          of the Services. Customer will ensure that its use of the Services
+          complies with all applicable laws, statutes, regulations or rules.
         </p>
         <p>
           <strong>2.5 Content Restrictions.</strong> Customer agrees that any
@@ -459,7 +468,7 @@ export const Condition = [
         </p>
         <p>
           d)   implies or suggests that the Content is created or endorsed by
-          Framer or Framer’s licensors;
+          Framer or Framer&lsquo;s licensors;
         </p>
         <p>
           e) probes, scans, or tests the vulnerability of any system or network
@@ -503,7 +512,7 @@ export const Condition = [
         <p>
           l)  contains any information or content that is illegal (including,
           without limitation, the disclosure of insider information under
-          securities law or of another party’s trade secrets);
+          securities law or of another party&lsquo;s trade secrets);
         </p>
         <p>
           m)  contains any information or content that the Customer knows is not
@@ -526,8 +535,9 @@ export const Condition = [
         <p>
           <strong>2.6 Publicity.</strong> During the Term and at any point
           thereafter, Framer may publicly refer to Customer orally and in
-          writing, including on Framer’s website and sales presentations, as a
-          customer of Framer and may use Customer’s logo for such purposes.
+          writing, including on Framer&lsquo;s website and sales presentations,
+          as a customer of Framer and may use Customer&lsquo;s logo for such
+          purposes.
         </p>
         <p>
           <strong>2.7 Support.</strong> Unless Customer purchases additional
@@ -560,16 +570,16 @@ export const Condition = [
           music, artwork, applications, computer code and associated
           documentation, including but not limited to the design, structure,
           arrangement, and “look and feel” of such content, and content that is
-          owned by or licensed to Framer and Framer’s licensors and is protected
-          by copyright, trademark, and other intellectual property rights and
-          laws​but specifically ​excluding rights in Packages and Components.
-          Except for the rights expressly granted herein, Customer acquires no
-          rights, title or interest in the Services.
+          owned by or licensed to Framer and Framer&lsquo;s licensors and is
+          protected by copyright, trademark, and other intellectual property
+          rights and laws​but specifically ​excluding rights in Packages and
+          Components. Except for the rights expressly granted herein, Customer
+          acquires no rights, title or interest in the Services.
         </p>
         <p>
           <strong>3.3 What Customer Owns.</strong> As between the Parties,
           Customer shall own all rights in and Framer disclaims any rights in
-          Customer’s Content.
+          Customer&lsquo;s Content.
         </p>
         <p>
           <strong>3.4 Packages and Components.</strong> Packages and Components
@@ -581,8 +591,8 @@ export const Condition = [
           Framer, Customer, or other third parties. Templates are owned by the
           persons or entities who create them. Templates created by Framer are
           supported as part of the Services. Framer will use reasonable efforts
-          to support Customer's use of Templates created by third parties but
-          disclaims all warranties as to such Templates. It is the
+          to support Customer&apos;s use of Templates created by third parties
+          but disclaims all warranties as to such Templates. It is the
           responsibility of the Template creator to offer technical support.
           Such creator assumes all responsibility and liability in connection
           with the use of the template.
@@ -595,20 +605,20 @@ export const Condition = [
     description: (
       <>
         <p>
-          <strong>4.1 Customer’s Content.</strong> Customer and its Users may
-          upload and share Content via the Services including but not limited to
-          website templates created and contributed by the Customer and its
-          Users, blog or forum posts, images, and photos. Any content a User
-          submits, posts, displays, or otherwise makes available on the Service,
-          including all Intellectual Property Rights (defined below) therein, is
-          referred to as <strong>“Content”</strong>. After the Content is
-          successfully uploaded, a link is made available allowing Users to
-          share the Content. Customer retains ownership of the Content. Framer
-          has no obligation to store, maintain, or provide Customer with a copy
-          of the Content. Customer alone is responsible for any of the Content
-          that may be lost or unrecoverable through the Customer’s use of the
-          Services. Customer is encouraged to archive its Content regularly and
-          frequently.
+          <strong>4.1 Customer&lsquo;s Content.</strong> Customer and its Users
+          may upload and share Content via the Services including but not
+          limited to website templates created and contributed by the Customer
+          and its Users, blog or forum posts, images, and photos. Any content a
+          User submits, posts, displays, or otherwise makes available on the
+          Service, including all Intellectual Property Rights (defined below)
+          therein, is referred to as <strong>“Content”</strong>. After the
+          Content is successfully uploaded, a link is made available allowing
+          Users to share the Content. Customer retains ownership of the Content.
+          Framer has no obligation to store, maintain, or provide Customer with
+          a copy of the Content. Customer alone is responsible for any of the
+          Content that may be lost or unrecoverable through the Customer&lsquo;s
+          use of the Services. Customer is encouraged to archive its Content
+          regularly and frequently.
         </p>
         <p>
           For the purposes of this Agreement,{' '}
@@ -661,24 +671,25 @@ export const Condition = [
     ),
   },
   {
-    title: '5. Customer’s Obligations to End Users',
+    title: '5. Customer&lsquo;s Obligations to End Users',
     description: (
       <>
         <p>
-          Any natural persons accessing or using Customer’s websites, pages, or
-          content created by Customer on the Services are Customer’s{' '}
-          <strong>“End Users.”</strong> Framer does not have a direct
-          relationship with End Users, therefore Framer is not responsible for
-          how Customer handles End User information.
+          Any natural persons accessing or using Customer&lsquo;s websites,
+          pages, or content created by Customer on the Services are
+          Customer&lsquo;s <strong>“End Users.”</strong> Framer does not have a
+          direct relationship with End Users, therefore Framer is not
+          responsible for how Customer handles End User information.
         </p>
         <p>
           <strong>a) Applicable laws.</strong> Customer may have additional
           obligations under local law other than those described in this
           Agreement. Use of the Services does not ensure compliance with such
-          laws, nor is Framer responsible for Customer’s compliance with such
-          laws. To the extent Framer has any obligations to assist Customer with
-          handling End User information, such obligations are enumerated within
-          a Data Processing Agreement executed between Framer and Customer.
+          laws, nor is Framer responsible for Customer&lsquo;s compliance with
+          such laws. To the extent Framer has any obligations to assist Customer
+          with handling End User information, such obligations are enumerated
+          within a Data Processing Agreement executed between Framer and
+          Customer.
         </p>
         <p>
           <strong>b) Security towards End Users.</strong> Customer will use all
@@ -698,27 +709,27 @@ export const Condition = [
           under the applicable breach notification statutes and any other
           applicable data protection laws. Customer acknowledges that Customer
           is solely responsible for any personal injury or property damage
-          arising from or relating to Customer’s use of any Services.
+          arising from or relating to Customer&lsquo;s use of any Services.
         </p>
         <p>
           <strong>d) Privacy.</strong> Customer acknowledges and agrees that
           Customer is solely responsible for providing any required notices and
           obtaining all required consents from End Users in connection with any
-          use of the Services. Customer’s notice and consent must be compliant
-          with all applicable data protection and security laws and regulations.
-          Without limiting the foregoing, before collecting or using any End
-          User information, Customer must provide adequate notice of the End
-          User information Customer collects, how it will be used and/or shared,
-          and obtain any necessary consents required under the applicable data
-          protection laws and regulations. Customer agrees to comply with all
-          data protection laws and regulations (including those applying to
-          personal information) in connection with Customer’s access and use of
-          the Services.
+          use of the Services. Customer&lsquo;s notice and consent must be
+          compliant with all applicable data protection and security laws and
+          regulations. Without limiting the foregoing, before collecting or
+          using any End User information, Customer must provide adequate notice
+          of the End User information Customer collects, how it will be used
+          and/or shared, and obtain any necessary consents required under the
+          applicable data protection laws and regulations. Customer agrees to
+          comply with all data protection laws and regulations (including those
+          applying to personal information) in connection with Customer&lsquo;s
+          access and use of the Services.
         </p>
         <p>
           <strong>e) Notice.</strong> Customer will provide and adhere to a
-          privacy policy for Customer’s use of the Services that: (i) complies
-          with all applicable laws, rules, and regulations, (ii) is
+          privacy policy for Customer&lsquo;s use of the Services that: (i)
+          complies with all applicable laws, rules, and regulations, (ii) is
           conspicuously displayed to all End Users, and (iii) clearly and
           accurately describes to End Users what information Customer collects
           (such as login information, contact form data, cookies, etc.) and how
@@ -728,19 +739,19 @@ export const Condition = [
         <p>
           <strong>f) Privacy rights.</strong> Customer will respond to any End
           Users wishing to exercise their privacy rights, under the applicable
-          law, as it relates to any information collected via Customer’s use of
-          the Services. For example, if End Users located in certain
+          law, as it relates to any information collected via Customer&lsquo;s
+          use of the Services. For example, if End Users located in certain
           jurisdictions may exercise a “right to be forgotten” (or “erasure”) to
           the information Customer has collected about them, Customer shall
           comply with their request as required by applicable law. For clarity,
           Customer is directly responsible (or, the “data controller”) for the
-          information processed by Customer’s use of the Services, including any
-          information processed via third-party applications available on the
-          Services. Framer is not a data controller to such information and is
-          not responsible for responding to End Users on Customer’s behalf. To
-          the extent Framer receives a request from an End User or authority
-          about Customer’s use of the Services, Framer will notify Customer as
-          permitted by law.
+          information processed by Customer&lsquo;s use of the Services,
+          including any information processed via third-party applications
+          available on the Services. Framer is not a data controller to such
+          information and is not responsible for responding to End Users on
+          Customer&lsquo;s behalf. To the extent Framer receives a request from
+          an End User or authority about Customer&lsquo;s use of the Services,
+          Framer will notify Customer as permitted by law.
         </p>
       </>
     ),
@@ -757,12 +768,13 @@ export const Condition = [
           regularly monitors compliance with these measures. Customer is
           responsible for reviewing the information made available by Framer
           relating to data security and making an independent determination as
-          to whether the Services meets Customer’s requirements and legal
-          obligations. Customer acknowledges that Framer’s security measures are
-          subject to technical progress and development and that Framer may
-          update or modify such measures from time to time provided that such
-          updates and modifications do not result in a material decrease of the
-          overall security of the Services during a subscription term.
+          to whether the Services meets Customer&lsquo;s requirements and legal
+          obligations. Customer acknowledges that Framer&lsquo;s security
+          measures are subject to technical progress and development and that
+          Framer may update or modify such measures from time to time provided
+          that such updates and modifications do not result in a material
+          decrease of the overall security of the Services during a subscription
+          term.
         </p>
       </>
     ),
@@ -789,12 +801,13 @@ export const Condition = [
           available or in the public domain at the time of disclosure through no
           fault of the receiving Party; (b) rightfully communicated to the
           receiving Party by persons not bound by confidentiality obligations
-          with respect thereto; (c) already in the receiving Party’s possession
-          free of any confidentiality obligations with respect thereto at the
-          time of disclosure; (d) independently developed by the receiving Party
-          without any use of or by persons who have access to the disclosing
-          Party’s Confidential Information; or (e) is approved in writing for
-          release or disclosure by the disclosing Party without restriction.
+          with respect thereto; (c) already in the receiving Party&lsquo;s
+          possession free of any confidentiality obligations with respect
+          thereto at the time of disclosure; (d) independently developed by the
+          receiving Party without any use of or by persons who have access to
+          the disclosing Party&lsquo;s Confidential Information; or (e) is
+          approved in writing for release or disclosure by the disclosing Party
+          without restriction.
         </p>
         <p>
           <strong>7.3 Nondisclosure.</strong> During the Term of this Agreement,
@@ -806,10 +819,11 @@ export const Condition = [
           Confidential Information disclosed by the disclosing Party only for
           the purposes described herein; and (b) that the receiving Party will
           not reproduce Confidential Information disclosed by the disclosing
-          Party, except as necessary to carry out the receiving Party's
+          Party, except as necessary to carry out the receiving Party&apos;s
           obligations and exercise its rights under this Agreement, and will
-          hold in confidence and protect such disclosing Party's Confidential
-          Information from dissemination to, and use by, any third party.
+          hold in confidence and protect such disclosing Party&apos;s
+          Confidential Information from dissemination to, and use by, any third
+          party.
         </p>
         <p>
           <strong>7.4 Legally Required Disclosure.</strong> Notwithstanding the
@@ -832,9 +846,9 @@ export const Condition = [
           <strong>8.1 Payment Terms.</strong> Customer will pay to Framer,
           without offset or deduction, all fees due under this Agreement. All
           payments will be in U.S. dollars. Unless otherwise specified, all fees
-          shall be due 30 days from the date of Framer’s invoice and all fees
-          are non-cancelable and non- refundable. All amounts will exclude all
-          applicable sales, use, and other taxes.
+          shall be due 30 days from the date of Framer&lsquo;s invoice and all
+          fees are non-cancelable and non- refundable. All amounts will exclude
+          all applicable sales, use, and other taxes.
         </p>
         <p>
           <strong>8.2 Merchant of Record.</strong> Our order process is
@@ -846,7 +860,7 @@ export const Condition = [
           <strong>8.3 Pricing.</strong> The Services are offered under different
           pricing plans, the limits and features of which are available{' '}
           <a href="https://www.framer.com/pricing/" className="text-[#8ACEC0]">
-            on Framer's pricing page
+            on Framer&apos;s pricing page
           </a>{' '}
           .there are paid self-service subscription plans{' '}
           <strong>(“Self-Service Subscriptions”).</strong> For an Enterprise
@@ -859,8 +873,8 @@ export const Condition = [
           charged for additional editors at the next monthly renewal date.
           Customers on an annual plan will be charged for additional editors
           monthly. This is separate from their annual billing. Additional
-          editors added to Customer’s team will not include a discount. The
-          discounted editor rate is only available when pre-purchasing extra
+          editors added to Customer&lsquo;s team will not include a discount.
+          The discounted editor rate is only available when pre-purchasing extra
           editors. Read more about additional editor charges{' '}
           <a href="" className="text-[#8ACEC0]">
             here
@@ -877,7 +891,7 @@ export const Condition = [
           Enterprise Customer upon notification.
         </p>
         <p>
-          Framer’s fees are subject to change, although Framer will notify
+          Framer&lsquo;s fees are subject to change, although Framer will notify
           Customer before any change. Customer hereby acknowledges that the
           Services have recurring payment features and Customer accepts
           responsibility for all recurring payment obligations. Framer (or
@@ -885,16 +899,17 @@ export const Condition = [
           of their subscription (e.g., each month, quarter, or year).
         </p>
         <p>
-          <strong>8.5 Fair Use.</strong> Customer’s subscription offering will
-          be specified on the applicable Order Form or Framer’s pricing page.
-          Customer can purchase additional usage and data at the specified rate
-          on the pricing page or in the Order Form. Framer will use commercially
-          reasonable efforts to provide Customer with sufficient bandwidth,
-          builds, and serverless function that Framer determines are typical of
-          projects at Customer’s plan level. Framer will notify Customer if
-          their usage is unreasonable, and may shut down and terminate projects
-          and accounts that are creating an unreasonable burden on Framer's
-          infrastructure and/or business operations. 
+          <strong>8.5 Fair Use.</strong> Customer&lsquo;s subscription offering
+          will be specified on the applicable Order Form or Framer&lsquo;s
+          pricing page. Customer can purchase additional usage and data at the
+          specified rate on the pricing page or in the Order Form. Framer will
+          use commercially reasonable efforts to provide Customer with
+          sufficient bandwidth, builds, and serverless function that Framer
+          determines are typical of projects at Customer&lsquo;s plan level.
+          Framer will notify Customer if their usage is unreasonable, and may
+          shut down and terminate projects and accounts that are creating an
+          unreasonable burden on Framer&apos;s infrastructure and/or business
+          operations.
         </p>
       </>
     ),
@@ -929,17 +944,17 @@ export const Condition = [
           any implied warranties of merchantability, fitness for production or
           any other purposes, non-infringement, system integration and/or data
           accuracy. Framer does not warrant that the Services or any other
-          services provided by Framer will meet customer’s requirements or
+          services provided by Framer will meet customer&lsquo;s requirements or
           operate uninterrupted or error-free. The Services may be subject to
           limitations, delays, and other problems inherent in the use of the
           internet and electronic communications. Framer is not responsible for
           any delays, delivery failures, or other damage resulting from such
-          problems.​Neither Framer nor its third-party providers shall have any
-          liability for ​customer’s use of ​content, Packages, Components,
+          problems. Neither Framer nor its third-party providers shall have any
+          liability for customer&lsquo;s use of content, Packages, Components,
           Templates, or other materials or information made available through or
-          developed using the Services. ​Framer shall have no responsibility for
-          determining that customer’s proposed use of the ​Services ​complies
-          with applicable laws in customer’s jurisdiction(s).
+          developed using the Services. Framer shall have no responsibility for
+          determining that customer&lsquo;s proposed use of the Services
+          complies with applicable laws in customer&lsquo;s jurisdiction(s).
         </p>
       </>
     ),
@@ -949,8 +964,8 @@ export const Condition = [
     description: (
       <>
         <p>
-          <strong>10.1</strong> Except for claims arising from customer’s
-          misappropriation of Framer’s intellectual property rights in the
+          <strong>10.1</strong> Except for claims arising from customer&lsquo;s
+          misappropriation of Framer&lsquo;s intellectual property rights in the
           Services: (a) in no event will either party be liable to the other
           party for any incidental, indirect, special, consequential or punitive
           damages, regardless of the nature of the claim, including, without
@@ -963,17 +978,17 @@ export const Condition = [
           in contract, tort, or strict liability, will not exceed the fees paid
           to Framer by Customer during the twelve month period prior to the
           event giving rise to any claim. The foregoing shall not limit
-          Customer’s payment obligations. These limitations upon damages and
-          claims are intended to apply without regard to whether other
+          Customer&lsquo;s payment obligations. These limitations upon damages
+          and claims are intended to apply without regard to whether other
           provisions of this agreement have been breached or have proven
           ineffective.
         </p>
         <p>
           <strong>10.2 Basis.</strong> Customer acknowledges and understands
           that the disclaimers, exclusions and limitations of liability in this
-          Agreement form an essential basis of the Parties’ agreement and that
-          absent such disclaimers, exclusions and limitations of liability, the
-          terms and conditions of this Agreement would be substantially
+          Agreement form an essential basis of the Parties&lsquo; agreement and
+          that absent such disclaimers, exclusions and limitations of liability,
+          the terms and conditions of this Agreement would be substantially
           different.
         </p>
       </>
@@ -1008,18 +1023,18 @@ export const Condition = [
           the Services, or (z) if neither of the foregoing is commercially
           practicable, terminate this Agreement and provide Customer a refund of
           any prepaid, unused fees for the Services. This section states
-          Framer’s entire obligation and liability with respect to any claim of
-          infringement.
+          Framer&lsquo;s entire obligation and liability with respect to any
+          claim of infringement.
         </p>
         <p>
           <strong>11.2 By Customer.</strong> Customer will defend, indemnify,
           and hold Framer harmless from and against any losses, liabilities,
-          costs (including reasonable attorneys’ fees) or damages to the extent
-          resulting from Customer’s breach or alleged breach of its obligations,
-          representations and warranties under this Agreement, or third party
-          claims that Content,Packages, Templates, or Components created by or
-          on behalf of Customer infringe the intellectual property rights of any
-          third party.
+          costs (including reasonable attorneys&lsquo; fees) or damages to the
+          extent resulting from Customer&lsquo;s breach or alleged breach of its
+          obligations, representations and warranties under this Agreement, or
+          third party claims that Content,Packages, Templates, or Components
+          created by or on behalf of Customer infringe the intellectual property
+          rights of any third party.
         </p>
         <p>
           <strong>11.3 Process.</strong> The foregoing indemnification
@@ -1028,7 +1043,7 @@ export const Condition = [
           indemnification is sought; (b) the indemnifying Party will have
           control of the defense or settlement; and (c) the indemnified Party
           will reasonably cooperate with the defense, at the indemnifying
-          Party's expense. 
+          Party&apos;s expense. 
         </p>
       </>
     ),
@@ -1047,7 +1062,8 @@ export const Condition = [
         <p>
           <strong>12.2 Purchase from Reseller.</strong> If Customer purchases
           the Services from an authorized reseller of Framer (“Reseller”),
-          Customer’s use of the Services will be governed by this Agreement.
+          Customer&lsquo;s use of the Services will be governed by this
+          Agreement.
         </p>
         <p>
           <strong>12.3 Termination.</strong> Either Party may, at its option,
@@ -1091,13 +1107,13 @@ export const Condition = [
           Payment), 10 (Limitations of Liability), 11 (Indemnification), 12
           (Term and Termination), and 13 (Miscellaneous) will survive such
           termination. Within ten business days following the termination date,
-          Customer shall, at Framer’s option, return to Framer or destroy (and
-          certify to Framer in writing as to such destruction) all copies of the
-          Services and Documentation and any other materials embodying or
+          Customer shall, at Framer&lsquo;s option, return to Framer or destroy
+          (and certify to Framer in writing as to such destruction) all copies
+          of the Services and Documentation and any other materials embodying or
           reflecting the Services and any other Framer Confidential Information.
           On termination or expiration of this Agreement other than termination
-          by Customer for Framer’s breach, Customer will immediately pay Framer,
-          as liquidated damages, the remaining balance (if any) for the
+          by Customer for Framer&lsquo;s breach, Customer will immediately pay
+          Framer, as liquidated damages, the remaining balance (if any) for the
           remainder of the subscription term.
         </p>
       </>
@@ -1115,9 +1131,9 @@ export const Condition = [
           annul these Terms. Articles 3:44, 6:228 and 6:265 of the Dutch Civil
           Code are excluded. This Agreement shall supersede the terms of any
           purchase order or other business form. If accepted by Framer,
-          Customer’s purchase order shall be binding only as to the following
-          terms: the Services ordered and the appropriately calculated fees due.
-          Other terms shall be void.
+          Customer&lsquo;s purchase order shall be binding only as to the
+          following terms: the Services ordered and the appropriately calculated
+          fees due. Other terms shall be void.
         </p>
         <p>
           <strong>13.2 Construction; Interpretation.</strong> If a court of
@@ -1142,26 +1158,27 @@ export const Condition = [
         </p>
         <p>
           <strong>13.4 Amendment.</strong> Framer may modify this Agreement
-          (which may include changes to Framer’s pricing and plans) from time to
-          time by giving notice to Customer by email or through the Services.
-          Unless a shorter period is specified by Framer (e.g., due to changes
-          in the Law or exigent circumstances), modifications become effective
-          upon renewal of Customer’s current Subscription Term or entry into a
-          new Order Form. If Framer specifies that the modifications to the
-          Agreement will take effect prior to Customer’s next renewal or Order
-          Form and Customer notifies Framer of its objection to the
-          modifications within 30 days after the date of such notice, Framer (at
-          its option and as Customer’s exclusive remedy) will either: (a) permit
-          Customer to continue under the existing version of this Agreement
-          until expiration of the then- current subscription term (after which
-          time the modified Agreement will go into effect) or (b) allow Customer
-          to terminate this Agreement and receive a refund of any pre-paid fees
-          allocable to the terminated portion of the applicable subscription
-          term. Customer may be required to click to accept or otherwise agree
-          to the modified Agreement in order to continue using the Services,
-          and, in any event, continued use of the Services after the updated
-          version of this Agreement goes into effect will constitute Customer’s
-          acceptance of such updated version.
+          (which may include changes to Framer&lsquo;s pricing and plans) from
+          time to time by giving notice to Customer by email or through the
+          Services. Unless a shorter period is specified by Framer (e.g., due to
+          changes in the Law or exigent circumstances), modifications become
+          effective upon renewal of Customer&lsquo;s current Subscription Term
+          or entry into a new Order Form. If Framer specifies that the
+          modifications to the Agreement will take effect prior to
+          Customer&lsquo;s next renewal or Order Form and Customer notifies
+          Framer of its objection to the modifications within 30 days after the
+          date of such notice, Framer (at its option and as Customer&lsquo;s
+          exclusive remedy) will either: (a) permit Customer to continue under
+          the existing version of this Agreement until expiration of the then-
+          current subscription term (after which time the modified Agreement
+          will go into effect) or (b) allow Customer to terminate this Agreement
+          and receive a refund of any pre-paid fees allocable to the terminated
+          portion of the applicable subscription term. Customer may be required
+          to click to accept or otherwise agree to the modified Agreement in
+          order to continue using the Services, and, in any event, continued use
+          of the Services after the updated version of this Agreement goes into
+          effect will constitute Customer&lsquo;s acceptance of such updated
+          version.
         </p>
         <p>
           <strong>13.5 Governing Law; Arbitration.</strong> This Agreement will
@@ -1199,7 +1216,7 @@ export const Condition = [
         </p>
         <p>
           <strong>13.8 Assignment.</strong> This Agreement may not be assigned
-          by either party without the other party’s prior written consent,
+          by either party without the other party&lsquo;s prior written consent,
           whether by operation of law or otherwise, except that either party may
           assign this Agreement to its successor in the event of a merger,
           acquisition or sale of all or substantially all of the assets of such
@@ -1211,7 +1228,6 @@ export const Condition = [
           counterparts, each of which will be deemed an original, but all of
           which together will constitute one and the same instrument.
         </p>
-        
       </>
     ),
   },
