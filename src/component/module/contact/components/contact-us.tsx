@@ -11,33 +11,17 @@ const ContactUs = () => {
   const icon = [
     {
       id: '1',
-      icons: (
-        <>
-          {' '}
-          <FaFacebookSquare />
-        </>
-      ),
+      icon: <FaFacebookSquare />,
       url: 'https://www.facebook.com/khamsagroup/?mibextid=ZbWKwL',
     },
     {
       id: '2',
-      icons: (
-        <>
-          {' '}
-          <FaLinkedin />
-        </>
-      ),
+      icon:  <FaLinkedin />,
       url: 'https://www.linkedin.com/company/khamsagroup/',
     },
     {
       id: '3',
-      icons: (
-        <>
-          {' '}
-          <FaYoutube />
-        </>
-      ),
-
+      icon: <FaYoutube />,
       url: 'https://youtu.be/f_GhQVHDH0E?si=E2vGEK0L4z1vxKng',
     },
   ]
@@ -97,7 +81,7 @@ const ContactUs = () => {
               {icon.map((data) => (
                 <div key={data.id} className="text-[42px]">
                   <Link target="_blank" href={`${data.url}`}>
-                    {data.icons}
+                    {data.icon}
                   </Link>
                 </div>
               ))}
