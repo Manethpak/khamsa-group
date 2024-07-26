@@ -8,11 +8,11 @@ const Contacts = () => {
     <div className="items-s flex h-full w-full justify-center bg-[#8ACEC0] px-10">
       <Motion className="flex h-full w-full max-w-7xl flex-col items-center justify-center gap-12 py-24 sm:flex-row sm:justify-between">
         <div className="flex w-full max-w-[550px] flex-col gap-6 font-extrabold text-white">
-          <p className="text-base">LET'S GOO</p>
+          <p className="text-base">LET&apos;S GOO</p>
           <h1 className="text-4xl md:text-5xl">Want to know more about us?</h1>
           <Link href="/contact" passHref>
             <button className="h-12 rounded-xl bg-white px-4 py-2 text-base font-bold text-[#19154E] focus:ring-opacity-50">
-              Let's talk
+              Let&apos;s talk
             </button>
           </Link>
         </div>

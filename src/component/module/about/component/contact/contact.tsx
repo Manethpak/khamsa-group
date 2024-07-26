@@ -30,7 +30,7 @@ const Contacts = () => {
         >
           <p className="text-base">What are you waiting for?</p>
           <h1 className="text-4xl md:text-5xl">
-            Let's invest in the future together
+            Let&apos;s invest in the future together
           </h1>
           <Link href="/contact" passHref>
             <button className="h-12 rounded-xl bg-white px-4 py-2 text-lg font-bold text-[#19154E] focus:ring-opacity-50">
