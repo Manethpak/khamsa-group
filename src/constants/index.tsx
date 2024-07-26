@@ -1,3 +1,5 @@
+import { title } from 'process'
+
 export const logo = [
   {
     id: '1',
@@ -167,14 +169,16 @@ export const InOurs = [
     id: '1',
     Image: '/images/Phase1.svg',
     title: 'Phase 1 - Leisure and F&B',
-    description:'Raw Materials, Rare Commodity, Real Estate, Resort, Food Industrial Park,Pharmaceutical.',
+    description:
+      'Raw Materials, Rare Commodity, Real Estate, Resort, Food Industrial Park,Pharmaceutical.',
   },
   {
     id: '2',
     Image: '/images/Phase2.svg',
     title: 'Phase 2 - Internet of Values',
     special: true,
-    description:'App, Web App, Big Data, Fintech, Software, Crypto, Digital, Infrastructure, Analytics, Blockchain, NFT,.',
+    description:
+      'App, Web App, Big Data, Fintech, Software, Crypto, Digital, Infrastructure, Analytics, Blockchain, NFT,.',
   },
   {
     id: '3',
@@ -188,29 +192,34 @@ export const InOurs = [
     id: '4',
     Image: '/images/Phase4.svg',
     title: 'Phase 4 - Invisible Energy',
-    descri: 'Biofuel, Biotech, Lightening Power, Hydrogen Power, Cosmo Power, Nano Power, Particle Power, Fusion Energy, Asteroid Mining, in Power Plant',
+    descri:
+      'Biofuel, Biotech, Lightening Power, Hydrogen Power, Cosmo Power, Nano Power, Particle Power, Fusion Energy, Asteroid Mining, in Power Plant',
   },
   {
     id: '5',
     Image: '/images/Phase5.svg',
     title: 'Phase 5 - Khamsa-O Holding',
     specials: true,
-    description:'High-Net-Worth-Individual Network, Investment Management, Financial Services, Asset Management, Portfolio Investment, Merger and Acquisition',
+    description:
+      'High-Net-Worth-Individual Network, Investment Management, Financial Services, Asset Management, Portfolio Investment, Merger and Acquisition',
   },
 ]
 
 export const Question = [
   {
     title: 'What is Khamsa?',
-    description:'Khamsa Group / សម្ព័ន្ធខាំសា. Khamsa (ख़मसा, خمسة , חַמְסָה, ⵜⴰⴼⵓⵙⵜ) from Arabic “Hamsa” means “five”, but also “the five fingers of the hand” and Romanized as “Khamsa” representing the open right hand, recognized and used as a sign of protection, blessings, power and strength in many times throughout history to provide defense against the bad luck and evil.  ',
+    description:
+      'Khamsa Group / សម្ព័ន្ធខាំសា. Khamsa (ख़मसा, خمسة , חַמְסָה, ⵜⴰⴼⵓⵙⵜ) from Arabic “Hamsa” means “five”, but also “the five fingers of the hand” and Romanized as “Khamsa” representing the open right hand, recognized and used as a sign of protection, blessings, power and strength in many times throughout history to provide defense against the bad luck and evil.  ',
   },
   {
     title: 'Who started Khamsa?',
-    description:'Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on     November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021.',
+    description:
+      'Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on     November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021.',
   },
   {
     title: 'Who are our associates?',
-    description:'Khamsa Group  is the conglomerate association with Khamsa Corp, Sunrise Rooster, Laoka, AI Farm, AutobotX, BadrobotX, Adone, Slum, Zox, Onecent, Lumpsum, Tongtin, CorporationK, VultureGO, and Tofu.',
+    description:
+      'Khamsa Group  is the conglomerate association with Khamsa Corp, Sunrise Rooster, Laoka, AI Farm, AutobotX, BadrobotX, Adone, Slum, Zox, Onecent, Lumpsum, Tongtin, CorporationK, VultureGO, and Tofu.',
   },
 ]
 
@@ -1211,7 +1220,6 @@ export const Condition = [
           counterparts, each of which will be deemed an original, but all of
           which together will constitute one and the same instrument.
         </p>
-        
       </>
     ),
   },
@@ -1244,5 +1252,35 @@ export const blogData = [
     imageUrl: '/images/stem.png',
     date: 'Sep 6, 2022',
     link: '/path-to-fourth-card',
+  },
+]
+
+export const Contact = [
+  {
+    title: 'Get in touch',
+    description:
+      " We’re always here to help. Contact us if you are interested in our service. Let's cooperate and invest in the future of Cambodia.",
+  },
+  {
+    title: 'Address',
+    description:
+      'Building#3, St39D, Anlungkung village, Preysor District, Dangkor Commune, Phnom Penh, Cambodia',
+  },
+  {
+    description: '',
+    link: [
+      {
+        name: 'info@khamsagroup.com',
+        url: '/',
+      },
+      {
+        name: 'linktr.ee/KhamsaGroup',
+        url: 'https://linktr.ee/KhamsaGroup',
+      },
+      {
+        phone: '+855(0)15686933',
+      },
+    ],
+    special: true,
   },
 ]
