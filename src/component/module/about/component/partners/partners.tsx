@@ -12,7 +12,7 @@ const Partners = () => {
     if (isInView) {
       controls.start('visible')
     }
-  }, [isInView])
+  }, [isInView, controls])
   return (
     <motion.div
       ref={ref}
@@ -27,7 +27,7 @@ const Partners = () => {
           initial="hidden"
           animate={controls}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
-          className="flex flex-col items-center gap-5 font-extrabold text-[#19154E]"
+          className="flex flex-col items-center gap-5 font-extrabold text-secondary"
         >
           <h1 className="max-w-[560px] text-4xl md:text-5xl">
             Meet our partners

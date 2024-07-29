@@ -14,10 +14,10 @@ const Potential = () => {
     if (isInView) {
       controls.start('visible')
     }
-  }, [isInView])
+  }, [isInView, controls])
   return (
     <motion.div>
-      <div className="flex w-full justify-center bg-[#E6F9FA]">
+      <div className="flex w-full justify-center bg-polar">
         <div className="grid max-h-full w-full grid-cols-1 items-center justify-center justify-items-stretch gap-x-24 gap-y-12 overflow-hidden px-5 py-12 md:px-10 xl:max-w-fit xl:grid-cols-2">
           <motion.div
             ref={ref}
@@ -31,11 +31,11 @@ const Potential = () => {
             className="max-w-full"
           >
             <div className="flex w-full max-w-[550px] flex-col gap-y-5 text-base font-extrabold">
-              <p className="text-[#8ACEC0]">at khamsagroup we</p>
-              <h1 className="text-4xl text-[#19154E] lg:text-5xl">
+              <p className="text-primary">at khamsagroup we</p>
+              <h1 className="text-4xl text-secondary lg:text-5xl">
                 Unlock Your Potential
               </h1>
-              <p className="font-medium text-[#5B5E76] lg:text-lg">
+              <p className="font-medium text-gray lg:text-lg">
                 We have experts in various fields including business, fintech,
                 AI and blockchain. We help accelerate your growth and maximize
                 your success.
@@ -53,7 +53,7 @@ const Potential = () => {
           </div>
         </div>
       </div>
-      <div className="flex h-[500px] w-full items-center justify-center bg-[#FFFFFF]">
+      <div className="flex h-[500px] w-full items-center justify-center bg-white">
         <Ceo />
       </div>
     </motion.div>

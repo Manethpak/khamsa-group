@@ -12,7 +12,7 @@ const TeamsCard = () => {
     if (isInView) {
       controls.start('visible')
     }
-  }, [isInView])
+  }, [isInView, controls])
   return (
     <motion.div
       ref={ref}
@@ -28,7 +28,7 @@ const TeamsCard = () => {
       {Teams.map((data) => (
         <div
           key={data.name}
-          className="flex h-[280px] max-w-3xl flex-col items-center justify-center gap-5 rounded-xl bg-[#E6F9FA] text-lg"
+          className="flex h-[280px] max-w-3xl flex-col items-center justify-center gap-5 rounded-xl bg-primary text-lg"
         >
           <Image
             src={data.Image}
@@ -38,8 +38,8 @@ const TeamsCard = () => {
             className="h-32 w-32"
           />
           <div>
-            <h1 className="font-extrabold text-[#19154E]">{data.name}</h1>
-            <p className="font-medium text-[#5B5E76]">{data.position}</p>
+            <h1 className="font-extrabold text-secondary">{data.name}</h1>
+            <p className="font-medium text-gray">{data.position}</p>
           </div>
         </div>
       ))}

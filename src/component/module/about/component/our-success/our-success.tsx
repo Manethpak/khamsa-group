@@ -11,11 +11,11 @@ const OurSuccess = () => {
     if (isInView) {
       controls.start('visible')
     }
-  }, [isInView])
+  }, [isInView, controls])
   return (
     <motion.div
       ref={ref}
-      className="flex w-full justify-center bg-[#E6F9FA] px-10"
+      className="flex w-full justify-center bg-polar px-10"
     >
       <div className="grid h-full w-full max-w-7xl grid-cols-1 gap-14 py-16 lg:grid-cols-2">
         <motion.div
@@ -28,8 +28,8 @@ const OurSuccess = () => {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
           className="flex max-w-[530px] flex-col gap-5 font-extrabold"
         >
-          <p className="text-base text-[#8ACEC0]">OUR SUCCESS</p>
-          <h1 className="text-4xl text-[#19154E] md:text-5xl">
+          <p className="text-base text-primary">OUR SUCCESS</p>
+          <h1 className="text-4xl text-secondary md:text-5xl">
             Leading development for modern teams .
           </h1>
         </motion.div>
@@ -48,8 +48,8 @@ const OurSuccess = () => {
               key={data.number}
               className="flex h-[126px] max-w-3xl flex-col items-center justify-center rounded-xl bg-white"
             >
-              <h1 className="text-[40px] text-[#19154E]">{data.number}</h1>
-              <p className="text-lg text-[#5B5E76]">{data.title}</p>
+              <h1 className="text-[40px] text-secondary">{data.number}</h1>
+              <p className="text-lg text-gray">{data.title}</p>
             </div>
           ))}
         </motion.div>
