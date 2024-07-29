@@ -28,7 +28,7 @@ const footerLinks = [
         location: [
           {
             title: 'AI FARM Robotics Factory, Ring Road 2, Cambodia',
-            url: 'https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3Dplace_id%3AChIJhyy6A6JbCTER3pHxfBV8ftk&key=462812a26b593f2dbfbfcbb14f6d699a',
+            url: 'https://maps.app.goo.gl/ENUtZ4TccU9Vt46j6'
           },
         ],
       },
