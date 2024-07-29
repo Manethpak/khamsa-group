@@ -17,7 +17,7 @@ const KhamsaGroup = () => {
     if (isInView) {
       controls.start('visible')
     }
-  }, [isInView])
+  }, [isInView, controls])
   return (
     <motion.div
       ref={ref}
@@ -34,8 +34,8 @@ const KhamsaGroup = () => {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
           className="h-full max-h-full space-y-5"
         >
-          <p className="text-base font-extrabold text-[#8ACEC0]">ABOUT US</p>
-          <h1 className="text-4xl font-extrabold text-[#19154E] md:text-6xl">
+          <p className="text-base font-extrabold text-primary">ABOUT US</p>
+          <h1 className="text-4xl font-extrabold text-secondary md:text-6xl">
             Khamsa Group / សម្ព័ន្ធខាំសា
           </h1>
         </motion.div>

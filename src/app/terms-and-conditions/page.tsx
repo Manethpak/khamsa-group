@@ -4,7 +4,7 @@ import React from 'react'
 
 const TermCondition = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center py-36 text-start text-lg font-medium text-[#5B5E76]">
+    <div className="flex w-full flex-col items-center justify-center py-36 text-start text-lg font-medium text-gray">
       <Motion className="h-fit w-full max-w-[1000px] space-y-7 text-pretty px-10">
         <div className="flex h-full max-h-full flex-col gap-7">
           <h1 className="text-4xl font-extrabold text-[#19154E] md:text-6xl">

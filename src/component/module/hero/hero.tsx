@@ -5,6 +5,7 @@ import React, { useEffect } from 'react'
 import { animate, motion, useMotionValue } from 'framer-motion'
 import { logo } from '@/constants'
 import useMeasure from 'react-use-measure'
+import Link from 'next/link'
 
 const Hero = () => {
   let [ref, { width }] = useMeasure()
@@ -44,7 +45,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.5 }}
-            className="space-y-5 text-center text-[#FFFFFF]"
+            className="space-y-5 text-center text-white"
           >
             <div className="text-4xl font-extrabold md:text-6xl lg:text-[68px]">
               <h1>Build The Future</h1>
@@ -53,8 +54,8 @@ const Hero = () => {
             <p className="text-lg font-medium md:text-xl lg:text-2xl">
               We wish to see through new creation, innovation and creativity.
             </p>
-            <button className="h-14 w-64 rounded-xl bg-[#FFFFFF] text-lg font-bold text-[#19154E]">
-              <a href="#investment">Explore Our Investment</a>
+            <button className="h-14 w-64 rounded-xl bg-white text-lg font-bold text-secondary">
+              <Link href="#investment">Explore Our Investment</Link>
             </button>
           </motion.div>
           <motion.div

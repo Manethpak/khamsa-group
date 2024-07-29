@@ -26,8 +26,8 @@ const Faq = () => {
   return (
     <div className="flex w-full justify-center px-10">
       <div className="flex h-full w-full max-w-7xl flex-col items-center gap-24 py-24">
-        <Motion className="flex flex-col items-center gap-5 text-center font-extrabold text-[#19154E]">
-          <p className="text-base text-[#8ACEC0]">FAQ</p>
+        <Motion className="flex flex-col items-center gap-5 text-center font-extrabold text-secondary">
+          <p className="text-base text-primary">FAQ</p>
           <h1 className="max-w-[560px] text-4xl md:text-5xl">
             Frequently asked questions.
           </h1>
@@ -36,14 +36,14 @@ const Faq = () => {
           {Question.map((data, index) => (
             <Motion
               key={data.title}
-              className="flex h-full w-full max-w-3xl flex-col items-center justify-center rounded-3xl bg-[#E6F9FA] p-5 px-8 text-lg"
+              className="flex h-full w-full max-w-3xl flex-col items-center justify-center rounded-3xl bg-polar p-5 px-8 text-lg"
             >
               <div
                 onClick={() => handleClick(index)}
                 className={`grid w-full justify-items-stretch ${open.includes(index) ? 'gap-5' : 'gap-0'}`}
               >
                 <div className="flex items-start justify-between">
-                  <h1 className="font-extrabold text-[#19154E]">
+                  <h1 className="font-extrabold text-secondary">
                     {data.title}
                   </h1>
                   <motion.p
