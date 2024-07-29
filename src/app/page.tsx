@@ -2,7 +2,7 @@ import Contact from '@/component/module/contact/contact'
 import Hero from '@/component/module/hero/hero'
 import Investment from '@/component/module/investment/investment'
 import Potential from '@/component/module/potential/potential'
-import Blog from './blog/page'
+import BlogContent from '@/component/module/blog/blog'
 
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <Hero/>
       <Investment/>
       <Potential/>
-      <Blog/>
+      <BlogContent/>
       <Contact/>
     </main>
   )
