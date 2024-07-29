@@ -1,3 +1,5 @@
+import { title } from 'process'
+
 export const logo = [
   {
     id: '1',
@@ -1260,5 +1262,35 @@ export const blogData = [
     imageUrl: '/images/stem.png',
     date: 'Sep 6, 2022',
     link: '/path-to-fourth-card',
+  },
+]
+
+export const Contact = [
+  {
+    title: 'Get in touch',
+    description:
+      " We’re always here to help. Contact us if you are interested in our service. Let's cooperate and invest in the future of Cambodia.",
+  },
+  {
+    title: 'Address',
+    description:
+      'Building#3, St39D, Anlungkung village, Preysor District, Dangkor Commune, Phnom Penh, Cambodia',
+  },
+  {
+    description: '',
+    link: [
+      {
+        name: 'info@khamsagroup.com',
+        url: '/',
+      },
+      {
+        name: 'linktr.ee/KhamsaGroup',
+        url: 'https://linktr.ee/KhamsaGroup',
+      },
+      {
+        phone: '+855(0)15686933',
+      },
+    ],
+    special: true,
   },
 ]

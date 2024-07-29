@@ -21,7 +21,7 @@ const footerLinks = [
         title: 'Linktr.ee/KhamsaGroup',
         url: 'https://linktr.ee/KhamsaGroup',
       },
-      { title: '+885(0)15686933', url: '/contact' },
+      { title: '+855(0)15686933', url: '/contact' },
       {
         title: 'Building Location',
         description: (
@@ -60,7 +60,7 @@ const FooterContent = () => {
                   key={link.title}
                   className="text-sm font-normal text-white/70"
                 >
-                  <Link href="link.url">{link.title}</Link>
+                  <Link href={`${link.url}`}>{link.title}</Link>
                   <h1>{link.description}</h1>
                 </div>
               ))}
