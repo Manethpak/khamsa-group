@@ -1,9 +1,9 @@
 'use client'
 import React, { useEffect, useRef } from 'react'
-import ContactContent from './components/contact-content'
+import ContactContent from '../contact/components/contact-content'
 import { useAnimation, useInView, motion } from 'framer-motion'
 
-const Contact = () => {
+const ContactSection = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const controls = useAnimation()
@@ -14,7 +14,10 @@ const Contact = () => {
     }
   }, [isInView, controls])
   return (
-    <motion.div className="m-auto flex min-h-screen max-w-screen-2xl items-center justify-center bg-primary">
+    <motion.section
+      id="contact"
+      className="m-auto flex min-h-screen max-w-screen-2xl items-center justify-center bg-primary"
+    >
       <motion.div
         ref={ref}
         variants={{
@@ -28,8 +31,8 @@ const Contact = () => {
       >
         <ContactContent />
       </motion.div>
-    </motion.div>
+    </motion.section>
   )
 }
 
-export default Contact
+export default ContactSection

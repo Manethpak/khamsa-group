@@ -2,9 +2,9 @@
 import React, { useEffect, useRef } from 'react'
 import dynamic from 'next/dynamic'
 import { useAnimation, useInView, motion } from 'framer-motion'
-import Ceo from './ceo'
+import Ceo from '../potential/ceo'
 
-const Potential = () => {
+const PotentialSection = () => {
   const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
@@ -16,7 +16,7 @@ const Potential = () => {
     }
   }, [isInView, controls])
   return (
-    <motion.div>
+    <motion.section id="potential">
       <div className="flex w-full justify-center bg-polar">
         <div className="grid max-h-full w-full grid-cols-1 items-center justify-center justify-items-stretch gap-x-24 gap-y-12 overflow-hidden px-5 py-12 md:px-10 xl:max-w-fit xl:grid-cols-2">
           <motion.div
@@ -56,8 +56,8 @@ const Potential = () => {
       <div className="flex h-[500px] w-full items-center justify-center bg-white">
         <Ceo />
       </div>
-    </motion.div>
+    </motion.section>
   )
 }
 
-export default Potential
+export default PotentialSection

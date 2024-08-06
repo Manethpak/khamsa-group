@@ -2,7 +2,8 @@
 import { useAnimation, useInView, motion } from 'framer-motion'
 import React, { useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { blogHome } from '@/constants'
+import { blogData } from '@/constants'
+import Image from 'next/image'
 
 const BlogHomePage: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null)
@@ -28,8 +29,8 @@ const BlogHomePage: React.FC = () => {
         transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
         className="grid w-full max-w-screen-lg grid-cols-1 gap-[20px] md:grid-cols-2 lg:grid-cols-2" // Updated grid and gap
       >
-        {blogHome.map((blog) => (
-          <Link href={blog.link} key={blog.id} passHref>
+        {blogData.map((blog) => (
+          <Link href={blog.link} key={blog.title} passHref>
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -41,20 +42,21 @@ const BlogHomePage: React.FC = () => {
                 opacity: 1, // Ensure opacity is visible
               }}
             >
-              <figure className="w-full">
-                <img
-                  src={blog.imageUrl}
-                  alt={blog.title}
-                  className="h-auto w-full object-cover"
-                  style={{ maxHeight: '401px' }} // Adjust max height for image
-                />
-              </figure>
+              <Image
+                src={blog.imageUrl}
+                alt={blog.title}
+                className="h-auto w-full object-cover"
+                style={{ maxHeight: '401px' }} // Adjust max height for image
+                width={475}
+                height={400}
+              />
+
               <div className="card-body p-6">
-                <h2 className="card-title mb-2 text-xl font-semibold text-[#000000]">
+                <h2 className="card-title mb-2 text-xl font-semibold text-black">
                   {blog.title}
                 </h2>
                 <p className="text-gray-700">{blog.description}</p>
-                <div className="card-actions mt-4 text-gray-500">
+                <div className="card-actions text-gray-500 mt-4">
                   {blog.date}
                 </div>
               </div>

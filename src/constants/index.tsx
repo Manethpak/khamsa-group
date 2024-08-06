@@ -861,7 +861,7 @@ export const Condition = [
         <p>
           <strong>8.3 Pricing.</strong> The Services are offered under different
           pricing plans, the limits and features of which are available{' '}
-          <a href="https://www.framer.com/pricing/" className="text-[#8ACEC0]">
+          <a href="https://www.framer.com/pricing/" className="text-primary">
             on Framer&apos;s pricing page
           </a>{' '}
           .there are paid self-service subscription plans{' '}
@@ -878,7 +878,7 @@ export const Condition = [
           editors added to Customer&lsquo;s team will not include a discount.
           The discounted editor rate is only available when pre-purchasing extra
           editors. Read more about additional editor charges{' '}
-          <a href="" className="text-[#8ACEC0]">
+          <a href="" className="text-primary">
             here
           </a>
           . The self-service subscriptions and any additional Services added to
@@ -1083,7 +1083,7 @@ export const Condition = [
           at any time in the
           <a
             href="https://login.framer.com/?_ga=2.33553340.321436369.1648539104-1690194880.1643619005"
-            className="text-[#8ACEC0]"
+            className="text-primary"
           >
             Framer Dashboard
           </a>
