@@ -13,11 +13,11 @@ const Office = () => {
     if (isInView) {
       controls.start('visible')
     }
-  }, [isInView])
+  }, [isInView, controls])
   return (
     <motion.div
     ref={ref}
-    className="flex w-full justify-center px-10 text-center bg-[#E6F9FA]"
+    className="flex w-full justify-center px-10 text-center bg-polar"
   >
     <div className="flex h-full w-full max-w-7xl flex-col gap-24 py-24">
       <motion.div
@@ -28,9 +28,9 @@ const Office = () => {
         initial="hidden"
         animate={controls}
         transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
-        className="flex flex-col items-center gap-5 font-extrabold text-[#19154E]"
+        className="flex flex-col items-center gap-5 font-extrabold text-secondary"
       >
-        <p className="text-base text-[#8ACEC0]">Our office</p>
+        <p className="text-base text-primary">Our office</p>
         <h1 className="max-w-[450px] text-4xl md:text-5xl">
             Work, play, and refresh.
         </h1>

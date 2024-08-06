@@ -11,7 +11,7 @@ const Teams = () => {
     if (isInView) {
       controls.start('visible')
     }
-  }, [isInView])
+  }, [isInView,controls])
   return (
     <motion.div
       ref={ref}
@@ -26,9 +26,9 @@ const Teams = () => {
           initial="hidden"
           animate={controls}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
-          className="flex flex-col items-center gap-5 font-extrabold text-[#19154E]"
+          className="flex flex-col items-center gap-5 font-extrabold text-secondary"
         >
-          <p className="text-base text-[#8ACEC0]">Our team</p>
+          <p className="text-base text-primary">Our team</p>
           <h1 className="max-w-[560px] text-4xl md:text-5xl">
             Empowering Entrepreneur.
           </h1>

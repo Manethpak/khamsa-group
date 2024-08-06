@@ -12,9 +12,9 @@ const Contact = () => {
     if (isInView) {
       controls.start('visible')
     }
-  }, [isInView])
+  }, [isInView, controls])
   return (
-    <motion.div className="m-auto flex min-h-screen max-w-screen-2xl items-center justify-center bg-[#8ACEC0]">
+    <motion.div className="m-auto flex min-h-screen max-w-screen-2xl items-center justify-center bg-primary">
       <motion.div
         ref={ref}
         variants={{

@@ -1,49 +1,94 @@
-import React from 'react'
+'use client'
+import { Motion } from '@/component/ui/motion'
+import { Contact } from '@/constants'
+import Link from 'next/link'
+import React, { useState } from 'react'
+import { FaFacebookSquare, FaLinkedin, FaYoutube } from 'react-icons/fa'
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
+import { motion } from 'framer-motion'
 
 const ContactUs = () => {
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-6 px-4 lg:mx-32 lg:flex-row lg:overflow-hidden lg:rounded-lg">
-      {/* Column 1: Image */}
-      <div className="card relative mt-4 w-full lg:mt-0 lg:h-[544.53px] lg:w-[740px] lg:border-r-0">
-        <img
-          src="/images/map.png" // Ensure the path to the image is correct
-          alt="Descriptive Alt Text"
-          className="h-full w-full rounded-lg object-cover"
-          style={{ maxWidth: '100%', maxHeight: '100%' }}
-        />
-      </div>
+  const icon = [
+    {
+      id: '1',
+      icon: <FaFacebookSquare />,
+      url: 'https://www.facebook.com/khamsagroup/?mibextid=ZbWKwL',
+    },
+    {
+      id: '2',
+      icon:  <FaLinkedin />,
+      url: 'https://www.linkedin.com/company/khamsagroup/',
+    },
+    {
+      id: '3',
+      icon: <FaYoutube />,
+      url: 'https://youtu.be/f_GhQVHDH0E?si=E2vGEK0L4z1vxKng',
+    },
+  ]
 
-      {/* Column 2: Content */}
-      <div className="card flex w-full flex-col items-center justify-center rounded-lg bg-[#8ACEC0] p-4 lg:w-[400px] lg:items-start lg:p-8">
-        <div className="flex flex-col items-center gap-4 text-white opacity-100 lg:items-start">
-          <h2 className="font-manrope text-center text-base lg:text-left lg:text-xl">
-            Get in touch
-          </h2>
-          <p className="font-manrope text-center text-sm lg:text-left lg:text-base xl:text-lg">
-            We&apos;re always here to help. Contact us if you are interested in
-            our service. Let&apos;s cooperate and invest in the future of
-            Cambodia.
-          </p>
-          <h2 className="font-manrope text-center text-base lg:text-left lg:text-xl">
-            Address:
-          </h2>
-          <p className="font-manrope text-center text-sm lg:text-left lg:text-base xl:text-lg">
-            Building#3, St39D, Anlungkung village, Preysor District, Dangkor
-            Commune, Phnom Penh, Cambodia
-          </p>
-          <h2 className="font-manrope text-center text-base lg:text-left lg:text-xl">
-            Contact:
-          </h2>
-          <p className="font-manrope text-center text-sm lg:text-left lg:text-base xl:text-lg">
-            info@khamsagroup.com <br />
-            <a href="https://linktr.ee/KhamsaGroup" className="text-blue-400">
-              linktr.ee/KhamsaGroup
-            </a>{' '}
-            <br />
-            +855(0)15686933
-          </p>
+  const [showArrow, setShowArrow] = useState<string | null>(null)
+  return (
+    <div className="flex w-full flex-col items-center justify-center py-36 text-lg font-medium text-white">
+      <Motion className="h-fit w-full max-w-7xl space-y-14 px-10">
+        <div className="flex h-full max-h-full flex-col gap-5">
+          <p className="text-base font-extrabold">contact us</p>
+          <h1 className="text-4xl font-extrabold md:text-6xl">We can help</h1>
         </div>
-      </div>
+        <div className="flex h-full w-full flex-col-reverse justify-between gap-y-14 xl:flex-row">
+          <div className="h-80 w-full max-w-7xl overflow-hidden rounded-2xl md:h-[450px] xl:h-[545px] xl:max-w-[740px]">
+            <iframe
+              className="max-h- h-full w-full xl:max-h-full"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3Dplace_id%3AChIJhyy6A6JbCTER3pHxfBV8ftk&key=462812a26b593f2dbfbfcbb14f6d699a"
+            ></iframe>
+          </div>
+          <div className="flex w-full max-w-[400px] flex-col gap-9">
+            {Contact.map((data) => (
+              <div key={data.description} className="">
+                <div className="flex flex-col gap-3">
+                  <h1 className="text-2xl font-extrabold">{data.title}</h1>
+                  <p>{data.description}</p>
+                  {data.link?.map((link, index) => (
+                    <motion.div
+                      onHoverStart={() => setShowArrow(link.name ?? '')}
+                      onHoverEnd={() => setShowArrow(null)}
+                      key={index}
+                      className="flex items-center gap-2 font-bold"
+                    >
+                      <div>
+                        <Link href={`${link.url}`}>{link.name}</Link>
+                        <p>{link.phone}</p>
+                      </div>
+                      {index !== 2 && (
+                        <motion.div
+                          initial={{ opacity: 1, x: 0 }}
+                          animate={
+                            showArrow === link.name ? { x: 5 } : { x: 0 }
+                          }
+                          transition={{ type: 'spring', stiffness: 50 }}
+                        >
+                          <HiOutlineArrowNarrowRight />
+                        </motion.div>
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            ))}
+            <div className="flex gap-4">
+              {icon.map((data) => (
+                <div key={data.id} className="text-[42px]">
+                  <Link target="_blank" href={`${data.url}`}>
+                    {data.icon}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Motion>
     </div>
   )
 }

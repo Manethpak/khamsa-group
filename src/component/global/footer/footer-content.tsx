@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { title } from 'process'
 
 const footerLinks = [
   {
@@ -21,16 +22,15 @@ const footerLinks = [
         title: 'Linktr.ee/KhamsaGroup',
         url: 'https://linktr.ee/KhamsaGroup',
       },
-      { title: '+885(0)15686933', url: '/contact' },
+      { title: '+855(0)15686933', url: '/contact' },
       {
         title: 'Building Location',
-        description: (
-          <p>
-            BUILDING FACTORY #3, RD. 39D, ST. 50M,ANLUNGKONG VILLAGE, DANGKOR
-            COMMUNE, PREYSAR DISTRICT, PHNOM PENH ROYAL CAPITAL, KINGDOM OF
-            CAMBODIA
-          </p>
-        ),
+        location: [
+          {
+            title: 'AI FARM Robotics Factory, Ring Road 2, Cambodia',
+            url: 'https://maps.app.goo.gl/ENUtZ4TccU9Vt46j6'
+          },
+        ],
       },
       {
         title: 'Terms and Conditions',
@@ -60,8 +60,12 @@ const FooterContent = () => {
                   key={link.title}
                   className="text-sm font-normal text-white/70"
                 >
-                  <Link href="link.url">{link.title}</Link>
-                  <h1>{link.description}</h1>
+                  <Link href={`${link.url}`}>{link.title}</Link>
+                  {link.location?.map((data) => (
+                    <div key={data.title} className="p-1">
+                      <Link href={`${data.url}`} target="_blank">{data.title}</Link>
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>

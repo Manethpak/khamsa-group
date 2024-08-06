@@ -8,7 +8,7 @@ import Contacts from './component/contact/contact'
 
 const Journeys = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center pt-36 text-lg font-normal text-[#5B5E76]">
+    <div className="flex w-full flex-col items-center justify-center pt-36 text-lg font-normal text-gray">
       <Motion className="h-fit w-full space-y-24 text-pretty px-10 text-center text-2xl font-medium">
         <div className="flex h-full max-h-full flex-col items-center gap-5">
           <p className="text-base font-extrabold text-[#8ACEC0]">
