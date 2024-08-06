@@ -7,7 +7,7 @@ import { logo } from '@/constants'
 import useMeasure from 'react-use-measure'
 import Link from 'next/link'
 
-const Hero = () => {
+const HeroSection = () => {
   let [ref, { width }] = useMeasure()
   const xTranslation = useMotionValue(0)
   useEffect(() => {
@@ -24,8 +24,8 @@ const Hero = () => {
   }, [xTranslation, width])
 
   return (
-    <div>
-      <div className="h-[880px] w-full flex justify-center items-center overflow-hidden relative">
+    <section id="hero">
+      <div className="relative flex h-[880px] w-full items-center justify-center overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ const Hero = () => {
             className="h-full w-full object-cover object-center"
           />
         </motion.div>
-        <div className="absolute flex flex-col justify-center h-full gap-24 mt-28 w-full">
+        <div className="absolute mt-28 flex h-full w-full flex-col justify-center gap-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.8 }}
-            className="mx-10 flex flex-col items-center justify-center gap-4 overflow-clip text-sm font-medium text-gray-400 md:mx-auto md:max-w-4xl"
+            className="text-gray-400 mx-10 flex flex-col items-center justify-center gap-4 overflow-clip text-sm font-medium md:mx-auto md:max-w-4xl"
           >
             <p>Our affiliate companies</p>
             <div
@@ -123,8 +123,8 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
-export default Hero
+export default HeroSection

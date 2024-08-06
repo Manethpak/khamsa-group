@@ -4,9 +4,9 @@ import React from 'react'
 import { Investments } from '@/constants'
 import { Motion } from '@/component/ui/motion'
 
-const Investment = () => {
+const InvestmentSection = () => {
   return (
-    <div
+    <section
       id="investment"
       className="flex flex-col items-center justify-center gap-12 p-5 pt-12 lg:px-0"
     >
@@ -20,7 +20,7 @@ const Investment = () => {
         {Investments.map((data) => (
           <div
             key={data.id}
-            className="flex h-[270px] w-full max-w-[320px] flex-col items-center justify-center gap-7 justify-self-center rounded-2xl border bg-white p-3 shadow-lg shadow-[#00000040] md:min-w-[341px] xl:min-w-[402px]"
+            className="flex h-[270px] w-full max-w-[320px] flex-col items-center justify-center gap-7 justify-self-center rounded-2xl border bg-white p-3 shadow-lg shadow-black/40 md:min-w-[341px] xl:min-w-[402px]"
           >
             <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white">
               <Image
@@ -42,8 +42,8 @@ const Investment = () => {
           </div>
         ))}
       </Motion>
-    </div>
+    </section>
   )
 }
 
-export default Investment
+export default InvestmentSection
