@@ -1,9 +1,9 @@
-import BlogHomePage from '@/component/module/blog/components/blog-homepage';
+import BlogList from '@/component/module/blog/blog-list'
 
 import React from 'react'
 
-const Blog = () => {
-  return <BlogHomePage />
+const BlogPage = () => {
+  return <BlogList />
 }
 
-export default Blog;
+export default BlogPage
