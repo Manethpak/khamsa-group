@@ -6,6 +6,7 @@ import { animate, motion, useMotionValue } from 'framer-motion'
 import { logo } from '@/constants'
 import useMeasure from 'react-use-measure'
 import Link from 'next/link'
+import { useHero } from '@/hooks/use-hero'
 
 const HeroSection = () => {
   let [ref, { width }] = useMeasure()
@@ -22,6 +23,10 @@ const HeroSection = () => {
     })
     return controls.stop
   }, [xTranslation, width])
+
+  const { data } = useHero()
+
+  useEffect(() => console.log(data), [data])
 
   return (
     <section id="hero">
