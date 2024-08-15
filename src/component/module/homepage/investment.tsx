@@ -16,7 +16,7 @@ const InvestmentSection = () => {
           Our Investment Portfolio
         </h1>
       </Motion>
-      <Motion className="-mt-3 grid h-fit w-full max-w-xl grid-cols-1 justify-items-stretch p-5 md:max-w-fit md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-3">
+      <Motion className="-mt-3 grid h-fit w-full max-w-xl grid-cols-1 justify-items-stretch gap-8 p-5 md:max-w-fit md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-3">
         {Investments.map((data) => (
           <div
             key={data.id}

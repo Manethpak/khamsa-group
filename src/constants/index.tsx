@@ -103,12 +103,12 @@ export const Teams = [
   {
     name: 'KIM KHORN LONG [龍金夫]',
     Image: '/images/CEO.jpeg',
-    position: 'CEO',
+    position: 'CHAIRMAN',
   },
   {
     name: 'Kevin Wang',
     Image: '/images/Vice-President.jpeg',
-    position: 'Vice President ',
+    position: 'GROUP VP & CEO',
   },
   {
     name: 'LIM Dalin',

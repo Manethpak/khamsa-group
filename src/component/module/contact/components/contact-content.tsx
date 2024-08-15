@@ -4,9 +4,9 @@ import React from 'react'
 const ContactContent = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-6 px-4 lg:mx-32 lg:overflow-hidden lg:rounded-lg">
-      <div className="flex w-full max-w-screen-2xl flex-col bg-primary p-4 lg:flex-row lg:gap-8 lg:p-8">
+      <div className="flex w-full max-w-screen-2xl flex-col p-4 lg:flex-row lg:gap-8 lg:p-8">
         {/* Card 1: Content */}
-        <div className="card flex flex-col items-start justify-center rounded-lg bg-primary p-4 lg:w-[530px] lg:p-8">
+        <div className="card flex flex-col items-start justify-center rounded-lg p-4 lg:w-[530px] lg:p-8">
           <div className="flex flex-col items-start gap-4 opacity-100">
             <h2 className="font-manrope text-sm text-white lg:text-lg xl:text-xl">
               GET STARTED

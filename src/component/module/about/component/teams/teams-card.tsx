@@ -28,7 +28,7 @@ const TeamsCard = () => {
       {Teams.map((data) => (
         <div
           key={data.name}
-          className="flex h-[280px] max-w-3xl flex-col items-center justify-center gap-5 rounded-xl bg-primary text-lg"
+          className="flex h-[280px] max-w-3xl flex-col items-center justify-center gap-5 rounded-xl bg-polar text-lg"
         >
           <Image
             src={data.Image}

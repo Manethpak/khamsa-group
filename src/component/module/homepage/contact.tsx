@@ -16,21 +16,23 @@ const ContactSection = () => {
   return (
     <motion.section
       id="contact"
-      className="m-auto flex min-h-screen max-w-screen-2xl items-center justify-center bg-primary"
+      className="flex min-h-screen w-full items-center justify-center bg-primary"
     >
-      <motion.div
-        ref={ref}
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={controls}
-        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
-        className="w-full sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]"
-      >
-        <ContactContent />
-      </motion.div>
+      <div className="w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={controls}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
+          className="mx-auto w-full max-w-[1280px]"
+        >
+          <ContactContent />
+        </motion.div>
+      </div>
     </motion.section>
   )
 }
