@@ -16,7 +16,7 @@ const ContactSection = () => {
   return (
     <motion.section
       id="contact"
-      className="flex min-h-screen w-full items-center justify-center bg-primary"
+      className="flex w-full items-center justify-center bg-primary"
     >
       <div className="w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <motion.div
