@@ -1273,8 +1273,6 @@ export const Contact = [
   },
   {
     title: 'Address',
-    description:
-      'Building#3, St39D, Anlungkung village, Preysor District, Dangkor Commune, Phnom Penh, Cambodia',
   },
   {
     description: '',

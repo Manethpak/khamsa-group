@@ -2518,6 +2518,134 @@ export interface components {
       link?: unknown
       social_link?: unknown
     }
+    ItemsItem: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      icon?: string | components['schemas']['Files'] | null
+      title?: string | null
+      description?: string | null
+      invesment_item?: number | components['schemas']['ItemsInvesment'] | null
+    }
+    ItemsBlogs: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      content?: string | null
+      title?: string | null
+      description?: string | null
+      /** Format: date */
+      date?: string | null
+      image?: string | components['schemas']['Files'] | null
+      topic?: string | null
+      blog_home?: number | components['schemas']['ItemsBlogsHome'] | null
+    }
+    ItemsInvestment: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      content?: string | null
+      title?: string | null
+      item?: (number | components['schemas']['ItemsItem'])[] | null
+    }
+    ItemsSuccess: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      number?: string | null
+      title?: string | null
+    }
+    ItemsFAQ: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      question?: string | null
+      answer?: string | null
+    }
+    ItemsTeam: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      image?: string | components['schemas']['Files'] | null
+      name?: string | null
+      position?: string | null
+    }
+    ItemsOffice: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      image?: string | components['schemas']['Files'] | null
+    }
+    ItemsContact: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      iframe?: string | null
+      title?: string | null
+      address?: unknown
+      link?: unknown
+      social_link?: unknown
+    }
+    ItemsSubscription: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      email?: string | null
+    }
   }
   responses: {
     /** @description Error: Not found. */
@@ -9710,5 +9838,5 @@ export type Schema = {
   Subscription: components['schemas']['ItemsSubscription'][]
   Hero: components['schemas']['ItemsHero']
   Investment: components['schemas']['ItemsInvestment'][]
-  Contact: components['schemas']['ItemsContact'][]
+  Contact: components['schemas']['ItemsContact']
 }
