@@ -5,8 +5,15 @@ import BlogCard from '../blog/components/blog-card'
 import { useAnimation, useInView, motion } from 'framer-motion'
 import Link from 'next/link'
 import { blogData } from '@/constants'
+import { Schema } from '@/lib/schema'
+import { formatDate } from '@/lib/utils'
+import { getImageUrl } from '@/lib/directus'
 
-const BlogSection = () => {
+type Props = {
+  data: Schema['Blogs']
+}
+
+const BlogSection = ({ data }: Props) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const controls = useAnimation()
@@ -48,8 +55,15 @@ const BlogSection = () => {
           </div>
         </motion.div>
         <div className="grid grid-cols-1 gap-6 bg-[#E6F9FA] py-5 pt-12 md:grid-cols-2">
-          {blogData.map((blog) => (
-            <BlogCard key={blog.title} {...blog} />
+          {data.map((blog) => (
+            <BlogCard
+              key={blog.title}
+              title={blog.title!}
+              topic={blog.topic!}
+              date={formatDate(blog.date!)}
+              imageUrl={getImageUrl(blog.image as string)}
+              link={`/blog/` + blog.slug}
+            />
           ))}
         </div>
       </div>

@@ -1,16 +1,19 @@
 'use client'
 
-import Image from 'next/image'
-import React, { useEffect } from 'react'
-import { animate, motion, useMotionValue } from 'framer-motion'
-import { logo } from '@/constants'
-import useMeasure from 'react-use-measure'
 import Link from 'next/link'
-import { useHero } from '@/hooks/use-hero'
+import React, { useEffect, useMemo } from 'react'
+import { animate, motion, useMotionValue } from 'framer-motion'
+import useMeasure from 'react-use-measure'
+import Image from 'next/image'
+import { getImageUrl } from '@/lib/directus'
+import { Schema } from '@/lib/schema'
 
-const HeroSection = () => {
+type Props = { data: Schema['Hero'] }
+
+const HeroSection = ({ data }: Props) => {
   let [ref, { width }] = useMeasure()
   const xTranslation = useMotionValue(0)
+
   useEffect(() => {
     let controls
     let finalPosition = -width / 2 - 11
@@ -24,9 +27,19 @@ const HeroSection = () => {
     return controls.stop
   }, [xTranslation, width])
 
-  const { data } = useHero()
-
-  useEffect(() => console.log(data), [data])
+  const displayLogo = useMemo(() => {
+    return data
+      ?.partners!.map((partner) => {
+        if (typeof partner === 'object' && partner !== null) {
+          return {
+            name: partner.name,
+            imageUrl: getImageUrl(partner.image as string),
+            url: partner.url,
+          }
+        }
+      })
+      .filter(Boolean)
+  }, [data.partners])
 
   return (
     <section id="hero">
@@ -52,12 +65,11 @@ const HeroSection = () => {
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.5 }}
             className="space-y-5 text-center text-white"
           >
-            <div className="text-4xl font-extrabold md:text-6xl lg:text-[68px]">
-              <h1>Build The Future</h1>
-              <h1> World.</h1>
+            <div className="text-4xl font-extrabold capitalize md:text-6xl lg:text-[68px]">
+              {data.title}
             </div>
             <p className="text-lg font-medium md:text-xl lg:text-2xl">
-              We wish to see through new creation, innovation and creativity.
+              {data.subtitle}
             </p>
             <button className="h-14 w-64 rounded-xl bg-white text-lg font-bold text-secondary">
               <Link href="#investment">Explore Our Investment</Link>
@@ -74,11 +86,11 @@ const HeroSection = () => {
               className="relative flex w-full gap-24"
               style={{
                 maskImage: `linear-gradient(
-                      to right,
-                      transparent,
-                      #000 10% 90%,
-                      transparent
-                    )`,
+            to right,
+            transparent,
+            #000 10% 90%,
+            transparent
+          )`,
                 whiteSpace: `nowrap`,
               }}
             >
@@ -90,18 +102,19 @@ const HeroSection = () => {
                 }}
                 className="relative flex min-w-max gap-24"
               >
-                {[...logo, ...logo].map((data) => (
-                  <div key={data.id} className="flex h-12 min-w-fit">
-                    <Image
-                      src={data.Image}
-                      alt=""
-                      width={250}
-                      height={250}
-                      className="h-full w-full object-cover"
-                      style={{ filter: 'grayscale(1) invert(1)' }}
-                    />
-                  </div>
-                ))}
+                {displayLogo &&
+                  [...displayLogo, ...displayLogo].map((data, index) => (
+                    <div key={index} className="flex h-12 min-w-fit">
+                      <Image
+                        src={data!.imageUrl}
+                        alt={data!.name!}
+                        width={250}
+                        height={250}
+                        className="h-full w-full object-cover"
+                        style={{ filter: 'grayscale(1) invert(1)' }}
+                      />
+                    </div>
+                  ))}
               </motion.div>
               <motion.div
                 ref={ref}
@@ -111,11 +124,11 @@ const HeroSection = () => {
                 }}
                 className="relative flex min-w-max gap-24"
               >
-                {[...logo, ...logo].map((data) => (
-                  <div key={data.id} className="flex h-12 min-w-fit">
+                {[...displayLogo, ...displayLogo].map((data, index) => (
+                  <div key={index} className="flex h-12 min-w-fit">
                     <Image
-                      src={data.Image}
-                      alt=""
+                      src={data!.imageUrl}
+                      alt={data!.name!}
                       width={250}
                       height={250}
                       className="h-full w-full object-cover"

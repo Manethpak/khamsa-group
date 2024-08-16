@@ -14,7 +14,7 @@ const Navbar = () => {
   const getBgColor =
     pathname === '/'
       ? 'bg-black text-white md:bg-white md:text-secondary lg:bg-gray/50 lg:text-white absolute top-0 z-[100] w-full'
-      : 'bg-white z-10 text-secondary fixed'
+      : 'bg-white z-10 text-secondary'
 
   const dropdownBgColor =
     pathname === '/' ? 'bg-black text-white' : 'bg-white text-secondary'
@@ -45,7 +45,7 @@ const Navbar = () => {
         },
       }}
       transition={{ stiffness: 150 }}
-      className={`${getBgColor} flex w-full flex-col items-center md:px-10 -mt-1 `}
+      className={`${getBgColor} -mt-1 flex w-full flex-col items-center md:px-10`}
     >
       {/* navbar section */}
       <div className="flex h-20 w-full max-w-7xl items-center justify-between px-5 md:px-6 lg:h-20">
@@ -71,7 +71,7 @@ const Navbar = () => {
               <li>
                 <Link href="/blog">Blogs</Link>
               </li>
-              <li className="bg-primary flex h-12 w-24 items-center justify-center rounded-xl text-white">
+              <li className="flex h-12 w-24 items-center justify-center rounded-xl bg-primary text-white">
                 <Link href="/contact">Contact</Link>
               </li>
             </ul>

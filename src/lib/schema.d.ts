@@ -783,45 +783,6 @@ export interface paths {
      */
     patch: operations['updateExtensions']
   }
-  '/items/hero': {
-    /**
-     * List Items
-     * @description List the hero items.
-     */
-    get: operations['readItemsHero']
-    /**
-     * Create an Item
-     * @description Create a new hero item.
-     */
-    post: operations['createItemsHero']
-    /**
-     * Delete Multiple Items
-     * @description Delete multiple existing hero items.
-     */
-    delete: operations['deleteItemsHero']
-    /**
-     * Update Multiple Items
-     * @description Update multiple hero items at the same time.
-     */
-    patch: operations['updateItemsHero']
-  }
-  '/items/hero/{id}': {
-    /**
-     * Retrieve an Item
-     * @description Retrieve a single hero item by unique identifier.
-     */
-    get: operations['readSingleItemsHero']
-    /**
-     * Delete an Item
-     * @description Delete an existing hero item.
-     */
-    delete: operations['deleteSingleItemsHero']
-    /**
-     * Update an Item
-     * @description Update an existing hero item.
-     */
-    patch: operations['updateSingleItemsHero']
-  }
   '/items/partners': {
     /**
      * List Items
@@ -860,6 +821,552 @@ export interface paths {
      * @description Update an existing partners item.
      */
     patch: operations['updateSingleItemsPartners']
+  }
+  '/items/Blogs_Home': {
+    /**
+     * List Items
+     * @description List the Blogs_Home items.
+     */
+    get: operations['readItemsBlogsHome']
+    /**
+     * Create an Item
+     * @description Create a new Blogs_Home item.
+     */
+    post: operations['createItemsBlogsHome']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing Blogs_Home items.
+     */
+    delete: operations['deleteItemsBlogsHome']
+    /**
+     * Update Multiple Items
+     * @description Update multiple Blogs_Home items at the same time.
+     */
+    patch: operations['updateItemsBlogsHome']
+  }
+  '/items/Blogs_Home/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single Blogs_Home item by unique identifier.
+     */
+    get: operations['readSingleItemsBlogsHome']
+    /**
+     * Delete an Item
+     * @description Delete an existing Blogs_Home item.
+     */
+    delete: operations['deleteSingleItemsBlogsHome']
+    /**
+     * Update an Item
+     * @description Update an existing Blogs_Home item.
+     */
+    patch: operations['updateSingleItemsBlogsHome']
+  }
+  '/items/Blogs': {
+    /**
+     * List Items
+     * @description List the Blogs items.
+     */
+    get: operations['readItemsBlogs']
+    /**
+     * Create an Item
+     * @description Create a new Blogs item.
+     */
+    post: operations['createItemsBlogs']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing Blogs items.
+     */
+    delete: operations['deleteItemsBlogs']
+    /**
+     * Update Multiple Items
+     * @description Update multiple Blogs items at the same time.
+     */
+    patch: operations['updateItemsBlogs']
+  }
+  '/items/Blogs/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single Blogs item by unique identifier.
+     */
+    get: operations['readSingleItemsBlogs']
+    /**
+     * Delete an Item
+     * @description Delete an existing Blogs item.
+     */
+    delete: operations['deleteSingleItemsBlogs']
+    /**
+     * Update an Item
+     * @description Update an existing Blogs item.
+     */
+    patch: operations['updateSingleItemsBlogs']
+  }
+  '/items/Home': {
+    /**
+     * List Items
+     * @description List the Home items.
+     */
+    get: operations['readItemsHome']
+    /**
+     * Create an Item
+     * @description Create a new Home item.
+     */
+    post: operations['createItemsHome']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing Home items.
+     */
+    delete: operations['deleteItemsHome']
+    /**
+     * Update Multiple Items
+     * @description Update multiple Home items at the same time.
+     */
+    patch: operations['updateItemsHome']
+  }
+  '/items/Home/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single Home item by unique identifier.
+     */
+    get: operations['readSingleItemsHome']
+    /**
+     * Delete an Item
+     * @description Delete an existing Home item.
+     */
+    delete: operations['deleteSingleItemsHome']
+    /**
+     * Update an Item
+     * @description Update an existing Home item.
+     */
+    patch: operations['updateSingleItemsHome']
+  }
+  '/items/Invesment': {
+    /**
+     * List Items
+     * @description List the Invesment items.
+     */
+    get: operations['readItemsInvesment']
+    /**
+     * Create an Item
+     * @description Create a new Invesment item.
+     */
+    post: operations['createItemsInvesment']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing Invesment items.
+     */
+    delete: operations['deleteItemsInvesment']
+    /**
+     * Update Multiple Items
+     * @description Update multiple Invesment items at the same time.
+     */
+    patch: operations['updateItemsInvesment']
+  }
+  '/items/Invesment/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single Invesment item by unique identifier.
+     */
+    get: operations['readSingleItemsInvesment']
+    /**
+     * Delete an Item
+     * @description Delete an existing Invesment item.
+     */
+    delete: operations['deleteSingleItemsInvesment']
+    /**
+     * Update an Item
+     * @description Update an existing Invesment item.
+     */
+    patch: operations['updateSingleItemsInvesment']
+  }
+  '/items/Potential': {
+    /**
+     * List Items
+     * @description List the Potential items.
+     */
+    get: operations['readItemsPotential']
+    /**
+     * Create an Item
+     * @description Create a new Potential item.
+     */
+    post: operations['createItemsPotential']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing Potential items.
+     */
+    delete: operations['deleteItemsPotential']
+    /**
+     * Update Multiple Items
+     * @description Update multiple Potential items at the same time.
+     */
+    patch: operations['updateItemsPotential']
+  }
+  '/items/Potential/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single Potential item by unique identifier.
+     */
+    get: operations['readSingleItemsPotential']
+    /**
+     * Delete an Item
+     * @description Delete an existing Potential item.
+     */
+    delete: operations['deleteSingleItemsPotential']
+    /**
+     * Update an Item
+     * @description Update an existing Potential item.
+     */
+    patch: operations['updateSingleItemsPotential']
+  }
+  '/items/Success': {
+    /**
+     * List Items
+     * @description List the Success items.
+     */
+    get: operations['readItemsSuccess']
+    /**
+     * Create an Item
+     * @description Create a new Success item.
+     */
+    post: operations['createItemsSuccess']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing Success items.
+     */
+    delete: operations['deleteItemsSuccess']
+    /**
+     * Update Multiple Items
+     * @description Update multiple Success items at the same time.
+     */
+    patch: operations['updateItemsSuccess']
+  }
+  '/items/Success/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single Success item by unique identifier.
+     */
+    get: operations['readSingleItemsSuccess']
+    /**
+     * Delete an Item
+     * @description Delete an existing Success item.
+     */
+    delete: operations['deleteSingleItemsSuccess']
+    /**
+     * Update an Item
+     * @description Update an existing Success item.
+     */
+    patch: operations['updateSingleItemsSuccess']
+  }
+  '/items/FAQ': {
+    /**
+     * List Items
+     * @description List the FAQ items.
+     */
+    get: operations['readItemsFAQ']
+    /**
+     * Create an Item
+     * @description Create a new FAQ item.
+     */
+    post: operations['createItemsFAQ']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing FAQ items.
+     */
+    delete: operations['deleteItemsFAQ']
+    /**
+     * Update Multiple Items
+     * @description Update multiple FAQ items at the same time.
+     */
+    patch: operations['updateItemsFAQ']
+  }
+  '/items/FAQ/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single FAQ item by unique identifier.
+     */
+    get: operations['readSingleItemsFAQ']
+    /**
+     * Delete an Item
+     * @description Delete an existing FAQ item.
+     */
+    delete: operations['deleteSingleItemsFAQ']
+    /**
+     * Update an Item
+     * @description Update an existing FAQ item.
+     */
+    patch: operations['updateSingleItemsFAQ']
+  }
+  '/items/Item': {
+    /**
+     * List Items
+     * @description List the Item items.
+     */
+    get: operations['readItemsItem']
+    /**
+     * Create an Item
+     * @description Create a new Item item.
+     */
+    post: operations['createItemsItem']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing Item items.
+     */
+    delete: operations['deleteItemsItem']
+    /**
+     * Update Multiple Items
+     * @description Update multiple Item items at the same time.
+     */
+    patch: operations['updateItemsItem']
+  }
+  '/items/Item/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single Item item by unique identifier.
+     */
+    get: operations['readSingleItemsItem']
+    /**
+     * Delete an Item
+     * @description Delete an existing Item item.
+     */
+    delete: operations['deleteSingleItemsItem']
+    /**
+     * Update an Item
+     * @description Update an existing Item item.
+     */
+    patch: operations['updateSingleItemsItem']
+  }
+  '/items/Team': {
+    /**
+     * List Items
+     * @description List the Team items.
+     */
+    get: operations['readItemsTeam']
+    /**
+     * Create an Item
+     * @description Create a new Team item.
+     */
+    post: operations['createItemsTeam']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing Team items.
+     */
+    delete: operations['deleteItemsTeam']
+    /**
+     * Update Multiple Items
+     * @description Update multiple Team items at the same time.
+     */
+    patch: operations['updateItemsTeam']
+  }
+  '/items/Team/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single Team item by unique identifier.
+     */
+    get: operations['readSingleItemsTeam']
+    /**
+     * Delete an Item
+     * @description Delete an existing Team item.
+     */
+    delete: operations['deleteSingleItemsTeam']
+    /**
+     * Update an Item
+     * @description Update an existing Team item.
+     */
+    patch: operations['updateSingleItemsTeam']
+  }
+  '/items/Office': {
+    /**
+     * List Items
+     * @description List the Office items.
+     */
+    get: operations['readItemsOffice']
+    /**
+     * Create an Item
+     * @description Create a new Office item.
+     */
+    post: operations['createItemsOffice']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing Office items.
+     */
+    delete: operations['deleteItemsOffice']
+    /**
+     * Update Multiple Items
+     * @description Update multiple Office items at the same time.
+     */
+    patch: operations['updateItemsOffice']
+  }
+  '/items/Office/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single Office item by unique identifier.
+     */
+    get: operations['readSingleItemsOffice']
+    /**
+     * Delete an Item
+     * @description Delete an existing Office item.
+     */
+    delete: operations['deleteSingleItemsOffice']
+    /**
+     * Update an Item
+     * @description Update an existing Office item.
+     */
+    patch: operations['updateSingleItemsOffice']
+  }
+  '/items/Subscription': {
+    /**
+     * List Items
+     * @description List the Subscription items.
+     */
+    get: operations['readItemsSubscription']
+    /**
+     * Create an Item
+     * @description Create a new Subscription item.
+     */
+    post: operations['createItemsSubscription']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing Subscription items.
+     */
+    delete: operations['deleteItemsSubscription']
+    /**
+     * Update Multiple Items
+     * @description Update multiple Subscription items at the same time.
+     */
+    patch: operations['updateItemsSubscription']
+  }
+  '/items/Subscription/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single Subscription item by unique identifier.
+     */
+    get: operations['readSingleItemsSubscription']
+    /**
+     * Delete an Item
+     * @description Delete an existing Subscription item.
+     */
+    delete: operations['deleteSingleItemsSubscription']
+    /**
+     * Update an Item
+     * @description Update an existing Subscription item.
+     */
+    patch: operations['updateSingleItemsSubscription']
+  }
+  '/items/Hero': {
+    /**
+     * List Items
+     * @description List the Hero items.
+     */
+    get: operations['readItemsHero']
+    /**
+     * Create an Item
+     * @description Create a new Hero item.
+     */
+    post: operations['createItemsHero']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing Hero items.
+     */
+    delete: operations['deleteItemsHero']
+    /**
+     * Update Multiple Items
+     * @description Update multiple Hero items at the same time.
+     */
+    patch: operations['updateItemsHero']
+  }
+  '/items/Hero/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single Hero item by unique identifier.
+     */
+    get: operations['readSingleItemsHero']
+    /**
+     * Delete an Item
+     * @description Delete an existing Hero item.
+     */
+    delete: operations['deleteSingleItemsHero']
+    /**
+     * Update an Item
+     * @description Update an existing Hero item.
+     */
+    patch: operations['updateSingleItemsHero']
+  }
+  '/items/Investment': {
+    /**
+     * List Items
+     * @description List the Investment items.
+     */
+    get: operations['readItemsInvestment']
+    /**
+     * Create an Item
+     * @description Create a new Investment item.
+     */
+    post: operations['createItemsInvestment']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing Investment items.
+     */
+    delete: operations['deleteItemsInvestment']
+    /**
+     * Update Multiple Items
+     * @description Update multiple Investment items at the same time.
+     */
+    patch: operations['updateItemsInvestment']
+  }
+  '/items/Investment/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single Investment item by unique identifier.
+     */
+    get: operations['readSingleItemsInvestment']
+    /**
+     * Delete an Item
+     * @description Delete an existing Investment item.
+     */
+    delete: operations['deleteSingleItemsInvestment']
+    /**
+     * Update an Item
+     * @description Update an existing Investment item.
+     */
+    patch: operations['updateSingleItemsInvestment']
+  }
+  '/items/Contact': {
+    /**
+     * List Items
+     * @description List the Contact items.
+     */
+    get: operations['readItemsContact']
+    /**
+     * Create an Item
+     * @description Create a new Contact item.
+     */
+    post: operations['createItemsContact']
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing Contact items.
+     */
+    delete: operations['deleteItemsContact']
+    /**
+     * Update Multiple Items
+     * @description Update multiple Contact items at the same time.
+     */
+    patch: operations['updateItemsContact']
+  }
+  '/items/Contact/{id}': {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single Contact item by unique identifier.
+     */
+    get: operations['readSingleItemsContact']
+    /**
+     * Delete an Item
+     * @description Delete an existing Contact item.
+     */
+    delete: operations['deleteSingleItemsContact']
+    /**
+     * Update an Item
+     * @description Update an existing Contact item.
+     */
+    patch: operations['updateSingleItemsContact']
   }
 }
 
@@ -1806,7 +2313,36 @@ export interface components {
        */
       bundle?: string | null
     }
-    ItemsHero: {
+    ItemsPartners: {
+      id?: number
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      name: string
+      url: string | null
+      image: string | components['schemas']['Files']
+      logo_home?: number | components['schemas']['ItemsHome'] | null
+      hero_id?: number | components['schemas']['ItemsHero'] | null
+    }
+    ItemsBlogsHome: {
+      id?: number
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      content?: string | null
+      title?: string | null
+      description?: string | null
+      article?: string | null
+      blog?: (number | components['schemas']['ItemsBlogs'])[] | null
+    }
+    ItemsBlogs: {
       id?: number
       status?: string
       sort?: number | null
@@ -1818,9 +2354,55 @@ export interface components {
       date_updated?: string | null
       title?: string | null
       description?: string | null
+      /** Format: date */
+      date?: string | null
+      image?: string | components['schemas']['Files'] | null
+      blog_home?: number | components['schemas']['ItemsBlogsHome'] | null
+      /** @description Auto-generated */
+      slug?: string | null
+      content?: string
+      topic?: string | null
+    }
+    ItemsHome: {
+      id?: number
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      title?: string | null
+      description?: string | null
       logo?: (number | components['schemas']['ItemsPartners'])[] | null
     }
-    ItemsPartners: {
+    ItemsInvesment: {
+      id?: number
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      content?: string | null
+      title?: string | null
+      item?: (number | components['schemas']['ItemsItem'])[] | null
+    }
+    ItemsPotential: {
+      id?: number
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      content?: string | null
+      title?: string | null
+      description?: string | null
+      qoute?: string | null
+      ceo?: string | null
+    }
+    ItemsSuccess: {
       id?: number
       status?: string
       sort?: number | null
@@ -1830,138 +2412,240 @@ export interface components {
       user_updated?: string | components['schemas']['Users'] | null
       /** Format: timestamp */
       date_updated?: string | null
-      name?: string | null
-      logo?: string | components['schemas']['Files'] | null
-      form?: number | components['schemas']['ItemsHero'] | null
+      number?: string | null
+      title?: string | null
+    }
+    ItemsFAQ: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      question?: string | null
+      answer?: string | null
     }
     ItemsItem: {
-      id?: number;
-      status?: string;
-      sort?: number | null;
-      user_created?: string | components["schemas"]["Users"] | null;
+      id?: number
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
       /** Format: timestamp */
-      date_created?: string | null;
-      user_updated?: string | components["schemas"]["Users"] | null;
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
       /** Format: timestamp */
-      date_updated?: string | null;
-      icon?: string | components["schemas"]["Files"] | null;
-      title?: string | null;
-      description?: string | null;
-      invesment_item?: number | components["schemas"]["ItemsInvesment"] | null;
-    };
-    ItemsBlogs: {
-      id?: number;
-      status?: string;
-      sort?: number | null;
-      user_created?: string | components["schemas"]["Users"] | null;
-      /** Format: timestamp */
-      date_created?: string | null;
-      user_updated?: string | components["schemas"]["Users"] | null;
-      /** Format: timestamp */
-      date_updated?: string | null;
-      content?: string | null;
-      title?: string | null;
-      description?: string | null;
-      /** Format: date */
-      date?: string | null;
-      image?: string | components["schemas"]["Files"] | null;
-      topic?: string | null;
-      blog_home?: number | components["schemas"]["ItemsBlogsHome"] | null;
-    };
-    ItemsInvestment: {
-      id?: number;
-      status?: string;
-      sort?: number | null;
-      user_created?: string | components["schemas"]["Users"] | null;
-      /** Format: timestamp */
-      date_created?: string | null;
-      user_updated?: string | components["schemas"]["Users"] | null;
-      /** Format: timestamp */
-      date_updated?: string | null;
-      content?: string | null;
-      title?: string | null;
-      item?: ((number | components["schemas"]["ItemsItem"])[]) | null;
-    };
-    ItemsSuccess: {
-      id?: number;
-      status?: string;
-      sort?: number | null;
-      user_created?: string | components["schemas"]["Users"] | null;
-      /** Format: timestamp */
-      date_created?: string | null;
-      user_updated?: string | components["schemas"]["Users"] | null;
-      /** Format: timestamp */
-      date_updated?: string | null;
-      number?: string | null;
-      title?: string | null;
-    };
-    ItemsFAQ: {
-      id?: number;
-      status?: string;
-      sort?: number | null;
-      user_created?: string | components["schemas"]["Users"] | null;
-      /** Format: timestamp */
-      date_created?: string | null;
-      user_updated?: string | components["schemas"]["Users"] | null;
-      /** Format: timestamp */
-      date_updated?: string | null;
-      question?: string | null;
-      answer?: string | null;
-    };
+      date_updated?: string | null
+      icon?: string | components['schemas']['Files'] | null
+      title?: string | null
+      description?: string | null
+      invesment_item?: number | components['schemas']['ItemsInvesment'] | null
+      investment_item?: number | components['schemas']['ItemsInvestment'] | null
+    }
     ItemsTeam: {
-      id?: number;
-      status?: string;
-      sort?: number | null;
-      user_created?: string | components["schemas"]["Users"] | null;
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
       /** Format: timestamp */
-      date_created?: string | null;
-      user_updated?: string | components["schemas"]["Users"] | null;
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
       /** Format: timestamp */
-      date_updated?: string | null;
-      image?: string | components["schemas"]["Files"] | null;
-      name?: string | null;
-      position?: string | null;
-    };
+      date_updated?: string | null
+      image?: string | components['schemas']['Files'] | null
+      name?: string | null
+      position?: string | null
+    }
     ItemsOffice: {
-      id?: number;
-      status?: string;
-      sort?: number | null;
-      user_created?: string | components["schemas"]["Users"] | null;
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
       /** Format: timestamp */
-      date_created?: string | null;
-      user_updated?: string | components["schemas"]["Users"] | null;
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
       /** Format: timestamp */
-      date_updated?: string | null;
-      image?: string | components["schemas"]["Files"] | null;
-    };
-    ItemsContact: {
-      id?: number;
-      status?: string;
-      sort?: number | null;
-      user_created?: string | components["schemas"]["Users"] | null;
-      /** Format: timestamp */
-      date_created?: string | null;
-      user_updated?: string | components["schemas"]["Users"] | null;
-      /** Format: timestamp */
-      date_updated?: string | null;
-      iframe?: string | null;
-      title?: string | null;
-      address?: unknown;
-      link?: unknown;
-      social_link?: unknown;
-    };
+      date_updated?: string | null
+      image?: string | components['schemas']['Files'] | null
+    }
     ItemsSubscription: {
-      id?: number;
-      status?: string;
-      sort?: number | null;
-      user_created?: string | components["schemas"]["Users"] | null;
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
       /** Format: timestamp */
-      date_created?: string | null;
-      user_updated?: string | components["schemas"]["Users"] | null;
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
       /** Format: timestamp */
-      date_updated?: string | null;
-      email?: string | null;
-    };
+      date_updated?: string | null
+      email?: string | null
+    }
+    ItemsHero: {
+      id?: number
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      title: string
+      subtitle: string
+      partners: (number | components['schemas']['ItemsPartners'])[]
+    }
+    ItemsInvestment: {
+      id?: number
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      title?: string | null
+      subtitle?: string | null
+      items?: (number | components['schemas']['ItemsItem'])[] | null
+    }
+    ItemsContact: {
+      id?: number
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      iframe?: string | null
+      address?: unknown
+      link?: unknown
+      social_link?: unknown
+    }
+    ItemsItem: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      icon?: string | components['schemas']['Files'] | null
+      title?: string | null
+      description?: string | null
+      invesment_item?: number | components['schemas']['ItemsInvesment'] | null
+    }
+    ItemsBlogs: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      content?: string | null
+      title?: string | null
+      description?: string | null
+      /** Format: date */
+      date?: string | null
+      image?: string | components['schemas']['Files'] | null
+      topic?: string | null
+      blog_home?: number | components['schemas']['ItemsBlogsHome'] | null
+    }
+    ItemsInvestment: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      content?: string | null
+      title?: string | null
+      item?: (number | components['schemas']['ItemsItem'])[] | null
+    }
+    ItemsSuccess: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      number?: string | null
+      title?: string | null
+    }
+    ItemsFAQ: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      question?: string | null
+      answer?: string | null
+    }
+    ItemsTeam: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      image?: string | components['schemas']['Files'] | null
+      name?: string | null
+      position?: string | null
+    }
+    ItemsOffice: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      image?: string | components['schemas']['Files'] | null
+    }
+    ItemsContact: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      iframe?: string | null
+      title?: string | null
+      address?: unknown
+      link?: unknown
+      social_link?: unknown
+    }
+    ItemsSubscription: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      email?: string | null
+    }
   }
   responses: {
     /** @description Error: Not found. */
@@ -6334,193 +7018,6 @@ export interface operations {
   }
   /**
    * List Items
-   * @description List the hero items.
-   */
-  readItemsHero: {
-    parameters: {
-      query?: {
-        fields?: components['parameters']['Fields']
-        limit?: components['parameters']['Limit']
-        meta?: components['parameters']['Meta']
-        offset?: components['parameters']['Offset']
-        sort?: components['parameters']['Sort']
-        filter?: components['parameters']['Filter']
-        search?: components['parameters']['Search']
-      }
-    }
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: {
-          'application/json': {
-            data?: components['schemas']['ItemsHero'][]
-            meta?: components['schemas']['x-metadata']
-          }
-        }
-      }
-      401: components['responses']['UnauthorizedError']
-    }
-  }
-  /**
-   * Create an Item
-   * @description Create a new hero item.
-   */
-  createItemsHero: {
-    parameters: {
-      query?: {
-        meta?: components['parameters']['Meta']
-      }
-    }
-    requestBody?: {
-      content: {
-        'application/json':
-          | components['schemas']['ItemsHero'][]
-          | components['schemas']['ItemsHero']
-      }
-    }
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: {
-          'application/json': {
-            data?: unknown
-          }
-        }
-      }
-      401: components['responses']['UnauthorizedError']
-    }
-  }
-  /**
-   * Delete Multiple Items
-   * @description Delete multiple existing hero items.
-   */
-  deleteItemsHero: {
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: never
-      }
-      401: components['responses']['UnauthorizedError']
-    }
-  }
-  /**
-   * Update Multiple Items
-   * @description Update multiple hero items at the same time.
-   */
-  updateItemsHero: {
-    parameters: {
-      query?: {
-        fields?: components['parameters']['Fields']
-        limit?: components['parameters']['Limit']
-        meta?: components['parameters']['Meta']
-        offset?: components['parameters']['Offset']
-        sort?: components['parameters']['Sort']
-        filter?: components['parameters']['Filter']
-        search?: components['parameters']['Search']
-      }
-    }
-    requestBody?: {
-      content: {
-        'application/json':
-          | components['schemas']['ItemsHero'][]
-          | components['schemas']['ItemsHero']
-      }
-    }
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: {
-          'application/json': {
-            data?: unknown
-          }
-        }
-      }
-    }
-  }
-  /**
-   * Retrieve an Item
-   * @description Retrieve a single hero item by unique identifier.
-   */
-  readSingleItemsHero: {
-    parameters: {
-      query?: {
-        fields?: components['parameters']['Fields']
-        meta?: components['parameters']['Meta']
-        version?: components['parameters']['Version']
-      }
-      path: {
-        /** @description Index of the item. */
-        id: number | string
-      }
-    }
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: {
-          'application/json': {
-            data?: components['schemas']['ItemsHero']
-          }
-        }
-      }
-      401: components['responses']['UnauthorizedError']
-      404: components['responses']['NotFoundError']
-    }
-  }
-  /**
-   * Delete an Item
-   * @description Delete an existing hero item.
-   */
-  deleteSingleItemsHero: {
-    parameters: {
-      path: {
-        /** @description Index of the item. */
-        id: number | string
-      }
-    }
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: never
-      }
-      401: components['responses']['UnauthorizedError']
-      404: components['responses']['NotFoundError']
-    }
-  }
-  /**
-   * Update an Item
-   * @description Update an existing hero item.
-   */
-  updateSingleItemsHero: {
-    parameters: {
-      query?: {
-        fields?: components['parameters']['Fields']
-        meta?: components['parameters']['Meta']
-      }
-      path: {
-        /** @description Index of the item. */
-        id: number | string
-      }
-    }
-    requestBody?: {
-      content: {
-        'application/json': components['schemas']['ItemsHero']
-      }
-    }
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: {
-          'application/json': {
-            data?: components['schemas']['ItemsHero']
-          }
-        }
-      }
-      401: components['responses']['UnauthorizedError']
-      404: components['responses']['NotFoundError']
-    }
-  }
-  /**
-   * List Items
    * @description List the partners items.
    */
   readItemsPartners: {
@@ -6706,20 +7203,2640 @@ export interface operations {
       404: components['responses']['NotFoundError']
     }
   }
+  /**
+   * List Items
+   * @description List the Blogs_Home items.
+   */
+  readItemsBlogsHome: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsBlogsHome'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new Blogs_Home item.
+   */
+  createItemsBlogsHome: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsBlogsHome'][]
+          | components['schemas']['ItemsBlogsHome']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing Blogs_Home items.
+   */
+  deleteItemsBlogsHome: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple Blogs_Home items at the same time.
+   */
+  updateItemsBlogsHome: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsBlogsHome'][]
+          | components['schemas']['ItemsBlogsHome']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single Blogs_Home item by unique identifier.
+   */
+  readSingleItemsBlogsHome: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsBlogsHome']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing Blogs_Home item.
+   */
+  deleteSingleItemsBlogsHome: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing Blogs_Home item.
+   */
+  updateSingleItemsBlogsHome: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsBlogsHome']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsBlogsHome']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * List Items
+   * @description List the Blogs items.
+   */
+  readItemsBlogs: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsBlogs'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new Blogs item.
+   */
+  createItemsBlogs: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsBlogs'][]
+          | components['schemas']['ItemsBlogs']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing Blogs items.
+   */
+  deleteItemsBlogs: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple Blogs items at the same time.
+   */
+  updateItemsBlogs: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsBlogs'][]
+          | components['schemas']['ItemsBlogs']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single Blogs item by unique identifier.
+   */
+  readSingleItemsBlogs: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsBlogs']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing Blogs item.
+   */
+  deleteSingleItemsBlogs: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing Blogs item.
+   */
+  updateSingleItemsBlogs: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsBlogs']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsBlogs']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * List Items
+   * @description List the Home items.
+   */
+  readItemsHome: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsHome'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new Home item.
+   */
+  createItemsHome: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsHome'][]
+          | components['schemas']['ItemsHome']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing Home items.
+   */
+  deleteItemsHome: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple Home items at the same time.
+   */
+  updateItemsHome: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsHome'][]
+          | components['schemas']['ItemsHome']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single Home item by unique identifier.
+   */
+  readSingleItemsHome: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsHome']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing Home item.
+   */
+  deleteSingleItemsHome: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing Home item.
+   */
+  updateSingleItemsHome: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsHome']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsHome']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * List Items
+   * @description List the Invesment items.
+   */
+  readItemsInvesment: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsInvesment'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new Invesment item.
+   */
+  createItemsInvesment: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsInvesment'][]
+          | components['schemas']['ItemsInvesment']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing Invesment items.
+   */
+  deleteItemsInvesment: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple Invesment items at the same time.
+   */
+  updateItemsInvesment: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsInvesment'][]
+          | components['schemas']['ItemsInvesment']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single Invesment item by unique identifier.
+   */
+  readSingleItemsInvesment: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsInvesment']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing Invesment item.
+   */
+  deleteSingleItemsInvesment: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing Invesment item.
+   */
+  updateSingleItemsInvesment: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsInvesment']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsInvesment']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * List Items
+   * @description List the Potential items.
+   */
+  readItemsPotential: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsPotential'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new Potential item.
+   */
+  createItemsPotential: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsPotential'][]
+          | components['schemas']['ItemsPotential']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing Potential items.
+   */
+  deleteItemsPotential: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple Potential items at the same time.
+   */
+  updateItemsPotential: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsPotential'][]
+          | components['schemas']['ItemsPotential']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single Potential item by unique identifier.
+   */
+  readSingleItemsPotential: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsPotential']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing Potential item.
+   */
+  deleteSingleItemsPotential: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing Potential item.
+   */
+  updateSingleItemsPotential: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsPotential']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsPotential']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * List Items
+   * @description List the Success items.
+   */
+  readItemsSuccess: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsSuccess'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new Success item.
+   */
+  createItemsSuccess: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsSuccess'][]
+          | components['schemas']['ItemsSuccess']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing Success items.
+   */
+  deleteItemsSuccess: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple Success items at the same time.
+   */
+  updateItemsSuccess: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsSuccess'][]
+          | components['schemas']['ItemsSuccess']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single Success item by unique identifier.
+   */
+  readSingleItemsSuccess: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsSuccess']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing Success item.
+   */
+  deleteSingleItemsSuccess: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing Success item.
+   */
+  updateSingleItemsSuccess: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsSuccess']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsSuccess']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * List Items
+   * @description List the FAQ items.
+   */
+  readItemsFAQ: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsFAQ'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new FAQ item.
+   */
+  createItemsFAQ: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsFAQ'][]
+          | components['schemas']['ItemsFAQ']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing FAQ items.
+   */
+  deleteItemsFAQ: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple FAQ items at the same time.
+   */
+  updateItemsFAQ: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsFAQ'][]
+          | components['schemas']['ItemsFAQ']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single FAQ item by unique identifier.
+   */
+  readSingleItemsFAQ: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsFAQ']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing FAQ item.
+   */
+  deleteSingleItemsFAQ: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing FAQ item.
+   */
+  updateSingleItemsFAQ: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsFAQ']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsFAQ']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * List Items
+   * @description List the Item items.
+   */
+  readItemsItem: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsItem'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new Item item.
+   */
+  createItemsItem: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsItem'][]
+          | components['schemas']['ItemsItem']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing Item items.
+   */
+  deleteItemsItem: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple Item items at the same time.
+   */
+  updateItemsItem: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsItem'][]
+          | components['schemas']['ItemsItem']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single Item item by unique identifier.
+   */
+  readSingleItemsItem: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsItem']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing Item item.
+   */
+  deleteSingleItemsItem: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing Item item.
+   */
+  updateSingleItemsItem: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsItem']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsItem']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * List Items
+   * @description List the Team items.
+   */
+  readItemsTeam: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsTeam'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new Team item.
+   */
+  createItemsTeam: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsTeam'][]
+          | components['schemas']['ItemsTeam']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing Team items.
+   */
+  deleteItemsTeam: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple Team items at the same time.
+   */
+  updateItemsTeam: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsTeam'][]
+          | components['schemas']['ItemsTeam']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single Team item by unique identifier.
+   */
+  readSingleItemsTeam: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsTeam']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing Team item.
+   */
+  deleteSingleItemsTeam: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing Team item.
+   */
+  updateSingleItemsTeam: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsTeam']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsTeam']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * List Items
+   * @description List the Office items.
+   */
+  readItemsOffice: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsOffice'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new Office item.
+   */
+  createItemsOffice: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsOffice'][]
+          | components['schemas']['ItemsOffice']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing Office items.
+   */
+  deleteItemsOffice: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple Office items at the same time.
+   */
+  updateItemsOffice: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsOffice'][]
+          | components['schemas']['ItemsOffice']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single Office item by unique identifier.
+   */
+  readSingleItemsOffice: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsOffice']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing Office item.
+   */
+  deleteSingleItemsOffice: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing Office item.
+   */
+  updateSingleItemsOffice: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsOffice']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsOffice']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * List Items
+   * @description List the Subscription items.
+   */
+  readItemsSubscription: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsSubscription'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new Subscription item.
+   */
+  createItemsSubscription: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsSubscription'][]
+          | components['schemas']['ItemsSubscription']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing Subscription items.
+   */
+  deleteItemsSubscription: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple Subscription items at the same time.
+   */
+  updateItemsSubscription: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsSubscription'][]
+          | components['schemas']['ItemsSubscription']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single Subscription item by unique identifier.
+   */
+  readSingleItemsSubscription: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsSubscription']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing Subscription item.
+   */
+  deleteSingleItemsSubscription: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing Subscription item.
+   */
+  updateSingleItemsSubscription: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsSubscription']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsSubscription']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * List Items
+   * @description List the Hero items.
+   */
+  readItemsHero: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsHero'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new Hero item.
+   */
+  createItemsHero: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsHero'][]
+          | components['schemas']['ItemsHero']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing Hero items.
+   */
+  deleteItemsHero: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple Hero items at the same time.
+   */
+  updateItemsHero: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsHero'][]
+          | components['schemas']['ItemsHero']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single Hero item by unique identifier.
+   */
+  readSingleItemsHero: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsHero']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing Hero item.
+   */
+  deleteSingleItemsHero: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing Hero item.
+   */
+  updateSingleItemsHero: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsHero']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsHero']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * List Items
+   * @description List the Investment items.
+   */
+  readItemsInvestment: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsInvestment'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new Investment item.
+   */
+  createItemsInvestment: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsInvestment'][]
+          | components['schemas']['ItemsInvestment']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing Investment items.
+   */
+  deleteItemsInvestment: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple Investment items at the same time.
+   */
+  updateItemsInvestment: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsInvestment'][]
+          | components['schemas']['ItemsInvestment']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single Investment item by unique identifier.
+   */
+  readSingleItemsInvestment: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsInvestment']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing Investment item.
+   */
+  deleteSingleItemsInvestment: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing Investment item.
+   */
+  updateSingleItemsInvestment: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsInvestment']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsInvestment']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * List Items
+   * @description List the Contact items.
+   */
+  readItemsContact: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsContact'][]
+            meta?: components['schemas']['x-metadata']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Create an Item
+   * @description Create a new Contact item.
+   */
+  createItemsContact: {
+    parameters: {
+      query?: {
+        meta?: components['parameters']['Meta']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsContact'][]
+          | components['schemas']['ItemsContact']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing Contact items.
+   */
+  deleteItemsContact: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+    }
+  }
+  /**
+   * Update Multiple Items
+   * @description Update multiple Contact items at the same time.
+   */
+  updateItemsContact: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        limit?: components['parameters']['Limit']
+        meta?: components['parameters']['Meta']
+        offset?: components['parameters']['Offset']
+        sort?: components['parameters']['Sort']
+        filter?: components['parameters']['Filter']
+        search?: components['parameters']['Search']
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json':
+          | components['schemas']['ItemsContact'][]
+          | components['schemas']['ItemsContact']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: unknown
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single Contact item by unique identifier.
+   */
+  readSingleItemsContact: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+        version?: components['parameters']['Version']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsContact']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Delete an Item
+   * @description Delete an existing Contact item.
+   */
+  deleteSingleItemsContact: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
+  /**
+   * Update an Item
+   * @description Update an existing Contact item.
+   */
+  updateSingleItemsContact: {
+    parameters: {
+      query?: {
+        fields?: components['parameters']['Fields']
+        meta?: components['parameters']['Meta']
+      }
+      path: {
+        /** @description Index of the item. */
+        id: number | string
+      }
+    }
+    requestBody?: {
+      content: {
+        'application/json': components['schemas']['ItemsContact']
+      }
+    }
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          'application/json': {
+            data?: components['schemas']['ItemsContact']
+          }
+        }
+      }
+      401: components['responses']['UnauthorizedError']
+      404: components['responses']['NotFoundError']
+    }
+  }
 }
 
 export type Schema = {
-  hero: components['schemas']['ItemsHero']
-  partners: components["schemas"]["ItemsPartners"][];
-  Item: components["schemas"]["ItemsItem"][];
-  Home: components["schemas"]["ItemsHome"];
-  Blogs: components["schemas"]["ItemsBlogs"][];
-  Investment: components["schemas"]["ItemsInvestment"][];
-  Potential: components["schemas"]["ItemsPotential"][];
-  Success: components["schemas"]["ItemsSuccess"][];
-  FAQ: components["schemas"]["ItemsFAQ"][];
-  Team: components["schemas"]["ItemsTeam"][];
-  Office: components["schemas"]["ItemsOffice"][];
-  Contact: components["schemas"]["ItemsContact"];
-  Subscription: components["schemas"]["ItemsSubscription"][];
+  partners: components['schemas']['ItemsPartners'][]
+  Blogs_Home: components['schemas']['ItemsBlogsHome'][]
+  Blogs: components['schemas']['ItemsBlogs'][]
+  Home: components['schemas']['ItemsHome'][]
+  Invesment: components['schemas']['ItemsInvesment'][]
+  Potential: components['schemas']['ItemsPotential'][]
+  Success: components['schemas']['ItemsSuccess'][]
+  FAQ: components['schemas']['ItemsFAQ'][]
+  Item: components['schemas']['ItemsItem'][]
+  Team: components['schemas']['ItemsTeam'][]
+  Office: components['schemas']['ItemsOffice'][]
+  Subscription: components['schemas']['ItemsSubscription'][]
+  Hero: components['schemas']['ItemsHero']
+  Investment: components['schemas']['ItemsInvestment'][]
+  Contact: components['schemas']['ItemsContact']
 }
