@@ -3,7 +3,7 @@ import HeroSection from '@/component/module/homepage/hero'
 import InvestmentSection from '@/component/module/homepage/investment'
 import PotentialSection from '@/component/module/homepage/potential'
 import BlogSection from '@/component/module/homepage/blog'
-import { fetchHero } from '@/hooks/use-hero'
+import { fetchHero } from '@/fetcher/hero/fetch-hero'
 
 export default async function Home() {
   const heroData = await fetchHero()
