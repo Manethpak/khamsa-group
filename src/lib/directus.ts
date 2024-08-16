@@ -5,4 +5,8 @@ const directus = createDirectus<Schema>(
   'https://khamsa.panel.dreamslab.dev'
 ).with(rest())
 
+export function getImageUrl(id: string) {
+  return 'https://khamsa.panel.dreamslab.dev/assets/' + id
+}
+
 export default directus

@@ -3,8 +3,15 @@ import { useAnimation, useInView, motion } from 'framer-motion'
 import React, { useEffect, useRef } from 'react'
 import { blogData } from '@/constants'
 import BlogCard from './components/blog-card'
+import { Schema } from '@/lib/schema'
+import { getImageUrl } from '@/lib/directus'
+import { formatDate } from '@/lib/utils'
 
-const BlogList: React.FC = () => {
+type Props = {
+  data: Schema['Blogs']
+}
+
+const BlogList = ({ data }: Props) => {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true })
   const controls = useAnimation()
@@ -16,7 +23,7 @@ const BlogList: React.FC = () => {
   }, [isInView, controls])
 
   return (
-    <div className="flex w-full flex-col items-center justify-center bg-[#E6F9FA] pt-36 text-lg font-normal text-[#5B5E76]">
+    <div className="flex w-full flex-col items-center justify-center bg-[#E6F9FA] py-36 text-lg font-normal text-[#5B5E76]">
       <motion.div
         ref={ref}
         variants={{
@@ -28,8 +35,15 @@ const BlogList: React.FC = () => {
         transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
         className="grid w-full max-w-screen-lg grid-cols-1 gap-[20px] md:grid-cols-2"
       >
-        {blogData.map((blog) => (
-          <BlogCard key={blog.title} {...blog} />
+        {data.map((blog) => (
+          <BlogCard
+            key={blog.title}
+            title={blog.title!}
+            topic={blog.topic!}
+            date={formatDate(blog.date!)}
+            imageUrl={getImageUrl(blog.image as string)}
+            link={`/blog/` + blog.slug}
+          />
         ))}
       </motion.div>
     </div>

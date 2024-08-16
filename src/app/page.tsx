@@ -3,14 +3,19 @@ import HeroSection from '@/component/module/homepage/hero'
 import InvestmentSection from '@/component/module/homepage/investment'
 import PotentialSection from '@/component/module/homepage/potential'
 import BlogSection from '@/component/module/homepage/blog'
+import { fetchHero } from '@/fetcher/hero/fetch-hero'
+import { fetchBlogs } from '@/fetcher/blog/fetch-blog'
 
-export default function Home() {
+export default async function Home() {
+  const heroData = await fetchHero()
+  const blogs = await fetchBlogs({ limit: 4 })
+
   return (
     <main>
-      <HeroSection />
+      <HeroSection data={heroData} />
       <InvestmentSection />
       <PotentialSection />
-      <BlogSection />
+      <BlogSection data={blogs} />
       <ContactSection />
     </main>
   )
