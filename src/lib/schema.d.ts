@@ -1834,6 +1834,134 @@ export interface components {
       logo?: string | components['schemas']['Files'] | null
       form?: number | components['schemas']['ItemsHero'] | null
     }
+    ItemsItem: {
+      id?: number;
+      status?: string;
+      sort?: number | null;
+      user_created?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_created?: string | null;
+      user_updated?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_updated?: string | null;
+      icon?: string | components["schemas"]["Files"] | null;
+      title?: string | null;
+      description?: string | null;
+      invesment_item?: number | components["schemas"]["ItemsInvesment"] | null;
+    };
+    ItemsBlogs: {
+      id?: number;
+      status?: string;
+      sort?: number | null;
+      user_created?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_created?: string | null;
+      user_updated?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_updated?: string | null;
+      content?: string | null;
+      title?: string | null;
+      description?: string | null;
+      /** Format: date */
+      date?: string | null;
+      image?: string | components["schemas"]["Files"] | null;
+      topic?: string | null;
+      blog_home?: number | components["schemas"]["ItemsBlogsHome"] | null;
+    };
+    ItemsInvestment: {
+      id?: number;
+      status?: string;
+      sort?: number | null;
+      user_created?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_created?: string | null;
+      user_updated?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_updated?: string | null;
+      content?: string | null;
+      title?: string | null;
+      item?: ((number | components["schemas"]["ItemsItem"])[]) | null;
+    };
+    ItemsSuccess: {
+      id?: number;
+      status?: string;
+      sort?: number | null;
+      user_created?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_created?: string | null;
+      user_updated?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_updated?: string | null;
+      number?: string | null;
+      title?: string | null;
+    };
+    ItemsFAQ: {
+      id?: number;
+      status?: string;
+      sort?: number | null;
+      user_created?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_created?: string | null;
+      user_updated?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_updated?: string | null;
+      question?: string | null;
+      answer?: string | null;
+    };
+    ItemsTeam: {
+      id?: number;
+      status?: string;
+      sort?: number | null;
+      user_created?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_created?: string | null;
+      user_updated?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_updated?: string | null;
+      image?: string | components["schemas"]["Files"] | null;
+      name?: string | null;
+      position?: string | null;
+    };
+    ItemsOffice: {
+      id?: number;
+      status?: string;
+      sort?: number | null;
+      user_created?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_created?: string | null;
+      user_updated?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_updated?: string | null;
+      image?: string | components["schemas"]["Files"] | null;
+    };
+    ItemsContact: {
+      id?: number;
+      status?: string;
+      sort?: number | null;
+      user_created?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_created?: string | null;
+      user_updated?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_updated?: string | null;
+      iframe?: string | null;
+      title?: string | null;
+      address?: unknown;
+      link?: unknown;
+      social_link?: unknown;
+    };
+    ItemsSubscription: {
+      id?: number;
+      status?: string;
+      sort?: number | null;
+      user_created?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_created?: string | null;
+      user_updated?: string | components["schemas"]["Users"] | null;
+      /** Format: timestamp */
+      date_updated?: string | null;
+      email?: string | null;
+    };
   }
   responses: {
     /** @description Error: Not found. */
@@ -6582,5 +6710,16 @@ export interface operations {
 
 export type Schema = {
   hero: components['schemas']['ItemsHero']
-  partners: components['schemas']['ItemsPartners'][]
+  partners: components["schemas"]["ItemsPartners"][];
+  Item: components["schemas"]["ItemsItem"][];
+  Home: components["schemas"]["ItemsHome"];
+  Blogs: components["schemas"]["ItemsBlogs"][];
+  Investment: components["schemas"]["ItemsInvestment"][];
+  Potential: components["schemas"]["ItemsPotential"][];
+  Success: components["schemas"]["ItemsSuccess"][];
+  FAQ: components["schemas"]["ItemsFAQ"][];
+  Team: components["schemas"]["ItemsTeam"][];
+  Office: components["schemas"]["ItemsOffice"][];
+  Contact: components["schemas"]["ItemsContact"];
+  Subscription: components["schemas"]["ItemsSubscription"][];
 }

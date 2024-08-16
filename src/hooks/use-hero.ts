@@ -1,5 +1,5 @@
 import directus from '@/lib/directus'
-import { readSingleton } from '@directus/sdk'
+import { readItems, readSingleton } from '@directus/sdk'
 import useSWR from 'swr'
 
 export function useHero() {
@@ -8,4 +8,20 @@ export function useHero() {
 
 export async function fetcherHero() {
   return directus.request(readSingleton('hero'))
+}
+
+export function useBlogs() {
+  return useSWR('/blogs', fetchBlog)
+}
+
+export async function fetchBlog() {
+  return directus.request(readItems('Blogs'))
+}
+
+export function useContact() {
+  return useSWR('/contact', fetchContact)
+}
+
+export async function fetchContact() {
+  return directus.request(readSingleton('Contact'))
 }
