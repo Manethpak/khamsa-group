@@ -1,11 +1,46 @@
 'use client'
-import Image from 'next/image'
-import React from 'react'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import HomePartnerCarousel from './components/home-partner'
 
-const HeroSection = () => {
+import Link from 'next/link'
+import React, { useEffect, useMemo } from 'react'
+import { animate, motion, useMotionValue } from 'framer-motion'
+import useMeasure from 'react-use-measure'
+import Image from 'next/image'
+import { getImageUrl } from '@/lib/directus'
+import { Schema } from '@/lib/schema'
+
+type Props = { data: Schema['Hero'] }
+
+const HeroSection = ({ data }: Props) => {
+  let [ref, { width }] = useMeasure()
+  const xTranslation = useMotionValue(0)
+
+  useEffect(() => {
+    let controls
+    let finalPosition = -width / 2 - 11
+
+    controls = animate(xTranslation, [0, finalPosition], {
+      ease: 'linear',
+      duration: 25,
+      repeat: Infinity,
+      repeatType: 'loop',
+    })
+    return controls.stop
+  }, [xTranslation, width])
+
+  const displayLogo = useMemo(() => {
+    return data
+      ?.partners!.map((partner) => {
+        if (typeof partner === 'object' && partner !== null) {
+          return {
+            name: partner.name,
+            imageUrl: getImageUrl(partner.image as string),
+            url: partner.url,
+          }
+        }
+      })
+      .filter(Boolean)
+  }, [data.partners])
+
   return (
     <section id="hero">
       <div className="relative flex h-[880px] w-full items-center justify-center overflow-hidden">
@@ -30,12 +65,11 @@ const HeroSection = () => {
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.5 }}
             className="space-y-5 text-center text-white"
           >
-            <div className="text-4xl font-extrabold md:text-6xl lg:text-[68px]">
-              <h1>Build The Future</h1>
-              <h1> World.</h1>
+            <div className="text-4xl font-extrabold capitalize md:text-6xl lg:text-[68px]">
+              {data.title}
             </div>
             <p className="text-lg font-medium md:text-xl lg:text-2xl">
-              We wish to see through new creation, innovation and creativity.
+              {data.subtitle}
             </p>
             <button className="h-14 w-64 rounded-xl bg-white text-lg font-bold text-secondary">
               <Link href="#investment">Explore Our Investment</Link>
@@ -48,7 +82,62 @@ const HeroSection = () => {
             className="text-gray-400 mx-10 flex flex-col items-center justify-center gap-4 overflow-clip text-sm font-medium md:mx-auto md:max-w-4xl"
           >
             <p>Our affiliate companies</p>
-            <HomePartnerCarousel />
+            <div
+              className="relative flex w-full gap-24"
+              style={{
+                maskImage: `linear-gradient(
+            to right,
+            transparent,
+            #000 10% 90%,
+            transparent
+          )`,
+                whiteSpace: `nowrap`,
+              }}
+            >
+              <motion.div
+                ref={ref}
+                style={{
+                  x: xTranslation,
+                  whiteSpace: `nowrap`,
+                }}
+                className="relative flex min-w-max gap-24"
+              >
+                {displayLogo &&
+                  [...displayLogo, ...displayLogo].map((data, index) => (
+                    <div key={index} className="flex h-12 min-w-fit">
+                      <Image
+                        src={data!.imageUrl}
+                        alt={data!.name!}
+                        width={250}
+                        height={250}
+                        className="h-full w-full object-cover"
+                        style={{ filter: 'grayscale(1) invert(1)' }}
+                      />
+                    </div>
+                  ))}
+              </motion.div>
+              <motion.div
+                ref={ref}
+                style={{
+                  x: xTranslation,
+                  whiteSpace: `nowrap`,
+                }}
+                className="relative flex min-w-max gap-24"
+              >
+                {[...displayLogo, ...displayLogo].map((data, index) => (
+                  <div key={index} className="flex h-12 min-w-fit">
+                    <Image
+                      src={data!.imageUrl}
+                      alt={data!.name!}
+                      width={250}
+                      height={250}
+                      className="h-full w-full object-cover"
+                      style={{ filter: 'grayscale(1) invert(1)' }}
+                    />
+                  </div>
+                ))}
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
