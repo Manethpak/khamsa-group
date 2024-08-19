@@ -1,12 +1,11 @@
 'use client'
 import { Motion } from '@/component/ui/motion'
-import { Contact } from '@/constants'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { FaFacebookSquare, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import { motion } from 'framer-motion'
-import { useContact } from '@/hooks/use-hero'
+import { useContact } from '@/fetcher/contact/use-contact'
 
 interface Props {
   title: string
@@ -14,7 +13,6 @@ interface Props {
   phone: string
   icon_name: keyof typeof iconMapping
 }
-
 
 const iconMapping = {
   facebook: FaFacebookSquare,
@@ -24,6 +22,7 @@ const iconMapping = {
 
 const ContactUs = () => {
   const { data } = useContact()
+
   const contact = data as {
     address?: Props[]
     link?: Props[]
@@ -32,11 +31,6 @@ const ContactUs = () => {
   }
   const address: Props[] = contact?.address || []
   const link: Props[] = contact?.link || []
-  const social_link: Props[] = contact?.social_link || []
-
-  console.log(contact)
-
-  
 
   const [showArrow, setShowArrow] = useState<string | null>(null)
   return (
@@ -58,55 +52,58 @@ const ContactUs = () => {
           </div>
           <div className="flex w-full max-w-[400px] flex-col gap-9">
             <div></div>
-            {Contact.map((data, index) => (
-              <div key={data.description} className="">
-                <div className="flex flex-col gap-3">
-                  <h1 className="text-2xl font-extrabold">{data.title}</h1>
-                  <p>{data.description}</p>
-                </div>
-                {index === 1 &&
-                  address.map((data) => (
-                    <div key={data.title}>
-                      <Link href={data.link}>{data.title}</Link>
-                    </div>
-                  ))}
-                <div className="flex flex-col gap-3">
-                  {index === 2 &&
-                    link.map((link, index) => (
-                      <motion.div
-                        onHoverStart={() => setShowArrow(link.title ?? '')}
-                        onHoverEnd={() => setShowArrow(null)}
-                        key={index}
-                        className="flex items-center gap-2 font-bold"
-                      >
-                        <div>
-                          <Link href={`${link.link}`}>{link.title}</Link>
-                          <p>{link.phone}</p>
-                        </div>
-                        {index !== 2 && (
-                          <motion.div
-                            initial={{ opacity: 1, x: 0 }}
-                            animate={
-                              showArrow === link.title ? { x: 5 } : { x: 0 }
-                            }
-                            transition={{ type: 'spring', stiffness: 50 }}
-                          >
-                            <HiOutlineArrowNarrowRight />
-                          </motion.div>
-                        )}
-                      </motion.div>
-                    ))}
-                </div>
+
+            <div className="flex flex-col gap-10">
+              <div className="space-y-3">
+                <h1 className="text-2xl font-bold">Get in touch</h1>
+                <p>
+                  We&apos;re always here to help. Contact us if you are
+                  interested in our service. Let&apos;s cooperate and invest in
+                  the future of Cambodia.
+                </p>
               </div>
-            ))}
+
+              <div className="space-y-3">
+                <h2 className="text-2xl font-bold">Address</h2>
+                {address.map((data) => (
+                  <div key={data.title}>
+                    <Link href={data.link}>{data.title}</Link>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col gap-3">
+                {link.map((link, index) => (
+                  <motion.div
+                    onHoverStart={() => setShowArrow(link.title ?? '')}
+                    onHoverEnd={() => setShowArrow(null)}
+                    key={index}
+                    className="flex items-center gap-2"
+                  >
+                    <div>
+                      <Link href={link.link}>{link.title}</Link>
+                      <p>{link.phone}</p>
+                    </div>
+
+                    <motion.div
+                      initial={{ opacity: 1, x: 0 }}
+                      animate={showArrow === link.title ? { x: 5 } : { x: 0 }}
+                      transition={{ type: 'spring', stiffness: 50 }}
+                    >
+                      <HiOutlineArrowNarrowRight />
+                    </motion.div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
 
             <div className="flex gap-4">
-            {social_link.map((data) => {
+              {(contact?.social_link || []).map((data) => {
                 const IconComponent = iconMapping[data.icon_name]
                 return (
                   <div key={data.title} className="text-[42px]">
                     <Link target="_blank" href={`${data.link}`}>
-                      {IconComponent ? <IconComponent /> : null}
+                      <IconComponent />
                     </Link>
                   </div>
                 )
