@@ -1,8 +1,10 @@
 import { useAnimation, useInView, motion } from 'framer-motion'
 import React, { useEffect, useRef } from 'react'
 import TeamsCard from './teams-card'
+import { useTeams } from '@/fetcher/about/teams/use-teams'
 
 const Teams = () => {
+  const { data } = useTeams()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const controls = useAnimation()
@@ -11,7 +13,7 @@ const Teams = () => {
     if (isInView) {
       controls.start('visible')
     }
-  }, [isInView,controls])
+  }, [isInView, controls])
   return (
     <motion.div
       ref={ref}
@@ -37,7 +39,7 @@ const Teams = () => {
             world of finance and achieve your investment objectives.
           </p>
         </motion.div>
-        <TeamsCard />
+        {data && <TeamsCard team={data} />}
       </div>
     </motion.div>
   )

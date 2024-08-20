@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react'
-import { Items } from '@/constants'
 import { useAnimation, useInView, motion } from 'framer-motion'
-
-const OurSuccess = () => {
+import { Schema } from '@/lib/schema'
+interface Props {
+  success: Schema['Success']
+}
+const OurSuccess = ({ success }: Props) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const controls = useAnimation()
@@ -13,10 +15,7 @@ const OurSuccess = () => {
     }
   }, [isInView, controls])
   return (
-    <motion.div
-      ref={ref}
-      className="flex w-full justify-center bg-polar px-10"
-    >
+    <motion.div ref={ref} className="flex w-full justify-center bg-polar px-10">
       <div className="grid h-full w-full max-w-7xl grid-cols-1 gap-14 py-16 lg:grid-cols-2">
         <motion.div
           variants={{
@@ -43,7 +42,7 @@ const OurSuccess = () => {
           transition={{ duration: 1, ease: 'easeOut', delay: 1 }}
           className="grid grid-cols-1 gap-5 font-extrabold md:grid-cols-2"
         >
-          {Items.map((data) => (
+          {success.map((data) => (
             <div
               key={data.number}
               className="flex h-[126px] max-w-3xl flex-col items-center justify-center rounded-xl bg-white"

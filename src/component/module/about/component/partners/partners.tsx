@@ -2,8 +2,13 @@ import { useAnimation, useInView, motion } from 'framer-motion'
 import React, { useEffect, useRef } from 'react'
 import { Partner } from '@/constants'
 import Image from 'next/image'
+import { Schema } from '@/lib/schema'
+import { getImageUrl } from '@/lib/directus'
 
-const Partners = () => {
+interface Props {
+  partner: Schema['partners']
+}
+const Partners = ({ partner }: Props) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const controls = useAnimation()
@@ -44,11 +49,11 @@ const Partners = () => {
           className="flex max-w-[630px] flex-col items-center justify-center gap-5 md:flex-row"
         >
           <div className="flex gap-5">
-            {Partner.slice(0, 3).map((data) => (
+            {partner.slice(0, 3).map((data) => (
               <div key={data.id} className="h-12 max-w-full">
                 <Image
-                  src={data.Image}
-                  alt="partners"
+                  src={getImageUrl(data.image! as string)}
+                  alt={data.name!}
                   width={250}
                   height={250}
                   className="h-full w-full object-center"
@@ -57,11 +62,11 @@ const Partners = () => {
             ))}
           </div>
           <div className="flex gap-5">
-            {Partner.slice(3).map((data) => (
+            {partner.slice(3).map((data) => (
               <div key={data.id} className="h-12 max-w-full">
                 <Image
-                  src={data.Image}
-                  alt="partners"
+                  src={getImageUrl(data.image! as string)}
+                  alt={data.name!}
                   width={250}
                   height={250}
                   className="h-full w-full object-center"

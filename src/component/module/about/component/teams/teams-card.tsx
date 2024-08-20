@@ -1,9 +1,13 @@
 import { useAnimation, useInView, motion } from 'framer-motion'
 import React, { useEffect, useRef } from 'react'
-import { Teams } from '@/constants'
 import Image from 'next/image'
+import { Schema } from '@/lib/schema'
+import { getImageUrl } from '@/lib/directus'
 
-const TeamsCard = () => {
+interface Props {
+  team: Schema['Team']
+}
+const TeamsCard = ({ team }: Props) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const controls = useAnimation()
@@ -25,14 +29,14 @@ const TeamsCard = () => {
       transition={{ duration: 1, ease: 'easeOut', delay: 1 }}
       className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3"
     >
-      {Teams.map((data) => (
+      {team.map((data) => (
         <div
           key={data.name}
           className="flex h-[280px] max-w-3xl flex-col items-center justify-center gap-5 rounded-xl bg-polar text-lg"
         >
           <Image
-            src={data.Image}
-            alt="teams"
+            src={getImageUrl(data.image! as string)}
+            alt={data.name!}
             width={250}
             height={250}
             className="h-32 w-32"
