@@ -1292,3 +1292,9 @@ export const Contact = [
     special: true,
   },
 ]
+export const Footer = [
+  { title: 'Our Journey', url: '/journey' },
+  { title: 'About Us', url: '/about-us' },
+  { title: 'Blogs', url: '/blog' },
+  { title: 'Contact Us', url: '/contact' },
+]
