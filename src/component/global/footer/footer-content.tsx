@@ -1,75 +1,56 @@
+import { Footer } from '@/constants'
+import { fetchContact } from '@/fetcher/contact/fetch-contact'
 import Link from 'next/link'
-import { title } from 'process'
+import React from 'react'
+interface Props {
+  title: string
+  link: string
+  phone: string
+}
 
-const footerLinks = [
-  {
-    title: 'Overview',
-    links: [
-      { title: 'Our Journey', url: '/journey' },
-      { title: 'About Us', url: '/about-us' },
-      { title: 'Blogs', url: '/blog' },
-      { title: 'Contact Us', url: '/contact' },
-    ],
-  },
-  {
-    title: 'More Informations',
-    links: [
-      {
-        title: 'info@khamsagroup.com',
-        url: '/about-us',
-      },
-      {
-        title: 'Linktr.ee/KhamsaGroup',
-        url: 'https://linktr.ee/KhamsaGroup',
-      },
-      { title: '+855(0)15686933', url: '/contact' },
-      {
-        title: 'Building Location',
-        location: [
-          {
-            title: 'AI FARM Robotics Factory, Ring Road 2, Cambodia',
-            url: 'https://maps.app.goo.gl/ENUtZ4TccU9Vt46j6'
-          },
-        ],
-      },
-      {
-        title: 'Terms and Conditions',
-        url: '/terms-and-conditions',
-      },
-    ],
-  },
-]
-
-const FooterContent = () => {
+const FooterContent = async () => {
+  const data = await fetchContact()
+  const contact = data as {
+    address?: Props[]
+    link?: Props[]
+    social_link?: Props[]
+    iframe?: string
+  }
+  const address: Props[] = contact?.address || []
+  const link: Props[] = contact?.link || []
   return (
     <footer className="flex w-full flex-col items-center bg-black p-10 text-white shadow-md">
-      <div className="flex w-full max-w-7xl flex-col gap-10">
-        {/* Title Section */}
+      <div className="flex w-full max-w-7xl flex-col gap-10 md:px-14">
         <h1 className="text-2xl font-bold">KhamsaGroup</h1>
-        {/* Footer Links Sections */}
-        <div className="flex w-full flex-col gap-10 sm:flex-row">
-          {footerLinks.map((item) => (
-            <div
-              key={item.title}
-              className="flex w-full max-w-lg flex-col gap-3"
-            >
-              {item.title}
-
-              {item.links.map((link) => (
-                <div
-                  key={link.title}
-                  className="text-sm font-normal text-white/70"
-                >
-                  <Link href={`${link.url}`}>{link.title}</Link>
-                  {link.location?.map((data) => (
-                    <div key={data.title} className="p-1">
-                      <Link href={`${data.url}`} target="_blank">{data.title}</Link>
-                    </div>
-                  ))}
+        <div className="flex w-full flex-col justify-between gap-10 sm:flex-row">
+          <div className="flex w-full max-w-lg flex-col gap-3">
+            <p>Overview</p>
+            {Footer.map((data) => (
+              <div
+                key={data.title}
+                className="text-sm font-normal text-white/70"
+              >
+                <Link href={data.url}>{data.title}</Link>
+              </div>
+            ))}
+          </div>
+          <div className="flex w-full max-w-lg flex-col gap-3">
+            <p>More Information</p>
+            <div className="flex flex-col gap-3 text-sm font-normal text-white/70">
+              {link.map((link, index) => (
+                <div key={index}>
+                  <Link href={link.link}>{link.title}</Link>
+                  <p>{link.phone}</p>
                 </div>
               ))}
+              {address.map((data) => (
+                <div key={data.title}>
+                  <Link href={data.link}>{data.title}</Link>
+                </div>
+              ))}
+              <Link href="/terms-and-conditions">Terms and Conditions</Link>
             </div>
-          ))}
+          </div>
         </div>
         <span className="text-xs font-normal text-white/70">
           © KhamsaGroup 2023.
@@ -78,5 +59,4 @@ const FooterContent = () => {
     </footer>
   )
 }
-
 export default FooterContent
