@@ -1,15 +1,18 @@
+'use client'
 import { Footer } from '@/constants'
 import { fetchContact } from '@/fetcher/contact/fetch-contact'
+import { useContact } from '@/fetcher/contact/use-contact'
 import Link from 'next/link'
 import React from 'react'
+
 interface Props {
   title: string
   link: string
   phone: string
 }
 
-const FooterContent = async () => {
-  const data = await fetchContact()
+const FooterContent = () => {
+  const {data} = useContact()
   const contact = data as {
     address?: Props[]
     link?: Props[]
