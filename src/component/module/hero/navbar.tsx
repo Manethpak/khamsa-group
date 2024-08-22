@@ -92,8 +92,10 @@ const Navbar = () => {
       <motion.div
         className={`${dropdownBgColor} absolute mt-20 h-56 w-full md:hidden`}
         animate={open ? 'open' : 'closed'}
+        initial={{ opacity: 0, y: '-20px' }}
         variants={{
           open: {
+            opacity: 1,
             y: '-5px',
             transition: { duration: 0.5, type: 'spring', stiffness: 150 },
           },
@@ -109,7 +111,7 @@ const Navbar = () => {
           },
         }}
       >
-        <div className="h-full">
+        <div onClick={() => setOpen(!open)} className="h-full">
           <ul className="flex flex-col items-center justify-center gap-7 font-semibold">
             <li>
               <Link href="/journey">Our Journey</Link>
