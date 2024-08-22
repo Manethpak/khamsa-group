@@ -16,7 +16,7 @@ const ContactSection = () => {
             </button>
           </Link>
         </div>
-        <div className="flex w-full max-w-full justify-end max-h-[450px] xl:min-h-[450px] bg-red-500">
+        <div className="flex w-full max-w-full justify-end max-h-[450px] xl:min-h-[450px] ">
           <Image
             src="/images/Factory.jpg"
             alt="farm"
