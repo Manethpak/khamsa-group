@@ -5,7 +5,6 @@ import React, { useEffect, useRef } from 'react'
 import OurSuccess from './component/our-success/our-success'
 import Teams from './component/teams/teams'
 import Office from './component/office/office'
-import Partners from './component/partners/partners'
 import Contacts from './component/contact/contact'
 import { useOffice } from '@/fetcher/about/office/use-office'
 import { useSuccess } from '@/fetcher/about/success/use-success'
@@ -103,7 +102,6 @@ const KhamsaGroup = () => {
       {successData && <OurSuccess success={successData} />}
       <Teams />
       {officeData && <Office office={officeData} />}
-      {partnerData && <Partners partner={partnerData} />}
       <Contacts />
     </motion.div>
   )
