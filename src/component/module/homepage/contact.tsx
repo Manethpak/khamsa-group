@@ -19,10 +19,9 @@ const ContactSection = () => {
         <div className="flex max-h-[450px] w-full max-w-full justify-end xl:min-h-[450px]">
           <Image
             src="/images/Factory.jpg"
-            alt="farm"
-            width={250}
-            height={250}
-            layout="responsive"
+            alt="view of ai farm factory"
+            width={620}
+            height={448}
             className="max-h-full w-full max-w-[620px] rounded-3xl object-cover object-center"
           />
         </div>
