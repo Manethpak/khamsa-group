@@ -55,6 +55,8 @@ const HeroSection = ({ data }: Props) => {
             alt=""
             width={250}
             height={250}
+            layout="responsive"
+            quality={100}
             className="h-full w-full object-cover object-center"
           />
         </motion.div>

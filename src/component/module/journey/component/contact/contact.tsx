@@ -22,6 +22,7 @@ const Contacts = () => {
             alt="farm"
             width={250}
             height={250}
+            layout="responsive"
             className="max-h-[640px] w-full max-w-[650px] rounded-3xl object-cover object-center"
           />
         </div>

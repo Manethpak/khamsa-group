@@ -28,6 +28,8 @@ const Journeys = () => {
             alt="logo"
             width={250}
             height={250}
+            quality={100}
+            layout="responsive"
             className="max-h-[720px] w-full max-w-7xl rounded-t-xl"
           />
         </div>
