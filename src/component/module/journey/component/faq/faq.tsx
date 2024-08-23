@@ -3,8 +3,12 @@ import { Question } from '@/constants'
 import React, { useEffect, useState } from 'react'
 import { motion, useAnimationControls } from 'framer-motion'
 import { GrClose } from 'react-icons/gr'
+import { Schema } from '@/lib/schema'
 
-const Faq = () => {
+interface Props {
+  faq: Schema['FAQ']
+}
+const Faq = ({ faq }: Props) => {
   const [open, setOpen] = useState<number[]>([])
   const containerControls = useAnimationControls()
 
@@ -33,9 +37,9 @@ const Faq = () => {
           </h1>
         </Motion>
         <div className="flex w-full cursor-pointer flex-col items-center gap-3">
-          {Question.map((data, index) => (
+          {faq.map((data, index) => (
             <Motion
-              key={data.title}
+              key={data.id}
               className="flex h-full w-full max-w-3xl flex-col items-center justify-center rounded-3xl bg-polar p-5 px-8 text-lg"
             >
               <div
@@ -44,7 +48,7 @@ const Faq = () => {
               >
                 <div className="flex items-start justify-between">
                   <h1 className="font-extrabold text-secondary">
-                    {data.title}
+                    {data.question}
                   </h1>
                   <motion.p
                     initial={{ rotate: open.includes(index) ? '0deg' : '0deg' }}
@@ -89,7 +93,7 @@ const Faq = () => {
                   }}
                   className="w-full max-w-[666px]"
                 >
-                  {data.description}
+                  {data.answer}
                 </motion.p>
               </div>
             </Motion>
