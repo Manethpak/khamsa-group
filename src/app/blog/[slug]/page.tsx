@@ -76,13 +76,11 @@ const BlogPage = async ({ params }: Props) => {
         </h2>
       </div>
 
-     <div className="mt-4 flex flex-col gap-4 md:flex-row md:justify-center">
+   <div className="mt-4 flex flex-col gap-4 md:flex-row md:justify-center">
   {[1, 2].map((_, index) => (
     <div
       key={index}
-      className={`flex h-auto w-full items-center justify-between rounded-[30px] rounded-tl-[20px] md:h-[100px] md:w-[600px] ${
-        index % 2 === 0 ? 'bg-white' : 'bg-white'
-      } p-4 shadow`}  
+      className="flex h-auto w-full items-center justify-between rounded-[30px] rounded-tl-[20px] md:h-[100px] md:w-[600px] bg-white p-4 shadow"
     >
             {/* Blog Image */}
             <Image
