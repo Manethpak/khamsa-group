@@ -1,11 +1,11 @@
 'use client'
 import { useAnimation, useInView, motion } from 'framer-motion'
 import React, { useEffect, useRef } from 'react'
-import { blogData } from '@/constants'
-import BlogCard from './components/blog-card'
 import { Schema } from '@/lib/schema'
 import { getImageUrl } from '@/lib/directus'
 import { formatDate } from '@/lib/utils'
+import BlogCard from './components/blog-card'
+import SubscriptionSection from './components/subscription-section'
 
 type Props = {
   data: Schema['Blogs']
@@ -33,7 +33,7 @@ const BlogList = ({ data }: Props) => {
         initial="hidden"
         animate={controls}
         transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
-        className="grid w-full max-w-screen-lg grid-cols-1 gap-[20px] md:grid-cols-2"
+        className="grid w-full max-w-screen-lg grid-cols-1 gap-[20px] p-6 md:grid-cols-2"
       >
         {data.map((blog) => (
           <BlogCard
@@ -46,6 +46,8 @@ const BlogList = ({ data }: Props) => {
           />
         ))}
       </motion.div>
+
+      <SubscriptionSection />
     </div>
   )
 }

@@ -5,8 +5,10 @@ import React from 'react'
 import InOur from './component/in-our/in-our'
 import Faq from './component/faq/faq'
 import Contacts from './component/contact/contact'
+import { useFaq } from '@/fetcher/faq/use-faq'
 
 const Journeys = () => {
+  const { data } = useFaq()
   return (
     <div className="flex w-full flex-col items-center justify-center pt-36 text-lg font-normal text-gray">
       <Motion className="h-fit w-full space-y-24 text-pretty px-10 text-center text-2xl font-medium">
@@ -34,7 +36,7 @@ const Journeys = () => {
         </div>
       </Motion>
       <InOur />
-      <Faq />
+      {data && <Faq faq={data}/>}
       <Contacts />
     </div>
   )

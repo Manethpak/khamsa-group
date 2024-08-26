@@ -9837,6 +9837,6 @@ export type Schema = {
   Office: components['schemas']['ItemsOffice'][]
   Subscription: components['schemas']['ItemsSubscription'][]
   Hero: components['schemas']['ItemsHero']
-  Investment: components['schemas']['ItemsInvestment'][]
+  Investment: components['schemas']['ItemsInvestment']
   Contact: components['schemas']['ItemsContact']
 }

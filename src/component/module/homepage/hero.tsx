@@ -80,7 +80,7 @@ const HeroSection = ({ data }: Props) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.8 }}
-            className="text-gray-400 mx-10 flex flex-col items-center justify-center gap-4 overflow-clip text-sm font-medium md:mx-auto md:max-w-4xl"
+            className="mx-10 flex flex-col items-center justify-center gap-4 overflow-clip text-sm font-medium text-white md:mx-auto md:max-w-4xl"
           >
             <p>Our affiliate companies</p>
             <div
