@@ -5,6 +5,7 @@ import { Metadata, ResolvingMetadata } from 'next'
 import { fetchBlogBySlug } from '@/fetcher/blog/fetch-blog'
 import { getImageUrl } from '@/lib/directus'
 import { formatDate } from '@/lib/utils'
+import SubscriptionSection from '@/component/module/blog/components/subscription-section'
 
 type Props = {
   params: { slug: string }
@@ -37,7 +38,8 @@ const BlogPage = async ({ params }: Props) => {
   const data = result[0]
 
   return (
-    <div className="container mx-auto mt-2 p-4 md:p-6 lg:p-8">
+    <div>
+<div className="container mx-auto mt-2 p-4 md:p-6 lg:p-8">
       <div className="mx-auto mb-8 max-w-3xl text-center">
         <p className="text-base font-extrabold uppercase text-[#4ca6fc]">
           {data.topic}
@@ -76,7 +78,7 @@ const BlogPage = async ({ params }: Props) => {
         </h2>
       </div>
 
-   <div className="mt-4 flex flex-col gap-4 md:flex-row md:justify-center">
+      <div className="mt-4 flex flex-col gap-4 md:flex-row md:justify-center">
   {[1, 2].map((_, index) => (
     <div
       key={index}
@@ -101,29 +103,11 @@ const BlogPage = async ({ params }: Props) => {
           </div>
         ))}
       </div>
-
-      <div className=" mt-8  flex w-full items-center justify-center bg-primary py-10 text-center">
-        <div className="flex max-w-[600px] flex-col gap-6 text-center font-extrabold text-white">
-          <p className="text-base">STAY IN THE LOOP</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl">
-            Subscribe for more inspiration
-          </h1>
-          <form className="flex flex-col items-center justify-center gap-2 md:flex-row">
-            <input
-              type="email"
-              placeholder="Email"
-              className="h-10 w-full rounded-lg px-3 text-sm text-black focus:outline-none md:w-[200px]"
-            />
-            <button
-              type="submit"
-              className="h-10 w-full rounded-lg bg-black px-3 py-1.5 text-sm font-bold text-white focus:ring-opacity-50 md:w-[100px]"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div>
+      
     </div>
+    <SubscriptionSection/>
+    </div>
+    
   )
 }
 
