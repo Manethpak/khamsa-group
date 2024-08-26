@@ -19,9 +19,9 @@ const Contacts = () => {
         <div className="flex w-full max-w-full justify-end">
           <Image
             src="/images/Farm.jpeg"
-            alt="farm"
-            width={250}
-            height={250}
+            alt="view of ai farm factory"
+            width={620}
+            height={448}
             className="max-h-[640px] w-full max-w-[650px] rounded-3xl object-cover object-center"
           />
         </div>
