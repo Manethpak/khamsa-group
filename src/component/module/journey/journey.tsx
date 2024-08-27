@@ -27,9 +27,10 @@ const Journeys = () => {
         <div className="flex h-fit w-full flex-col items-center">
           <Image
             src="/images/journey.avif"
-            alt="logo"
-            width={250}
-            height={250}
+            alt="showcasing our journey in the next 30 years"
+            width={1200}
+            height={654}
+            quality={100}
             className="max-h-[720px] w-full max-w-7xl rounded-t-xl"
           />
         </div>

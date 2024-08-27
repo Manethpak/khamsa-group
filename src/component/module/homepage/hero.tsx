@@ -52,9 +52,10 @@ const HeroSection = ({ data }: Props) => {
         >
           <Image
             src="/images/bg-home.avif"
-            alt=""
-            width={250}
-            height={250}
+            alt="globe background image"
+            width={1920}
+            height={880}
+            quality={100}
             className="h-full w-full object-cover object-center"
           />
         </motion.div>

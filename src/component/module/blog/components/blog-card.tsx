@@ -25,7 +25,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
       <motion.div
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.95 }}
-        className="card overflow-hidden rounded-[20px] shadow-lg"
+        className="card overflow-hidden rounded-[20px] shadow-lg h-full"
         style={{
           boxShadow: '0px 10px 30px -20px #00000040',
           background: 'white',
@@ -44,7 +44,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           <h2 className="card-title mb-2 text-xl font-semibold text-[#4ca6fc]">
             {topic}
           </h2>
-          <p className="text-gray-600">{title}</p>
+          <p className="text-gray-600 h-24 p-2 overflow-hidden">{title}</p>
           <div className="card-actions text-gray-500 mt-4">{date}</div>
         </div>
       </motion.div>
