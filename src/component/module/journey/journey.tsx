@@ -13,7 +13,7 @@ const Journeys = () => {
     <div className="flex w-full flex-col items-center justify-center pt-36 text-lg font-normal text-gray">
       <Motion className="h-fit w-full space-y-24 text-pretty px-10 text-center text-2xl font-medium">
         <div className="flex h-full max-h-full flex-col items-center gap-5">
-          <p className="text-base font-extrabold text-primary">
+          <p className="text-xl font-extrabold text-primary">
             Khamsagroup journey
           </p>
           <h1 className="max-w-[1000px] text-4xl font-extrabold text-[#19154E] md:text-6xl">
@@ -36,7 +36,7 @@ const Journeys = () => {
         </div>
       </Motion>
       <InOur />
-      {data && <Faq faq={data}/>}
+      {data && <Faq faq={data} />}
       <Contacts />
     </div>
   )

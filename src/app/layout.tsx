@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/component/module/hero/navbar'
 import Footer from '@/component/module/footer/footer'
-
-const inter = Inter({ subsets: ['latin'] })
+import { lato, libre, noto_serif_khmer } from '@/utils/fonts'
 
 export const metadata: Metadata = {
   title: 'Khamsa Group',
@@ -18,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={inter.className}>
+      <body className={` ${lato} ${libre} ${noto_serif_khmer}`}>
         <Navbar />
         {children}
         <Footer />
