@@ -39,9 +39,10 @@ const KhamsaGroup = () => {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
           className="h-full max-h-full space-y-5"
         >
-          <p className="text-base font-extrabold text-primary">ABOUT US</p>
+          <p className="text-xl font-extrabold text-primary">ABOUT US</p>
           <h1 className="noto_serif_khmer text-4xl font-extrabold text-secondary md:text-6xl">
-            Khamsa Group / សម្ព័ន្ធខាំសា
+            Khamsa Group /{' '}
+            <small className="font-serif-khmer">សម្ព័ន្ធខាំសា</small>
           </h1>
         </motion.div>
         <motion.div
@@ -65,36 +66,48 @@ const KhamsaGroup = () => {
         </motion.div>
         <div className="w-fullmx-autor noto_serif_khmer flex max-w-7xl flex-col gap-y-9 text-justify">
           <p>
-            <strong>Khamsa Group /</strong>សម្ព័ន្ធខាំសា. Khamsa (ख़मसा, خمسة ,
-            חַמְסָה, ⵜⴰⴼⵓⵙⵜ) from Arabic “Hamsa” means “five”, but also “the
-            five fingers of the hand” and Romanized as “Khamsa” representing the
-            open right hand, recognized and used as a sign of protection,
-            blessings, power and strength in many times throughout history to
-            provide defense against the bad luck and evil.{' '}
+            <strong>Khamsa Group /</strong>{' '}
+            <small className="font-serif-khmer">សម្ព័ន្ធខាំសា.</small>{' '}
+            <small className="font-libre">
+              Khamsa (ख़मसा, خمسة , חַמְסָה, ⵜⴰⴼⵓⵙⵜ) from Arabic “Hamsa” means
+              “five”, but also “the five fingers of the hand” and Romanized as
+              “Khamsa” representing the open right hand, recognized and used as
+              a sign of protection, blessings, power and strength in many times
+              throughout history to provide defense against the bad luck and
+              evil.{' '}
+            </small>
           </p>
           <p>
             <strong>Khamsa Investment Group Co. Ltd. or Khamsa Group</strong>{' '}
-            was founded by the CEO himself, Mr. Kim Khorn Long on November 16,
-            2017, and was finally incorporated and registered in the Kingdom of
-            Cambodia on August 11, 2021. The company was formed to support its
-            subsidiaries, such as Khamsa Co. Ltd, Sunrise Rooster Co. Ltd., AI
-            Farm Co. Ltd and Laoka Co. Ltd., the investment community to ensure
-            that all its business objectives will be put into reality.{' '}
+            <small className="font-libre">
+              was founded by the CEO himself, Mr. Kim Khorn Long on November 16,
+              2017, and was finally incorporated and registered in the Kingdom
+              of Cambodia on August 11, 2021. The company was formed to support
+              its subsidiaries, such as Khamsa Co. Ltd, Sunrise Rooster Co.
+              Ltd., AI Farm Co. Ltd and Laoka Co. Ltd., the investment community
+              to ensure that all its business objectives will be put into
+              reality.{' '}
+            </small>
           </p>
           <p>
-            We focus on industries (a) Value-chain-based industry, (b)
-            meta-data-based industry, (c) AI-based industry, (d) knowledge-based
-            economy, (e) scarcity resources industry, (f) renewable energy
-            industry, (g) information technology and engineering, (h) internet
-            of values
+            <small className="font-libre">
+              {' '}
+              We focus on industries (a) Value-chain-based industry, (b)
+              meta-data-based industry, (c) AI-based industry, (d)
+              knowledge-based economy, (e) scarcity resources industry, (f)
+              renewable energy industry, (g) information technology and
+              engineering, (h) internet of values
+            </small>
           </p>
           <div>
             <strong>Association </strong>
             <p>
-              <strong>Khamsa Group</strong> is the conglomerate association with
-              Khamsa Corp, Sunrise Rooster, Laoka, AI Farm, AutobotX, BadrobotX,
-              Adone, Slum, Zox, Onecent, Lumpsum, Tongtin, CorporationK,
-              VultureGO, and Tofu.
+              <strong>Khamsa Group</strong>{' '}
+              <small className="font-libre">
+                is the conglomerate association with Khamsa Corp, Sunrise
+                Rooster, Laoka, AI Farm, AutobotX, BadrobotX, Adone, Slum, Zox,
+                Onecent, Lumpsum, Tongtin, CorporationK, VultureGO, and Tofu.
+              </small>
             </p>
           </div>
         </div>

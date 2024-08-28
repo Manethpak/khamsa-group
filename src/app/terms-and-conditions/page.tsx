@@ -15,7 +15,7 @@ const TermCondition = () => {
           </p>
         </div>
         {Condition.map((data) => (
-          <div key={data.title} className="space-y-16">
+          <div key={data.title} className="font-libre space-y-16">
             <div className="space-y-5">{data.descriptions}</div>
             <div className="space-y-5">
               <h1 className="text-2xl font-extrabold text-[#19154E] md:text-4xl">

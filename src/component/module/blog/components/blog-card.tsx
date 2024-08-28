@@ -31,7 +31,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           background: 'white',
         }}
       >
-        <div className="noto_serif_khmer">
+        <div className="font-serif-khmer">
           <Image
             src={imageUrl}
             alt={title}
@@ -44,7 +44,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           <h2 className="card-title lato mb-2 text-xl font-semibold text-[#4ca6fc]">
             {topic}
           </h2>
-          <p className="text-gray-600 noto_serif_khmer">{title}</p>
+          <p className="text-gray-600 font-serif-khmer">{title}</p>
           <div className="card-actions text-gray-500 mt-4">{date}</div>
         </div>
       </motion.div>

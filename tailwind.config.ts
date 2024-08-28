@@ -1,3 +1,4 @@
+import { Khmer } from 'next/font/google'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -18,6 +19,11 @@ const config: Config = {
         secondary: '#19154E',
         polar: '#E6F9FA',
         gray: '#5b5e76',
+      },
+      fontFamily: {
+        lato: ['var(--font-lato)'],
+        libre: ['var(--font-libre)'],
+        'serif-khmer': ['var(--font-noto-serif-khmer)'],
       },
     },
   },

@@ -39,18 +39,18 @@ const BlogPage = async ({ params }: Props) => {
 
   return (
     <>
-      <div className="lato container mx-auto mt-2 p-4 md:p-6 lg:p-8">
+      <div className="font-lato container mx-auto mt-2 p-4 md:p-6 lg:p-8">
         <div className="mx-auto mb-8 max-w-3xl text-center">
-          <p className="lato text-base font-extrabold uppercase text-[#4ca6fc]">
+          <p className="text-base font-extrabold uppercase text-[#4ca6fc]">
             {data.topic}
           </p>
-          <h1 className="lato noto_serif_khmer pt-8 text-3xl font-extrabold capitalize text-[#19154E] md:text-4xl lg:text-5xl">
+          <h1 className="font-lato serif-khmer pt-8 text-3xl font-extrabold capitalize text-[#19154E] md:text-4xl lg:text-5xl">
             {data.title}
           </h1>
-          <h2 className="noto_serif_khmer my-4 text-lg text-zinc-600 md:text-xl lg:text-2xl">
+          <h2 className="font-serif-khmer my-4 text-lg text-zinc-600 md:text-xl lg:text-2xl">
             {data.description}
           </h2>
-          <time className="noto_serif_khmer text-sm text-zinc-400 md:text-base lg:text-lg">
+          <time className="font-serif-khmer text-sm text-zinc-400 md:text-base lg:text-lg">
             {formatDate(data.date!)}
           </time>
         </div>
@@ -61,13 +61,13 @@ const BlogPage = async ({ params }: Props) => {
             width={1200}
             height={630}
             alt={data.title!}
-            className="noto_serif_khmer mx-auto mb-10 w-full rounded-xl lg:max-w-5xl"
+            className="font-serif-khmer mx-auto mb-10 w-full rounded-xl lg:max-w-5xl"
           />
         )}
 
         {data.content && (
           <div
-            className="noto_serif_khmer prose prose-zinc mx-auto max-w-4xl"
+            className="font-serif-khmer prose prose-zinc mx-auto max-w-4xl"
             dangerouslySetInnerHTML={{ __html: data.content! }}
           />
         )}
@@ -90,7 +90,7 @@ const BlogPage = async ({ params }: Props) => {
                 width={100}
                 height={100}
                 alt={data.title!}
-                className="noto_serif_khmer rounded-lg object-cover"
+                className="font-serif-khmer rounded-lg object-cover"
               />
               <div className="ml-4 flex flex-col justify-center">
                 {/* Blog Topic */}
@@ -98,34 +98,12 @@ const BlogPage = async ({ params }: Props) => {
                   {data.topic!}
                 </p>
                 {/* Blog Title */}
-                <h3 className="noto_serif_khmer text-lg font-bold">
+                <h3 className="font-serif-khmer text-lg font-bold">
                   {data.title!}
                 </h3>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-8 flex w-full items-center justify-center bg-primary py-10 text-center">
-          <div className="flex max-w-[600px] flex-col gap-6 text-center font-extrabold text-white">
-            <p className="text-base">STAY IN THE LOOP</p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl">
-              Subscribe for more inspiration
-            </h1>
-            <form className="flex flex-col items-center justify-center gap-2 md:flex-row">
-              <input
-                type="email"
-                placeholder="Email"
-                className="h-10 w-full rounded-lg px-3 text-sm text-black focus:outline-none md:w-[200px]"
-              />
-              <button
-                type="submit"
-                className="h-10 w-full rounded-lg bg-black px-3 py-1.5 text-sm font-bold text-white focus:ring-opacity-50 md:w-[100px]"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
         </div>
       </div>
       <SubscriptionSection />

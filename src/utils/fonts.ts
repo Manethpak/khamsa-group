@@ -9,13 +9,13 @@ const lato_init = Lato({
 const libre_init = Libre_Baskerville({
   subsets: ['latin'],
   weight: ['400'],
-  variable: '--font-libre_baskerville',
+  variable: '--font-libre',
 })
 
 const noto_serif_khmer_init = Noto_Serif_Khmer({
   subsets: ['latin'],
   weight: ['500'],
-  variable: '--font-noto_serif_khmer',
+  variable: '--font-noto-serif-khmer',
 })
 
 export const lato = lato_init.className
