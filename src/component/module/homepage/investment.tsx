@@ -29,7 +29,6 @@ const InvestmentSection = ({ data }: Props) => {
       id="investment"
       className="flex flex-col items-center justify-center gap-[12px] p-5 pt-12 lg:px-0"
     >
-     
       <Motion className="flex h-28 max-w-[350px] flex-col gap-2 text-center 2xl:max-w-[600px]">
         <p className="text-base font-extrabold text-primary">{data.subtitle}</p>
         <h1 className="text-4xl font-extrabold text-secondary">{data.title}</h1>

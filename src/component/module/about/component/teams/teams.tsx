@@ -30,7 +30,7 @@ const Teams = () => {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
           className="flex flex-col items-center gap-5 font-extrabold text-secondary"
         >
-          <p className="text-base text-primary">Our team</p>
+          <p className="text-xl uppercase text-primary">Our team</p>
           <h1 className="max-w-[560px] text-4xl md:text-5xl">
             Empowering Entrepreneur.
           </h1>

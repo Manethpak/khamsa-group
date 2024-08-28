@@ -150,7 +150,7 @@ const HeroSection = ({ data }: Props) => {
           </h1>
 
           {/* 15px primary color line under the description */}
-          <div className="mx-auto mt-2 h-[1px] w-[150px] bg-primary"></div>
+          <div className="mx-auto mt-2 h-[1px] w-[200px] bg-primary"></div>
         </Motion>
       </div>
     </section>
