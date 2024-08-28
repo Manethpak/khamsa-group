@@ -2429,6 +2429,7 @@ export interface components {
       answer?: string | null
     }
     ItemsItem: {
+      categorySlug: any
       id?: number
       sort?: number | null
       user_created?: string | components['schemas']['Users'] | null
