@@ -2491,6 +2491,8 @@ export interface components {
       date_updated?: string | null
       title: string
       subtitle: string
+      description: string
+      image?: string | components['schemas']['Files'] | null
       partners: (number | components['schemas']['ItemsPartners'])[]
     }
     ItemsInvestment: {
