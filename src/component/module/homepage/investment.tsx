@@ -29,27 +29,7 @@ const InvestmentSection = ({ data }: Props) => {
       id="investment"
       className="flex flex-col items-center justify-center gap-[12px] p-5 pt-12 lg:px-0"
     >
-      {/* Text above subtitle */}
-      <div className="relative mb-4 mt-4 bg-white text-center">
-        <p
-          className="font-lib-baskerville mx-auto text-[20px] font-bold leading-[28px] tracking-[0.2px] text-black sm:text-[24px] sm:leading-[30px] md:text-[26px] md:leading-[33.6px]"
-          style={{
-            maxWidth: '972px',
-            height: 'auto',
-            position: 'relative',
-          }}
-        >
-          Khamsa / from Arabic “Hamsa” means “five”, but also “the five fingers
-          of the hand” and Romanized as “Khamsa” representing the open right
-          hand, recognized and used as a sign of protection, blessings, power
-          and strength in many times throughout history to provide defense
-          against the bad luck and evil.
-        </p>
-
-        {/* Line below the text */}
-        <div className="absolute bottom-[-10px] left-1/2 h-[5px] w-[150px] -translate-x-1/2 transform bg-primary md:w-[200px] lg:w-[250px]"></div>
-      </div>
-
+     
       <Motion className="flex h-28 max-w-[350px] flex-col gap-2 text-center 2xl:max-w-[600px]">
         <p className="text-base font-extrabold text-primary">{data.subtitle}</p>
         <h1 className="text-4xl font-extrabold text-secondary">{data.title}</h1>
