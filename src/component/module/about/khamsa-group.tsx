@@ -40,7 +40,7 @@ const KhamsaGroup = () => {
           className="h-full max-h-full space-y-5"
         >
           <p className="text-base font-extrabold text-primary">ABOUT US</p>
-          <h1 className="text-4xl font-extrabold text-secondary md:text-6xl">
+          <h1 className="noto_serif_khmer text-4xl font-extrabold text-secondary md:text-6xl">
             Khamsa Group / សម្ព័ន្ធខាំសា
           </h1>
         </motion.div>
@@ -63,7 +63,7 @@ const KhamsaGroup = () => {
             className="max-h-[720px] w-full max-w-[720px]"
           />
         </motion.div>
-        <div className="w-fullmx-autor flex max-w-7xl flex-col gap-y-9 text-justify">
+        <div className="w-fullmx-autor noto_serif_khmer flex max-w-7xl flex-col gap-y-9 text-justify">
           <p>
             <strong>Khamsa Group /</strong>សម្ព័ន្ធខាំសា. Khamsa (ख़मसा, خمسة ,
             חַמְסָה, ⵜⴰⴼⵓⵙⵜ) from Arabic “Hamsa” means “five”, but also “the

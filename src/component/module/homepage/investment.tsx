@@ -9,7 +9,6 @@ import { getImageUrl } from '@/lib/directus'
 type Props = { data: Schema['Investment'] }
 
 const InvestmentSection = ({ data }: Props) => {
-
   const item = useMemo(() => {
     return data
       ?.items!.map((item) => {
@@ -17,10 +16,9 @@ const InvestmentSection = ({ data }: Props) => {
           return {
             title: item.title,
             imageUrl: getImageUrl(item.icon as string),
-            description: item.description
+            description: item.description,
           }
         }
-        
       })
       .filter(Boolean)
   }, [data.items])
@@ -30,13 +28,13 @@ const InvestmentSection = ({ data }: Props) => {
       className="flex flex-col items-center justify-center gap-12 p-5 pt-12 lg:px-0"
     >
       <Motion className="flex h-28 max-w-[350px] flex-col gap-2 text-center 2xl:max-w-[600px]">
-        <p className="text-base font-extrabold text-primary">{data.subtitle}</p>
-        <h1 className="text-4xl font-extrabold text-secondary">
-          {data.title}
-        </h1>
+        <p className="text-xl font-bold uppercase text-primary">
+          {data.subtitle}
+        </p>
+        <h1 className="text-4xl font-extrabold text-secondary">{data.title}</h1>
       </Motion>
       <Motion className="-mt-3 grid h-fit w-full max-w-xl grid-cols-1 justify-items-stretch gap-8 p-5 md:max-w-fit md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-3">
-        {item.map((data , index) => (
+        {item.map((data, index) => (
           <div
             key={index}
             className="flex h-[270px] w-full max-w-[320px] flex-col items-center justify-center gap-7 justify-self-center rounded-2xl bg-white p-3 shadow-lg shadow-black/40 md:min-w-[341px] xl:min-w-[402px]"
@@ -54,7 +52,7 @@ const InvestmentSection = ({ data }: Props) => {
               <h1 className="text-2xl font-extrabold text-secondary">
                 {data!.title}
               </h1>
-              <p className="max-w-52 text-base font-medium text-gray">
+              <p className="libre_baskerville max-w-52 text-base font-medium text-gray">
                 {data!.description}
               </p>
             </div>

@@ -38,7 +38,7 @@ const BlogSection = ({ data }: Props) => {
           transition={{ duration: 0.3, ease: 'easeOut', delay: 0.25 }}
           className="mt-20 text-center"
         >
-          <p className="text-sm font-medium text-primary">Blog</p>
+          <p className="text-xl font-bold uppercase text-primary">Blogs</p>
           <h1 className="font-manrope mt-4 text-4xl font-extrabold tracking-tight lg:text-5xl">
             Insights and news from <br /> KhamsaGroup
           </h1>

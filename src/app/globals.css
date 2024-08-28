@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.lato {
+  font-family: var(--font-lato);
+}
+.noto_serif_khmer {
+  font-family: var(--font-noto_serif_khmer);
+}
+.libre_baskerville {
+  font-family: var(--font-libre_baskerville);
+}
