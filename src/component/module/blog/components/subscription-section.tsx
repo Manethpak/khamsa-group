@@ -1,12 +1,28 @@
 'use client'
 
+import { Motion } from '@/component/ui/motion'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 const SubscriptionSection = () => {
+  const pathname = usePathname()
+  
+  // Determine the background color based on the path
+  const getBgColor =
+    pathname === '/blog'
+      ? 'bg-white text-black'
+      : 'bg-primary text-white'
+
+      const getButtonColor =
+      pathname === '/blog'
+        ? 'bg-primary text-black'
+        : 'bg-black text-white'
+        
+
   return (
-    <div className="flex w-full items-center justify-center bg-white text-center">
+    <div className={`flex w-full items-center justify-center ${getBgColor} text-center`}>
       <div className="flex h-full w-full max-w-7xl flex-col items-center justify-center py-20">
-        <div className="flex max-w-[600px] flex-col gap-6 text-center font-extrabold text-black">
+        <Motion className="flex max-w-[600px] flex-col gap-6 text-center font-semibold ">
           <p className="text-base">STAY IN THE LOOP</p>
           <h1 className="text-4xl md:text-5xl">
             Subscribe for more inspiration
@@ -15,16 +31,16 @@ const SubscriptionSection = () => {
             <input
               type="email"
               placeholder="Email"
-              className="h-10 w-[200px] rounded-lg px-3 text-sm text-black focus:outline-none"
+              className="h-10 w-[200px] font-light bg-slate-200/70 rounded-lg px-3 text-black focus:outline-none"
             />
             <button
               type="submit"
-              className="h-10 w-[100px] rounded-lg bg-[#8ACEC0] px-3 py-1.5 text-sm font-bold text-white focus:ring-opacity-50"
+              className={`${getButtonColor}  h-10 w-[100px] rounded-lg px-3 py-1.5 text-sm font-bold focus:ring-opacity-50`}
             >
               Subscribe
             </button>
           </form>
-        </div>
+        </Motion>
       </div>
     </div>
   )

@@ -25,7 +25,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
       <motion.div
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.95 }}
-        className="card overflow-hidden rounded-[20px] shadow-lg"
+        className="card h-full overflow-hidden rounded-[20px] shadow-lg"
         style={{
           boxShadow: '0px 10px 30px -20px #00000040',
           background: 'white',

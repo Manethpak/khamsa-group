@@ -2429,6 +2429,7 @@ export interface components {
       answer?: string | null
     }
     ItemsItem: {
+      categorySlug: any
       id?: number
       sort?: number | null
       user_created?: string | components['schemas']['Users'] | null
@@ -2491,6 +2492,8 @@ export interface components {
       date_updated?: string | null
       title: string
       subtitle: string
+      description: string
+      image?: string | components['schemas']['Files'] | null
       partners: (number | components['schemas']['ItemsPartners'])[]
     }
     ItemsInvestment: {
