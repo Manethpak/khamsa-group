@@ -39,15 +39,15 @@ const BlogPage = async ({ params }: Props) => {
 
   return (
     <>
-      <div className="font-lato container mx-auto mt-2 p-4 md:p-6 lg:p-8">
+      <div className="container mx-auto mt-2 p-4 font-lato md:p-6 lg:p-8">
         <div className="mx-auto mb-8 max-w-3xl text-center">
           <p className="text-base font-extrabold uppercase text-[#4ca6fc]">
             {data.topic}
           </p>
-          <h1 className="font-lato serif-khmer pt-8 text-3xl font-extrabold capitalize text-[#19154E] md:text-4xl lg:text-5xl">
+          <h1 className="serif-khmer pt-8 font-lato text-3xl font-extrabold capitalize text-[#19154E] md:text-4xl lg:text-5xl">
             {data.title}
           </h1>
-          <h2 className="font-serif-khmer my-4 text-lg text-zinc-600 md:text-xl lg:text-2xl">
+          <h2 className="my-4 font-serif-khmer text-lg text-zinc-600 md:text-xl lg:text-2xl">
             {data.description}
           </h2>
           <time className="font-serif-khmer text-sm text-zinc-400 md:text-base lg:text-lg">
@@ -61,23 +61,22 @@ const BlogPage = async ({ params }: Props) => {
             width={1200}
             height={630}
             alt={data.title!}
-            className="font-serif-khmer mx-auto mb-10 w-full rounded-xl lg:max-w-5xl"
+            className="mx-auto mb-10 w-full rounded-xl font-serif-khmer lg:max-w-5xl"
           />
         )}
 
         {data.content && (
           <div
-            className="font-serif-khmer prose prose-zinc mx-auto max-w-4xl"
+            className="prose prose-zinc mx-auto max-w-4xl font-serif-khmer"
             dangerouslySetInnerHTML={{ __html: data.content! }}
           />
         )}
-
+        {/* latestnew */}
         <div className="mx-4 py-12 text-start md:mx-10 lg:mx-16">
           <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
             Latest Articles
           </h2>
         </div>
-
         <div className="mt-4 flex flex-col gap-4 md:flex-row md:justify-center">
           {[1, 2].map((_, index) => (
             <div
@@ -90,7 +89,7 @@ const BlogPage = async ({ params }: Props) => {
                 width={100}
                 height={100}
                 alt={data.title!}
-                className="font-serif-khmer rounded-lg object-cover"
+                className="rounded-lg object-cover font-serif-khmer"
               />
               <div className="ml-4 flex flex-col justify-center">
                 {/* Blog Topic */}
