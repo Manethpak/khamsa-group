@@ -23,30 +23,31 @@ const BlogList = ({ data }: Props) => {
   }, [isInView, controls])
 
   return (
-    <div className="flex w-full flex-col items-center justify-center bg-[#E6F9FA] py-36 text-lg font-normal text-[#5B5E76]">
-      <motion.div
-        ref={ref}
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={controls}
-        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
-        className="grid w-full max-w-screen-lg grid-cols-1 gap-[20px] p-6 md:grid-cols-2"
-      >
-        {data.map((blog) => (
-          <BlogCard
-            key={blog.title}
-            title={blog.title!}
-            topic={blog.topic!}
-            date={formatDate(blog.date!)}
-            imageUrl={getImageUrl(blog.image as string)}
-            link={`/blog/` + blog.slug}
-          />
-        ))}
-      </motion.div>
-
+    <div>
+      <div className="flex w-full flex-col items-center justify-center gap-20 bg-[#E6F9FA] py-36 text-lg font-normal text-[#5B5E76]">
+        <motion.div
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={controls}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
+          className="grid w-full max-w-screen-lg grid-cols-1 gap-[20px] p-6 md:grid-cols-2"
+        >
+          {data.map((blog) => (
+            <BlogCard
+              key={blog.title}
+              title={blog.title!}
+              topic={blog.topic!}
+              date={formatDate(blog.date!)}
+              imageUrl={getImageUrl(blog.image as string)}
+              link={`/blog/` + blog.slug}
+            />
+          ))}
+        </motion.div>
+      </div>
       <SubscriptionSection />
     </div>
   )

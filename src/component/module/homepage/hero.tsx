@@ -7,6 +7,7 @@ import useMeasure from 'react-use-measure'
 import Image from 'next/image'
 import { getImageUrl } from '@/lib/directus'
 import { Schema } from '@/lib/schema'
+import { Motion } from '@/component/ui/motion'
 
 type Props = { data: Schema['Hero'] }
 
@@ -51,7 +52,7 @@ const HeroSection = ({ data }: Props) => {
           className="h-full w-full"
         >
           <Image
-            src="/images/bg-home.avif"
+            src={getImageUrl(data.image as string)}
             alt="globe background image"
             width={1920}
             height={880}
@@ -59,7 +60,7 @@ const HeroSection = ({ data }: Props) => {
             className="h-full w-full object-cover object-center"
           />
         </motion.div>
-        <div className="absolute mt-28 flex h-full w-full flex-col justify-center gap-24">
+        <div className="absolute flex h-full w-full flex-col justify-center gap-24 bg-black/45 pt-28">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -141,6 +142,13 @@ const HeroSection = ({ data }: Props) => {
             </div>
           </motion.div>
         </div>
+      </div>
+      <div className="flex w-full items-center justify-center bg-polar py-32">
+        <Motion className="flex w-full max-w-4xl flex-col gap-5 text-center">
+          <h1 className="text-lg text-secondary md:text-xl">
+            {data.description}
+          </h1>
+        </Motion>
       </div>
     </section>
   )

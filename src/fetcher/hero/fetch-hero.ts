@@ -5,7 +5,7 @@ export async function fetchHero() {
   return directus.request(
     readSingleton('Hero', {
       // @ts-expect-error
-      fields: ['*', 'partners.*'],
+      fields: ['*', 'partners.*', 'description'],
     })
   )
 }
