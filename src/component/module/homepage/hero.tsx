@@ -60,7 +60,7 @@ const HeroSection = ({ data }: Props) => {
             className="h-full w-full object-cover object-center"
           />
         </motion.div>
-        <div className="absolute pt-28 flex h-full w-full flex-col justify-center gap-24 bg-black/45">
+        <div className="absolute flex h-full w-full flex-col justify-center gap-24 bg-black/45 pt-28">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,9 +74,7 @@ const HeroSection = ({ data }: Props) => {
               {data.subtitle}
             </p>
             <button className="h-14 w-64 rounded-xl bg-white text-lg font-bold text-secondary">
-              <Link href="#investment" className="">
-                Explore Our Investment
-              </Link>
+              <Link href="#investment">Explore Our Investment</Link>
             </button>
           </motion.div>
           <motion.div
@@ -147,9 +145,12 @@ const HeroSection = ({ data }: Props) => {
       </div>
       <div className="flex w-full items-center justify-center bg-polar py-32">
         <Motion className="flex w-full max-w-4xl flex-col gap-5 text-center">
-          <h1 className="text-lg text-secondary md:text-xl">
+          <h1 className="font-lib-baskerville mx-auto text-[20px] font-bold leading-[28px] tracking-[0.2px] text-black sm:text-[24px] sm:leading-[30px] md:text-[26px] md:leading-[33.6px]">
             {data.description}
           </h1>
+
+          {/* 15px primary color line under the description */}
+          <div className="mx-auto mt-2 h-[1px] w-[200px] bg-primary"></div>
         </Motion>
       </div>
     </section>

@@ -1,59 +1,62 @@
-// src/app/category/[slug]/page.tsx
-import { fetchCategoryBySlug } from '@/lib/directus'
-import { notFound } from 'next/navigation' // This handles the 404 error for missing data
+import { fetchCategoryBySlug } from '@/fetcher/category/fetch-category'
+import { notFound } from 'next/navigation'
+import { Metadata, ResolvingMetadata } from 'next'
+import CategoryCard from '@/component/module/category/components/category-card'
+import { getImageUrl } from '@/lib/directus'
 
-type Category = {
-  title: string
-  sub_title: string
-  icons: string
-  tag: string
-  date: string
-  items: Array<{ title: string; description: string; imageUrl: string }>
+type Props = {
+  params: { slug: string }
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  // Fetch category data based on the slug
-  const categoryData = await fetchCategoryBySlug(params.slug)
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  try {
+    const result = await fetchCategoryBySlug(params.slug)
+    const previousImages = (await parent).openGraph?.images || []
 
-  // Check if category data is found
-  if (!categoryData || categoryData.length === 0) {
-    notFound() // This will render the 404 page
+    if (!result[0]) {
+      throw new Error('Category not found')
+    }
+
+    return {
+      title: result[0]?.title || 'Category',
+      description: result[0]?.description || 'Category description',
+      openGraph: {
+        images: [getImageUrl(result[0]?.image as string), ...previousImages],
+      },
+    }
+  } catch (error) {
+    console.error('Error generating metadata:', error)
+    return {
+      title: 'Error',
+      description: 'Failed to fetch category metadata',
+    }
   }
-
-  const category = categoryData[0] // Extract category details
-
-  return (
-    <div className="p-5">
-      <h1 className="text-4xl font-bold">{category.title}</h1>
-      <p className="mt-2 text-lg">{category.sub_title}</p>
-      <img src={category.icons} alt={category.title} className="mt-4" />
-      <div className="mt-5 grid grid-cols-4 gap-4">
-        {category.items.slice(0, 12).map((item, index) => (
-          <div
-            key={index}
-            className="relative flex transform flex-col items-center justify-between overflow-hidden rounded-t-lg bg-white shadow-lg transition-transform hover:scale-105"
-            style={{
-              width: '423px',
-              height: '590px',
-              borderRadius: '10px 10px 0 0',
-              opacity: 1,
-            }}
-          >
-            <img
-              src={item.imageUrl}
-              alt={item.title}
-              className="h-2/3 w-full object-cover"
-              style={{ borderRadius: '10px 10px 0 0' }}
-            />
-            <div className="flex flex-col items-center p-4">
-              <h2 className="mb-2 text-xl font-semibold">{item.title}</h2>
-              <p className="text-gray-600 text-center text-base">
-                {item.summary}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
 }
+
+const CategoryPage = async ({ params }: Props) => {
+  try {
+    const result = await fetchCategoryBySlug(params.slug)
+
+    if (!result[0]) {
+      return notFound() // Render 404 if no result
+    }
+
+    const data = result[0]
+
+    return (
+      <div className="p-5">
+        <CategoryCard data={data} onFilterClick={function (): void {
+          throw new Error('Function not implemented.')
+        } } />
+      </div>
+    )
+  } catch (error) {
+    console.error('Error fetching category data:', error)
+    return notFound() // Render 404 if there's an error
+  }
+}
+
+export default CategoryPage
