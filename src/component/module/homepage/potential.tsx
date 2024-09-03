@@ -31,10 +31,10 @@ const PotentialSection = () => {
             className="max-w-full"
           >
             <div className="flex w-full max-w-[550px] flex-col gap-y-5 text-base font-extrabold">
-              <p className="text-xl font-bold uppercase text-primary">
+              <p className="text-xl uppercase text-primary">
                 at khamsagroup we
               </p>
-              <h1 className="text-4xl text-secondary lg:text-5xl">
+              <h1 className="text-4xl font-bold text-secondary lg:text-5xl">
                 Unlock Your Potential
               </h1>
               <p className="libre_baskerville font-medium text-gray lg:text-lg">

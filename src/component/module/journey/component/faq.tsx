@@ -1,5 +1,6 @@
+'use client'
+
 import { Motion } from '@/component/ui/motion'
-import { Question } from '@/constants'
 import React, { useEffect, useState } from 'react'
 import { motion, useAnimationControls } from 'framer-motion'
 import { GrClose } from 'react-icons/gr'
