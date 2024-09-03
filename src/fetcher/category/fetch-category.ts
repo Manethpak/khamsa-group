@@ -14,8 +14,9 @@ export async function fetchCategory() {
   )
 }
 
-export async function fetchCompanyByCategorySlug(slug: string): Promise<Schema['Company']> {
-
+export async function fetchCompanyByCategorySlug(
+  slug: string
+): Promise<Schema['Company']> {
   const filter =
     slug === 'all'
       ? undefined
@@ -32,11 +33,10 @@ export async function fetchCompanyByCategorySlug(slug: string): Promise<Schema['
     readItems('Company_Category', {
       fields: ['*', 'Company_id.*', 'Category_id.slug', 'Category_id.title'],
       filter: {
-        ...filter
+        ...filter,
       },
     })
   )
-  console.log(result)
 
   return result.map((data) => {
     // @ts-expect-error type has no knowledge of deep nested

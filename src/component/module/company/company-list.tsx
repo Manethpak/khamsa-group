@@ -12,8 +12,8 @@ type Props = {
 }
 
 const CompanyList = ({ company, category }: Props) => {
-  const { slug } = useParams();
-  const router = useRouter();
+  const { slug } = useParams()
+  const router = useRouter()
 
   return (
     <section>
@@ -21,17 +21,16 @@ const CompanyList = ({ company, category }: Props) => {
         <div className="h-full w-full max-w-7xl overflow-hidden py-16">
           <div className="flex h-10 w-full justify-between text-lg sm:text-xl">
             <h1 className="flex h-full w-full max-w-28 items-center text-xl font-semibold sm:min-w-max sm:text-2xl">
-              Explore all
+              Explore our investment
             </h1>
             <div className="flex items-start p-1 sm:min-w-max">
               <p>Category :</p>
               <select
-              defaultValue={slug}
+                defaultValue={slug}
                 className="z-10 flex h-fit max-h-64 w-36 flex-col bg-white px-2 pt-1"
                 onChange={(e) => {
                   router.push(e.currentTarget.value)
                 }}
-
               >
                 <option value="all">All</option>
                 {category.map((data, index) => (
