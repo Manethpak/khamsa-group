@@ -11,26 +11,27 @@ type Props = { data: Schema['Investment'] }
 const InvestmentSection = ({ data }: Props) => {
   const item = useMemo(() => {
     return data
-      ?.items!.map((item) => {
+      ?.category!.map((item) => {
         if (typeof item === 'object' && item !== null) {
           return {
             title: item.title,
-            imageUrl: getImageUrl(item.icon as string),
-            description: item.description,
-            categorySlug: item.categorySlug, // Assuming this is the slug or identifier for the category
+            imageUrl: getImageUrl(item.image as string),
+            subtitle: item.subtitle,
+            categorySlug: item.slug, 
           }
         }
       })
       .filter(Boolean)
-  }, [data.items])
-
+  }, [data.category])
   return (
     <section
       id="investment"
       className="flex flex-col items-center justify-center gap-[12px] p-5 pt-12 lg:px-0"
     >
       <Motion className="flex h-28 max-w-[350px] flex-col gap-2 text-center 2xl:max-w-[600px]">
-        <p className="text-base font-extrabold text-primary">{data.subtitle}</p>
+        <p className="text-xl font-extrabold uppercase text-primary">
+          {data.subtitle}
+        </p>
         <h1 className="text-4xl font-extrabold text-secondary">{data.title}</h1>
       </Motion>
 
@@ -52,7 +53,7 @@ const InvestmentSection = ({ data }: Props) => {
                   {data!.title}
                 </h1>
                 <p className="max-w-52 text-base font-medium text-gray transition-colors group-hover:text-white">
-                  {data!.description}
+                  {data!.subtitle}
                 </p>
               </div>
             </div>

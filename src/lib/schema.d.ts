@@ -2506,6 +2506,7 @@ export interface components {
       date_updated?: string | null
       title?: string | null
       subtitle?: string | null
+      category?: (number | components['schemas']['ItemsCategory']) [] | null
       items?: (number | components['schemas']['ItemsItem'])[] | null
     }
     ItemsContact: {
@@ -2567,6 +2568,7 @@ export interface components {
       date_updated?: string | null
       content?: string | null
       title?: string | null
+      category?: (number | components['schemas']['ItemsCategory']) [] | null
       item?: (number | components['schemas']['ItemsItem'])[] | null
     }
     ItemsSuccess: {
@@ -2648,6 +2650,61 @@ export interface components {
       /** Format: timestamp */
       date_updated?: string | null
       email?: string | null
+    }
+    ItemsCategory: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      image?: string | components['schemas']['Files'] | null
+      title?: string | null
+      slug?: string | null
+      subtitle?: string | null
+      
+      investment?: number | components['schemas']['ItemsInvestment'] | null
+      company?: number | components['schemas']['ItemsCompany'] | null
+    }
+    ItemsCompany: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      image?: string | components['schemas']['Files'] | null
+      logo?: string | components['schemas']['Files'] | null
+      slug?: string | null
+      name?: string | null
+      company_size?: string | null
+      founded?: string | null
+      location?: string | null
+      about_company?: string | null
+      tag?: string | null
+      link?: unknown
+      icon_link?: unknown
+      more_image?: number | components['schemas']['ItemsInformation'] | null
+      category?: number | components['schemas']['ItemsCategory'] | null  
+    }
+    ItemsImage: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      image?: string | components['schemas']['Files'] | null
+      company?: number | components['schemas']['ItemsCompany'] | null
     }
   }
   responses: {
@@ -9842,4 +9899,7 @@ export type Schema = {
   Hero: components['schemas']['ItemsHero']
   Investment: components['schemas']['ItemsInvestment']
   Contact: components['schemas']['ItemsContact']
+  Category: components['schemas']['ItemsCategory'][]
+  Company: components['schemas']['ItemsCompany'][]
+  Image: components['schemas']['ItemsImage'][]
 }

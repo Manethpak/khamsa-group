@@ -13,8 +13,9 @@ const Navbar = () => {
 
   const getBgColor =
     pathname === '/'
-      ? 'bg-black text-white md:bg-white md:text-secondary lg:bg-gray/50 lg:text-white absolute top-0 z-[100] w-full'
-      : 'bg-white z-10 text-secondary'
+    ? `bg-black text-white md:bg-white md:text-secondary lg:bg-gray/50 lg:text-white absolute top-0 w-full
+       ${open ? 'z-[100]' : 'z-[50]'}`
+  : `bg-white text-secondary ${open ? 'relative z-50' : ''}`
 
   const dropdownBgColor =
     pathname === '/' ? 'bg-black text-white' : 'bg-white text-secondary'
@@ -79,12 +80,12 @@ const Navbar = () => {
           {open ? (
             <IoClose
               onClick={() => setOpen(!open)}
-              className="h-7 w-7 md:hidden"
+              className="h-7 w-7 md:hidden cursor-pointer"
             />
           ) : (
             <IoMenu
               onClick={() => setOpen(!open)}
-              className="h-7 w-7 md:hidden"
+              className="h-7 w-7 md:hidden cursor-pointer"
             />
           )}
         </div>
@@ -111,21 +112,21 @@ const Navbar = () => {
           },
         }}
       >
-        <div onClick={() => setOpen(!open)} className="h-full">
+        <div className="h-full">
           <ul className="flex flex-col items-center justify-center gap-7 font-semibold">
             <li>
-              <Link href="/journey">Our Journey</Link>
+              <Link href="/journey" onClick={() => setOpen(!open)}>Our Journey</Link>
             </li>
             <li>
-              <Link href="/about-us">About Us</Link>
+              <Link href="/about-us" onClick={() => setOpen(!open)}>About Us</Link>
             </li>
             <li>
-              <Link href="/blog">Blogs</Link>
+              <Link href="/blog" onClick={() => setOpen(!open)}>Blogs</Link>
             </li>
             <li
               className={`${contactBgColor} flex h-10 w-24 items-center justify-center rounded-xl`}
             >
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact" onClick={() => setOpen(!open)}>Contact</Link>
             </li>
           </ul>
         </div>

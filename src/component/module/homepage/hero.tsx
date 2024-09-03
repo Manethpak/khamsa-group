@@ -74,7 +74,7 @@ const HeroSection = ({ data }: Props) => {
               {data.subtitle}
             </p>
             <button className="h-14 w-64 rounded-xl bg-white text-lg font-bold text-secondary">
-              <Link href="#investment">Explore Our Investment</Link>
+              <Link href="/category">Explore Our Investment</Link>
             </button>
           </motion.div>
           <motion.div

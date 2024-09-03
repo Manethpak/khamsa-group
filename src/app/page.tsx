@@ -12,16 +12,14 @@ export default async function Home() {
   const heroData = await fetchHero()
   const blogs = await fetchBlogs({ limit: 4 })
   const investmentData = await fetchInvestment()
-  // const categoryData = await fetchCategory();
 
   return (
-    <div>
+    <main>
       <HeroSection data={heroData} />
-      {/* Pass categoryData to InvestmentSection if needed */}
       <InvestmentSection data={investmentData} />
       <PotentialSection />
       <BlogSection data={blogs} />
       <ContactSection />
-    </div>
+    </main>
   )
 }
