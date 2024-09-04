@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useMemo } from 'react'
-import { Investments } from '@/constants'
 import { Motion } from '@/component/ui/motion'
 import { Schema } from '@/lib/schema'
 import { getImageUrl } from '@/lib/directus'
@@ -46,7 +45,7 @@ const InvestmentSection = ({ data }: Props) => {
                   alt={data!.title!}
                   width={64}
                   height={64}
-                  className="h-12 w-12"
+                  className="h-12 w-12 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
                 />
               </div>
               <div className="flex flex-col gap-3 text-center">
