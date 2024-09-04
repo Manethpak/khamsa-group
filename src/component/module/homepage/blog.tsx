@@ -38,13 +38,13 @@ const BlogSection = ({ data }: Props) => {
           transition={{ duration: 0.3, ease: 'easeOut', delay: 0.25 }}
           className="mt-20 text-center"
         >
-          <p className="text-xl font-bold uppercase text-primary">Blogs</p>
+          <p className="text-xl uppercase text-primary">Blogs</p>
           <h1 className="font-manrope mt-4 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Insights and news from <br /> KhamsaGroup
+            Insights and news from <br /> Khamsa Group
           </h1>
           <p className="font-manrope mt-6 text-base font-semibold leading-7">
             Discover articles of hot news and important announcements <br />{' '}
-            from experts at KhamsaGroup
+            from experts at Khamsa Group
           </p>
           <div className="mt-6">
             <Link href="/blog" passHref>

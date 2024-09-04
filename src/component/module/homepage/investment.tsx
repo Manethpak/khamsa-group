@@ -17,35 +17,36 @@ const InvestmentSection = ({ data }: Props) => {
             title: item.title,
             imageUrl: getImageUrl(item.image as string),
             subtitle: item.subtitle,
-            categorySlug: item.slug, 
+            categorySlug: item.slug,
           }
         }
       })
       .filter(Boolean)
   }, [data.category])
+
   return (
     <section
       id="investment"
-      className="flex flex-col items-center justify-center gap-[12px] p-5 pt-12 lg:px-0"
+      className="flex flex-col items-center justify-center gap-20 px-5 py-12 lg:px-0"
     >
       <Motion className="flex h-28 max-w-[350px] flex-col gap-2 text-center 2xl:max-w-[600px]">
-        <p className="text-xl font-extrabold uppercase text-primary">
-          {data.subtitle}
-        </p>
-        <h1 className="text-4xl font-extrabold text-secondary">{data.title}</h1>
+        <p className="text-xl uppercase text-primary">{data.subtitle}</p>
+        <h1 className="my-4 text-4xl font-bold text-secondary lg:text-5xl">
+          {data.title}
+        </h1>
       </Motion>
 
-      <Motion className="-mt-3 grid h-fit w-full max-w-xl grid-cols-1 justify-items-stretch gap-[12px] p-5 md:max-w-fit md:grid-cols-2 lg:grid-cols-3">
+      <Motion className="-mt-3 grid h-fit w-full max-w-xl grid-cols-1 place-content-center justify-items-stretch gap-[12px] p-5 md:max-w-fit md:grid-cols-2 lg:grid-cols-3">
         {item.map((data, index) => (
           <Link href={`/category/${data!.categorySlug}`} key={index} passHref>
-            <div className="group flex h-[270px] w-full max-w-[320px] cursor-pointer flex-col items-center justify-center gap-7 justify-self-center rounded-2xl bg-white p-3 shadow-[0_15px_35px_rgba(0,0,0,0.2),0_10px_20px_rgba(0,0,0,0.1)] transition-all hover:bg-primary hover:shadow-[0_20px_45px_rgba(0,0,0,0.3),0_15px_30px_rgba(0,0,0,0.2)] md:min-w-[341px] xl:min-w-[402px]">
+            <div className="group flex h-[270px] w-full max-w-[320px] cursor-pointer flex-col items-center justify-center gap-7 justify-self-center rounded-2xl bg-white p-3 shadow-[0_15px_35px_rgba(0,0,0,0.2),0_10px_20px_rgba(0,0,0,0.1)] transition-all hover:bg-primary md:min-w-[341px] xl:min-w-[402px]">
               <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white transition-colors group-hover:bg-primary">
                 <Image
                   src={data!.imageUrl}
                   alt={data!.title!}
-                  width={250}
-                  height={250}
-                  className="h-8 w-8"
+                  width={64}
+                  height={64}
+                  className="h-12 w-12"
                 />
               </div>
               <div className="flex flex-col gap-3 text-center">

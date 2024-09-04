@@ -58,21 +58,22 @@ const CompanyDetailPage = () => {
           <div className="w-full xl:w-[70%]">
             <div className="flex items-center justify-center text-wrap text-start">
               Pirate ipsum arrgh bounty warp jack. Buccaneer ensign chains yard
-              jib pounders o'nine coffer spyglass. Clipper men gunwalls lanyard
-              pay man pinnace hail-shot topmast. Chandler gangplank men gold
-              furl pounders clipper coast. Warp cup deck coxswain to lubber
+              jib pounders o&apos;nine coffer spyglass. Clipper men gunwalls
+              lanyard pay man pinnace hail-shot topmast. Chandler gangplank men
+              gold furl pounders clipper coast. Warp cup deck coxswain to lubber
               chase starboard jennys. Run buccaneer the league jolly jack
-              pounders roger. Jones' jones' reef fluke arr arr plate. Belay shot
-              guns sloop the spanish boatswain. Men me prey locker fluke gabion
-              avast rat. Shiver mizzen chantey bixled shrouds log across. Coast
-              grapple ballast bixled jennys sheet yawl. Nipper pounders crack
-              ahoy hang lass cup plate gunwalls. Gangplank jones' pay jones'
-              spanish. Lateen men lanyard crimp no chains quarterdeck. Halter
-              lubber dead brace buccaneer fleet bixle arr aft. Cutlass the cat
-              boat main fathom. Gun shrouds topgallant fluke topgallant spyglass
-              hands pillage pounders. Execution seas rig chantey yer blow. Round
-              mutiny spirits to hogshead. Scurvy gun timbers bounty nest tea
-              seas chain hempen arrgh. Man sail jack tender chantey gabion
+              pounders roger. Jones&apos; jones&apos; reef fluke arr arr plate.
+              Belay shot guns sloop the spanish boatswain. Men me prey locker
+              fluke gabion avast rat. Shiver mizzen chantey bixled shrouds log
+              across. Coast grapple ballast bixled jennys sheet yawl. Nipper
+              pounders crack ahoy hang lass cup plate gunwalls. Gangplank
+              jones&apos; pay jones&apos; spanish. Lateen men lanyard crimp no
+              chains quarterdeck. Halter lubber dead brace buccaneer fleet bixle
+              arr aft. Cutlass the cat boat main fathom. Gun shrouds topgallant
+              fluke topgallant spyglass hands pillage pounders. Execution seas
+              rig chantey yer blow. Round mutiny spirits to hogshead. Scurvy gun
+              timbers bounty nest tea seas chain hempen arrgh. Man sail jack
+              tender chantey gabion
             </div>
           </div>
         </div>

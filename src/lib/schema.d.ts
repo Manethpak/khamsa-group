@@ -2506,7 +2506,7 @@ export interface components {
       date_updated?: string | null
       title?: string | null
       subtitle?: string | null
-      category?: (number | components['schemas']['ItemsCategory']) [] | null
+      category?: (number | components['schemas']['ItemsCategory'])[] | null
       items?: (number | components['schemas']['ItemsItem'])[] | null
     }
     ItemsContact: {
@@ -2568,7 +2568,7 @@ export interface components {
       date_updated?: string | null
       content?: string | null
       title?: string | null
-      category?: (number | components['schemas']['ItemsCategory']) [] | null
+      category?: (number | components['schemas']['ItemsCategory'])[] | null
       item?: (number | components['schemas']['ItemsItem'])[] | null
     }
     ItemsSuccess: {
@@ -2652,6 +2652,7 @@ export interface components {
       email?: string | null
     }
     ItemsCategory: {
+      name: string
       id?: number
       status?: string
       sort?: number | null
@@ -2665,7 +2666,7 @@ export interface components {
       title?: string | null
       slug?: string | null
       subtitle?: string | null
-      
+
       investment?: number | components['schemas']['ItemsInvestment'] | null
       company?: number | components['schemas']['ItemsCompany'] | null
     }
@@ -2691,7 +2692,12 @@ export interface components {
       link?: unknown
       icon_link?: unknown
       more_image?: number | components['schemas']['ItemsInformation'] | null
-      category?: number | components['schemas']['ItemsCategory'] | null  
+      category?:
+        | {
+            Category_id: components['schemas']['ItemsCategory']
+            Company_id: components['schemas']['ItemsCompany']
+          }[]
+        | null
     }
     ItemsImage: {
       id?: number
