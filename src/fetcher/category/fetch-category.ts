@@ -21,25 +21,22 @@ export async function fetchCompanyByCategorySlug(
     slug === 'all'
       ? undefined
       : {
-          Category_id: {
-            slug: {
-              _eq: slug,
+          category: {
+            Category_id: {
+              slug: {
+                _eq: slug,
+              },
             },
           },
         }
 
-  const result = await directus.request(
-    // @ts-expect-error type has no knowledge of deep nested
-    readItems('Company_Category', {
-      fields: ['*', 'Company_id.*', 'Category_id.slug', 'Category_id.title'],
+  return await directus.request(
+    readItems('Company', {
+      // @ts-expect-error type has no knowledge of deep nested
+      fields: ['*', 'category.Category_id.slug', 'category.Category_id.title'],
       filter: {
         ...filter,
       },
     })
   )
-
-  return result.map((data) => {
-    // @ts-expect-error type has no knowledge of deep nested
-    return { ...data.Company_id, category: data.Category_id }
-  })
 }
