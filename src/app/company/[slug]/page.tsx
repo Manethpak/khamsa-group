@@ -48,7 +48,7 @@ const CompanyPage = async ({ params }: Props) => {
 
   return (
     <div>
-      <div className="mx-auto max-w-6xl px-4 py-10 lg:px-0">
+      <div className="0 mx-auto max-w-6xl px-4 py-10 md:px-10">
         <Link href="/category/all" className="flex w-fit">
           <ChevronLeftIcon />
           <span>Back</span>
@@ -56,10 +56,10 @@ const CompanyPage = async ({ params }: Props) => {
 
         <div className="mt-4 flex h-fit w-full flex-col gap-6 md:gap-5">
           <div className="flex flex-col gap-4 lg:flex-row">
-            <div className="flex max-w-4xl flex-col items-center gap-2 overflow-y-auto rounded-lg lg:max-h-[500px] lg:flex-row">
+            <div className="flex max-w-4xl flex-col items-center gap-2 overflow-y-auto lg:max-h-[500px] lg:flex-row">
               <div
                 className={cn(
-                  'sticky top-0 h-full',
+                  'sticky top-0 h-full w-full',
                   company?.moreImg?.length! > 0 ? 'h-full' : ''
                 )}
               >
@@ -77,7 +77,7 @@ const CompanyPage = async ({ params }: Props) => {
                 className={cn(
                   company?.moreImg?.length! > 0
                     ? 'flex w-full min-w-[180px] overflow-x-auto'
-                    : 'hidden',
+                    : 'hidden w-0',
                   'max-h-fit flex-1 gap-3 self-start overflow-y-scroll lg:max-w-52 lg:flex-col'
                 )}
               >

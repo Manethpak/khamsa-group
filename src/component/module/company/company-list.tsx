@@ -47,14 +47,9 @@ const CompanyList = ({ company }: Props) => {
               <p className="text-base text-gray">
                 {dateYearFormat(data.founded!)}
               </p>
-              <div className="flex gap-2 text-primary">
+              <div className="text-primary">
                 {data.category &&
-                  data.category?.map((v, index) => (
-                    <span key={index}>
-                      {v.Category_id?.title}
-                      {index !== data.category!.length - 1 && ', '}
-                    </span>
-                  ))}
+                  data.category?.map((v) => v.Category_id?.title).join(', ')}
               </div>
             </div>
           </div>

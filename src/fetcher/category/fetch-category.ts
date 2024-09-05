@@ -38,6 +38,7 @@ export async function fetchCompanyByCategorySlug(
       filter: {
         ...filter,
       },
+      sort: ['-founded'],
     })
   )
 }
