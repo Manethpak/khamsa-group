@@ -6,7 +6,6 @@ import BlogSection from '@/component/module/homepage/blog'
 import { fetchHero } from '@/fetcher/hero/fetch-hero'
 import { fetchBlogs } from '@/fetcher/blog/fetch-blog'
 import { fetchInvestment } from '@/fetcher/investment/fetch-investment'
-// import { fetchCategory } from '@/fetcher/category/fetch-category';
 
 export default async function Home() {
   const heroData = await fetchHero()

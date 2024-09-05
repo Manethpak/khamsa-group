@@ -30,21 +30,20 @@ const HeroSection = ({ data }: Props) => {
 
   const displayLogo = useMemo(() => {
     return data
-      ?.partners!.map((partner) => {
-        if (typeof partner === 'object' && partner !== null) {
+      ?.company!.map((company) => {
+        if (typeof company === 'object' && company !== null) {
           return {
-            name: partner.name,
-            imageUrl: getImageUrl(partner.image as string),
-            url: partner.url,
+            name: company.name,
+            imageUrl: getImageUrl(company.logo as string),
           }
         }
       })
       .filter(Boolean)
-  }, [data.partners])
+  }, [data.company])
 
   return (
     <section id="hero">
-      <div className="relative flex h-[880px] w-full items-center justify-center overflow-hidden font-noto">
+      <div className="font-noto relative flex h-[880px] w-full items-center justify-center overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

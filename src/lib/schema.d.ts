@@ -2313,21 +2313,6 @@ export interface components {
        */
       bundle?: string | null
     }
-    ItemsPartners: {
-      id?: number
-      sort?: number | null
-      user_created?: string | components['schemas']['Users'] | null
-      /** Format: timestamp */
-      date_created?: string | null
-      user_updated?: string | components['schemas']['Users'] | null
-      /** Format: timestamp */
-      date_updated?: string | null
-      name: string
-      url: string | null
-      image: string | components['schemas']['Files']
-      logo_home?: number | components['schemas']['ItemsHome'] | null
-      hero_id?: number | components['schemas']['ItemsHero'] | null
-    }
     ItemsBlogsHome: {
       id?: number
       user_created?: string | components['schemas']['Users'] | null
@@ -2494,7 +2479,7 @@ export interface components {
       subtitle: string
       description: string
       image?: string | components['schemas']['Files'] | null
-      partners: (number | components['schemas']['ItemsPartners'])[]
+      company: (number | components['schemas']['ItemsCompany'])[]
     }
     ItemsInvestment: {
       id?: number
@@ -2692,6 +2677,7 @@ export interface components {
       link?: unknown
       icon_link?: unknown
       more_image?: (number | components['schemas']['ItemsInformation'])[]
+      hero?: number | components['schemas']['ItemsHero'] | null
       category?:
         | {
             Category_id: components['schemas']['ItemsCategory']
@@ -9890,7 +9876,6 @@ export interface operations {
 }
 
 export type Schema = {
-  partners: components['schemas']['ItemsPartners'][]
   Blogs_Home: components['schemas']['ItemsBlogsHome'][]
   Blogs: components['schemas']['ItemsBlogs'][]
   Home: components['schemas']['ItemsHome'][]
