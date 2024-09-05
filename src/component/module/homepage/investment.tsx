@@ -26,11 +26,11 @@ const InvestmentSection = ({ data }: Props) => {
   return (
     <section
       id="investment"
-      className="flex flex-col items-center justify-center gap-20 px-5 py-12 lg:px-0"
+      className="flex flex-col items-center justify-center gap-20 px-5 py-12 lg:px-0 font-noto"
     >
       <Motion className="flex h-28 max-w-[350px] flex-col gap-2 text-center 2xl:max-w-[600px]">
-        <p className="text-xl uppercase text-primary">{data.subtitle}</p>
-        <h1 className="my-4 text-4xl font-bold text-secondary lg:text-5xl">
+        <p className="subtitle">{data.subtitle}</p>
+        <h1 className="title">
           {data.title}
         </h1>
       </Motion>

@@ -1,23 +1,35 @@
-import { Lato, Libre_Baskerville, Noto_Serif_Khmer } from 'next/font/google'
+import {  Libre_Baskerville,
+  Noto_Serif_Khmer,
+  Noto_Sans,
+  Noto_Sans_Khmer, 
+} from 'next/font/google'
 
-const lato_init = Lato({
-  subsets: ['latin'],
-  weight: ['100', '300', '400', '700', '900'],
-  variable: '--font-lato',
-})
 
 const libre_init = Libre_Baskerville({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['400'],
   variable: '--font-libre',
 })
 
 const noto_serif_khmer_init = Noto_Serif_Khmer({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['500'],
   variable: '--font-noto-serif-khmer',
 })
 
-export const lato = lato_init.className
+const noto_sans_init = Noto_Sans({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-noto-sans',
+})
+
+const noto_sans_khmer_init = Noto_Sans_Khmer({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-noto-sans-khmer',
+})
+
 export const libre = libre_init.variable
 export const noto_serif_khmer = noto_serif_khmer_init.variable
+export const noto_sans = noto_sans_init.variable
+export const noto_sans_khmer = noto_sans_khmer_init.variable

@@ -24,7 +24,7 @@ const BlogList = ({ data }: Props) => {
 
   return (
     <div>
-      <div className="flex w-full flex-col items-center justify-center gap-20 bg-[#E6F9FA] py-36 text-lg font-normal text-[#5B5E76]">
+      <div className="flex w-full flex-col items-center justify-center gap-20 bg-[#E6F9FA] py-36 text-lg font-noto text-[#5B5E76]">
         <motion.div
           ref={ref}
           variants={{

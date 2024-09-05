@@ -26,7 +26,7 @@ const KhamsaGroup = () => {
   return (
     <motion.div
       ref={ref}
-      className="flex w-full flex-col items-center justify-center"
+      className="flex w-full flex-col items-center justify-center font-noto"
     >
       <motion.div className="h-full space-y-24 text-pretty p-10 py-28 text-center text-2xl font-medium text-[#888888]">
         <motion.div
@@ -39,8 +39,8 @@ const KhamsaGroup = () => {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
           className="h-full max-h-full space-y-5"
         >
-          <p className="text-xl font-extrabold text-primary">ABOUT US</p>
-          <h1 className="noto_serif_khmer text-4xl font-extrabold text-secondary md:text-6xl">
+          <p className="subtitle">ABOUT US</p>
+          <h1 className="title">
             Khamsa Group /{' '}
             <small className="font-serif-khmer">សម្ព័ន្ធខាំសា</small>
           </h1>

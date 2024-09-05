@@ -21,7 +21,7 @@ const config: Config = {
         gray: '#5b5e76',
       },
       fontFamily: {
-        lato: ['var(--font-lato)'],
+        noto: ['var(--font-noto-sans)'],
         libre: ['var(--font-libre)'],
         'serif-khmer': ['var(--font-noto-serif-khmer)'],
       },

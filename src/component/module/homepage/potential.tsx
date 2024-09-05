@@ -31,13 +31,13 @@ const PotentialSection = () => {
             className="max-w-full"
           >
             <div className="flex w-full max-w-[550px] flex-col gap-y-5 text-base font-extrabold">
-              <p className="text-xl uppercase text-primary">
+              <p className="subtitle">
                 at khamsagroup we
               </p>
-              <h1 className="text-4xl font-bold text-secondary lg:text-5xl">
+              <h1 className="title">
                 Unlock Your Potential
               </h1>
-              <p className="libre_baskerville font-medium text-gray lg:text-lg">
+              <p className="libre_baskerville font-noto text-gray lg:text-lg">
                 We have experts in various fields including business, fintech,
                 AI and blockchain. We help accelerate your growth and maximize
                 your success.

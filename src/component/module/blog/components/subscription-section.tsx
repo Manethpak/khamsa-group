@@ -20,13 +20,11 @@ const SubscriptionSection = () => {
         
 
   return (
-    <div className={`flex w-full items-center justify-center ${getBgColor} text-center`}>
+    <div className={`flex w-full items-center justify-center ${getBgColor} text-center font-noto`}>
       <div className="flex h-full w-full max-w-7xl flex-col items-center justify-center py-20">
         <Motion className="flex max-w-[600px] flex-col gap-6 text-center font-semibold ">
-          <p className="text-base">STAY IN THE LOOP</p>
-          <h1 className="text-4xl md:text-5xl">
-            Subscribe for more inspiration
-          </h1>
+        <p className= {`${getBgColor} subtitle`}>STAY IN THE LOOP</p>
+        <h1 className={`${getBgColor} title`}>Subscribe for more inspiration.</h1>
           <form className="flex items-center justify-center gap-2">
             <input
               type="email"

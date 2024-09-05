@@ -27,8 +27,8 @@ const OurSuccess = ({ success }: Props) => {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
           className="flex max-w-[530px] flex-col gap-5 font-extrabold"
         >
-          <p className="text-base text-primary">OUR SUCCESS</p>
-          <h1 className="text-4xl text-secondary md:text-5xl">
+          <p className="subtitle">OUR SUCCESS</p>
+          <h1 className="title">
             Leading development for modern teams .
           </h1>
         </motion.div>

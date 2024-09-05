@@ -44,7 +44,7 @@ const HeroSection = ({ data }: Props) => {
 
   return (
     <section id="hero">
-      <div className="relative flex h-[880px] w-full items-center justify-center overflow-hidden">
+      <div className="relative flex h-[880px] w-full items-center justify-center overflow-hidden font-noto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

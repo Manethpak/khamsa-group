@@ -8,8 +8,8 @@ const InOur = () => {
     <div className="-mt-1 flex w-full items-start justify-center bg-polar px-10">
       <div className="flex h-full w-full max-w-7xl flex-col gap-24 py-24">
         <Motion className="flex w-full max-w-[540px] flex-col gap-5 font-extrabold">
-          <p className="text-base text-primary">Join us in our</p>
-          <h1 className="text-4xl text-secondary md:text-5xl">
+          <p className="subtitle">Join us in our</p>
+          <h1 className="title">
             30 years journey
           </h1>
           <p className="text-lg font-normal">

@@ -40,11 +40,11 @@ const BlogPage = async ({ params }: Props) => {
   return (
     <>
       <div className="container mx-auto mt-2 p-4 font-lato md:p-6 lg:p-8">
-        <div className="mx-auto mb-8 max-w-3xl text-center">
-          <p className="text-base font-extrabold uppercase text-[#4ca6fc]">
+        <div className="mx-auto mb-8 max-w-3xl text-center flex flex-col gap-3">
+          <p className="subtitle text-[#4ca6fc]">
             {data.topic}
           </p>
-          <h1 className="serif-khmer pt-8 font-lato text-3xl font-extrabold capitalize text-[#19154E] md:text-4xl lg:text-5xl">
+          <h1 className=" capitalize title">
             {data.title}
           </h1>
           <h2 className="my-4 font-serif-khmer text-lg text-zinc-600 md:text-xl lg:text-2xl">
@@ -73,7 +73,7 @@ const BlogPage = async ({ params }: Props) => {
         )}
         {/* latestnew */}
         <div className="mx-4 py-12 text-start md:mx-10 lg:mx-16">
-          <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
+          <h2 className="title">
             Latest Articles
           </h2>
         </div>
@@ -91,13 +91,13 @@ const BlogPage = async ({ params }: Props) => {
                 alt={data.title!}
                 className="rounded-lg object-cover font-serif-khmer"
               />
-              <div className="ml-4 flex flex-col justify-center">
+              <div className="ml-4 flex flex-col gap-2 justify-center">
                 {/* Blog Topic */}
-                <p className="text-base font-extrabold uppercase text-[#4ca6fc]">
+                <p className="subtitle text-[#4ca6fc]">
                   {data.topic!}
                 </p>
                 {/* Blog Title */}
-                <h3 className="font-serif-khmer text-lg font-bold">
+                <h3 className="title text-lg ">
                   {data.title!}
                 </h3>
               </div>

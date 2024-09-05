@@ -49,7 +49,7 @@ const Navbar = () => {
       className={`${getBgColor} -mt-1 flex w-full flex-col items-center md:px-10`}
     >
       {/* navbar section */}
-      <div className="flex h-20 w-full max-w-7xl items-center justify-between px-5 md:px-6 lg:h-20">
+      <div className="flex h-20 w-full max-w-7xl items-center justify-between px-5 font-noto md:px-6 lg:h-20">
         <Link href="/" className="flex h-9 items-center gap-2">
           <Image
             src="/images/logo.avif"
