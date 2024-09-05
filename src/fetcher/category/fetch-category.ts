@@ -34,6 +34,7 @@ export async function fetchCompanyByCategorySlug(
     readItems('Company', {
       // @ts-expect-error type has no knowledge of deep nested
       fields: ['*', 'category.Category_id.slug', 'category.Category_id.title'],
+      // @ts-expect-error type has no knowledge of deep nested
       filter: {
         ...filter,
       },
