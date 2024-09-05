@@ -9,5 +9,5 @@ export function dateYearFormat(dateString: string) {
   const year = date.getFullYear()
   const month = date.toLocaleString('default', { month: 'long' })
 
-  return `${year} ${month}`
+  return `${month}, ${year}`
 }

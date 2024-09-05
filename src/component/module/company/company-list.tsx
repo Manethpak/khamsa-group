@@ -44,11 +44,17 @@ const CompanyList = ({ company }: Props) => {
               <h2 className="text-2xl font-bold uppercase text-secondary">
                 {data.name!}
               </h2>
-              <p className="px-2 text-base text-gray">
+              <p className="text-base text-gray">
                 {dateYearFormat(data.founded!)}
               </p>
-              <div className="flex gap-2 pt-4 text-lg text-primary">
-                {data.category?.map((v) => v.Category_id?.title).join(',  ')}
+              <div className="flex gap-2 text-primary">
+                {data.category &&
+                  data.category?.map((v, index) => (
+                    <span key={index}>
+                      {v.Category_id?.title}
+                      {index !== data.category!.length - 1 && ', '}
+                    </span>
+                  ))}
               </div>
             </div>
           </div>
