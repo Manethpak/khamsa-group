@@ -25,7 +25,7 @@ const BlogSection = ({ data }: Props) => {
   }, [isInView, controls])
 
   return (
-    <motion.section className="flex min-h-screen flex-col items-center justify-center bg-[#E6F9FA] py-5">
+    <motion.section className="flex min-h-screen flex-col items-center justify-center bg-[#E6F9FA] py-5 font-noto">
       <div className="w-full max-w-screen-xl px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         <motion.div
           ref={ref}
@@ -38,8 +38,8 @@ const BlogSection = ({ data }: Props) => {
           transition={{ duration: 0.3, ease: 'easeOut', delay: 0.25 }}
           className="mt-20 text-center"
         >
-          <p className="text-xl uppercase text-primary">Blogs</p>
-          <h1 className="font-manrope mt-4 text-4xl font-extrabold tracking-tight lg:text-5xl">
+          <p className="subtitle">Blogs</p>
+          <h1 className="title">
             Insights and news from <br /> Khamsa Group
           </h1>
           <p className="font-manrope mt-6 text-base font-semibold leading-7">

@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .title {
+      @apply font-noto text-2xl font-extrabold leading-normal text-[#19154E] md:text-4xl lg:text-5xl;
+    }
+  
+    .subtitle {
+      @apply font-noto text-sm font-extrabold uppercase tracking-widest text-[#8ACEC0] md:text-base;
+    }
+  
+    .heading-title {
+      @apply font-noto text-3xl font-extrabold text-white md:text-4xl;
+    }
+  
+    .heading-subtitle {
+      @apply font-noto text-lg font-medium md:text-xl lg:text-2xl;
+    }
+  }
+  
+  .box-shadow {
+    -webkit-box-shadow: 2px 6px 9px 0px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 2px 6px 9px 0px rgba(0, 0, 0, 0.09);
+    box-shadow: 2px 6px 9px 0px rgba(0, 0, 0, 0.09);
+  }

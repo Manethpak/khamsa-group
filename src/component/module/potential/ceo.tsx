@@ -5,7 +5,7 @@ import React from 'react'
 const Ceo = () => {
   return (
     <Motion
-      className="flex w-full max-w-[360px] flex-col gap-5 text-center md:max-w-[600px] lg:px-14"
+      className="flex w-full max-w-[360px] flex-col gap-5 text-center  font-noto md:max-w-[600px] lg:px-14"
     >
       <h1 className="text-2xl font-semibold text-secondary xl:text-3xl">
         &quot;There is no small person or small idea. Here, there are only

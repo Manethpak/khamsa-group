@@ -7,8 +7,8 @@ const Contacts = () => {
     <div className="flex w-full items-center justify-center bg-primary px-10 text-center">
       <div className="flex h-full w-full max-w-7xl justify-center py-24">
         <Motion className="flex max-w-[530px] flex-col gap-6 font-extrabold text-white">
-          <p className="text-base">What are you waiting for?</p>
-          <h1 className="text-4xl md:text-5xl">
+          <p className="subtitle text-white">What are you waiting for?</p>
+          <h1 className="title text-white">
             Let&apos;s invest in the future together
           </h1>
           <Link href="/contact" passHref>

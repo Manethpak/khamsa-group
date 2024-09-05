@@ -2,7 +2,10 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from '@/component/module/hero/navbar'
 import Footer from '@/component/module/footer/footer'
-import { lato, libre, noto_serif_khmer } from '@/utils/fonts'
+import { libre,
+  noto_sans,
+  noto_sans_khmer,
+  noto_serif_khmer,} from '@/utils/fonts'
 
 export const metadata: Metadata = {
   title: 'Khamsa Group',
@@ -16,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={` ${lato} ${libre} ${noto_serif_khmer}`}>
+      <body className={`${libre} ${noto_serif_khmer} ${noto_sans} ${noto_sans_khmer}`}>
         <Navbar />
         {children}
         <Footer />

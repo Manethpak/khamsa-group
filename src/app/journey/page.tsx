@@ -11,13 +11,13 @@ export default async function JourneyPage() {
   const faq = await fetchFaq()
 
   return (
-    <div className="flex w-full flex-col items-center justify-center pt-36 text-lg font-normal text-gray">
+    <div className="flex w-full flex-col items-center justify-center pt-36 text-lg font-noto text-gray">
       <Motion className="h-fit w-full space-y-24 text-pretty px-10 text-center text-2xl font-medium">
         <div className="flex h-full max-h-full flex-col items-center gap-5">
-          <p className="text-xl font-extrabold text-primary">
+          <p className="subtitle">
             Khamsagroup journey
           </p>
-          <h1 className="max-w-[1000px] text-4xl font-extrabold text-[#19154E] md:text-6xl">
+          <h1 className="max-w-[1000px] heading-title  text-secondary ">
             A Journey of a thousand miles begins with a single step
           </h1>
           <p className="max-w-[720px] text-lg md:text-2xl">

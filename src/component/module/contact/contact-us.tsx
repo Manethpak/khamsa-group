@@ -34,11 +34,11 @@ const ContactUs = () => {
 
   const [showArrow, setShowArrow] = useState<string | null>(null)
   return (
-    <div className="flex w-full flex-col items-center justify-center py-36 text-lg font-medium text-white">
+    <div className="flex w-full flex-col items-center justify-center py-36 text-lg font-noto text-white">
       <Motion className="h-fit w-full max-w-7xl space-y-14 px-10">
         <div className="flex h-full max-h-full flex-col gap-5">
-          <p className="text-base font-extrabold">contact us</p>
-          <h1 className="text-4xl font-extrabold md:text-6xl">We can help</h1>
+          <p className="subtitle text-white">contact us</p>
+          <h1 className="title text-white">We can help</h1>
         </div>
         <div className="flex h-full w-full flex-col-reverse justify-between gap-y-14 xl:flex-row">
           <div className="h-80 w-full max-w-7xl overflow-hidden rounded-2xl md:h-[450px] xl:h-[545px] xl:max-w-[740px]">

@@ -33,9 +33,9 @@ const Office = ({ office }: Props) => {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
           className="flex flex-col items-center gap-5 font-extrabold text-secondary"
         >
-          <p className="text-base text-primary">Our office</p>
-          <h1 className="max-w-[450px] text-4xl md:text-5xl">
-            Work, play, and refresh.
+          <p className="subtitle">Our office</p>
+          <h1 className="title max-w-[450px] ">
+            Work, Play, and Refresh.
           </h1>
         </motion.div>
         <motion.div

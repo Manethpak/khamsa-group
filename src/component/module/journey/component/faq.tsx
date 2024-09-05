@@ -32,8 +32,8 @@ const Faq = ({ faq }: Props) => {
     <div className="flex w-full justify-center px-10">
       <div className="flex h-full w-full max-w-7xl flex-col items-center gap-24 py-24">
         <Motion className="flex flex-col items-center gap-5 text-center font-extrabold text-secondary">
-          <p className="text-base text-primary">FAQ</p>
-          <h1 className="max-w-[560px] text-4xl md:text-5xl">
+          <p className="subtitle">FAQ</p>
+          <h1 className="title">
             Frequently asked questions.
           </h1>
         </Motion>
