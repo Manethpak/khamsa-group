@@ -35,10 +35,10 @@ const InvestmentSection = ({ data }: Props) => {
         </h1>
       </Motion>
 
-      <Motion className="-mt-3 grid h-fit w-full max-w-xl grid-cols-1 place-content-center justify-items-stretch gap-[12px] p-5 md:max-w-fit md:grid-cols-2 lg:grid-cols-3">
+      <Motion className="-mt-3 grid h-fit w-full max-w-xl grid-cols-1 justify-center gap-8 p-5 md:max-w-fit md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-3">
         {item.map((data, index) => (
           <Link href={`/category/${data!.categorySlug}`} key={index} passHref>
-            <div className="group flex h-[270px] w-full max-w-[320px] cursor-pointer flex-col items-center justify-center gap-7 justify-self-center rounded-2xl bg-white p-3 shadow-[0_15px_35px_rgba(0,0,0,0.2),0_10px_20px_rgba(0,0,0,0.1)] transition-all hover:bg-primary md:min-w-[341px] xl:min-w-[402px]">
+            <div className="group mx-auto flex h-[270px] w-full max-w-[320px] cursor-pointer flex-col items-center justify-center gap-7 justify-self-center rounded-2xl bg-white p-3 shadow-[0_15px_35px_rgba(0,0,0,0.2),0_10px_20px_rgba(0,0,0,0.1)] transition-all hover:bg-primary md:min-w-[341px] lg:min-w-[325px] xl:min-w-[402px]">
               <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white transition-colors group-hover:bg-primary">
                 <Image
                   src={data!.imageUrl}
