@@ -2688,10 +2688,10 @@ export interface components {
       founded?: string | null
       location?: string | null
       about_company?: string | null
-      tag?: string | null
+      tag?: number[] | null
       link?: unknown
       icon_link?: unknown
-      more_image?: number | components['schemas']['ItemsInformation'] | null
+      more_image?: (number | components['schemas']['ItemsInformation'])[]
       category?:
         | {
             Category_id: components['schemas']['ItemsCategory']
