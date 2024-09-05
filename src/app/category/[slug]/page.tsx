@@ -9,6 +9,8 @@ type Props = {
   params: { slug: string }
 }
 
+export const revalidate = 300
+
 const CategoryPage = async ({ params }: Props) => {
   const companies = await fetchCompanyByCategorySlug(params.slug)
   const categoryData = await fetchCategory()

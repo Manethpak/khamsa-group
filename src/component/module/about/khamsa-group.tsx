@@ -8,12 +8,11 @@ import Office from './component/office/office'
 import Contacts from './component/contact/contact'
 import { useOffice } from '@/fetcher/about/office/use-office'
 import { useSuccess } from '@/fetcher/about/success/use-success'
-import { usePartner } from '@/fetcher/partner/use-partner'
 
 const KhamsaGroup = () => {
   const { data: officeData } = useOffice()
   const { data: successData } = useSuccess()
-  const { data: partnerData } = usePartner()
+
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const controls = useAnimation()
@@ -26,7 +25,7 @@ const KhamsaGroup = () => {
   return (
     <motion.div
       ref={ref}
-      className="flex w-full flex-col items-center justify-center font-noto"
+      className="font-noto flex w-full flex-col items-center justify-center"
     >
       <motion.div className="h-full space-y-24 text-pretty p-10 py-28 text-center text-2xl font-medium text-[#888888]">
         <motion.div
