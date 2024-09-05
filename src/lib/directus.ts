@@ -1,16 +1,29 @@
 import { createDirectus, rest } from '@directus/sdk'
 import { Schema } from './schema'
 
-const directus = createDirectus<Schema>(
-  'https://khamsa.panel.dreamslab.dev'
-).with(
+const BASE_URL = 'https://khamsa.panel.dreamslab.dev'
+
+const directus = createDirectus<Schema>(BASE_URL).with(
   rest({
     onRequest: (options) => ({ ...options, cache: 'no-store' }),
   })
 )
 
-export function getImageUrl(id: string) {
-  return 'https://khamsa.panel.dreamslab.dev/assets/' + id
+type Preset = {
+  key?: string
+  width?: number
+  height?: number
+  quality?: number
+}
+
+export function getImageUrl(id: string, preset?: Preset) {
+  const url = new URL('/assets/' + id, BASE_URL)
+
+  for (const [key, value] of Object.entries(preset || {})) {
+    url.searchParams.set(key, value.toString())
+  }
+
+  return url.href
 }
 
 export default directus

@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { getImageUrl } from '@/lib/directus'
 import { FaFacebookSquare, FaLinkedin } from 'react-icons/fa'
 import Link from 'next/link'
+import { cn, formatDate } from '@/lib/utils'
 
 type Props = {
   data: Schema['Company']
@@ -66,12 +67,17 @@ const CompanyDetail = ({ data }: Props) => {
                       src={company.imgUrl}
                       alt={company.name!}
                       width={1200}
-                      height={1200}
+                      height={900}
                       quality={100}
                       className="h-full w-full object-cover object-center"
                     />
                   </div>
-                  <div className="mx-auto flex max-h-fit w-full gap-3 overflow-scroll lg:max-w-52 lg:flex-col">
+                  <div
+                    className={cn(
+                      company?.moreImg ? 'flex' : 'hidden',
+                      'mx-auto max-h-fit w-full gap-3 overflow-scroll lg:max-w-52 lg:flex-col'
+                    )}
+                  >
                     {company.moreImg?.map((img, index) => (
                       <div key={index} className="max-h-48 max-w-full">
                         <Image
@@ -99,22 +105,41 @@ const CompanyDetail = ({ data }: Props) => {
                       </span>
                     ))}
                   </div>
-                  <div className="flex flex-col gap-8">
-                    <h1>Found: {company.date}</h1>
-                    <h1>Location: {company.location}</h1>
-                    <h1>Team size: {company.company_size}</h1>
+                  <div className="flex flex-col gap-4">
+                    <p>
+                      Founded:{' '}
+                      <span className="font-bold">
+                        {formatDate(company.date!)}
+                      </span>
+                    </p>
+                    <p>
+                      Team size:{' '}
+                      <span className="font-bold">{company.company_size}</span>
+                    </p>
                     {company.link?.map((link, index) => (
                       <div key={index}>
-                        {index !== 1 && (
-                          <span>
-                            Website : <Link href={link.link}>{link.title}</Link>
-                          </span>
+                        {index === 0 && (
+                          <>
+                            Website:{' '}
+                            <span className="font-bold">
+                              <Link href={link.link}>{link.title}</Link>
+                            </span>
+                          </>
                         )}
-                        {index !== 0 && (
-                          <span>Phone number : {link.title}</span>
+                        {index === 1 && (
+                          <>
+                            Phone number:{' '}
+                            <span className="font-bold">{link.title}</span>
+                          </>
                         )}
                       </div>
                     ))}
+                    <p>
+                      Location:{' '}
+                      <span className="font-bold capitalize">
+                        {company.location}
+                      </span>
+                    </p>
                   </div>
                   <div className="mt-4 flex items-center gap-5 text-4xl">
                     {(company.icon_link || []).map((iconLink, index) => {
@@ -128,10 +153,10 @@ const CompanyDetail = ({ data }: Props) => {
                   </div>
                 </div>
               </div>
-              <div className="w-full max-w-4xl">
+              <div className="mt-10 w-full max-w-4xl">
                 {company.about_company && (
                   <div
-                    className="flex items-center justify-center text-wrap text-start"
+                    className="prose min-w-full text-justify"
                     dangerouslySetInnerHTML={{
                       __html: company.about_company!,
                     }}

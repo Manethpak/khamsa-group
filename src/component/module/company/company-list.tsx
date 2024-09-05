@@ -20,11 +20,12 @@ const CompanyList = ({ company }: Props) => {
             <div className="relative h-64 max-w-full">
               <div className="relative h-full w-full">
                 <Image
-                  src={getImageUrl(data.image! as string)}
+                  src={getImageUrl(data.image! as string, {
+                    key: 'company-thumbnail',
+                  })}
                   alt={data.name!}
-                  width={1920}
-                  height={880}
-                  quality={100}
+                  width={880}
+                  height={600}
                   className="h-full w-full rounded-lg object-cover object-center"
                 />
               </div>
@@ -33,9 +34,8 @@ const CompanyList = ({ company }: Props) => {
                 <Image
                   src={getImageUrl(data.logo! as string)}
                   alt={data.name!}
-                  width={80}
-                  height={80}
-                  quality={80}
+                  width={100}
+                  height={100}
                   className="h-fit w-fit rounded-lg object-contain object-center"
                 />
               </div>
