@@ -38,7 +38,6 @@ const CompanyDetail = ({ data }: Props) => {
 
     const link = item.link as linkProps[]
     const icon_link = item?.icon_link as linkProps[]
-    console.log(icon_link)
 
     return {
       name: item.name,
@@ -59,40 +58,49 @@ const CompanyDetail = ({ data }: Props) => {
       {companies.map((company, index) => (
         <div key={index}>
           <div className="flex w-full flex-col items-center justify-center p-10">
-            <div className="flex h-fit w-full max-w-7xl flex-col gap-10 py-10 md:gap-5">
-              <div className="flex h-full flex-col justify-between gap-3 lg:flex-row">
-                <div className="flex w-full max-w-full flex-col items-center gap-3 overflow-y-hidden lg:flex-row">
-                  <div className="h-full w-full lg:max-w-3xl">
+            <div className="flex h-fit w-full max-w-7xl flex-col gap-6 py-10 md:gap-5">
+              <div className="flex h-full flex-col gap-4 lg:flex-row">
+                <div className="flex max-h-[500px] max-w-4xl flex-col items-center gap-2 overflow-y-auto lg:flex-row">
+                  <div
+                    className={cn(
+                      'sticky top-0',
+                      // not sure why this work, but it work
+                      company?.moreImg?.length! > 0 ? 'h-full' : ''
+                    )}
+                  >
                     <Image
                       src={company.imgUrl}
                       alt={company.name!}
-                      width={1200}
-                      height={900}
-                      quality={100}
+                      width={700}
+                      height={500}
+                      quality={90}
                       className="h-full w-full object-cover object-center"
                     />
                   </div>
+
                   <div
                     className={cn(
-                      company?.moreImg ? 'flex' : 'hidden',
-                      'mx-auto max-h-fit w-full gap-3 overflow-scroll lg:max-w-52 lg:flex-col'
+                      company?.moreImg?.length! > 0
+                        ? 'flex min-w-[180px]'
+                        : 'hidden',
+                      'max-h-fit flex-1 gap-3 self-start overflow-y-scroll lg:max-w-52 lg:flex-col'
                     )}
                   >
                     {company.moreImg?.map((img, index) => (
-                      <div key={index} className="max-h-48 max-w-full">
+                      <div key={index} className="max-h-48 w-full">
                         <Image
                           src={img?.imageUrl as string}
                           alt={company.name!}
-                          width={1200}
-                          height={1200}
+                          width={400}
+                          height={400}
                           quality={100}
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
                     ))}
-                    <div className=""></div>
                   </div>
                 </div>
+
                 <div className="flex w-full max-w-xs flex-col gap-6 py-8 lg:px-5">
                   <h1 className="text-3xl font-bold">{company.name}</h1>
                   <div className="flex flex-wrap gap-2">
@@ -153,6 +161,7 @@ const CompanyDetail = ({ data }: Props) => {
                   </div>
                 </div>
               </div>
+
               <div className="mt-10 w-full max-w-4xl">
                 {company.about_company && (
                   <div
