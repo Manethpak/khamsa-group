@@ -7,6 +7,8 @@ import { fetchHero } from '@/fetcher/hero/fetch-hero'
 import { fetchBlogs } from '@/fetcher/blog/fetch-blog'
 import { fetchInvestment } from '@/fetcher/investment/fetch-investment'
 
+export const revalidate = 300
+
 export default async function Home() {
   const heroData = await fetchHero()
   const blogs = await fetchBlogs({ limit: 4 })
