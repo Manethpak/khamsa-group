@@ -4,19 +4,19 @@
 
 @layer components {
   .heading-title {
-    @apply font-manrope font-bold text-3xl sm:text-5xl lg:text-4xl xl:text-5xl leading-normal text-deepGreen ;
+    @apply font-manrope font-bold text-3xl sm:text-5xl lg:text-4xl xl:text-5xl tracking-tight capitalize leading-normal text-deepGreen ;
   }
 
   .subtitle {
-    @apply font-manrope font-normal normal-case text-base lg:text-lg text-deepGreen;
+    @apply font-manrope font-extralight normal-case text-base lg:text-lg text-deepGreen tracking-tight ;
   }
 
-  .title {
+  /* .title {
     @apply font-noto text-sm font-extrabold uppercase tracking-widest text-[#8ACEC0] md:text-base;
   }
   .heading-subtitle {
     @apply font-noto text-lg font-medium md:text-xl lg:text-2xl;
-  }
+  } */
 }
 
 .box-shadow {
