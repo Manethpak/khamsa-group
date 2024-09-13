@@ -18,11 +18,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth bg-[#F7F7F7]">
       <body className={`${libre} ${noto_serif_khmer} ${noto_sans} ${noto_sans_khmer}`}>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   )
