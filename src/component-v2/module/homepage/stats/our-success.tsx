@@ -21,7 +21,7 @@ const OurSuccess = ({ data }: Props) => {
 
   return (
     <motion.div ref={ref} className="relative mt-6 w-full">
-      <div className="max-w-9xl w-full justify-center">
+      <div className="max-w-9xl mx-auto w-full px-4">
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 75 },
@@ -30,13 +30,13 @@ const OurSuccess = ({ data }: Props) => {
           initial="hidden"
           animate={controls}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
-          className="grid grid-cols-1 items-center justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+          className="grid grid-cols-1 place-items-center gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
         >
           {data.map((item, index) => (
             <motion.div
               key={index}
-              className="mx-auto flex flex-col items-center justify-center  border-black-1 bg-white p-4 font-manrope text-green-700" // 'mx-auto' for centering in col-1
-              style={{ width: '290px', height: '150px' }}
+              className="flex flex-col items-center justify-center  border-black bg-white p-1 font-manrope text-green-700 "
+              style={{ width: '100%', maxWidth: '290px', height: '150px' }} // Fixed height
               variants={{
                 hidden: { opacity: 0, y: 75 },
                 visible: { opacity: 1, y: 0 },
@@ -45,8 +45,12 @@ const OurSuccess = ({ data }: Props) => {
               animate={controls}
               transition={{ duration: 1, ease: 'easeOut', delay: 1 }}
             >
-              <h1 className="font-manrope text-3xl font-semibold">{item.number}</h1>
-              <span className="mt-2 text-2xl font-light">{item.title}</span>
+              <h1 className="text-lg font-manrope sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+                {item.number}
+              </h1>
+              <span className="mt-1 font-manrope font-light text-sm sm:text-base md:text-2xl lg:text-2xl xl:text-2xl">
+                {item.title}
+              </span>
             </motion.div>
           ))}
         </motion.div>

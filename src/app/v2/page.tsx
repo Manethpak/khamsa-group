@@ -9,6 +9,7 @@ import HomeSection from '@/component-v2/module/homepage/home-section/home'
 import { Header } from '@/component-v2/global/header/heager'
 import { fetchSuccess } from '@/fetcher/about/success/fetch-success'
 import OurSuccess from '@/component-v2/module/homepage/stats/our-success'
+import OurJourney from '@/component-v2/module/homepage/ourjourney-section/our-journey'
 
 export const revalidate = 300
 
@@ -23,7 +24,7 @@ export default async function Home() {
       <HomeSection data={heroData} />
       <OurSuccess data= {successData}/>
       <InvestmentSection data={investmentData} />
-      <PotentialSection />
+      <OurJourney/>
       <BlogSection data={blogs} />
       <ContactSection />
     </Header>
