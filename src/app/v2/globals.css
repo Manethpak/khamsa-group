@@ -11,12 +11,13 @@
     @apply font-manrope font-extralight normal-case text-base lg:text-lg text-deepGreen tracking-tight ;
   }
 
-  /* .title {
-    @apply font-noto text-sm font-extrabold uppercase tracking-widest text-[#8ACEC0] md:text-base;
-  }
   .heading-subtitle {
-    @apply font-noto text-lg font-medium md:text-xl lg:text-2xl;
-  } */
+    @apply font-manrope font-medium text-2xl lg:text-3xl text-deepGreen tracking-tight uppercase;
+  }
+
+  .title {
+    @apply font-manrope font-normal normal-case text-xl lg:text-2xl text-deepGreen tracking-tight;
+  }
 }
 
 .box-shadow {
@@ -45,4 +46,12 @@ body::-webkit-scrollbar-thumb {
 /* set button(top and bottom of the scrollbar) */
 body::-webkit-scrollbar-button {
   display: none;
+}
+
+.swiper-scrollbar-drag {
+  border: 3px solid #1BAB92;
+}
+
+.swiper-scrollbar-drag:hover {
+  border: 4px solid #1BAB92;
 }
