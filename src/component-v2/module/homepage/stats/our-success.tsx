@@ -5,7 +5,7 @@ import { useAnimation, useInView, motion } from 'framer-motion'
 import { Schema } from '@/lib/schema'
 
 type Props = {
-  data: Schema['Success'][] // Assuming 'data' is an array of Success objects
+  data: Schema['Success'] // Assuming 'data' is an array of Success objects
 }
 
 const OurSuccess = ({ data }: Props) => {

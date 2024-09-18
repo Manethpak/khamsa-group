@@ -26,7 +26,7 @@ const FooterContent = () => {
         <h1 className="text-2xl font-bold">KhamsaGroup</h1>
         <div className="flex w-full flex-col justify-between gap-10 sm:flex-row">
           <div className="flex w-full max-w-lg flex-col gap-3">
-            <p>Overview</p>
+            <p>Overview v2</p>
             {Footer.map((data) => (
               <div
                 key={data.title}
