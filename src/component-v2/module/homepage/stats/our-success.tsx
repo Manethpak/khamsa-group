@@ -35,7 +35,7 @@ const OurSuccess = ({ data }: Props) => {
           {data.map((item, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center justify-center  border-black bg-white p-1 font-manrope text-green-700 "
+              className="flex flex-col items-center justify-center border-black bg-white p-1 font-manrope text-green-700"
               style={{ width: '100%', maxWidth: '290px', height: '150px' }} // Fixed height
               variants={{
                 hidden: { opacity: 0, y: 75 },
@@ -45,10 +45,10 @@ const OurSuccess = ({ data }: Props) => {
               animate={controls}
               transition={{ duration: 1, ease: 'easeOut', delay: 1 }}
             >
-              <h1 className="text-lg font-manrope sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+              <h1 className="font-manrope text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
                 {item.number}
               </h1>
-              <span className="mt-1 font-manrope font-light text-sm sm:text-base md:text-2xl lg:text-2xl xl:text-2xl">
+              <span className="mt-1 font-manrope text-sm font-light sm:text-base md:text-2xl lg:text-2xl xl:text-2xl">
                 {item.title}
               </span>
             </motion.div>

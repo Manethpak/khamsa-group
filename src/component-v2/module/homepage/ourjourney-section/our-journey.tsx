@@ -33,26 +33,21 @@ const OurJourney = () => {
             <motion.div
               key={index}
               onClick={() => setSelectedPhase(phase)} // Update selected phase on click
-         
-  className={`border-white-100 flex flex-col items-center justify-center bg-white font-manrope text-green-700 transition-colors duration-300 hover:bg-secondPrimary hover:text-white focus:font-extrabold focus:text-white active:bg-secondPrimary sm:text-base md:text-2xl lg:text-2xl xl:text-2xl ${
-    selectedPhase === phase
-      ? 'bg-secondPrimary font-manrope text-[22px] leading-[30.05px] text-left'
-      : ''
-  }`}
-  style={{ width: '173px', height: '69px' }} // Adjusted height
-  variants={{
-    hidden: { opacity: 0, y: 75 },
-    visible: { opacity: 1, y: 0 },
-  }}
-  whileTap={{ scale: 1 }} // Slight scale effect on click
->
-  <h1 className="font-manrope text-[22px] text-2xl font-light hover:font-semibold hover:text-white">
-    {phase}
-  </h1>
-
-
-
-             
+              className={`border-white-100 flex flex-col items-center justify-center bg-white font-manrope text-green-700 transition-colors duration-300 hover:bg-secondPrimary hover:text-white focus:font-extrabold focus:text-white active:bg-secondPrimary sm:text-base md:text-2xl lg:text-2xl xl:text-2xl ${
+                selectedPhase === phase
+                  ? 'bg-secondPrimary text-left font-manrope text-[22px] leading-[30.05px]'
+                  : ''
+              }`}
+              style={{ width: '173px', height: '69px' }} // Adjusted height
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              whileTap={{ scale: 1 }} // Slight scale effect on click
+            >
+              <h1 className="font-manrope text-2xl text-[22px] font-light hover:font-semibold hover:text-white">
+                {phase}
+              </h1>
             </motion.div>
           ))}
         </motion.div>
