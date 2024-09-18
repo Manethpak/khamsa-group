@@ -1,14 +1,12 @@
-import ContactSection from '@/component/module/homepage/contact'
-import InvestmentSection from '@/component/module/homepage/investment'
-import PotentialSection from '@/component/module/homepage/potential'
-import BlogSection from '@/component/module/homepage/blog'
+import HomeSection from '@/component-v2/module/homepage/home-section/home'
+import OurSuccess from '@/component-v2/module/homepage/stats/our-success'
+import Investment from '@/component-v2/module/homepage/investment-section/investment'
+import { Header } from '@/component-v2/global/header/header'
 import { fetchHero } from '@/fetcher/hero/fetch-hero'
 import { fetchBlogs } from '@/fetcher/blog/fetch-blog'
 import { fetchInvestment } from '@/fetcher/investment/fetch-investment'
-import HomeSection from '@/component-v2/module/homepage/home-section/home'
-import { Header } from '@/component-v2/global/header/heager'
 import { fetchSuccess } from '@/fetcher/about/success/fetch-success'
-import OurSuccess from '@/component-v2/module/homepage/stats/our-success'
+
 
 export const revalidate = 300
 
@@ -22,10 +20,7 @@ export default async function Home() {
     <Header>
       <HomeSection data={heroData} />
       <OurSuccess data= {successData}/>
-      <InvestmentSection data={investmentData} />
-      <PotentialSection />
-      <BlogSection data={blogs} />
-      <ContactSection />
+      <Investment data={investmentData} />
     </Header>
   )
 }
