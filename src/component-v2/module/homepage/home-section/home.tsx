@@ -42,8 +42,8 @@ const HomeSection = ({ data }: Props) => {
   }, [data.company])
 
   return (
-    <section id="hero" className="flex flex-col w-full items-center justify-center py-20 overflow-hidden px-5 md:px-10 lg:px-24">
-      <div className="w-full max-w-screen-2xl flex flex-col gap-20">
+    <section id="hero" className="flex flex-col w-full items-center justify-center py-20 overflow-hidden">
+      <div className="w-full max-w-screen-2xl flex flex-col gap-20 px-5 md:px-10 lg:px-24">
         <div className="flex h-full flex-col-reverse items-center justify-center lg:gap-12 lg:flex-row sm:justify-between">
           <div className="flex flex-col gap-10 w-full h-full justify-center max-w-5xl subtitle ">
             <div className=" flex flex-col">

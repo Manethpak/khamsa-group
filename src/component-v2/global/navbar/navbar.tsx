@@ -76,10 +76,10 @@ const Navbar = () => {
       animate={containerControls}
       variants={navbarVariants}
       transition={{ duration: 0.35, ease: 'easeInOut' }}
-      className="subtitle sticky top-0 z-50 -mt-1 flex w-full flex-col items-center bg-white px-5 md:px-10 lg:px-24"
+      className="subtitle sticky top-0 z-50 -mt-1 flex w-full flex-col items-center bg-white"
     >
       {/* Navbar Section */}
-      <div className="flex h-20 w-full max-w-screen-2xl items-center justify-between lg:h-20">
+      <div className="flex h-20 w-full max-w-screen-2xl items-center justify-between lg:h-20 px-5 md:px-10 lg:px-24">
         <Link href="/v2" className="flex h-9 items-center gap-2">
           <Image
             src="/images/logo.avif"
