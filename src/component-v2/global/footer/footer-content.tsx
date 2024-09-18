@@ -1,17 +1,27 @@
 'use client'
-import { Footer } from '@/constants'
-import { useContact } from '@/fetcher/contact/use-contact'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { FaFacebookSquare, FaLinkedin, FaYoutube } from 'react-icons/fa'
+import { useContact } from '@/fetcher/contact/use-contact'
+import { motion } from 'framer-motion'
 
 interface Props {
   title: string
   link: string
   phone: string
+  icon_name: keyof typeof iconMapping
 }
 
-const FooterContent = () => {
-  const {data} = useContact()
+const iconMapping = {
+  facebook: FaFacebookSquare,
+  linkedin: FaLinkedin,
+  youtube: FaYoutube,
+}
+
+const Footer = () => {
+  const { data } = useContact()
+
   const contact = data as {
     address?: Props[]
     link?: Props[]
@@ -21,44 +31,104 @@ const FooterContent = () => {
   const address: Props[] = contact?.address || []
   const link: Props[] = contact?.link || []
   return (
-    <footer className="flex w-full flex-col items-center bg-black p-10 font-noto text-white shadow-md">
-      <div className="flex w-full max-w-7xl flex-col gap-10 md:px-14">
-        <h1 className="text-2xl font-bold">KhamsaGroup</h1>
-        <div className="flex w-full flex-col justify-between gap-10 sm:flex-row">
-          <div className="flex w-full max-w-lg flex-col gap-3">
-            <p>Overview v2</p>
-            {Footer.map((data) => (
-              <div
-                key={data.title}
-                className="text-sm font-normal text-white/70"
-              >
-                <Link href={data.url}>{data.title}</Link>
-              </div>
-            ))}
+    <footer className="from-gray-100 to-gray-100 bg-black bg-gradient-to-r text-white">
+      <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div>
+            <div className="flex items-center gap-3">
+              <Image
+                src={'/images/logo.avif'}
+                width={100}
+                height={200}
+                alt="Khamsa Group Logo"
+                className="mr-2 h-16 w-16"
+              />
+              <span className="gap-10 pb-0 text-2xl">Khamsa Group</span>
+            </div>
+
+            <p className="text-gray-600 mt-4 max-w-xs text-sm">
+              Pirate ipsum arrgh bounty warp jack. Yellow timbers no pounders
+              fluke lugsail gangplank. Across no poop landlubber a road sails
+              mutiny rat. Fleet coxswain lass lass crow&apos;s cup gar. Tales
+              nest ensign lateen no gold.
+            </p>
+
+            <div className="text-gray-600 mt-8 flex space-x-6">
+              {contact?.social_link?.map(({ icon_name, link }, index) => {
+                const IconComponent = iconMapping[icon_name]
+                return (
+                  <div
+                    key={index}
+                    className="rounded-full border-2 p-2 text-2xl hover:bg-[#ff0366] hover:text-white"
+                  >
+                    <Link href={link} target="_blank">
+                      <IconComponent />
+                    </Link>
+                  </div>
+                )
+              })}
+            </div>
           </div>
-          <div className="flex w-full max-w-lg flex-col gap-3">
-            <p>More Information</p>
-            <div className="flex flex-col gap-3 text-sm font-normal text-white/70">
+          <div className="grid grid-cols-1 lg:grid-cols-1 lg:justify-items-center">
+            <div>
+              <h3 className="pt-4 text-[22px] font-bold lg:pl-20">Overview</h3>
+              <ul className="text-gray-500 mt-4 flex flex-col space-y-2 text-sm">
+                <li className="hover:opacity-75 lg:pl-20">
+                  <Link href="#">Our Journey</Link>
+                </li>
+                <li className="hover:opacity-75 lg:pl-20">
+                  <Link href="#">About us</Link>
+                </li>
+                <li className="hover:opacity-75 lg:pl-20">
+                  <Link href="#">Blogs</Link>
+                </li>
+                <li className="hover:opacity-75 lg:pl-20">
+                  <Link href="#">Contact us</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div className="grid grid-cols-1">
+              <h2 className="pt-4 text-[22px] font-bold">More information</h2>
+
               {link.map((link, index) => (
-                <div key={index}>
-                  <Link href={link.link}>{link.title}</Link>
-                  <p>{link.phone}</p>
-                </div>
+                <motion.div key={index}>
+                  <div>
+                    <Link
+                      href={link.link}
+                      className="text-gray-500 mt-4 flex flex-col space-y-2 text-sm"
+                    >
+                      {link.title}
+                    </Link>
+                    <p>{link.phone}</p>
+                  </div>
+                </motion.div>
               ))}
-              {address.map((data) => (
-                <div key={data.title}>
-                  <Link href={data.link}>{data.title}</Link>
-                </div>
-              ))}
-              <Link href="/terms-and-conditions">Terms and Conditions</Link>
+              <div className="items-center sm:items-center">
+                {address.map((data) => (
+                  <div key={data.title} className="">
+                    <Link
+                      href={data.link}
+                      className="text-gray-500 mt-4 flex flex-col space-y-2 text-sm uppercase"
+                    >
+                      {' '}
+                      {data.title}
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-        <span className="text-xs font-normal text-white/70">
-          © KhamsaGroup 2023.
-        </span>
+        <p className="text-gray-800 mt-8 text-sm">
+          © KhamsaGroup 2024 |{' '}
+          <Link href="#" className="text-gray-400">
+            Terms and Conditions
+          </Link>
+        </p>
       </div>
     </footer>
   )
 }
-export default FooterContent
+export default Footer
