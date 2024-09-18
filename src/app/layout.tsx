@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navbar from '@/component/module/hero/navbar'
-import Footer from '@/component/module/footer/footer'
 import {
   libre,
   noto_sans,
   noto_sans_khmer,
   noto_serif_khmer,
+  manrope
 } from '@/utils/fonts'
 
 export const metadata: Metadata = {
@@ -22,11 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth bg-[#F7F7F7]">
       <body
-        className={`${libre} ${noto_serif_khmer} ${noto_sans} ${noto_sans_khmer}`}
+        className={`${libre} ${noto_serif_khmer} ${noto_sans} ${noto_sans_khmer} ${manrope}`}
       >
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   )

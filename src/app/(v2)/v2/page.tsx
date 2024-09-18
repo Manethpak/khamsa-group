@@ -1,7 +1,6 @@
 import HomeSection from '@/component-v2/module/homepage/home-section/home'
 import OurSuccess from '@/component-v2/module/homepage/stats/our-success'
 import Investment from '@/component-v2/module/homepage/investment-section/investment'
-import { Header } from '@/component-v2/global/header/header'
 import { fetchHero } from '@/fetcher/hero/fetch-hero'
 import { fetchBlogs } from '@/fetcher/blog/fetch-blog'
 import { fetchInvestment } from '@/fetcher/investment/fetch-investment'
@@ -17,7 +16,7 @@ export default async function Home() {
   const successData = await fetchSuccess()
 
   return (
-    <Header>
+    <div>
       <HomeSection data={heroData} />
       <OurSuccess data= {successData}/>
       <InvestmentSection data={investmentData} />
@@ -25,6 +24,6 @@ export default async function Home() {
       <BlogSection data={blogs} />
       <ContactSection />
       <Investment data={investmentData} />
-    </Header>
+    </div>
   )
 }

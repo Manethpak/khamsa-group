@@ -3,6 +3,7 @@ import { Footer } from '@/constants'
 import { fetchContact } from '@/fetcher/contact/fetch-contact'
 import { useContact } from '@/fetcher/contact/use-contact'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 interface Props {
@@ -13,6 +14,11 @@ interface Props {
 
 const FooterContent = () => {
   const {data} = useContact()
+  const pathname = usePathname()
+
+  const footer =
+    pathname === '/' ? '' : ''
+
   const contact = data as {
     address?: Props[]
     link?: Props[]
@@ -22,7 +28,7 @@ const FooterContent = () => {
   const address: Props[] = contact?.address || []
   const link: Props[] = contact?.link || []
   return (
-    <footer className="flex w-full flex-col items-center bg-black p-10 font-noto text-white shadow-md">
+    <footer className={`${footer} flex w-full flex-col items-center bg-black p-10 font-noto text-white shadow-md`}>
       <div className="flex w-full max-w-7xl flex-col gap-10 md:px-14">
         <h1 className="text-2xl font-bold">KhamsaGroup</h1>
         <div className="flex w-full flex-col justify-between gap-10 sm:flex-row">
