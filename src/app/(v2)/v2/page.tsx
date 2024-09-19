@@ -6,6 +6,7 @@ import { fetchHero } from '@/fetcher/hero/fetch-hero'
 import { fetchBlogs } from '@/fetcher/blog/fetch-blog'
 import { fetchInvestment } from '@/fetcher/investment/fetch-investment'
 import { fetchSuccess } from '@/fetcher/about/success/fetch-success'
+import BlogSection from '@/component-v2/module/homepage/blogs-section/blogs'
 export const revalidate = 300
 
 export default async function Home() {
@@ -17,9 +18,10 @@ export default async function Home() {
   return (
     <div>
       <HomeSection data={heroData} />
-      <OurSuccess data= {successData}/>
+      <OurSuccess data={successData} />
       <Investment data={investmentData} />
-      <OurJourney/>
+      <OurJourney />
+      <BlogSection />
       <Investment data={investmentData} />
     </div>
   )
