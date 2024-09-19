@@ -20,7 +20,6 @@ export default async function Home() {
       <OurSuccess data= {successData}/>
       <Investment data={investmentData} />
       <OurJourney/>
-      <Investment data={investmentData} />
     </div>
   )
 }
