@@ -1,12 +1,14 @@
-'use client' // This makes the component a Client Component
+'use client'
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { phaseData } from '@/constants'
 
+type PhaseKeys = keyof typeof phaseData
+
 const OurJourney = () => {
-  const [selectedPhase, setSelectedPhase] = useState('Phase 1')
-  const phases = Object.keys(phaseData)
+  const [selectedPhase, setSelectedPhase] = useState<PhaseKeys>('Phase 1')
+  const phases = Object.keys(phaseData) as PhaseKeys[]
 
   return (
     <section className="mx-auto flex w-full max-w-screen-2xl flex-col items-center px-5 md:px-10 lg:px-24">
@@ -30,7 +32,11 @@ const OurJourney = () => {
             <motion.div
               key={index}
               onClick={() => setSelectedPhase(phase)}
-              className={`flex flex-col items-center justify-center transition-colors duration-300 sm:text-base md:text-xl lg:text-2xl ${selectedPhase === phase ? 'bg-secondPrimary font-bold text-white' : 'bg-white font-normal text-secondPrimary'}`}
+              className={`flex flex-col items-center justify-center transition-colors duration-300 sm:text-base md:text-xl lg:text-2xl ${
+                selectedPhase === phase
+                  ? 'bg-secondPrimary font-bold text-white'
+                  : 'bg-white font-normal text-secondPrimary'
+              }`}
               style={{
                 width: '173px',
                 height: '69px',
@@ -61,7 +67,11 @@ const OurJourney = () => {
             animate="visible"
             transition={{ duration: 1, ease: 'easeOut', delay: 1 }}
           >
-            <p>{phaseData[selectedPhase].box1}</p>
+            {phaseData[selectedPhase] ? (
+              <p>{phaseData[selectedPhase].box1}</p>
+            ) : (
+              <p>Loading...</p>
+            )}
           </motion.div>
 
           {/* Second Box */}
@@ -76,7 +86,11 @@ const OurJourney = () => {
             animate="visible"
             transition={{ duration: 1, ease: 'easeOut', delay: 1 }}
           >
-            <p>{phaseData[selectedPhase].box2}</p>
+            {phaseData[selectedPhase] ? (
+              <p>{phaseData[selectedPhase].box2}</p>
+            ) : (
+              <p>Loading...</p>
+            )}
           </motion.div>
         </div>
       </motion.div>
