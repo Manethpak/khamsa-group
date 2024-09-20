@@ -48,7 +48,9 @@ const OurJourney = () => {
               }}
               whileTap={{ scale: 1 }}
             >
-              <h1 className="font-manrope text-2xl text-[22px]">{phase}</h1>
+              <h1 className="font-manrope sm:text-xs md:text-xs lg:text-[22px]">
+                {phase}
+              </h1>
             </motion.div>
           ))}
         </motion.div>
