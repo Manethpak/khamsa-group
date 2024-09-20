@@ -1,26 +1,23 @@
-'use client'
+'use client' // This makes the component a Client Component
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { phaseData } from '@/constants'
 
 const OurJourney = () => {
-  // State to manage the selected phase
   const [selectedPhase, setSelectedPhase] = useState('Phase 1')
-
-  // Array of phase titles to map over
   const phases = Object.keys(phaseData)
 
   return (
-    <section className="h-full w-full px-20 py-16">
-      <motion.div className="mx-auto flex w-full max-w-screen-2xl flex-col gap-5 px-5 md:px-10 lg:px-24">
-        <h1 className="mr-4 text-start font-manrope text-4xl font-semibold text-secondPrimary">
-          Our Journey
+    <section className="mx-auto flex w-full max-w-screen-2xl flex-col items-center px-5 md:px-10 lg:px-24">
+      <motion.div className="flex w-full max-w-screen-2xl flex-col gap-10">
+        <h1 className="text-start  font-manrope text-2xl font-semibold text-secondPrimary sm:text-3xl md:text-4xl">
+          OUR JOURNEY
         </h1>
 
         {/* Grid for the 5 phases */}
         <motion.div
-          className="flex justify-start gap-2 font-manrope text-xl font-semibold transition-colors duration-300"
+          className="flex justify-start gap-2 font-manrope text-lg font-semibold transition-colors duration-300 sm:text-base md:text-lg lg:text-xl xl:text-2xl"
           variants={{
             hidden: { opacity: 0, y: 75 },
             visible: { opacity: 1, y: 0 },
@@ -32,20 +29,16 @@ const OurJourney = () => {
           {phases.map((phase, index) => (
             <motion.div
               key={index}
-              onClick={() => setSelectedPhase(phase)} // Update selected phase on click
-              className={`border-white-100 flex flex-col items-center justify-center bg-white font-manrope text-green-700 transition-colors duration-300 hover:bg-secondPrimary hover:text-white focus:font-extrabold focus:text-white active:bg-secondPrimary sm:text-base md:text-2xl lg:text-2xl xl:text-2xl ${
-                selectedPhase === phase
-                  ? 'bg-secondPrimary text-left font-manrope text-[22px] leading-[30.05px]'
-                  : ''
-              }`}
-              style={{ width: '173px', height: '69px' }} // Adjusted height
+              onClick={() => setSelectedPhase(phase)}
+              className={`border-white-100 flex flex-col items-center justify-center bg-white transition-colors duration-300 focus:bg-secondPrimary focus:font-extrabold focus:text-white active:bg-secondPrimary sm:text-base md:text-xl lg:text-2xl ${selectedPhase === phase ? 'bg-secondPrimary font-semibold text-white' : 'bg-transparent text-green-700'}`}
+              style={{ width: '173px', height: '69px' }}
               variants={{
                 hidden: { opacity: 0, y: 75 },
                 visible: { opacity: 1, y: 0 },
               }}
-              whileTap={{ scale: 1 }} // Slight scale effect on click
+              whileTap={{ scale: 1 }}
             >
-              <h1 className="font-manrope text-2xl text-[22px] font-light hover:font-semibold hover:text-white">
+              <h1 className="font-manrope text-2xl text-[22px] font-light hover:font-semibold">
                 {phase}
               </h1>
             </motion.div>
@@ -53,11 +46,11 @@ const OurJourney = () => {
         </motion.div>
 
         {/* Boxes below the grid */}
-        <div className="flex-col-2 flex items-center gap-10">
+        <div className="flex-col-2 flex flex-wrap justify-start gap-6 md:gap-10">
           {/* First Box */}
           <motion.div
-            className="justify-start self-start p-4 font-manrope text-sm font-light transition-colors duration-300 ease-in-out sm:text-base md:text-2xl lg:text-2xl xl:text-2xl"
-            style={{ width: '325px', height: '450px' }}
+            className="p-4 font-manrope text-sm font-light transition-colors duration-300 ease-in-out sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+            style={{ width: '100%', maxWidth: '325px', height: 'auto' }}
             variants={{
               hidden: { opacity: 0, y: 75 },
               visible: { opacity: 1, y: 0 },
@@ -66,14 +59,13 @@ const OurJourney = () => {
             animate="visible"
             transition={{ duration: 1, ease: 'easeOut', delay: 1 }}
           >
-            <p>{phaseData[selectedPhase].box1}</p>{' '}
-            {/* Display content for box 1 */}
+            <p>{phaseData[selectedPhase].box1}</p>
           </motion.div>
 
           {/* Second Box */}
           <motion.div
-            className="p-4 font-manrope text-sm font-light transition-colors duration-300 ease-in-out sm:text-base md:text-2xl lg:text-2xl xl:text-2xl"
-            style={{ width: '751px', height: '450px' }}
+            className="p-4 font-manrope text-sm font-light transition-colors duration-300 ease-in-out sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+            style={{ width: '100%', maxWidth: '751px', height: 'auto' }}
             variants={{
               hidden: { opacity: 0, y: 75 },
               visible: { opacity: 1, y: 0 },
@@ -82,8 +74,7 @@ const OurJourney = () => {
             animate="visible"
             transition={{ duration: 1, ease: 'easeOut', delay: 1 }}
           >
-            <p>{phaseData[selectedPhase].box2}</p>{' '}
-            {/* Display content for box 2 */}
+            <p>{phaseData[selectedPhase].box2}</p>
           </motion.div>
         </div>
       </motion.div>
