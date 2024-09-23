@@ -2,9 +2,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { FaFacebookSquare, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { useContact } from '@/fetcher/contact/use-contact'
 import { motion } from 'framer-motion'
+import { FaTelegramPlane } from 'react-icons/fa'
+import { GrFacebookOption, GrLinkedinOption } from 'react-icons/gr'
 
 interface Props {
   title: string
@@ -14,9 +15,9 @@ interface Props {
 }
 
 const iconMapping = {
-  facebook: FaFacebookSquare,
-  linkedin: FaLinkedin,
-  youtube: FaYoutube,
+  facebook: GrFacebookOption,
+  linkedin: GrLinkedinOption,
+  youtube: FaTelegramPlane,
 }
 
 const Footer = () => {
@@ -59,7 +60,7 @@ const Footer = () => {
                 return (
                   <div
                     key={index}
-                    className="rounded-full border-2 p-2 text-2xl hover:bg-[#ff0366] hover:text-white"
+                    className="rounded-full border-2 p-2 text-2xl"
                   >
                     <Link href={link} target="_blank">
                       <IconComponent />
