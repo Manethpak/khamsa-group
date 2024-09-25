@@ -1,6 +1,12 @@
 import directus from '@/lib/directus'
 import { readItems } from '@directus/sdk'
 
-export async function fetchOffice() {
-  return directus.request(readItems('Office'))
+type Option = {
+  limit?: number
+}
+
+export async function fetchOffice(option?: Option) {
+  return directus.request(readItems('Office',{
+    limit: option?.limit || -1,
+  }))
 }
