@@ -20,7 +20,7 @@ export const Motion: React.FC<Props> = ({ children, className, delay = 0 }) => {
   }, [isInView , controls])
 
   return (
-    <div ref={ref} style={{ position: "relative", overflow: "hidden" }}>
+    <div ref={ref}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 30 },

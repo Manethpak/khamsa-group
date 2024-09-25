@@ -6,7 +6,7 @@ import { fetchOffice } from '@/fetcher/about/office/fetch-office'
 import { fetchTeams } from '@/fetcher/about/teams/fetch-teams'
 import React from 'react'
 
-const page = async () => {
+const AboutPage = async () => {
   const dataTeam = await fetchTeams()
   const dataOffice = await fetchOffice({ limit: 9 })
 
@@ -20,4 +20,4 @@ const page = async () => {
   )
 }
 
-export default page
+export default AboutPage

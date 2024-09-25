@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { phaseData } from '@/constants'
+import { Motion } from '@/component-v2/ui/motion'
 
 type PhaseKeys = keyof typeof phaseData
 
@@ -11,91 +12,60 @@ const OurJourney = () => {
   const phases = Object.keys(phaseData) as PhaseKeys[]
 
   return (
-    <section className="mx-auto flex w-full max-w-screen-2xl flex-col items-center px-5 md:px-10 lg:px-24">
-      <motion.div className="flex w-full max-w-screen-2xl flex-col gap-10">
-        <h1 className="text-start font-manrope text-2xl font-semibold text-secondPrimary sm:text-3xl md:text-4xl">
+    <section className="flex w-full flex-col items-center justify-center">
+      <div className="flex w-full max-w-screen-2xl flex-col gap-10 px-5 md:px-10 lg:px-24">
+        <Motion delay={0.5} className="heading-subtitle">
           OUR JOURNEY
-        </h1>
+        </Motion>
 
         {/* Grid for the 5 phases */}
-        <motion.div
+        <Motion
+          delay={0.75}
           className="flex justify-start gap-2 font-manrope text-lg font-semibold transition-colors duration-300 sm:text-base md:text-lg lg:text-xl xl:text-2xl"
-          variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 1, ease: 'easeOut', delay: 1 }}
         >
           {phases.map((phase, index) => (
-            <motion.div
+            <div
               key={index}
               onClick={() => setSelectedPhase(phase)}
-              className={`flex flex-col items-center justify-center transition-colors duration-300 sm:text-base md:text-xl lg:text-2xl ${
+              className={`flex flex-col items-center justify-center transition-colors duration-300 ${
                 selectedPhase === phase
-                  ? 'bg-secondPrimary font-bold text-white'
-                  : 'bg-white font-normal text-secondPrimary'
+                  ? 'title bg-secondPrimary font-bold text-white'
+                  : 'title bg-white'
               }`}
               style={{
                 width: '173px',
                 height: '69px',
                 border: 'white',
               }}
-              variants={{
-                hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              whileTap={{ scale: 1 }}
             >
-              <h1 className="font-manrope sm:text-xs md:text-xs lg:text-[22px]">
+              <h1 className="font-manrope text-xs sm:text-sm lg:text-base">
                 {phase}
               </h1>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </Motion>
 
         {/* Boxes below the grid */}
-        <div className="flex-col-2 flex flex-wrap justify-start gap-6 md:gap-10">
+        <div className="flex flex-col gap-x-24 gap-y-10 sm:flex-row">
           {/* First Box */}
-          <motion.div
-            className="p-4 font-manrope text-sm font-light transition-colors duration-300 ease-in-out sm:text-base md:text-lg lg:text-xl xl:text-2xl"
-            style={{ width: '100%', maxWidth: '325px', height: 'auto' }}
-            variants={{
-              hidden: { opacity: 0, y: 75 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 1, ease: 'easeOut', delay: 1 }}
-          >
+          <Motion delay={0.75} className="title w-52">
             {phaseData[selectedPhase] ? (
               <p>{phaseData[selectedPhase].box1}</p>
             ) : (
               <p>Loading...</p>
             )}
-          </motion.div>
+          </Motion>
 
           {/* Second Box */}
-          <motion.div
-            className="p-4 font-manrope text-sm font-light transition-colors duration-300 ease-in-out sm:text-base md:text-lg lg:text-xl xl:text-2xl"
-            style={{ width: '100%', maxWidth: '751px', height: 'auto' }}
-            variants={{
-              hidden: { opacity: 0, y: 75 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 1, ease: 'easeOut', delay: 1 }}
-          >
+          <Motion className="subtitle pr w-full max-w-4xl p-4">
             {phaseData[selectedPhase] ? (
               <p>{phaseData[selectedPhase].box2}</p>
             ) : (
               <p>Loading...</p>
             )}
-          </motion.div>
+          </Motion>
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }
