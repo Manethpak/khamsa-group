@@ -1,7 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import { fetchBlogs } from '@/fetcher/blog/fetch-blog'
-import { Schema } from '@/lib/schema'
 import { GoArrowUpRight } from 'react-icons/go'
 
 const BlogSection = () => {
@@ -35,8 +33,8 @@ const BlogSection = () => {
                   Doloribus.Lorem ipsum dolor sit amet consectetur adipisicing
                   elit. Doloribus.Pirate ipsum arrgh bounty warp jack. Hands
                   bucko shot a tea sail coxswain sail. Arr rat brethren
-                  starboard shiver crow's black smartly shiver shiver. Dock prey
-                  buccaneer chain man just rum pirate...
+                  starboard shiver crow&apos;s black smartly shiver shiver. Dock
+                  prey buccaneer chain man just rum pirate...
                 </p>
                 <GoArrowUpRight className="h-10 w-20" />
               </div>
@@ -62,9 +60,9 @@ const BlogSection = () => {
                   </h2>
                   <p>
                     Pirate ipsum arrgh bounty warp jack. Hands bucko shot a tea
-                    sail coxswain sail. Arr rat brethren starboard shiver crow's
-                    black smartly shiver shiver. Dock prey buccaneer chain man
-                    just rum pirate...
+                    sail coxswain sail. Arr rat brethren starboard shiver
+                    crow&apos;s black smartly shiver shiver. Dock prey buccaneer
+                    chain man just rum pirate...
                   </p>
                 </div>
                 <span className="font-semibold">14 Mar 2024</span>
@@ -89,9 +87,9 @@ const BlogSection = () => {
                   </h2>
                   <p>
                     Pirate ipsum arrgh bounty warp jack. Hands bucko shot a tea
-                    sail coxswain sail. Arr rat brethren starboard shiver crow's
-                    black smartly shiver shiver. Dock prey buccaneer chain man
-                    just rum pirate...
+                    sail coxswain sail. Arr rat brethren starboard shiver
+                    crow&apos;s black smartly shiver shiver. Dock prey buccaneer
+                    chain man just rum pirate...
                   </p>
                 </div>
                 <span className="font-semibold">14 Mar 2024</span>
@@ -116,9 +114,9 @@ const BlogSection = () => {
                   </h2>
                   <p>
                     Pirate ipsum arrgh bounty warp jack. Hands bucko shot a tea
-                    sail coxswain sail. Arr rat brethren starboard shiver crow's
-                    black smartly shiver shiver. Dock prey buccaneer chain man
-                    just rum pirate...
+                    sail coxswain sail. Arr rat brethren starboard shiver
+                    crow&apos;s black smartly shiver shiver. Dock prey buccaneer
+                    chain man just rum pirate...
                   </p>
                 </div>
                 <span className="font-semibold">14 Mar 2024</span>
