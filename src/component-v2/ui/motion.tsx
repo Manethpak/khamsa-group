@@ -5,11 +5,10 @@ import React, { useEffect, useRef } from 'react'
 interface Props {
   children: React.ReactNode
   className?: string
-  width?: "fit-content" | "100%"
   delay?: number
 }
 
-export const Motion: React.FC<Props> = ({ children, className, width = "fit-content", delay = 0 }) => {
+export const Motion: React.FC<Props> = ({ children, className, delay = 0 }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const controls = useAnimation()
@@ -18,10 +17,10 @@ export const Motion: React.FC<Props> = ({ children, className, width = "fit-cont
     if (isInView) {
       controls.start('visible')
     }
-  }, [isInView])
+  }, [isInView , controls])
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+    <div ref={ref}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 30 },

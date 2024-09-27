@@ -1,5 +1,3 @@
-import { title } from 'process'
-
 export const logo = [
   {
     id: '1',
@@ -1358,3 +1356,14 @@ export const phaseData = {
            investments, we aim to lead the transition towards a greener, more sustainable world.`,
   },
 }
+
+export const About_v2 = [
+  {
+    title: 'Khamsa Investment',
+    subtitle: 'Group Co. Ltd. or Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021. The company was formed to support its subsidiaries, such as Khamsa Co. Ltd, Sunrise Rooster Co. Ltd., AI Farm Co. Ltd and Laoka Co. Ltd., the investment community to ensure that all its business objectives will be put into reality.'
+  },
+  {
+    title: 'Khamsa Investment',
+    subtitle: 'Group Co. Ltd. or Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021. The company was formed to support its subsidiaries, such as Khamsa Co. Ltd, Sunrise Rooster Co. Ltd., AI Farm Co. Ltd and Laoka Co. Ltd., the investment community to ensure that all its business objectives will be put into reality.'
+  }
+]

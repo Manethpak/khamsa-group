@@ -1,6 +1,10 @@
 import useSWR from 'swr'
 import { fetchOffice } from './fetch-office'
 
-export function useOffice() {
-  return useSWR('/office', fetchOffice)
+type Option = {
+  limit?: number
+}
+
+export function useOffice(option?: Option) {
+  return useSWR(['/office', option], () => fetchOffice(option));
 }
