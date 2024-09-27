@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 @layer components {
-  .title {
-    @apply font-noto text-2xl font-extrabold leading-normal text-[#19154E] md:text-4xl lg:text-5xl;
+  .heading-title {
+    @apply font-manrope font-bold text-3xl sm:text-5xl lg:text-4xl xl:text-5xl tracking-tight capitalize leading-normal text-deepGreen ;
   }
 
   .subtitle {
-    @apply font-noto text-sm font-extrabold uppercase tracking-widest text-[#8ACEC0] md:text-base;
-  }
-
-  .heading-title {
-    @apply font-noto text-3xl font-extrabold text-white md:text-4xl;
+    @apply font-manrope font-extralight normal-case text-base lg:text-lg text-deepGreen tracking-tight ;
   }
 
   .heading-subtitle {
-    @apply font-noto text-lg font-medium md:text-xl lg:text-2xl;
+    @apply font-manrope font-medium text-2xl lg:text-3xl text-deepGreen tracking-tight uppercase;
+  }
+
+  .title {
+    @apply font-manrope font-normal normal-case text-xl lg:text-2xl text-deepGreen tracking-tight;
   }
 }
 
@@ -46,4 +46,12 @@ body::-webkit-scrollbar-thumb {
 /* set button(top and bottom of the scrollbar) */
 body::-webkit-scrollbar-button {
   display: none;
+}
+
+.swiper-scrollbar-drag {
+  border: 3px solid #1BAB92;
+}
+
+.swiper-scrollbar-drag:hover {
+  border: 4px solid #1BAB92;
 }

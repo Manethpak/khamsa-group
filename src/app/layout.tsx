@@ -1,3 +1,5 @@
+import Navbar from '@/component/global/navbar/navbar'
+import FooterContent from '@/component/global/footer/footer-content'
 import type { Metadata } from 'next'
 import './globals.css'
 import {
@@ -23,7 +25,9 @@ export default function RootLayout({
       <body
         className={`${libre} ${noto_serif_khmer} ${noto_sans} ${noto_sans_khmer} ${manrope}`}
       >
+        <Navbar/>
         {children}
+        <FooterContent/>
       </body>
     </html>
   )
