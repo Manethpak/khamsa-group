@@ -54,7 +54,7 @@ const Contacts = () => {
             className="flex h-full max-h-[450px] w-full max-w-full justify-center lg:max-w-[650px]"
           >
             <Image
-              src="/images/Rectangle 99.jpg"
+              src="/images/about-contact.jpg"
               alt="view of ai farm factory"
               width={620}
               height={448}
