@@ -7,7 +7,7 @@ import {
   noto_sans,
   noto_sans_khmer,
   noto_serif_khmer,
-  manrope
+  manrope,
 } from '@/utils/fonts'
 
 export const metadata: Metadata = {
@@ -25,9 +25,9 @@ export default function RootLayout({
       <body
         className={`${libre} ${noto_serif_khmer} ${noto_sans} ${noto_sans_khmer} ${manrope}`}
       >
-        <Navbar/>
+        <Navbar />
         {children}
-        <FooterContent/>
+        <FooterContent />
       </body>
     </html>
   )

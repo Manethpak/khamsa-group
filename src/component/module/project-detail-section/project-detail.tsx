@@ -1,13 +1,13 @@
 // ProjectDetail.js
 import React from 'react'
 import Image from 'next/image'
-import { project_v2 } from '@/constants' 
+import { project_v2 } from '@/constants'
 
 const ProjectDetail = () => {
   return (
     <div className="font-lato container mx-auto mt-8 p-4 md:p-6 lg:p-8">
       {/* Title */}
-      <h1 className="mb-4 bg-blue-500 text-center  text-2xl font-secondprimary capitalize md:text-4xl lg:text-5xl">
+      <h1 className="font-secondprimary mb-4 bg-blue-500 text-center text-2xl capitalize md:text-4xl lg:text-5xl">
         {project_v2.title || 'Project Title'}{' '}
         {/* <span className="text-sm text-zinc-400">(2022-present)</span> */}
       </h1>
@@ -31,7 +31,7 @@ const ProjectDetail = () => {
           {project_v2.images[index] && (
             <div className="flex justify-center">
               <Image
-                src={project_v2.images[index]} 
+                src={project_v2.images[index]}
                 width={475}
                 height={314}
                 alt={`Image for ${project_v2.title}`}

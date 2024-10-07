@@ -17,7 +17,7 @@ export const Motion: React.FC<Props> = ({ children, className, delay = 0 }) => {
     if (isInView) {
       controls.start('visible')
     }
-  }, [isInView , controls])
+  }, [isInView, controls])
 
   return (
     <div ref={ref}>

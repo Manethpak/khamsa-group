@@ -1360,23 +1360,25 @@ export const phaseData = {
 export const About_v2 = [
   {
     title: 'Khamsa Investment',
-    subtitle: 'Group Co. Ltd. or Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021. The company was formed to support its subsidiaries, such as Khamsa Co. Ltd, Sunrise Rooster Co. Ltd., AI Farm Co. Ltd and Laoka Co. Ltd., the investment community to ensure that all its business objectives will be put into reality.'
+    subtitle:
+      'Group Co. Ltd. or Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021. The company was formed to support its subsidiaries, such as Khamsa Co. Ltd, Sunrise Rooster Co. Ltd., AI Farm Co. Ltd and Laoka Co. Ltd., the investment community to ensure that all its business objectives will be put into reality.',
   },
   {
     title: 'Khamsa Investment',
-    subtitle: 'Group Co. Ltd. or Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021. The company was formed to support its subsidiaries, such as Khamsa Co. Ltd, Sunrise Rooster Co. Ltd., AI Farm Co. Ltd and Laoka Co. Ltd., the investment community to ensure that all its business objectives will be put into reality.'
-  }
+    subtitle:
+      'Group Co. Ltd. or Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021. The company was formed to support its subsidiaries, such as Khamsa Co. Ltd, Sunrise Rooster Co. Ltd., AI Farm Co. Ltd and Laoka Co. Ltd., the investment community to ensure that all its business objectives will be put into reality.',
+  },
 ]
-  export const project_v2 = {
-    title: 'BIO-GREENERGY LAB MONDULKIRI',
-    date: 'Published 5 days ago • Updated a day ago • 1 min read',
-    descriptions: [
-      'Pirate ipsum arrgh bounty warp jack. Furl starboard pinnace piracy sink ketch weigh arr tales. Brace buccaneer measured cutlass heave davy gun lass. Roger gunwalls parrel nest tell lee boatswain.',
-      'Pirate ipsum arrgh bounty warp jack. Pin round jack me topgallant her. Overhaul rig gold shiver weigh six killick keelhaul shrouds. Privateer brig men seven jolly pounders warp killick me. Nipperkin scourge bounty spot anchor bounty nipperkin. On yellow rig main no lugsail ahoy rig. Timbers spot reef aft boat bilged. Jolly hearties tell aft arr jib bilge gold me. Weigh jones brace salmagundi coxswain keelhaul chain. O nine chantey cat men plate down sink or. Spot heave belay crimp cog brace gun. Crack tell rat me lanyard gangplank lee hail-shot rum chase. Gar privateer boatswain yard black fer the. Gar boat gangway crow s locker black Sails schooner blimey mutiny man bucko',
-      'Pirate ipsum arrgh bounty warp jack. Pin round jack me topgallant her. Overhaul rig gold shiver weigh six killick keelhaul shrouds. Privateer brig men seven jolly pounders warp killick me. Nipperkin scourge bounty spot anchor bounty nipperkin. On yellow rig main no lugsail ahoy rig. Timbers spot reef aft boat bilged. Jolly hearties tell aft arr jib bilge gold me. Weigh jones  brace salmagundi coxswain keelhaul chain. O nine chantey cat men plate down sink or. Spot heave belay crimp cog brace gun. Crack tell rat me lanyard gangplank lee hail-shot rum chase. Gar privateer boatswain yard black fer the. Gar boat gangway crow s locker black. Sails schooner blimey mutiny man bucko',
-    ],
-    images: [
-      '/AI Farm picture.png', // Replace with your static image paths
-      '/Factory.jpg',
-    ],
-  }
+export const project_v2 = {
+  title: 'BIO-GREENERGY LAB MONDULKIRI',
+  date: 'Published 5 days ago • Updated a day ago • 1 min read',
+  descriptions: [
+    'Pirate ipsum arrgh bounty warp jack. Furl starboard pinnace piracy sink ketch weigh arr tales. Brace buccaneer measured cutlass heave davy gun lass. Roger gunwalls parrel nest tell lee boatswain.',
+    'Pirate ipsum arrgh bounty warp jack. Pin round jack me topgallant her. Overhaul rig gold shiver weigh six killick keelhaul shrouds. Privateer brig men seven jolly pounders warp killick me. Nipperkin scourge bounty spot anchor bounty nipperkin. On yellow rig main no lugsail ahoy rig. Timbers spot reef aft boat bilged. Jolly hearties tell aft arr jib bilge gold me. Weigh jones brace salmagundi coxswain keelhaul chain. O nine chantey cat men plate down sink or. Spot heave belay crimp cog brace gun. Crack tell rat me lanyard gangplank lee hail-shot rum chase. Gar privateer boatswain yard black fer the. Gar boat gangway crow s locker black Sails schooner blimey mutiny man bucko',
+    'Pirate ipsum arrgh bounty warp jack. Pin round jack me topgallant her. Overhaul rig gold shiver weigh six killick keelhaul shrouds. Privateer brig men seven jolly pounders warp killick me. Nipperkin scourge bounty spot anchor bounty nipperkin. On yellow rig main no lugsail ahoy rig. Timbers spot reef aft boat bilged. Jolly hearties tell aft arr jib bilge gold me. Weigh jones  brace salmagundi coxswain keelhaul chain. O nine chantey cat men plate down sink or. Spot heave belay crimp cog brace gun. Crack tell rat me lanyard gangplank lee hail-shot rum chase. Gar privateer boatswain yard black fer the. Gar boat gangway crow s locker black. Sails schooner blimey mutiny man bucko',
+  ],
+  images: [
+    '/AI Farm picture.png', // Replace with your static image paths
+    '/Factory.jpg',
+  ],
+}

@@ -33,7 +33,7 @@ const FooterSection = () => {
   const address: Props[] = contact?.address || []
   const link: Props[] = contact?.link || []
   return (
-    <footer className="from-gray-100 to-gray-100 bg-black bg-gradient-to-r text-white flex w-full flex-col items-center justify-center overflow-hidden py-20">
+    <footer className="from-gray-100 to-gray-100 flex w-full flex-col items-center justify-center overflow-hidden bg-black bg-gradient-to-r py-20 text-white">
       <div className="flex w-full max-w-screen-2xl flex-col gap-20 px-5 md:px-10 lg:px-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
