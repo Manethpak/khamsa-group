@@ -2,8 +2,7 @@ import ProjectCard from '@/component/module/projects/project-card'
 
 const Project = () => {
   const projects = Array(6).fill({
-    id: '1',
-    title: 'Khaki Coffee Farm Mondulkiri ',
+    title: 'Khaki Coffee Farm Mondulkiri',
     description:
       'the first 1000 hectares of historical coffee plantation in the form of social enterprise in the kingdom of cambodia...',
     image: '/images/Factory.jpg',
@@ -18,7 +17,7 @@ const Project = () => {
           {projects.map((project) => (
             <ProjectCard
               title={project.title}
-              key={project.id}
+              key={project.title}
               description={project.description}
               image={project.image}
               href={project.herf}
