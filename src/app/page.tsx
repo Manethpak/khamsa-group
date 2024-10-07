@@ -11,7 +11,7 @@ export const revalidate = 300
 
 export default async function Home() {
   const heroData = await fetchHero()
-  const blogs = await fetchBlogs({ limit: 4 })
+  const blogs = await fetchBlogs({ limit: 5 })
   const investmentData = await fetchInvestment()
   const successData = await fetchSuccess()
 
@@ -21,7 +21,7 @@ export default async function Home() {
       <OurSuccess data={successData} />
       <Investment data={investmentData} />
       <OurJourney />
-      <BlogSection />
+      <BlogSection data={blogs} />
     </div>
   )
 }
