@@ -33,7 +33,7 @@ const Contacts = () => {
                 delay={0.6}
                 className="heading-title font-light leading-snug text-white"
               >
-                Let's invest in the future together
+                Let&apos;s invest in the future together
               </Motion>
               <Motion delay={0.7}>
                 <button className="h-14 w-full max-w-fit rounded bg-white px-5 font-medium">
