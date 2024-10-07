@@ -75,7 +75,7 @@ const Investment = ({ data }: Props) => {
                   <h1 className="title">{data!.title}</h1>
                   <p className="max-w-sm">{data!.subtitle}</p>
                 </div>
-                <Link href={`/category/${data!.categorySlug}`} passHref>
+                <Link href={`/project-detail/`} passHref>
                   <p>Read More</p>
                 </Link>
               </Motion>
