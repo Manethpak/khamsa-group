@@ -1,129 +1,80 @@
 import React from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
-import { GoArrowUpRight } from 'react-icons/go'
+import { Schema } from '@/lib/schema'
+import { formatDate } from '@/lib/utils'
+import { getImageUrl } from '@/lib/directus'
+import { PiArrowUpRightThin } from "react-icons/pi";
+import { Motion } from '@/component/ui/motion'
 
-const BlogSection = () => {
+type Props = {
+  data: Schema['Blogs']
+}
+
+const BlogSection = ({ data }: Props) => {
+  // Sort data by date (if needed)
+  const sortedData = [...data].sort((a, b) => new Date(b.date!).getTime() - new Date(a.date!).getTime())
+
   return (
-    <section className="flex h-full w-full flex-col items-center justify-center py-10">
-      <div className="w-full max-w-screen-2xl px-5 md:px-10 lg:px-24">
-        <h1 className="text-3xl font-semibold">Recent Blog posts </h1>
-        <div className="mt-10 flex h-full w-full flex-col gap-4 md:gap-8 xl:flex-row">
-          {/* MAIN BLOG */}
-          <div className="flex cursor-pointer flex-col xl:w-[55%]">
-            <div className="aspect-video w-full lg:h-[450px] xl:aspect-square xl:h-[700px]">
-              <Image
-                src="/images/Factory.jpg"
-                width={700}
-                height={700}
-                className="h-full w-full object-cover object-center"
-                alt="blog"
-                priority
-              />
-            </div>
-            <div className="flex h-full flex-col gap-4 py-4 pb-8">
-              <div className="flex items-center justify-between">
-                <h1 className="text-4xl font-semibold xl:text-5xl">
-                  Pirate ipsum arrgh
-                </h1>
-                <p className="font-semibold">14 Mar 2024</p>
-              </div>
-              <div className="flex w-full items-end justify-between gap-10">
-                <p className="w-full max-w-full text-lg">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Doloribus.Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Doloribus.Pirate ipsum arrgh bounty warp jack. Hands
-                  bucko shot a tea sail coxswain sail. Arr rat brethren
-                  starboard shiver crow&apos;s black smartly shiver shiver. Dock
-                  prey buccaneer chain man just rum pirate...
-                </p>
-                <GoArrowUpRight className="h-10 w-20" />
-              </div>
-            </div>
+    <section className="flex flex-col w-full items-center justify-center py-20">
+      <div className="w-full max-w-screen-2xl flex flex-col gap-20 px-5 md:px-10 lg:px-24 subtitle">
+        <Motion delay={0.75} className="flex justify-between title items-end">
+          <h1 className="heading-subtitle normal-case ">
+            Recent Blog posts
+          </h1>
+          <Link href="/blog">See all</Link>
+        </Motion>
+        {/* Main Section */}
+        <Motion delay={1} className="flex flex-col md:flex-row gap-y-10 gap-x-5 justify-between items-center">
+          {/* Featured Blog Post */}
+          <div className="w-full md:max-w-2xl">
+            {sortedData.length > 0 && (
+              <Link href={`/blog/` + sortedData[0].slug}>
+                <div className="flex flex-col ">
+                  <Image
+                    src={getImageUrl(sortedData[0].image as string)}
+                    alt={sortedData[0].title!}
+                    width={1400}
+                    height={1400}
+                    className="w-full object-cover object-center"
+                  />
+                  <div className="mt-4 flex justify-between gap-1 h-full max-h-40 overflow-hidden">
+                    <div className="w-full max-w-xl space-y-3">
+                    <h1 className="heading-subtitle normal-case ">{sortedData[0].topic}</h1>
+                    <p className="px-2">{sortedData[0].title}</p>
+                    </div>
+                    <div className="grid content-between w-full max-w-36 place-items-end">
+                      <span>{formatDate(sortedData[0].date!)}</span>
+                      <PiArrowUpRightThin className="size-10 " />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            )}
           </div>
-          {/* SUB BLOGS */}
-          <div className="flex w-full min-w-[200px] flex-col gap-6 xl:w-[45%]">
-            <div className="flex max-h-[150px] min-h-[100px] w-full cursor-pointer md:max-h-[250px]">
-              <div className="aspect-square w-[40%] min-w-[150px] max-w-[200px]">
-                <Image
-                  src="/images/office1.jpeg"
-                  alt="blog"
-                  priority
-                  className="h-full w-full object-cover object-center"
-                  width={300}
-                  height={300}
-                />
-              </div>
-              <div className="flex w-full flex-col justify-between gap-4 px-4">
-                <div className="overflow-hidden">
-                  <h2 className="mb-2 text-xl font-medium md:text-3xl">
-                    Pirate ipsum arrgh
-                  </h2>
-                  <p>
-                    Pirate ipsum arrgh bounty warp jack. Hands bucko shot a tea
-                    sail coxswain sail. Arr rat brethren starboard shiver
-                    crow&apos;s black smartly shiver shiver. Dock prey buccaneer
-                    chain man just rum pirate...
-                  </p>
-                </div>
-                <span className="font-semibold">14 Mar 2024</span>
-              </div>
-            </div>
 
-            <div className="flex max-h-[150px] min-h-[100px] w-full cursor-pointer md:max-h-[250px]">
-              <div className="aspect-square w-[40%] min-w-[150px] max-w-[200px]">
-                <Image
-                  src="/images/student.png"
-                  alt="blog"
-                  priority
-                  className="h-full w-full object-cover object-center"
-                  width={200}
-                  height={200}
-                />
-              </div>
-              <div className="flex w-full flex-col justify-between gap-4 px-4">
-                <div className="overflow-hidden">
-                  <h2 className="mb-2 text-xl font-medium md:text-3xl">
-                    Pirate ipsum arrgh
-                  </h2>
-                  <p>
-                    Pirate ipsum arrgh bounty warp jack. Hands bucko shot a tea
-                    sail coxswain sail. Arr rat brethren starboard shiver
-                    crow&apos;s black smartly shiver shiver. Dock prey buccaneer
-                    chain man just rum pirate...
-                  </p>
+          {/* Smaller Blog Posts */}
+          <div className="grid space-y-6 md:space-y-1 lg:space-y-5">
+            {sortedData.slice(1, 5).map((blog) => (
+              <Link href={`/blog/` + blog.slug} key={blog.title}>
+                <div className="flex gap-3 md:min-h-5 lg:max-h-[145px] ">
+                  <Image
+                    src={getImageUrl(blog.image as string)}
+                    alt={blog.title!}
+                    width={1400}
+                    height={1400}
+                    className="max-w-56 w-full object-cover scale-95"
+                  />
+                  <div className="grid max-w-md w-full">
+                    <h2 className="title">{blog.topic}</h2>
+                    <p className="h-14 md:h-6 overflow-hidden px-2">{blog.title}...</p>
+                    <span>{formatDate(blog.date!)}</span>
+                  </div>
                 </div>
-                <span className="font-semibold">14 Mar 2024</span>
-              </div>
-            </div>
-
-            <div className="flex max-h-[150px] min-h-[100px] w-full cursor-pointer md:max-h-[250px]">
-              <div className="aspect-square w-[40%] min-w-[150px] max-w-[200px]">
-                <Image
-                  src="/images/AI Farm picture.png"
-                  alt="blog"
-                  priority
-                  className="h-full w-full object-cover object-center"
-                  width={300}
-                  height={300}
-                />
-              </div>
-              <div className="flex w-full flex-col justify-between gap-4 px-4">
-                <div className="overflow-hidden">
-                  <h2 className="mb-2 text-xl font-medium md:text-3xl">
-                    Pirate ipsum arrgh
-                  </h2>
-                  <p>
-                    Pirate ipsum arrgh bounty warp jack. Hands bucko shot a tea
-                    sail coxswain sail. Arr rat brethren starboard shiver
-                    crow&apos;s black smartly shiver shiver. Dock prey buccaneer
-                    chain man just rum pirate...
-                  </p>
-                </div>
-                <span className="font-semibold">14 Mar 2024</span>
-              </div>
-            </div>
+              </Link>
+            ))}
           </div>
-        </div>
+        </Motion>
       </div>
     </section>
   )
