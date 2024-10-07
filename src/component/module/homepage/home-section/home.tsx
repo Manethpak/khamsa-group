@@ -42,33 +42,33 @@ const HomeSection = ({ data }: Props) => {
   }, [data.company])
 
   return (
-    <section id="hero" className="flex flex-col w-full items-center justify-center py-20 overflow-hidden">
-      <div className="w-full max-w-screen-2xl flex flex-col gap-20 px-5 md:px-10 lg:px-24">
-        <div className="flex h-full flex-col-reverse items-center justify-center lg:gap-12 lg:flex-row sm:justify-between">
-          <div className="flex flex-col gap-10 w-full h-full justify-center max-w-5xl subtitle ">
-            <div className=" flex flex-col">
+    <section
+      id="hero"
+      className="flex w-full flex-col items-center justify-center overflow-hidden py-20"
+    >
+      <div className="flex w-full max-w-screen-2xl flex-col gap-20 px-5 md:px-10 lg:px-24">
+        <div className="flex h-full flex-col-reverse items-center justify-center sm:justify-between lg:flex-row lg:gap-12">
+          <div className="subtitle flex h-full w-full max-w-5xl flex-col justify-center gap-10">
+            <div className="flex flex-col">
               <Motion delay={0.5} className="heading-title py-5">
-              {data.title}
+                {data.title}
               </Motion>
-              
-              <Motion delay={0.6}>
-              {data.subtitle}
-              </Motion>
-              <Motion delay={0.7}>
-              {data.description}
-              </Motion>
+
+              <Motion delay={0.6}>{data.subtitle}</Motion>
+              <Motion delay={0.7}>{data.description}</Motion>
+            </div>
+            <Motion delay={0.8}>
+              <button className="h-14 w-full max-w-fit rounded-xl bg-secondPrimary px-5 font-medium text-white">
+                <Link href="#investment">Explore Our Investment</Link>
+              </button>
+            </Motion>
           </div>
-          <Motion delay={0.8}>
-          <button className="h-14 max-w-fit px-5 w-full rounded-xl bg-secondPrimary text-white font-medium">
-              <Link href="#investment">Explore Our Investment</Link>
-            </button>
-          </Motion>
-          </div>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.75 }}
-            className="flex h-full max-h-[450px] w-full bg-blue-500 max-w-full lg:max-w-[650px] justify-center">
+            className="flex h-full max-h-[450px] w-full max-w-full justify-center bg-blue-500 lg:max-w-[650px]"
+          >
             <Image
               src="/images/heroContent.gif"
               alt="view of ai farm factory"
@@ -79,70 +79,72 @@ const HomeSection = ({ data }: Props) => {
           </motion.div>
         </div>
         <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.8 }}
-            className="flex flex-col sm:flex-row items-center w-full heading-title text-lg sm:justify-between gap-10 font-normal overflow-hidden"
-          >
-            <p className="max-w-72 sm:min-w-max w-full text-center sm:text-start">Our affiliate companies</p>
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.8 }}
+          className="heading-title flex w-full flex-col items-center gap-10 overflow-hidden text-lg font-normal sm:flex-row sm:justify-between"
+        >
+          <p className="w-full max-w-72 text-center sm:min-w-max sm:text-start">
+            Our affiliate companies
+          </p>
 
-            <div
-              className="flex gap-24 min-w-max w-full"
-              style={{
-                maskImage: `linear-gradient(
+          <div
+            className="flex w-full min-w-max gap-24"
+            style={{
+              maskImage: `linear-gradient(
             to right,
             transparent,
             #000 10% 90%,
             transparent
           )`,
+              whiteSpace: `nowrap`,
+            }}
+          >
+            <motion.div
+              ref={ref}
+              style={{
+                x: xTranslation,
                 whiteSpace: `nowrap`,
               }}
+              className="flex w-full gap-24"
             >
-              <motion.div
-                ref={ref}
-                style={{
-                  x: xTranslation,
-                  whiteSpace: `nowrap`,
-                }}
-                className="flex gap-24 w-full"
-              >
-                {displayLogo &&
-                  [...displayLogo, ...displayLogo].map((data, index) => (
-                    <div key={index} className="flex h-14 min-w-fit">
-                      <Image
-                        src={data!.imageUrl}
-                        alt={data!.name!}
-                        width={250}
-                        height={250}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                  ))}
-              </motion.div>
-              <motion.div
-                ref={ref}
-                style={{
-                  x: xTranslation,
-                  whiteSpace: `nowrap`,
-                }}
-                className="flex gap-24 w-full"
-              >
-                {displayLogo &&
-                  [...displayLogo, ...displayLogo].map((data, index) => (
-                    <div key={index} className="flex h-14 min-w-fit">
-                      <Image
-                        src={data!.imageUrl}
-                        alt={data!.name!}
-                        width={250}
-                        height={250}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                  ))}
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
+              {displayLogo &&
+                [...displayLogo, ...displayLogo].map((data, index) => (
+                  <div key={index} className="flex h-14 min-w-fit">
+                    <Image
+                      src={data!.imageUrl}
+                      alt={data!.name!}
+                      width={250}
+                      height={250}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                ))}
+            </motion.div>
+            <motion.div
+              ref={ref}
+              style={{
+                x: xTranslation,
+                whiteSpace: `nowrap`,
+              }}
+              className="flex w-full gap-24"
+            >
+              {displayLogo &&
+                [...displayLogo, ...displayLogo].map((data, index) => (
+                  <div key={index} className="flex h-14 min-w-fit">
+                    <Image
+                      src={data!.imageUrl}
+                      alt={data!.name!}
+                      width={250}
+                      height={250}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                ))}
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
     </section>
   )
 }

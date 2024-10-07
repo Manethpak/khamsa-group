@@ -6,7 +6,9 @@ type Option = {
 }
 
 export async function fetchOffice(option?: Option) {
-  return directus.request(readItems('Office',{
-    limit: option?.limit || -1,
-  }))
+  return directus.request(
+    readItems('Office', {
+      limit: option?.limit || -1,
+    })
+  )
 }

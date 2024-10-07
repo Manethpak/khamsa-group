@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Schema } from '@/lib/schema'
 import { formatDate } from '@/lib/utils'
 import { getImageUrl } from '@/lib/directus'
-import { PiArrowUpRightThin } from "react-icons/pi";
+import { PiArrowUpRightThin } from 'react-icons/pi'
 import { Motion } from '@/component/ui/motion'
 
 type Props = {
@@ -13,24 +13,27 @@ type Props = {
 
 const BlogSection = ({ data }: Props) => {
   // Sort data by date (if needed)
-  const sortedData = [...data].sort((a, b) => new Date(b.date!).getTime() - new Date(a.date!).getTime())
+  const sortedData = [...data].sort(
+    (a, b) => new Date(b.date!).getTime() - new Date(a.date!).getTime()
+  )
 
   return (
-    <section className="flex flex-col w-full items-center justify-center py-20">
-      <div className="w-full max-w-screen-2xl flex flex-col gap-20 px-5 md:px-10 lg:px-24 subtitle">
-        <Motion delay={0.75} className="flex justify-between title items-end">
-          <h1 className="heading-subtitle normal-case ">
-            Recent Blog posts
-          </h1>
+    <section className="flex w-full flex-col items-center justify-center py-20">
+      <div className="subtitle flex w-full max-w-screen-2xl flex-col gap-20 px-5 md:px-10 lg:px-24">
+        <Motion delay={0.75} className="title flex items-end justify-between">
+          <h1 className="heading-subtitle normal-case">Recent Blog posts</h1>
           <Link href="/blog">See all</Link>
         </Motion>
         {/* Main Section */}
-        <Motion delay={1} className="flex flex-col md:flex-row gap-y-10 gap-x-5 justify-between items-center">
+        <Motion
+          delay={1}
+          className="flex flex-col items-center justify-between gap-x-5 gap-y-10 md:flex-row"
+        >
           {/* Featured Blog Post */}
           <div className="w-full md:max-w-2xl">
             {sortedData.length > 0 && (
               <Link href={`/blog/` + sortedData[0].slug}>
-                <div className="flex flex-col ">
+                <div className="flex flex-col">
                   <Image
                     src={getImageUrl(sortedData[0].image as string)}
                     alt={sortedData[0].title!}
@@ -38,14 +41,16 @@ const BlogSection = ({ data }: Props) => {
                     height={1400}
                     className="w-full object-cover object-center"
                   />
-                  <div className="mt-4 flex justify-between gap-1 h-full max-h-40 overflow-hidden">
+                  <div className="mt-4 flex h-full max-h-40 justify-between gap-1 overflow-hidden">
                     <div className="w-full max-w-xl space-y-3">
-                    <h1 className="heading-subtitle normal-case ">{sortedData[0].topic}</h1>
-                    <p className="px-2">{sortedData[0].title}</p>
+                      <h1 className="heading-subtitle normal-case">
+                        {sortedData[0].topic}
+                      </h1>
+                      <p className="px-2">{sortedData[0].title}</p>
                     </div>
-                    <div className="grid content-between w-full max-w-36 place-items-end">
+                    <div className="grid w-full max-w-36 place-items-end content-between">
                       <span>{formatDate(sortedData[0].date!)}</span>
-                      <PiArrowUpRightThin className="size-10 " />
+                      <PiArrowUpRightThin className="size-10" />
                     </div>
                   </div>
                 </div>
@@ -57,17 +62,19 @@ const BlogSection = ({ data }: Props) => {
           <div className="grid space-y-6 md:space-y-1 lg:space-y-5">
             {sortedData.slice(1, 5).map((blog) => (
               <Link href={`/blog/` + blog.slug} key={blog.title}>
-                <div className="flex gap-3 md:min-h-5 lg:max-h-[145px] ">
+                <div className="flex gap-3 md:min-h-5 lg:max-h-[145px]">
                   <Image
                     src={getImageUrl(blog.image as string)}
                     alt={blog.title!}
                     width={1400}
                     height={1400}
-                    className="max-w-56 w-full object-cover scale-95"
+                    className="w-full max-w-56 scale-95 object-cover"
                   />
-                  <div className="grid max-w-md w-full">
+                  <div className="grid w-full max-w-md">
                     <h2 className="title">{blog.topic}</h2>
-                    <p className="h-14 md:h-6 overflow-hidden px-2">{blog.title}...</p>
+                    <p className="h-14 overflow-hidden px-2 md:h-6">
+                      {blog.title}...
+                    </p>
                     <span>{formatDate(blog.date!)}</span>
                   </div>
                 </div>

@@ -12,10 +12,10 @@ const AboutPage = async () => {
 
   return (
     <section>
-      <AboutSection/>
-      <Teams team={dataTeam}/>
-      <Office office={dataOffice}/>
-      <Contacts/>
+      <AboutSection />
+      <Teams team={dataTeam} />
+      <Office office={dataOffice} />
+      <Contacts />
     </section>
   )
 }

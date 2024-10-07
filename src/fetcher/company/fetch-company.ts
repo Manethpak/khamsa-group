@@ -19,7 +19,7 @@ export async function fetchCompanyBySlug(slug: string) {
   return directus.request(
     readItems('Company', {
       // @ts-expect-error
-      fields: ['*', 'category.*','more_image.*'],
+      fields: ['*', 'category.*', 'more_image.*'],
       filter: { slug },
     })
   )
