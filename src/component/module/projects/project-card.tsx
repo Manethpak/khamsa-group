@@ -22,12 +22,10 @@ const ProjectCard = ({ title, description, image, href }: ProjectCardProps) => {
         />
       </div>
       <div className="flex w-full flex-col gap-5">
-        <h1 className="w-[80%] pt-5 title ">{title}</h1>
-        <div className="flex flex-col justify-between gap-8 pb-8 subtitle">
+        <h1 className="title w-[80%] pt-5">{title}</h1>
+        <div className="subtitle flex flex-col justify-between gap-8 pb-8">
           <p>{description}</p>
-          <Link href={href} >
-            Read more
-          </Link>
+          <Link href={href}>Read more</Link>
         </div>
       </div>
     </div>
