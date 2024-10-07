@@ -9,8 +9,7 @@
     "lint": "next lint",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore .",
-    "gen:type": "npx directus-typescript-gen --host https://khamsa.panel.dreamslab.dev --outFile ./src/lib/schema.d.ts",
-    "prepare": "husky"
+    "gen:type": "npx directus-typescript-gen --host https://khamsa.panel.dreamslab.dev --outFile ./src/lib/schema.d.ts"
   },
   "dependencies": {
     "@directus/sdk": "^17.0.0",
