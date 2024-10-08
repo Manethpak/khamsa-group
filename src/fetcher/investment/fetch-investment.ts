@@ -1,7 +1,7 @@
 import directus from '@/lib/directus'
 import { readSingleton } from '@directus/sdk'
 
-export async function fetchInvestment(slug: string) {
+export async function fetchInvestment() {
   return directus.request(
     readSingleton('Investment', {
       // @ts-expect-error
