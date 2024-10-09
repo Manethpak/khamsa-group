@@ -1296,33 +1296,6 @@ export const Footer = [
   { title: 'Blogs', url: '/blog' },
   { title: 'Contact Us', url: '/contact' },
 ]
-export const phaseData = {
-  'Phase 1': {
-    box1: 'OUR FOUNDATION',
-    box2: ` Established Khamsa Group of Businesses (Holding Company, Cambodia) 
-    Founded key subsidiaries: Al Farm, Laoka, Factory Al, and UAVx`,
-  },
-  'Phase 2': {
-    box1: 'STRENGTHENING PARTNERSHIPS',
-    box2: ` Founding of three other subsidiaries (Dreamslab, Chiptree, and ByteFarm)
-     Getting into a strategic partnership with STS Robotics`,
-  },
-  'Phase 3': {
-    box1: 'EXPANSION & NEW VENTURES',
-    box2: ` Launched additional subsidiary: Newfoundland 
-    (focused on real estate development & consulting services)`,
-  },
-  'Phase 4': {
-    box1: 'FOCUS ON STRATEGIC GROWTH',
-    box2: ` Prioritizing joint-ventures and partnership investments 
-    to fuel expansion and market reach`,
-  },
-  'Phase 5': {
-    box1: 'INNOVATION & GLOBAL REACH',
-    box2: ` Exploring future investment opportunities both locally & 
-    globally Seeking innovative, tech-driven solutions for sustainable growth`,
-  },
-}
 
 export const About_v2 = [
   {
