@@ -4,15 +4,15 @@
 
 @layer components {
   .heading-title {
-    @apply font-manrope text-3xl font-bold leading-normal normal-case tracking-tight text-deepGreen sm:text-5xl lg:text-4xl xl:text-5xl;
+    @apply font-manrope text-3xl font-bold leading-normal tracking-tight text-deepGreen sm:text-5xl lg:text-4xl xl:text-5xl;
   }
 
   .subtitle {
-    @apply font-manrope text-base font-extralight normal-case tracking-tight text-deepGreen lg:text-lg;
+    @apply font-manrope text-base font-extralight capitalize tracking-tight text-deepGreen lg:text-lg;
   }
 
   .heading-subtitle {
-    @apply font-manrope text-2xl font-medium normal-case tracking-tight text-deepGreen lg:text-3xl;
+    @apply font-manrope text-2xl font-medium capitalize tracking-tight text-deepGreen lg:text-3xl;
   }
 
   .title {
