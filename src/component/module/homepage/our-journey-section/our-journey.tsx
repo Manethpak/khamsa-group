@@ -1,15 +1,15 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { phaseData } from '@/constants'
+import { JOURNEY_DATA } from '@/constants/journey'
 import { Motion } from '@/component/ui/motion'
+import { cn } from '@/lib/utils'
 
-type PhaseKeys = keyof typeof phaseData
+type PhaseKeys = keyof typeof JOURNEY_DATA
 
 const OurJourney = () => {
-  const [selectedPhase, setSelectedPhase] = useState<PhaseKeys>('Phase 1')
-  const phases = Object.keys(phaseData) as PhaseKeys[]
+  const [selectedPhase, setSelectedPhase] = useState<PhaseKeys>('2021')
+  const phases = Object.keys(JOURNEY_DATA) as PhaseKeys[]
 
   return (
     <section id='journey' className="flex w-full flex-col items-center justify-center">
@@ -27,16 +27,12 @@ const OurJourney = () => {
             <div
               key={index}
               onClick={() => setSelectedPhase(phase)}
-              className={`flex flex-col cursor-pointer items-center justify-center transition-colors duration-300 ${
+              className={cn(
+                'title flex h-16 w-40 flex-col items-center justify-center border-white transition-colors duration-300',
                 selectedPhase === phase
-                  ? 'title bg-secondPrimary font-bold text-white'
-                  : 'title bg-white'
-              }`}
-              style={{
-                width: '173px',
-                height: '69px',
-                border: 'white',
-              }}
+                  ? 'bg-secondPrimary font-bold text-white'
+                  : 'bg-white'
+              )}
             >
               <h1 className="font-manrope text-xs sm:text-sm lg:text-base">
                 {phase}
@@ -49,20 +45,14 @@ const OurJourney = () => {
         <div className="flex flex-col gap-x-24 gap-y-10 sm:flex-row">
           {/* First Box */}
           <Motion delay={0.75} className="title w-52">
-            {phaseData[selectedPhase] ? (
-              <p>{phaseData[selectedPhase].box1}</p>
-            ) : (
-              <p>Loading...</p>
-            )}
+            <p>{JOURNEY_DATA[selectedPhase].title}</p>
           </Motion>
 
           {/* Second Box */}
           <Motion delay={0.8} className="subtitle pr w-full max-w-4xl p-4">
-            {phaseData[selectedPhase] ? (
-              <Motion delay={0.8}>{phaseData[selectedPhase].box2}</Motion>
-            ) : (
-              <p>Loading...</p>
-            )}
+            <Motion delay={0.8}>
+              {JOURNEY_DATA[selectedPhase].description}
+            </Motion>
           </Motion>
         </div>
       </div>
