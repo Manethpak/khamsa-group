@@ -4,7 +4,7 @@
 
 @layer components {
   .heading-title {
-    @apply font-manrope text-3xl font-bold capitalize leading-normal tracking-tight text-deepGreen sm:text-5xl lg:text-4xl xl:text-5xl;
+    @apply font-manrope text-3xl font-bold leading-normal normal-case tracking-tight text-deepGreen sm:text-5xl lg:text-4xl xl:text-5xl;
   }
 
   .subtitle {
@@ -12,7 +12,7 @@
   }
 
   .heading-subtitle {
-    @apply font-manrope text-2xl font-medium uppercase tracking-tight text-deepGreen lg:text-3xl;
+    @apply font-manrope text-2xl font-medium normal-case tracking-tight text-deepGreen lg:text-3xl;
   }
 
   .title {
@@ -54,4 +54,42 @@ body::-webkit-scrollbar-button {
 
 .swiper-scrollbar-drag:hover {
   border: 4px solid #1bab92;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  right: auto !important;
+  left: calc(50% - 130px);
+  top: auto !important;
+  bottom: -8px !important;
+}
+.swiper-button-next {
+  right: calc(50% - 130px) !important;
+  top: auto !important;
+  bottom: -8px !important;
+}
+.swiper-button-prev::after,.swiper-button-next::after{
+  height: 40px !important;
+  width: 20px !important;
+  font-size: 20px;
+  color: #1bab92;
+}
+
+.swiper-pagination-bullet {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  line-height: 30px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: #DDDDDD;
+  transform: none !important;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #1bab92;
+  transform: none !important;
 }

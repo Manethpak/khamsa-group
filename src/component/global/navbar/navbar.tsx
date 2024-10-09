@@ -94,7 +94,10 @@ const Navbar = () => {
           <div className="hidden md:block">
             <ul className="flex items-center gap-7 font-light">
               <li>
-                <Link href="/journey">Our Journey</Link>
+                <Link href="/project">Projects</Link>
+              </li>
+              <li>
+                <Link href="#journey">Our Journey</Link>
               </li>
               <li>
                 <Link href="/about-us">About Us</Link>

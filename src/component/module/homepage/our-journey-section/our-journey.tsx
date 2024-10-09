@@ -12,10 +12,10 @@ const OurJourney = () => {
   const phases = Object.keys(phaseData) as PhaseKeys[]
 
   return (
-    <section className="flex w-full flex-col items-center justify-center">
+    <section id='journey' className="flex w-full flex-col items-center justify-center">
       <div className="flex w-full max-w-screen-2xl flex-col gap-10 px-5 md:px-10 lg:px-24">
         <Motion delay={0.5} className="heading-subtitle">
-          OUR JOURNEY
+          Our Journey
         </Motion>
 
         {/* Grid for the 5 phases */}
@@ -27,7 +27,7 @@ const OurJourney = () => {
             <div
               key={index}
               onClick={() => setSelectedPhase(phase)}
-              className={`flex flex-col items-center justify-center transition-colors duration-300 ${
+              className={`flex flex-col cursor-pointer items-center justify-center transition-colors duration-300 ${
                 selectedPhase === phase
                   ? 'title bg-secondPrimary font-bold text-white'
                   : 'title bg-white'
