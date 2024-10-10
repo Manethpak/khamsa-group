@@ -27,7 +27,7 @@ const BlogSection = ({ data }: Props) => {
         {/* Main Section */}
         <Motion
           delay={1}
-          className="flex flex-col items-center justify-between gap-x-5 gap-y-10 md:flex-row"
+          className="flex flex-col items-center justify-between gap-x-5 gap-y-10 lg:flex-row"
         >
           {/* Featured Blog Post */}
           <div className="w-full md:max-w-2xl">
@@ -41,12 +41,12 @@ const BlogSection = ({ data }: Props) => {
                     height={1400}
                     className="w-full object-cover object-center"
                   />
-                  <div className="mt-4 flex h-full max-h-40 justify-between gap-1 overflow-hidden">
+                  <div className="mt-4 flex max-h-40 justify-between gap-1 overflow-hidden">
                     <div className="w-full max-w-xl space-y-3">
-                      <h1 className="heading-subtitle normal-case">
-                        {sortedData[0].topic}
+                      <h1 className="heading-subtitle h-full max-h-8 overflow-hidden normal-case">
+                        {sortedData[0].title}
                       </h1>
-                      <p className="px-2">{sortedData[0].title}</p>
+                      <p className="px-2">{sortedData[0].description}</p>
                     </div>
                     <div className="grid w-full max-w-36 place-items-end content-between">
                       <span>{formatDate(sortedData[0].date!)}</span>
@@ -71,9 +71,9 @@ const BlogSection = ({ data }: Props) => {
                     className="w-full max-w-56 scale-95 object-cover"
                   />
                   <div className="grid w-full max-w-md">
-                    <h2 className="title">{blog.topic}</h2>
-                    <p className="h-14 overflow-hidden px-2 md:h-6">
-                      {blog.title}...
+                    <h2 className="title h-8 overflow-hidden">{blog.title}</h2>
+                    <p className="h-12 overflow-hidden px-2 lg:h-8">
+                      {blog.description}...
                     </p>
                     <span>{formatDate(blog.date!)}</span>
                   </div>

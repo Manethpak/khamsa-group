@@ -94,7 +94,10 @@ const Navbar = () => {
           <div className="hidden md:block">
             <ul className="flex items-center gap-7 font-light">
               <li>
-                <Link href="/journey">Our Journey</Link>
+                <Link href="/project">Projects</Link>
+              </li>
+              <li>
+                <a href="#journey">Our Journey</a>
               </li>
               <li>
                 <Link href="/about-us">About Us</Link>
@@ -130,9 +133,14 @@ const Navbar = () => {
         <div className="h-full">
           <ul className="flex flex-col items-center justify-center gap-7 font-semibold">
             <li>
-              <Link href="/journey" onClick={() => setOpen(!open)}>
-                Our Journey
+              <Link href="/project" onClick={() => setOpen(!open)}>
+                Projects
               </Link>
+            </li>
+            <li>
+              <a href="/journey" onClick={() => setOpen(!open)}>
+                Our Journey
+              </a>
             </li>
             <li>
               <Link href="/about-us" onClick={() => setOpen(!open)}>

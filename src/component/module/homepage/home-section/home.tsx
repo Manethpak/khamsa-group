@@ -67,7 +67,7 @@ const HomeSection = ({ data }: Props) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.75 }}
-            className="flex h-full max-h-[450px] w-full max-w-full justify-center bg-blue-500 lg:max-w-[650px]"
+            className="flex h-full max-h-[450px] w-full max-w-full justify-center lg:max-w-[650px]"
           >
             <Image
               src="/images/heroContent.gif"
