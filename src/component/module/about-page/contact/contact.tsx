@@ -26,18 +26,18 @@ const Contacts = () => {
         <div className="flex h-full flex-col-reverse items-center justify-center sm:justify-between lg:flex-row lg:gap-12">
           <div className="subtitle flex h-full w-full max-w-5xl flex-col justify-center gap-10">
             <div className="flex flex-col gap-7">
-              <Motion delay={0.5} className="text-white">
-                What are you waiting for?
+              <Motion delay={0.5} className="font-bold text-white">
+                What are You Waiting For?
               </Motion>
               <Motion
                 delay={0.6}
                 className="heading-title font-light leading-snug text-white"
               >
-                Let&apos;s invest in the future together
+                Let&apos;s Invest in the Future Together
               </Motion>
               <Motion delay={0.7}>
                 <button className="h-14 w-full max-w-fit rounded bg-white px-5 font-medium">
-                  <Link href="/contact">Contact us</Link>
+                  <Link href="/contact">Contact Us</Link>
                 </button>
               </Motion>
             </div>

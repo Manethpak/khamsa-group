@@ -76,7 +76,7 @@ const Navbar = () => {
       animate={containerControls}
       variants={navbarVariants}
       transition={{ duration: 0.35, ease: 'easeInOut' }}
-      className="subtitle sticky top-0 z-50 -mt-1 flex w-full flex-col items-center bg-white"
+      className="subtitle font-semibold sticky top-0 z-50 -mt-1 flex w-full flex-col items-center bg-white"
     >
       {/* Navbar Section */}
       <div className="flex h-20 w-full max-w-screen-2xl items-center justify-between px-5 md:px-10 lg:h-20 lg:px-24">
@@ -92,7 +92,7 @@ const Navbar = () => {
         </Link>
         <div>
           <div className="hidden md:block">
-            <ul className="flex items-center gap-7 font-light">
+            <ul className="flex items-center gap-7">
               <li>
                 <Link href="/project">Projects</Link>
               </li>
@@ -102,7 +102,7 @@ const Navbar = () => {
               <li>
                 <Link href="/blog">Blogs</Link>
               </li>
-              <li className="flex h-12 w-24 items-center justify-center rounded-md bg-secondPrimary text-white">
+              <li className="flex h-12 w-24 items-center justify-center rounded bg-secondPrimary text-white">
                 <Link href="/contact">Contact</Link>
               </li>
             </ul>
@@ -122,13 +122,13 @@ const Navbar = () => {
       </div>
       {/* Dropdown menu section */}
       <motion.div
-        className="absolute mt-20 h-56 w-full bg-white md:hidden"
+        className="absolute mt-20 h-fit py-10 w-full bg-white md:hidden"
         animate={open ? 'open' : 'closed'}
         variants={dropdownVariants}
         initial={{ opacity: 0, y: '-20px' }}
       >
         <div className="h-full">
-          <ul className="flex flex-col items-center justify-center gap-7 font-semibold">
+          <ul className="flex flex-col items-center justify-center gap-7">
             <li>
               <Link href="/project" onClick={() => setOpen(!open)}>
                 Projects

@@ -8,15 +8,15 @@
   }
 
   .subtitle {
-    @apply font-manrope text-base font-extralight capitalize tracking-tight text-deepGreen lg:text-lg;
+    @apply font-manrope text-base font-light text-deepGreen lg:text-lg;
   }
 
   .heading-subtitle {
-    @apply font-manrope text-2xl font-medium capitalize tracking-tight text-deepGreen lg:text-3xl;
+    @apply font-manrope text-2xl font-semibold tracking-tight text-deepGreen lg:text-3xl;
   }
 
   .title {
-    @apply font-manrope text-xl font-normal normal-case tracking-tight text-deepGreen lg:text-2xl;
+    @apply font-manrope text-xl font-semibold tracking-tight text-deepGreen lg:text-2xl;
   }
 }
 
