@@ -8,7 +8,7 @@
   }
 
   .subtitle {
-    @apply font-manrope text-base font-extralight capitalize tracking-tight text-deepGreen lg:text-lg;
+    @apply font-manrope text-base font-extralight tracking-tight text-deepGreen lg:text-lg;
   }
 
   .heading-subtitle {
@@ -68,7 +68,8 @@ body::-webkit-scrollbar-button {
   top: auto !important;
   bottom: -8px !important;
 }
-.swiper-button-prev::after,.swiper-button-next::after{
+.swiper-button-prev::after,
+.swiper-button-next::after {
   height: 40px !important;
   width: 20px !important;
   font-size: 20px;
@@ -84,7 +85,7 @@ body::-webkit-scrollbar-button {
   font-size: 12px;
   color: #000;
   opacity: 1;
-  background: #DDDDDD;
+  background: #dddddd;
   transform: none !important;
 }
 

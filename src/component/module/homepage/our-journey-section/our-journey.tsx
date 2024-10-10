@@ -21,7 +21,7 @@ const OurJourney = () => {
         {/* Grid for the 5 phases */}
         <Motion
           delay={0.75}
-          className="flex justify-start gap-2 font-manrope text-lg font-semibold transition-colors duration-300 sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+          className="flex justify-center gap-12 font-manrope text-lg font-semibold transition-colors duration-300 sm:text-base md:text-lg lg:text-xl xl:text-2xl"
         >
           {phases.map((phase, index) => (
             <div
