@@ -3,7 +3,7 @@
 import { useAnimation, useInView, motion } from 'framer-motion'
 import Image from 'next/image'
 import React, { useEffect, useRef } from 'react'
-import { About_v2 } from '@/constants'
+import { ABOUT_US } from '@/constants/about-us'
 import { Motion } from '@/component/ui/motion'
 
 const AboutSection = () => {
@@ -23,7 +23,7 @@ const AboutSection = () => {
           <Motion className="title">About Us</Motion>
           <div className="flex w-full flex-col-reverse items-start justify-between gap-5 lg:flex-row lg:items-center">
             <div className="flex w-full max-w-2xl flex-col items-center justify-center gap-5 px-4">
-              {About_v2.map((data, index) => (
+              {ABOUT_US.map((data, index) => (
                 <Motion key={data.title} delay={index * 0.2} className="flex">
                   <li>
                     <strong className="font-medium">{data.title}</strong>
