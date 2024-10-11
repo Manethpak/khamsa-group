@@ -12,7 +12,10 @@ const OurJourney = () => {
   const phases = Object.keys(JOURNEY_DATA) as PhaseKeys[]
 
   return (
-    <section id='journey' className="flex w-full flex-col items-center justify-center">
+    <section
+      id="journey"
+      className="flex w-full flex-col items-center justify-center"
+    >
       <div className="flex w-full max-w-screen-2xl flex-col gap-10 px-5 md:px-10 lg:px-24">
         <Motion delay={0.5} className="heading-subtitle">
           Our Journey
@@ -21,14 +24,14 @@ const OurJourney = () => {
         {/* Grid for the 5 phases */}
         <Motion
           delay={0.75}
-          className="flex justify-center gap-12 font-manrope text-lg font-semibold transition-colors duration-300 sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+          className="flex cursor-pointer justify-start gap-4 font-manrope text-lg font-semibold transition-colors duration-300 sm:text-base md:text-lg lg:text-xl xl:text-2xl"
         >
           {phases.map((phase, index) => (
             <div
               key={index}
               onClick={() => setSelectedPhase(phase)}
               className={cn(
-                'title font-light flex h-16 w-40 flex-col items-center justify-center border-white transition-colors duration-300',
+                'title flex h-16 w-40 flex-col items-center justify-center border-white font-light transition-colors duration-300',
                 selectedPhase === phase
                   ? 'bg-secondPrimary font-medium text-white'
                   : 'bg-white'
@@ -44,7 +47,7 @@ const OurJourney = () => {
         {/* Boxes below the grid */}
         <div className="flex flex-col gap-x-24 gap-y-10 sm:flex-row">
           {/* First Box */}
-          <Motion delay={0.75} className="title font-normal w-full">
+          <Motion delay={0.75} className="title w-full font-normal">
             <p>{JOURNEY_DATA[selectedPhase].title}</p>
           </Motion>
 

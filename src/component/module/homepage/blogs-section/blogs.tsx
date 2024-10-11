@@ -71,7 +71,9 @@ const BlogSection = ({ data }: Props) => {
                     className="w-full max-w-56 scale-95 object-cover"
                   />
                   <div className="grid w-full max-w-md">
-                    <h2 className="title text-base sm:text-xl h-8 overflow-hidden">{blog.title}</h2>
+                    <h2 className="title h-8 overflow-hidden text-base sm:text-xl">
+                      {blog.title}
+                    </h2>
                     <p className="h-12 overflow-hidden px-2 lg:h-8">
                       {blog.description}...
                     </p>
