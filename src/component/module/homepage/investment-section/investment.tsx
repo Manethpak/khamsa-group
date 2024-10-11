@@ -84,7 +84,7 @@ const Investment = ({ data }: Props) => {
           <SwiperSlide>
             <Motion className="flex h-40 max-h-full min-h-full min-w-full max-w-full flex-col justify-center gap-3 sm:h-56 md:h-80">
               <Link
-                href="/project"
+                href="/projects"
                 className="subtitle mx-14 flex size-24 items-center justify-center rounded-full border border-secondPrimary text-secondPrimary"
               >
                 See More{' '}
