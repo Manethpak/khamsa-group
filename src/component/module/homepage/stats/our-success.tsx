@@ -14,12 +14,12 @@ const OurSuccess = ({ data }: Props) => {
           {data.map((item, index) => (
             <div
               key={index}
-              className="flex h-36 w-full flex-col items-center justify-center border-black bg-white font-manrope text-green-700"
+              className="flex h-36 w-full flex-col items-center justify-center border-black bg-white"
             >
-              <h1 className="font-manrope text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+              <h1 className="title text-3xl md:text-[32px] ">
                 {item.number}
               </h1>
-              <span className="mt-1 font-manrope text-sm font-light sm:text-base md:text-2xl lg:text-2xl xl:text-2xl">
+              <span className="subtitle font-light">
                 {item.title}
               </span>
             </div>

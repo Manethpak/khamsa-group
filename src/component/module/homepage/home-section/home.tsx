@@ -58,7 +58,7 @@ const HomeSection = ({ data }: Props) => {
               <Motion delay={0.7}>{data.description}</Motion>
             </div>
             <Motion delay={0.8}>
-              <button className="h-14 w-full max-w-fit rounded-xl bg-secondPrimary px-5 font-medium text-white">
+              <button className="h-14 w-full max-w-fit rounded bg-secondPrimary px-5 font-medium text-white">
                 <Link href="#investment">Explore Our Investment</Link>
               </button>
             </Motion>
@@ -85,7 +85,7 @@ const HomeSection = ({ data }: Props) => {
           className="heading-title flex w-full flex-col items-center gap-10 overflow-hidden text-lg font-normal sm:flex-row sm:justify-between"
         >
           <p className="w-full max-w-72 text-center sm:min-w-max sm:text-start">
-            Our affiliate companies
+            Our Affiliate Companies
           </p>
 
           <div

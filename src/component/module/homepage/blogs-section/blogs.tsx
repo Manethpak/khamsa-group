@@ -42,14 +42,14 @@ const BlogSection = ({ data }: Props) => {
                     className="w-full object-cover object-center"
                   />
                   <div className="mt-4 flex max-h-40 justify-between gap-1 overflow-hidden">
-                    <div className="w-full max-w-xl space-y-3">
+                    <div className="w-full max-w-xl space-y-7 md:space-y-10">
                       <h1 className="heading-subtitle h-full max-h-8 overflow-hidden normal-case">
                         {sortedData[0].title}
                       </h1>
                       <p className="px-2">{sortedData[0].description}</p>
                     </div>
                     <div className="grid w-full max-w-36 place-items-end content-between">
-                      <span>{formatDate(sortedData[0].date!)}</span>
+                      <span className="pt-2">{formatDate(sortedData[0].date!)}</span>
                       <PiArrowUpRightThin className="size-10" />
                     </div>
                   </div>
@@ -71,11 +71,11 @@ const BlogSection = ({ data }: Props) => {
                     className="w-full max-w-56 scale-95 object-cover"
                   />
                   <div className="grid w-full max-w-md">
-                    <h2 className="title h-8 overflow-hidden">{blog.title}</h2>
+                    <h2 className="title text-base sm:text-xl h-8 overflow-hidden">{blog.title}</h2>
                     <p className="h-12 overflow-hidden px-2 lg:h-8">
                       {blog.description}...
                     </p>
-                    <span>{formatDate(blog.date!)}</span>
+                    <span className="text-xs">{formatDate(blog.date!)}</span>
                   </div>
                 </div>
               </Link>
