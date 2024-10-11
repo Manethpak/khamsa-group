@@ -80,19 +80,23 @@ const Investment = ({ data }: Props) => {
                 </Link>
               </Motion>
             </SwiperSlide>
-            
           ))}
           <SwiperSlide>
-            <Motion className="flex  flex-col gap-3 h-40 max-h-full min-h-full min-w-full max-w-full sm:h-56 md:h-80  justify-center">
-              <Link href="/project" className="size-24 subtitle flex mx-14 items-center justify-center border rounded-full border-secondPrimary text-secondPrimary">See More </Link>
+            <Motion className="flex h-40 max-h-full min-h-full min-w-full max-w-full flex-col justify-center gap-3 sm:h-56 md:h-80">
+              <Link
+                href="/project"
+                className="subtitle mx-14 flex size-24 items-center justify-center rounded-full border border-secondPrimary text-secondPrimary"
+              >
+                See More{' '}
+              </Link>
             </Motion>
           </SwiperSlide>
-          <div className="relative mt-5 flex h-14 xl:h-20 w-full max-w-full items-center cursor-pointer">
-            <div className="custom-swiper-next font-thin absolute bottom-0 right-10 flex size-14 xl:size-20 text-3xl items-center justify-center border rounded-full border-secondPrimary text-secondPrimary ">
+          <div className="relative mt-5 flex h-14 w-full max-w-full cursor-pointer items-center xl:h-20">
+            <div className="custom-swiper-next absolute bottom-0 right-10 flex size-14 items-center justify-center rounded-full border border-secondPrimary text-3xl font-thin text-secondPrimary xl:size-20">
               <GoArrowRight />
             </div>
-            <div className="custom-swiper-scroll h-1 w-full max-w-7xl bg-[#E0E0E0] mr-32 flex relative items-center rounded-md"/>
-          </div>  
+            <div className="custom-swiper-scroll relative mr-32 flex h-1 w-full max-w-7xl items-center rounded-md bg-[#E0E0E0]" />
+          </div>
         </Swiper>
       </div>
     </section>

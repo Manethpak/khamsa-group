@@ -16,12 +16,8 @@ const OurSuccess = ({ data }: Props) => {
               key={index}
               className="flex h-36 w-full flex-col items-center justify-center border-black bg-white"
             >
-              <h1 className="title text-3xl md:text-[32px] ">
-                {item.number}
-              </h1>
-              <span className="subtitle font-light">
-                {item.title}
-              </span>
+              <h1 className="title text-3xl md:text-[32px]">{item.number}</h1>
+              <span className="subtitle font-light">{item.title}</span>
             </div>
           ))}
         </Motion>

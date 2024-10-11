@@ -25,8 +25,8 @@ const Topic = () => {
             className="rounded-lg bg-white p-4 shadow-md"
             style={{
               width: '200.15px',
-              height: '120px', 
-              opacity: 1, 
+              height: '120px',
+              opacity: 1,
             }}
           >
             <h3 className="text-lg font-semibold">{item.title}</h3>
