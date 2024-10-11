@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { project_v2 } from '@/constants'
 import Topic from './topic'
 
+
 const ProjectDetail = () => {
   const handleShare = () => {
     const shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}&title=${encodeURIComponent(project_v2.title || 'Project Title')}&summary=${encodeURIComponent(project_v2.descriptions.join(' '))}&source=${encodeURIComponent('https://www.linkedin.com/company/khamsagroup/posts/?feedView=all')}`
@@ -24,7 +25,6 @@ const ProjectDetail = () => {
           2022 - present
         </span>
       </div>
-
       {/* Date with Share Icon */}
       <div className="mb-8 mt-8 flex w-full max-w-3xl items-center gap-8 border-b border-t px-4 py-6">
         <time className="font-manrope text-xs text-zinc-400 sm:text-sm md:text-base lg:text-base">
