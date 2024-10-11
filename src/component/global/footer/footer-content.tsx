@@ -34,7 +34,7 @@ const FooterSection = () => {
   const link: Props[] = contact?.link || []
   return (
     <footer className="from-gray-100 to-gray-100 flex w-full flex-col items-center justify-center overflow-hidden bg-black bg-gradient-to-r py-24 text-white">
-      <div className="flex w-full max-w-screen-2xl flex-col gap-10 px-5 md:px-10 lg:px-24">
+      <div className="flex w-full max-w-screen-2xl flex-col gap-5 px-5 md:px-10 lg:px-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
@@ -49,13 +49,11 @@ const FooterSection = () => {
             </div>
 
             <p className="text-gray-600 mt-4 max-w-xs text-sm">
-              Pirate ipsum arrgh bounty warp jack. Yellow timbers no pounders
-              fluke lugsail gangplank. Across no poop landlubber a road sails
-              mutiny rat. Fleet coxswain lass lass crow&apos;s cup gar. Tales
-              nest ensign lateen no gold.
+              Build the Future World We wish to see through New Creation,
+              Innovation and Creativity.
             </p>
 
-            <div className="text-gray-600 mt-8 flex space-x-6">
+            <div className="text-gray-600 mt-8 flex gap-4">
               {contact?.social_link?.map(({ icon_name, link }, index) => {
                 const IconComponent = iconMapping[icon_name]
                 return (
