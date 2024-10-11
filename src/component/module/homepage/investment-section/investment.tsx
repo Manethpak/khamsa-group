@@ -55,7 +55,7 @@ const Investment = ({ data }: Props) => {
             640: { slidesPerView: 3, spaceBetween: 15 },
             1280: { slidesPerView: 4, spaceBetween: 20 },
           }}
-          className=" flex w-full "
+          className="flex w-full"
         >
           {items.map((data, index) => (
             <SwiperSlide
@@ -80,13 +80,19 @@ const Investment = ({ data }: Props) => {
                 </Link>
               </Motion>
             </SwiperSlide>
+            
           ))}
+          <SwiperSlide>
+            <Motion className="flex  flex-col gap-3 h-40 max-h-full min-h-full min-w-full max-w-full sm:h-56 md:h-80  justify-center">
+              <Link href="/project" className="size-24 subtitle flex mx-14 items-center justify-center border rounded-full border-secondPrimary text-secondPrimary">See More </Link>
+            </Motion>
+          </SwiperSlide>
           <div className="relative mt-5 flex h-14 xl:h-20 w-full max-w-full items-center cursor-pointer">
             <div className="custom-swiper-next font-thin absolute bottom-0 right-10 flex size-14 xl:size-20 text-3xl items-center justify-center border rounded-full border-secondPrimary text-secondPrimary ">
               <GoArrowRight />
             </div>
             <div className="custom-swiper-scroll h-1 w-full max-w-7xl bg-[#E0E0E0] mr-32 flex relative items-center rounded-md"/>
-          </div>
+          </div>  
         </Swiper>
       </div>
     </section>

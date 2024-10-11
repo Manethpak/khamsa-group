@@ -1,14 +1,15 @@
-import {  Libre_Baskerville,
+import {
+  Libre_Baskerville,
   Noto_Serif_Khmer,
   Noto_Sans,
   Noto_Sans_Khmer,
-  Manrope 
+  Manrope,
 } from 'next/font/google'
 
 // add new font for v2
 const manrope_init = Manrope({
   subsets: ['latin'],
-  weight: ['200','300','400','500','600','700','800'],
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
   variable: '--font-manrope',
 })
 

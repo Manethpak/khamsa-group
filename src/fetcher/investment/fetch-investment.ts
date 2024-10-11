@@ -3,9 +3,9 @@ import { readSingleton } from '@directus/sdk'
 
 export async function fetchInvestment() {
   return directus.request(
-    readSingleton('Investment',{
+    readSingleton('Investment', {
       // @ts-expect-error
-      fields: ['*', 'items.*','category.*','subtitle']
+      fields: ['*', 'items.*', 'category.*', 'subtitle'],
     })
   )
 }

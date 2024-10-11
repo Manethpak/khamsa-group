@@ -33,8 +33,8 @@ const FooterSection = () => {
   const address: Props[] = contact?.address || []
   const link: Props[] = contact?.link || []
   return (
-    <footer className="from-gray-100 to-gray-100 bg-black bg-gradient-to-r text-white flex w-full flex-col items-center justify-center overflow-hidden py-20">
-      <div className="flex w-full max-w-screen-2xl flex-col gap-20 px-5 md:px-10 lg:px-24">
+    <footer className="from-gray-100 to-gray-100 flex w-full flex-col items-center justify-center overflow-hidden bg-black bg-gradient-to-r py-24 text-white">
+      <div className="flex w-full max-w-screen-2xl flex-col gap-10 px-5 md:px-10 lg:px-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
@@ -105,7 +105,7 @@ const FooterSection = () => {
                   <div key={data.title} className="">
                     <Link
                       href={data.link}
-                      className="text-gray-500 mt-4 flex flex-col space-y-2 text-sm uppercase"
+                      className="text-gray-500 mt-4 flex flex-col space-y-2 text-sm"
                     >
                       {' '}
                       {data.title}
@@ -116,7 +116,7 @@ const FooterSection = () => {
             </div>
           </div>
         </div>
-        <p className="text-gray-800 mt-8 text-sm">
+        <p className="text-gray-800 text-sm">
           © KhamsaGroup 2024 |{' '}
           <Link href="#" className="text-gray-400">
             Terms and Conditions

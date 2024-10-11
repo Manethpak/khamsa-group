@@ -1291,92 +1291,35 @@ export const Contact = [
   },
 ]
 export const Footer = [
+  { title: 'Projects', url: '/project' },
   { title: 'Our Journey', url: '/journey' },
   { title: 'About Us', url: '/about-us' },
   { title: 'Blogs', url: '/blog' },
   { title: 'Contact Us', url: '/contact' },
 ]
-export const phaseData = {
-  'Phase 1': {
-    box1: 'Leisure and F&B',
-    box2: `Phase 1 is all about our expansion into the leisure and food & beverage industry. 
-           With a growing demand for experiential dining and unique leisure experiences, we 
-           have invested heavily in creating world-class restaurants and resorts that offer 
-           not just food and accommodation but unforgettable moments. Our flagship projects 
-           include gourmet food trucks, waterfront restaurants, and eco-friendly resorts 
-           nestled in natural landscapes. Our approach is sustainability-focused, ensuring 
-           that each of our F&B ventures promotes local cuisine and culture, while also 
-           supporting the communities where we operate. We believe that leisure should 
-           not only refresh the body but also nourish the soul.`,
-  },
-  'Phase 2': {
-    box1: 'Tech Innovation',
-    box2: `Phase 2 focuses on our foray into the world of technology innovation. As the digital 
-           revolution continues to reshape industries, we are committed to driving change 
-           through disruptive technologies. Our investments in AI, machine learning, and 
-           blockchain have led to the creation of smart applications that solve real-world 
-           problems. From AI-powered customer service bots to blockchain platforms that 
-           secure transactions, we are at the forefront of tech innovation. Our R&D teams 
-           work tirelessly to create scalable solutions, and our goal is to democratize access 
-           to technology for businesses of all sizes, enabling them to thrive in the modern era.`,
-  },
-  'Phase 3': {
-    box1: 'Real Estate',
-    box2: `Phase 3 marks our venture into the real estate market, where we focus on creating 
-           sustainable, smart living spaces that meet the needs of the modern urbanite. 
-           Our real estate portfolio includes residential developments, commercial spaces, 
-           and industrial parks, all designed with a focus on green energy, smart home 
-           technology, and community living. We believe in building more than just buildings; 
-           we create environments where people can live, work, and thrive. Our projects 
-           incorporate sustainable building materials, energy-efficient designs, and innovative 
-           waste management systems, ensuring that our developments are not only functional 
-           but also environmentally friendly.`,
-  },
-  'Phase 4': {
-    box1: 'FinTech',
-    box2: `In Phase 4, we dive into the financial technology sector, where our goal is to 
-           revolutionize how people manage, invest, and spend their money. With the rise 
-           of digital banking and decentralized finance (DeFi), we are developing platforms 
-           that give users more control over their financial lives. Our flagship product is a 
-           mobile banking app that combines traditional banking features with cryptocurrency 
-           management, allowing users to seamlessly navigate between fiat and digital 
-           currencies. Additionally, we are working on AI-powered financial advisory services 
-           that provide personalized investment advice based on real-time data analytics.`,
-  },
-  'Phase 5': {
-    box1: 'Green Energy',
-    box2: `Phase 5 is our commitment to investing in green energy solutions to address the 
-           global energy crisis and reduce our carbon footprint. We are focused on solar, wind, 
-           and hydroelectric power projects, aiming to supply clean and renewable energy to 
-           both urban and rural areas. Our initiatives include solar panel installations in 
-           underdeveloped regions, wind farms in coastal areas, and small-scale hydroelectric 
-           plants that generate electricity for local communities. We are also researching 
-           energy storage solutions to improve the reliability of renewable energy, ensuring 
-           a sustainable and consistent power supply for future generations. Through our 
-           investments, we aim to lead the transition towards a greener, more sustainable world.`,
-  },
-}
 
 export const About_v2 = [
   {
     title: 'Khamsa Investment',
-    subtitle: 'Group Co. Ltd. or Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021. The company was formed to support its subsidiaries, such as Khamsa Co. Ltd, Sunrise Rooster Co. Ltd., AI Farm Co. Ltd and Laoka Co. Ltd., the investment community to ensure that all its business objectives will be put into reality.'
+    subtitle:
+      'Group Co. Ltd. or Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021. The company was formed to support its subsidiaries, such as Khamsa Co. Ltd, Sunrise Rooster Co. Ltd., AI Farm Co. Ltd and Laoka Co. Ltd., the investment community to ensure that all its business objectives will be put into reality.',
   },
   {
     title: 'Khamsa Investment',
-    subtitle: 'Group Co. Ltd. or Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021. The company was formed to support its subsidiaries, such as Khamsa Co. Ltd, Sunrise Rooster Co. Ltd., AI Farm Co. Ltd and Laoka Co. Ltd., the investment community to ensure that all its business objectives will be put into reality.'
-  }
+    subtitle:
+      'Group Co. Ltd. or Khamsa Group was founded by the CEO himself, Mr. Kim Khorn Long on November 16, 2017, and was finally incorporated and registered in the Kingdom of Cambodia on August 11, 2021. The company was formed to support its subsidiaries, such as Khamsa Co. Ltd, Sunrise Rooster Co. Ltd., AI Farm Co. Ltd and Laoka Co. Ltd., the investment community to ensure that all its business objectives will be put into reality.',
+  },
 ]
-  export const project_v2 = {
-    title: 'BIO-GREENERGY LAB MONDULKIRI',
-    date: 'Published 5 days ago • Updated a day ago • 1 min read',
-    descriptions: [
-      'Pirate ipsum arrgh bounty warp jack. Furl starboard pinnace piracy sink ketch weigh arr tales. Brace buccaneer measured cutlass heave davy gun lass. Roger gunwalls parrel nest tell lee boatswain.',
-      'Pirate ipsum arrgh bounty warp jack. Pin round jack me topgallant her. Overhaul rig gold shiver weigh six killick keelhaul shrouds. Privateer brig men seven jolly pounders warp killick me. Nipperkin scourge bounty spot anchor bounty nipperkin. On yellow rig main no lugsail ahoy rig. Timbers spot reef aft boat bilged. Jolly hearties tell aft arr jib bilge gold me. Weigh jones brace salmagundi coxswain keelhaul chain. O nine chantey cat men plate down sink or. Spot heave belay crimp cog brace gun. Crack tell rat me lanyard gangplank lee hail-shot rum chase. Gar privateer boatswain yard black fer the. Gar boat gangway crow s locker black Sails schooner blimey mutiny man bucko',
-      'Pirate ipsum arrgh bounty warp jack. Pin round jack me topgallant her. Overhaul rig gold shiver weigh six killick keelhaul shrouds. Privateer brig men seven jolly pounders warp killick me. Nipperkin scourge bounty spot anchor bounty nipperkin. On yellow rig main no lugsail ahoy rig. Timbers spot reef aft boat bilged. Jolly hearties tell aft arr jib bilge gold me. Weigh jones  brace salmagundi coxswain keelhaul chain. O nine chantey cat men plate down sink or. Spot heave belay crimp cog brace gun. Crack tell rat me lanyard gangplank lee hail-shot rum chase. Gar privateer boatswain yard black fer the. Gar boat gangway crow s locker black. Sails schooner blimey mutiny man bucko',
-    ],
-    images: [
-      '/AI Farm picture.png', // Replace with your static image paths
-      '/Factory.jpg',
-    ],
-  }
+export const project_v2 = {
+  title: 'BIO-GREENERGY LAB MONDULKIRI',
+  date: 'Published 5 days ago • Updated a day ago • 1 min read',
+  descriptions: [
+    'Pirate ipsum arrgh bounty warp jack. Furl starboard pinnace piracy sink ketch weigh arr tales. Brace buccaneer measured cutlass heave davy gun lass. Roger gunwalls parrel nest tell lee boatswain.',
+    'Pirate ipsum arrgh bounty warp jack. Pin round jack me topgallant her. Overhaul rig gold shiver weigh six killick keelhaul shrouds. Privateer brig men seven jolly pounders warp killick me. Nipperkin scourge bounty spot anchor bounty nipperkin. On yellow rig main no lugsail ahoy rig. Timbers spot reef aft boat bilged. Jolly hearties tell aft arr jib bilge gold me. Weigh jones brace salmagundi coxswain keelhaul chain. O nine chantey cat men plate down sink or. Spot heave belay crimp cog brace gun. Crack tell rat me lanyard gangplank lee hail-shot rum chase. Gar privateer boatswain yard black fer the. Gar boat gangway crow s locker black Sails schooner blimey mutiny man bucko',
+    'Pirate ipsum arrgh bounty warp jack. Pin round jack me topgallant her. Overhaul rig gold shiver weigh six killick keelhaul shrouds. Privateer brig men seven jolly pounders warp killick me. Nipperkin scourge bounty spot anchor bounty nipperkin. On yellow rig main no lugsail ahoy rig. Timbers spot reef aft boat bilged. Jolly hearties tell aft arr jib bilge gold me. Weigh jones  brace salmagundi coxswain keelhaul chain. O nine chantey cat men plate down sink or. Spot heave belay crimp cog brace gun. Crack tell rat me lanyard gangplank lee hail-shot rum chase. Gar privateer boatswain yard black fer the. Gar boat gangway crow s locker black. Sails schooner blimey mutiny man bucko',
+  ],
+  images: [
+    '/AI Farm picture.png', // Replace with your static image paths
+    '/Factory.jpg',
+  ],
+}
