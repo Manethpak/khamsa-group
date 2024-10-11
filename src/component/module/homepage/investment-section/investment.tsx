@@ -17,12 +17,12 @@ type Props = { data: Schema['Investment'] }
 const Investment = ({ data }: Props) => {
   const items = useMemo(() => {
     return data
-      ?.category!.map((item) => {
+      ?.project!.map((item) => {
         if (typeof item === 'object' && item !== null) {
           return {
             title: item.title,
             imageUrl: getImageUrl(item.image as string),
-            subtitle: item.subtitle,
+            subtitle: item.description,
             categorySlug: item.slug,
           }
         }
@@ -64,8 +64,8 @@ const Investment = ({ data }: Props) => {
             >
               <Motion className="flex h-full max-w-fit flex-col gap-3">
                 <Image
-                  // src={data!.imageUrl}
-                  src="/images/test.jpg"
+                  src={data!.imageUrl}
+                  // src="/images/test.jpg"
                   alt={data!.title!}
                   width={1200}
                   height={1200}
