@@ -57,6 +57,7 @@ const ProjectDetail = () => {
           )}
         </div>
       ))}
+      <Topic/>
     </div>
   )
 }
