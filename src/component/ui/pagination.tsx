@@ -1,8 +1,6 @@
 'use client';
-import React, { useState } from 'react';
-import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';

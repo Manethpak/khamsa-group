@@ -5,8 +5,9 @@ import React from 'react'
 import { Footer } from '@/constants'
 import { useContact } from '@/fetcher/contact/use-contact'
 import { motion } from 'framer-motion'
-import { FaTelegramPlane } from 'react-icons/fa'
-import { GrFacebookOption, GrLinkedinOption } from 'react-icons/gr'
+import FacebookIcon from '@/component/global/icon/facebook-icon'
+import TelegramIcon from '@/component/global/icon/telegram-icon'
+import LinkedInIcon from '@/component/global/icon/linkedin-icon'
 
 interface Props {
   title: string
@@ -16,9 +17,9 @@ interface Props {
 }
 
 const iconMapping = {
-  facebook: GrFacebookOption,
-  linkedin: GrLinkedinOption,
-  youtube: FaTelegramPlane,
+  facebook: FacebookIcon,
+  linkedin: LinkedInIcon,
+  youtube: TelegramIcon,
 }
 
 const FooterSection = () => {

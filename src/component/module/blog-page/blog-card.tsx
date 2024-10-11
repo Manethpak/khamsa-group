@@ -1,45 +1,57 @@
-import { Paginate } from '@/component/ui/pagination';
-import { getImageUrl } from '@/lib/directus';
-import { Schema } from '@/lib/schema';
-import { formatDate } from '@/lib/utils';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
+'use client'
+import { Paginate } from '@/component/ui/pagination'
+import { getImageUrl } from '@/lib/directus'
+import { Schema } from '@/lib/schema'
+import { formatDate } from '@/lib/utils'
+import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import React from 'react'
 
-type Props = {
-  data: Schema['Blogs'];
-};
+type BlogCardProps = {
+  imageUrl: string
+  title: string
+  topic: string
+  date: string
+  link: string
+  description: string
+}
 
-const BlogCard = ({ data }: Props) => {
+const BlogCard: React.FC<BlogCardProps> = ({
+  link,
+  imageUrl,
+  title,
+  topic,
+  date,
+  description,
+}) => {
+  const pathname = usePathname()
+
+  const getColor = pathname === '/blog' ? '' : 'text-white font-medium subtitle'
+
   return (
-    <Paginate>
-      {data.map((blog) => (
-        <div key={blog.title} className="relative">
-          <Link href={`/blog/` + blog.slug} className="space-y-5">
-            <div className="aspect-square max-h-[400px] min-h-[250px] w-full">
-              <Image
-                src={getImageUrl(blog.image as string)}
-                alt={blog.title!}
-                width={1400}
-                height={1400}
-                className="h-full w-full object-cover object-center relative"
-              />
-            </div>
-            
-            <div className="flex h-fit flex-col gap-3 overflow-hidden">
-              <h1 className="title h-8 overflow-clip ">{blog.title}</h1>
-              <p className="max-w-sm h-40 overflow-clip px-1">{blog.description}</p>
-            </div>
-            <div>{formatDate(blog.date!)}</div>
-            <div className="absolute left-0 top-0 m-4 flex  items-center justify-center px-4 py-1 rounded text-white bg-secondPrimary">
-              {blog.topic}
-            </div>
-          </Link>
+    <Link href={link} key={title} className="space-y-5">
+      <div
+        className={`${getColor}relative aspect-square max-h-[400px] min-h-[250px] w-full`}
+      >
+        <Image
+          src={imageUrl}
+          alt={title}
+          width={1400}
+          height={1400}
+          className="relative h-full w-full object-cover object-center"
+        />
+        <div className="absolute left-0 top-0 m-4 flex items-center justify-center rounded bg-secondPrimary px-4 py-1 text-white">
+          {topic}
         </div>
-        
-      ))}
-    </Paginate>
-  );
-};
+      </div>
+      <div className="flex h-fit flex-col gap-3 overflow-hidden">
+        <h1 className={`${getColor} title h-8 overflow-clip`}>{title}</h1>
+        <p className="h-40 max-w-sm overflow-clip px-1">{description}</p>
+      </div>
+      <div>{date}</div>
+    </Link>
+  )
+}
 
-export default BlogCard;
+export default BlogCard

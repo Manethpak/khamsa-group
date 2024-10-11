@@ -4,13 +4,13 @@ import Link from 'next/link'
 import React, { useMemo, useState } from 'react'
 import { Schema } from '@/lib/schema'
 import { Motion } from '@/component/ui/motion'
-import { GoArrowRight } from 'react-icons/go'
 import { getImageUrl } from '@/lib/directus'
 import { Virtual, Navigation, Pagination, Scrollbar } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/scrollbar'
 import 'swiper/css/navigation'
+import { MoveRight } from 'lucide-react'
 
 type Props = { data: Schema['Investment'] }
 
@@ -89,7 +89,7 @@ const Investment = ({ data }: Props) => {
           </SwiperSlide>
           <div className="relative mt-5 flex h-14 xl:h-20 w-full max-w-full items-center cursor-pointer">
             <div className="custom-swiper-next font-thin absolute bottom-0 right-10 flex size-14 xl:size-20 text-3xl items-center justify-center border rounded-full border-secondPrimary text-secondPrimary ">
-              <GoArrowRight />
+              <MoveRight />
             </div>
             <div className="custom-swiper-scroll h-1 w-full max-w-7xl bg-[#E0E0E0] mr-32 flex relative items-center rounded-md"/>
           </div>  

@@ -2,11 +2,12 @@
 import { Motion } from '@/component/ui/motion'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { FaTelegramPlane } from 'react-icons/fa'
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import { motion } from 'framer-motion'
 import { useContact } from '@/fetcher/contact/use-contact'
-import { GrFacebookOption, GrLinkedinOption } from 'react-icons/gr'
+import FacebookIcon from '@/component/global/icon/facebook-icon'
+import TelegramIcon from '@/component/global/icon/telegram-icon'
+import LinkedInIcon from '@/component/global/icon/linkedin-icon'
+import { ArrowRight } from 'lucide-react'
 
 interface Props {
   title: string
@@ -16,9 +17,9 @@ interface Props {
 }
 
 const iconMapping = {
-  facebook: GrFacebookOption,
-  linkedin: GrLinkedinOption,
-  youtube: FaTelegramPlane,
+  facebook: FacebookIcon,
+  linkedin: LinkedInIcon,
+  youtube: TelegramIcon,
 }
 
 const ContactPage = () => {
@@ -61,8 +62,8 @@ const ContactPage = () => {
 
               <div className="space-y-3">
                 <h2 className="title">Address</h2>
-                {address.map((data) => (
-                  <div key={data.title}>
+                {address.map((data, index) => (
+                  <div key={index}>
                     <Link href={data.link}>{data.title}</Link>
                   </div>
                 ))}
@@ -87,7 +88,7 @@ const ContactPage = () => {
                       animate={showArrow === link.title ? { x: 5 } : { x: 0 }}
                       transition={{ type: 'spring', stiffness: 50 }}
                     >
-                      <HiOutlineArrowNarrowRight />
+                      <ArrowRight />
                     </motion.div>
                   </motion.div>
                 ))}
@@ -96,11 +97,11 @@ const ContactPage = () => {
             <div className="flex flex-col gap-4">
               <h2 className="title">Follow us on:</h2>
               <div className="flex gap-4">
-                {(contact?.social_link || []).map((data) => {
+                {(contact?.social_link || []).map((data, index) => {
                   const IconComponent = iconMapping[data.icon_name]
                   return (
                     <div
-                      key={data.title}
+                      key={index}
                       className="flex size-12 items-center justify-center rounded-full border"
                     >
                       <Link target="_blank" href={`${data.link}`}>
