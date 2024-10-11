@@ -2491,6 +2491,7 @@ export interface components {
       date_updated?: string | null
       title?: string | null
       subtitle?: string | null
+      project?: (number | components['schemas']['ItemsProject'])[] | null
       category?: (number | components['schemas']['ItemsCategory'])[] | null
       items?: (number | components['schemas']['ItemsItem'])[] | null
     }
@@ -2555,6 +2556,25 @@ export interface components {
       title?: string | null
       category?: (number | components['schemas']['ItemsCategory'])[] | null
       item?: (number | components['schemas']['ItemsItem'])[] | null
+    }
+    ItemsProject: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      content?: string | null
+      title?: string | null
+      description?: string | null
+      slug?: string | null
+      /** Format: date */
+      date?: string | null
+      image?: string | components['schemas']['Files'] | null
+      invesment_item?: number | components['schemas']['ItemsInvesment'] | null
     }
     ItemsSuccess: {
       id?: number
@@ -9893,4 +9913,5 @@ export type Schema = {
   Category: components['schemas']['ItemsCategory'][]
   Company: components['schemas']['ItemsCompany'][]
   Image: components['schemas']['ItemsImage'][]
+  Project: components['schemas']['ItemsProject'][]
 }
