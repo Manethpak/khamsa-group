@@ -8,7 +8,7 @@ type Option = {
 export async function fetchBlogs(option?: Option) {
   return directus.request(
     readItems('Blogs', {
-      fields: ['title', 'topic', 'image', 'slug', 'date','description'],
+      fields: ['title', 'topic', 'image', 'slug', 'date', 'description'],
       limit: option?.limit || -1,
       sort: ['sort', '-date'],
     })

@@ -12,7 +12,7 @@ const BlogPage = async () => {
           <h1 className="heading-subtitle normal-case">Recent Blog posts</h1>
         </Motion>
         <Motion delay={1}>
-          <BlogCard data={blogs}/>
+          <BlogCard data={blogs} />
         </Motion>
       </div>
     </section>
