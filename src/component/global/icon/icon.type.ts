@@ -1,3 +1,3 @@
-import React from "react";
+import React from 'react'
 
 export type SVGProp = React.SVGAttributes<SVGGElement>

@@ -108,9 +108,10 @@ const Navbar = () => {
             </ul>
           </div>
           {open ? (
-            <X onClick={() => setOpen(!open)}
-            className="h-7 w-7 cursor-pointer md:hidden"/>
-            
+            <X
+              onClick={() => setOpen(!open)}
+              className="h-7 w-7 cursor-pointer md:hidden"
+            />
           ) : (
             <AlignJustify
               onClick={() => setOpen(!open)}

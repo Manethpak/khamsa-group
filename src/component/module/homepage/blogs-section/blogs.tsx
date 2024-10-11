@@ -49,7 +49,9 @@ const BlogSection = ({ data }: Props) => {
                       <p className="px-2">{sortedData[0].description}</p>
                     </div>
                     <div className="grid w-full max-w-36 place-items-end content-between">
-                      <span className="pt-2">{formatDate(sortedData[0].date!)}</span>
+                      <span className="pt-2">
+                        {formatDate(sortedData[0].date!)}
+                      </span>
                       <MoveUpRight className="size-10" />
                     </div>
                   </div>

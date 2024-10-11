@@ -85,12 +85,20 @@ const BlogPage = async ({ params }: Props) => {
         </Motion>
       </div>
       <div className="flex w-full flex-col items-center justify-center bg-primary">
-        <div className="flex w-full max-w-screen-2xl flex-col gap-14 text-white px-5 py-14 md:px-10 lg:px-24">
-          <Motion delay={0.75} className="title text-white flex items-end justify-between">
-            <h1 className="heading-subtitle normal-case text-white ">More topic</h1>
+        <div className="flex w-full max-w-screen-2xl flex-col gap-14 px-5 py-14 text-white md:px-10 lg:px-24">
+          <Motion
+            delay={0.75}
+            className="title flex items-end justify-between text-white"
+          >
+            <h1 className="heading-subtitle normal-case text-white">
+              More topic
+            </h1>
             <Link href="/blog">See all</Link>
           </Motion>
-          <Motion delay={1} className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 text-white">
+          <Motion
+            delay={1}
+            className="grid grid-cols-2 gap-6 text-white sm:grid-cols-3 md:grid-cols-4"
+          >
             {blogs.map((blog) => (
               <BlogCard
                 key={blog.title}

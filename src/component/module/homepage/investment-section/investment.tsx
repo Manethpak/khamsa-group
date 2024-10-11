@@ -91,8 +91,8 @@ const Investment = ({ data }: Props) => {
               </Link>
             </Motion>
           </SwiperSlide>
-          <div className="relative mt-5 flex h-14 xl:h-20 w-full max-w-full items-center cursor-pointer">
-            <div className="custom-swiper-next font-thin absolute bottom-0 right-10 flex size-14 xl:size-20 text-3xl items-center justify-center border rounded-full border-secondPrimary text-secondPrimary ">
+          <div className="relative mt-5 flex h-14 w-full max-w-full cursor-pointer items-center xl:h-20">
+            <div className="custom-swiper-next absolute bottom-0 right-10 flex size-14 items-center justify-center rounded-full border border-secondPrimary text-3xl font-thin text-secondPrimary xl:size-20">
               <MoveRight />
             </div>
             <div className="custom-swiper-scroll relative mr-32 flex h-1 w-full max-w-7xl items-center rounded-md bg-[#E0E0E0]" />

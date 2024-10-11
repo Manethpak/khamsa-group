@@ -1,12 +1,11 @@
-'use client';
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import '@/app/globals.css';
-import { Pagination, Navigation } from 'swiper/modules';
-
+'use client'
+import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import '@/app/globals.css'
+import { Pagination, Navigation } from 'swiper/modules'
 
 interface Props {
   children: React.ReactNode[]
