@@ -1,16 +1,34 @@
+'use client'
 import { Paginate } from '@/component/ui/pagination'
 import { getImageUrl } from '@/lib/directus'
 import { Schema } from '@/lib/schema'
 import { formatDate } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
-type Props = {
-  data: Schema['Blogs']
+type BlogCardProps = {
+  imageUrl: string
+  title: string
+  topic: string
+  date: string
+  link: string
+  description: string
 }
 
-const BlogCard = ({ data }: Props) => {
+const BlogCard: React.FC<BlogCardProps> = ({
+  link,
+  imageUrl,
+  title,
+  topic,
+  date,
+  description,
+}) => {
+  const pathname = usePathname()
+
+  const getColor = pathname === '/blog' ? '' : 'text-white font-medium subtitle'
+
   return (
     <Paginate>
       {data.map((blog) => (
