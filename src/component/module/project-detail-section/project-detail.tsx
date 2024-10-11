@@ -1,10 +1,10 @@
 'use client' // Specify that this is a Client Component
 
-import { IoShareOutline } from 'react-icons/io5'
 import React from 'react'
 import Image from 'next/image'
 import { project_v2 } from '@/constants'
 import Topic from './topic'
+import { ShareIcon } from 'lucide-react'
 
 const ProjectDetail = () => {
   const handleShare = () => {
@@ -29,7 +29,7 @@ const ProjectDetail = () => {
         <time className="font-manrope text-xs text-zinc-400 sm:text-sm md:text-base lg:text-base">
           {project_v2.date || 'Date not available'}
         </time>
-        <IoShareOutline
+        <ShareIcon
           className="ml-auto cursor-pointer text-zinc-400"
           size={30}
           onClick={handleShare}
