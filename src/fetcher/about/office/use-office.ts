@@ -6,5 +6,5 @@ type Option = {
 }
 
 export function useOffice(option?: Option) {
-  return useSWR(['/office', option], () => fetchOffice(option));
+  return useSWR(['/office', option], () => fetchOffice(option))
 }

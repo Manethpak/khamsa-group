@@ -4,7 +4,7 @@ import type { Config } from 'tailwindcss'
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    //add for component v2 
+    //add for component v2
     './src/component-v2/**/*.{js,ts,jsx,tsx,mdx}',
     './src/component/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -28,7 +28,7 @@ const config: Config = {
         noto: ['var(--font-noto-sans)'],
         libre: ['var(--font-libre)'],
         'serif-khmer': ['var(--font-noto-serif-khmer)'],
-        manrope:['var(--font-manrope)'],
+        manrope: ['var(--font-manrope)'],
       },
     },
   },
