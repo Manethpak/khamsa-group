@@ -76,7 +76,7 @@ const Navbar = () => {
       animate={containerControls}
       variants={navbarVariants}
       transition={{ duration: 0.35, ease: 'easeInOut' }}
-      className="subtitle font-semibold sticky top-0 z-50 -mt-1 flex w-full flex-col items-center bg-white"
+      className="subtitle sticky top-0 z-50 -mt-1 flex w-full flex-col items-center bg-white font-semibold"
     >
       {/* Navbar Section */}
       <div className="flex h-20 w-full max-w-screen-2xl items-center justify-between px-5 md:px-10 lg:h-20 lg:px-24">
@@ -94,7 +94,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <ul className="flex items-center gap-7">
               <li>
-                <Link href="/project">Projects</Link>
+                <Link href="/projects">Projects</Link>
               </li>
               <li>
                 <Link href="/about-us">About Us</Link>
@@ -122,7 +122,7 @@ const Navbar = () => {
       </div>
       {/* Dropdown menu section */}
       <motion.div
-        className="absolute mt-20 h-fit py-10 w-full bg-white md:hidden"
+        className="absolute mt-20 h-fit w-full bg-white py-10 md:hidden"
         animate={open ? 'open' : 'closed'}
         variants={dropdownVariants}
         initial={{ opacity: 0, y: '-20px' }}
