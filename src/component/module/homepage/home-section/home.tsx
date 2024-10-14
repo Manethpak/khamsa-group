@@ -35,6 +35,7 @@ const HomeSection = ({ data }: Props) => {
           return {
             name: company.name,
             imageUrl: getImageUrl(company.logo as string),
+            website: company.website,
           }
         }
       })
@@ -110,7 +111,12 @@ const HomeSection = ({ data }: Props) => {
             >
               {displayLogo &&
                 [...displayLogo, ...displayLogo].map((data, index) => (
-                  <div key={index} className="flex h-14 min-w-fit">
+                  <Link
+                    href={data?.website || '#'}
+                    key={index}
+                    className="flex h-14 min-w-fit"
+                    target="_blank"
+                  >
                     <Image
                       src={data!.imageUrl}
                       alt={data!.name!}
@@ -118,7 +124,7 @@ const HomeSection = ({ data }: Props) => {
                       height={250}
                       className="h-full w-full object-cover"
                     />
-                  </div>
+                  </Link>
                 ))}
             </motion.div>
             <motion.div
@@ -131,7 +137,12 @@ const HomeSection = ({ data }: Props) => {
             >
               {displayLogo &&
                 [...displayLogo, ...displayLogo].map((data, index) => (
-                  <div key={index} className="flex h-14 min-w-fit">
+                  <Link
+                    href={data?.website || '#'}
+                    key={index}
+                    className="flex h-14 min-w-fit"
+                    target="_blank"
+                  >
                     <Image
                       src={data!.imageUrl}
                       alt={data!.name!}
@@ -139,7 +150,7 @@ const HomeSection = ({ data }: Props) => {
                       height={250}
                       className="h-full w-full object-cover"
                     />
-                  </div>
+                  </Link>
                 ))}
             </motion.div>
           </div>

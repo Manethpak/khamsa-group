@@ -18,6 +18,9 @@ const config: Config = {
       },
       colors: {
         deepGreen: '#084D36',
+        'dark-green': {
+          DEFAULT: '#084D36',
+        },
         primary: '#8ACEC0',
         secondary: '#19154E',
         polar: '#E6F9FA',

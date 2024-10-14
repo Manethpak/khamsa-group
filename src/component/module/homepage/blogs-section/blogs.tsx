@@ -37,16 +37,19 @@ const BlogSection = ({ data }: Props) => {
                   <Image
                     src={getImageUrl(sortedData[0].image as string)}
                     alt={sortedData[0].title!}
-                    width={1400}
-                    height={1400}
+                    width={800}
+                    height={800}
+                    quality={100}
                     className="w-full object-cover object-center"
                   />
                   <div className="mt-4 flex max-h-40 justify-between gap-1 overflow-hidden">
-                    <div className="w-full max-w-xl space-y-7 md:space-y-10">
-                      <h1 className="heading-subtitle h-full max-h-8 overflow-hidden normal-case">
+                    <div className="w-full space-y-6 md:space-y-8">
+                      <h1 className="heading-subtitle line-clamp-2 h-fit normal-case">
                         {sortedData[0].title}
                       </h1>
-                      <p className="px-2">{sortedData[0].description}</p>
+                      <p className="line-clamp-2 px-2">
+                        {sortedData[0].description}
+                      </p>
                     </div>
                     <div className="grid w-full max-w-36 place-items-end content-between">
                       <span className="pt-2">
@@ -73,13 +76,13 @@ const BlogSection = ({ data }: Props) => {
                     className="w-full max-w-56 scale-95 object-cover"
                   />
                   <div className="grid w-full max-w-md">
-                    <h2 className="title h-8 overflow-hidden text-base sm:text-xl">
+                    <h2 className="title line-clamp-2 h-fit text-base sm:text-xl">
                       {blog.title}
                     </h2>
-                    <p className="h-12 overflow-hidden px-2 lg:h-8">
-                      {blog.description}...
+                    <p className="line-clamp-2 h-fit text-sm">
+                      {blog.description}
                     </p>
-                    <span className="text-xs">{formatDate(blog.date!)}</span>
+                    <span className="text-sm">{formatDate(blog.date!)}</span>
                   </div>
                 </div>
               </Link>
