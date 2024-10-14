@@ -14,7 +14,7 @@ import { MoveRight } from 'lucide-react'
 
 type Props = { data: Schema['Investment'] }
 
-const Investment = ({ data }: Props) => {
+const Company = ({ data }: Props) => {
   const items = useMemo(() => {
     return data
       ?.project!.map((item) => {
@@ -23,7 +23,7 @@ const Investment = ({ data }: Props) => {
             title: item.title,
             imageUrl: getImageUrl(item.image as string),
             subtitle: item.description,
-            categorySlug: item.slug,
+            projectSlug: item.slug,
           }
         }
       })
@@ -77,7 +77,7 @@ const Investment = ({ data }: Props) => {
                   <h1 className="title line-clamp-2">{data!.title}</h1>
                   <p className="line-clamp-3 max-w-sm">{data!.subtitle}</p>
                 </div>
-                <Link href={`/project-detail/`} passHref>
+                <Link href={`/projects/${data!.projectSlug}`} passHref>
                   <p>Read More</p>
                 </Link>
               </Motion>
@@ -97,7 +97,7 @@ const Investment = ({ data }: Props) => {
             <div className="custom-swiper-next absolute bottom-0 right-10 flex size-14 items-center justify-center rounded-full border border-secondPrimary text-3xl font-thin text-secondPrimary xl:size-20">
               <MoveRight />
             </div>
-            <div className="custom-swiper-scroll relative mr-32 flex h-1 w-full max-w-7xl items-center rounded-md bg-[#E0E0E0]" />
+            <div className="custom-swiper-scroll absolute left-0 flex h-1 w-full max-w-6xl items-center rounded-md bg-[#E0E0E0]" />
           </div>
         </Swiper>
       </div>
@@ -105,4 +105,4 @@ const Investment = ({ data }: Props) => {
   )
 }
 
-export default Investment
+export default Company

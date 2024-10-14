@@ -8,9 +8,9 @@ type Option = {
 export async function fetchCompany(option?: Option) {
   return directus.request(
     readItems('Company', {
+      // @ts-expect-error
       fields: [
         '*',
-        // @ts-expect-error undefined key
         'category.Category_id.title',
         'logo',
         'company_description',
