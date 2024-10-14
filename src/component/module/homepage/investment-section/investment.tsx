@@ -28,7 +28,9 @@ const Investment = ({ data }: Props) => {
         }
       })
       .filter(Boolean)
-  }, [data?.category])
+  }, [data?.project])
+
+  const project = items.slice(0,10)
 
   return (
     <section
@@ -57,7 +59,7 @@ const Investment = ({ data }: Props) => {
           }}
           className="flex w-full"
         >
-          {items.map((data, index) => (
+          {project.map((data, index) => (
             <SwiperSlide
               key={index}
               className="flex max-h-full max-w-full flex-col items-center justify-center gap-7"

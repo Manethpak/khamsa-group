@@ -9,7 +9,7 @@ export async function fetchCompany(option?: Option) {
   return directus.request(
     readItems('Company', {
       // @ts-expect-error
-      fields: ['*', 'category.Category_id.title', 'logo'],
+      fields: ['*', 'category.Category_id.title', 'logo','company_description'],
       limit: option?.limit || -1,
     })
   )

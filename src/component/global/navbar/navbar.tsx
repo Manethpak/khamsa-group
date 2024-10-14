@@ -94,6 +94,9 @@ const Navbar = () => {
           <div className="hidden md:block">
             <ul className="flex items-center gap-7">
               <li>
+                <Link href="/company-directory">Company Directory</Link>
+              </li>
+              <li>
                 <Link href="/projects">Projects</Link>
               </li>
               <li>
@@ -129,6 +132,11 @@ const Navbar = () => {
       >
         <div className="h-full">
           <ul className="flex flex-col items-center justify-center gap-7">
+            <li>
+              <Link href="/company-directory" onClick={() => setOpen(!open)}>
+                Company Directory
+              </Link>
+            </li>
             <li>
               <Link href="/projects" onClick={() => setOpen(!open)}>
                 Projects

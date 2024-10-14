@@ -1,34 +1,22 @@
 import CompanyCard from '@/component/module/company-directory/company-card'
-import FilterButton from '@/component/module/company-directory/filter-button'
+import CompanyList from '@/component/module/company-directory/company-list'
+import DropdownCategory from '@/component/module/company-directory/dropdown-category'
+import { Motion } from '@/component/ui/motion'
+import { fetchCategory } from '@/fetcher/category/fetch-category'
+import { fetchCompany } from '@/fetcher/company/fetch-company'
 
-const data = [
-  {
-    title: 'DreamsLAB',
-    description: 'Leading provider of tech solutions.',
-    category: 'Technology',
-    date: '2024-present',
-  },
-]
-
-const CompanyDirectoryPage = () => {
+const CompanyDirectoryPage = async () => {
+  const companies = await fetchCompany()
+  const categoryData = await fetchCategory()
   return (
-    <section className="flex h-full w-full flex-col items-center justify-center">
-      <div className="flex w-full max-w-screen-2xl flex-col gap-10 px-5 py-10 md:px-10 lg:px-24">
-        <h1 className="text-2xl font-semibold">Company Directory</h1>
-        <div className="flex flex-wrap gap-5">
-          <FilterButton title="Industry" />
-        </div>
-        <div className="flex flex-col gap-5">
-          {data.map((project, index) => (
-            <CompanyCard
-              title={project.title}
-              key={index}
-              description={project.description}
-              category={project.category}
-              date={project.date}
-            />
-          ))}
-        </div>
+    <section className="flex w-full flex-col items-center justify-center py-20">
+      <div className="subtitle flex w-full max-w-screen-2xl flex-col gap-20 px-5 md:px-10 lg:px-24">
+        <Motion delay={0.75} className="title flex items-end justify-between">
+          <h1 className="heading-subtitle normal-case">Company Directory</h1>
+        </Motion>
+        <Motion delay={1}>
+          <CompanyList data={companies} />
+        </Motion>
       </div>
     </section>
   )
