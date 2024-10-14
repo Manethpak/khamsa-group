@@ -5,19 +5,19 @@ type Option = {
   limit?: number
 }
 
-export async function fetchBlogs(option?: Option) {
+export async function fetchProject(option?: Option) {
   return directus.request(
-    readItems('Blogs', {
-      fields: ['title', 'topic', 'image', 'slug', 'date', 'description'],
+    readItems('Project', {
+      fields: ['title', 'image', 'slug', 'date', 'description', 'content'],
       limit: option?.limit || -1,
-      sort: ['sort', '-date'],
+      sort: ['-date'],
     })
   )
 }
 
-export async function fetchBlogBySlug(slug: string) {
+export async function fetchProjectBySlug(slug: string) {
   return directus.request(
-    readItems('Blogs', {
+    readItems('Project', {
       fields: ['*'],
       filter: { slug },
     })

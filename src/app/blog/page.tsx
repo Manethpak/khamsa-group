@@ -1,4 +1,4 @@
-import BlogCard from '@/component/module/blog-page/blog-card'
+import BlogList from '@/component/module/blog-page/blog-list'
 import { Motion } from '@/component/ui/motion'
 import { fetchBlogs } from '@/fetcher/blog/fetch-blog'
 import React from 'react'
@@ -12,7 +12,7 @@ const BlogPage = async () => {
           <h1 className="heading-subtitle normal-case">Recent Blog Posts</h1>
         </Motion>
         <Motion delay={1}>
-          <BlogCard data={blogs} />
+          <BlogList data={blogs} />
         </Motion>
       </div>
     </section>

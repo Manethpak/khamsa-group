@@ -1,34 +1,22 @@
-import ProjectCard from '@/component/module/projects/project-card'
+import ProjectList from '@/component/module/projects/project-list'
+import { Motion } from '@/component/ui/motion'
+import { fetchProject } from '@/fetcher/project/fetch-project'
+import React from 'react'
 
-const sample = {
-  id: '1',
-  title: 'Khaki Coffee Farm Mondulkiri',
-  description:
-    'the first 1000 hectares of historical coffee plantation in the form of social enterprise in the kingdom of cambodia...',
-  image: '/images/Factory.jpg',
-  href: '/projects',
-}
-const projects = Array<typeof sample>(6).fill(sample)
-
-const ProjectPage = () => {
+const ProjectsPage = async () => {
+  const projects = await fetchProject()
   return (
-    <section className="flex h-full w-full flex-col items-center justify-center">
-      <div className="flex w-full max-w-screen-2xl flex-col gap-10 px-5 py-10 md:px-10 lg:px-24">
-        <h1 className="heading-subtitle normal-case">Projects</h1>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <ProjectCard
-              title={project.title}
-              key={index}
-              description={project.description}
-              image={project.image}
-              href={project.href}
-            />
-          ))}
-        </div>
+    <section className="flex w-full flex-col items-center justify-center py-20">
+      <div className="subtitle flex w-full max-w-screen-2xl flex-col gap-20 px-5 md:px-10 lg:px-24">
+        <Motion delay={0.75} className="title flex items-end justify-between">
+          <h1 className="heading-subtitle normal-case">Projects</h1>
+        </Motion>
+        <Motion delay={1}>
+          <ProjectList data={projects} />
+        </Motion>
       </div>
     </section>
   )
 }
 
-export default ProjectPage
+export default ProjectsPage

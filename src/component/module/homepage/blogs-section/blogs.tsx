@@ -4,8 +4,8 @@ import Image from 'next/image'
 import { Schema } from '@/lib/schema'
 import { formatDate } from '@/lib/utils'
 import { getImageUrl } from '@/lib/directus'
-import { PiArrowUpRightThin } from 'react-icons/pi'
 import { Motion } from '@/component/ui/motion'
+import { MoveUpRight } from 'lucide-react'
 
 type Props = {
   data: Schema['Blogs']
@@ -52,7 +52,7 @@ const BlogSection = ({ data }: Props) => {
                       <span className="pt-2">
                         {formatDate(sortedData[0].date!)}
                       </span>
-                      <PiArrowUpRightThin className="size-10" />
+                      <MoveUpRight className="size-10" />
                     </div>
                   </div>
                 </div>

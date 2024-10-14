@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "format": "prettier --check src",
+    "format:fix": "prettier --write src",
     "gen:type": "npx directus-typescript-gen --host https://khamsa.panel.dreamslab.dev --outFile ./src/lib/schema.d.ts"
   },
   "dependencies": {
@@ -22,8 +22,8 @@
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^5.2.1",
     "react-player": "^2.16.0",
+    "react-share": "^5.1.0",
     "react-use-measure": "^2.1.1",
     "shadcn-ui": "^0.8.0",
     "swiper": "^11.1.14",

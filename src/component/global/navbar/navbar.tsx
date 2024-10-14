@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
-import { IoClose, IoMenu } from 'react-icons/io5'
+import { AlignJustify, X } from 'lucide-react'
 import {
   motion,
   useAnimationControls,
@@ -108,12 +108,12 @@ const Navbar = () => {
             </ul>
           </div>
           {open ? (
-            <IoClose
+            <X
               onClick={() => setOpen(!open)}
               className="h-7 w-7 cursor-pointer md:hidden"
             />
           ) : (
-            <IoMenu
+            <AlignJustify
               onClick={() => setOpen(!open)}
               className="h-7 w-7 cursor-pointer md:hidden"
             />
@@ -130,7 +130,7 @@ const Navbar = () => {
         <div className="h-full">
           <ul className="flex flex-col items-center justify-center gap-7">
             <li>
-              <Link href="/project" onClick={() => setOpen(!open)}>
+              <Link href="/projects" onClick={() => setOpen(!open)}>
                 Projects
               </Link>
             </li>

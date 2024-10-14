@@ -15,3 +15,14 @@ export const ABOUT_US = [
       'is to be recognized as the premier asset management corporation for high-net-worth individuals in Asia by 2050.',
   },
 ]
+export const valueData = {
+  title: 'Our Values',
+  mainTitle: 'Respect, Commitment, Integrity, and Honesty',
+  image: {
+    src: '/images/ourvalue.jpg', // Dummy image path
+    alt: 'Value Image', // Dummy alt text
+  },
+  description: `We all come from diverse backgrounds, united in our efforts to
+  understand and support one another as we shape the "future world" through innovation,
+  invention, and creativity. Our mission is to make a positive impact by staying true to our values.`,
+}
