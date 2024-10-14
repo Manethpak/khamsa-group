@@ -10,7 +10,7 @@ export async function fetchProject(option?: Option) {
     readItems('Project', {
       fields: ['title', 'image', 'slug', 'date', 'description', 'content'],
       limit: option?.limit || -1,
-      sort: ['sort', '-date'],
+      sort: ['-date'],
     })
   )
 }
