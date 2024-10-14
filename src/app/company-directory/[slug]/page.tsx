@@ -48,8 +48,8 @@ const CompanyPage = async ({ params }: Props) => {
   }
 
   return (
-    <div className="subtitle flex w-full flex-col items-center justify-center ">
-      <div className="h-fit w-full max-w-screen-2xl px-5 md:px-10 lg:px-24 py-20">
+    <div className="subtitle flex w-full flex-col items-center justify-center">
+      <div className="h-fit w-full max-w-screen-2xl px-5 py-20 md:px-10 lg:px-24">
         <Link href="/company" className="flex w-fit">
           <ChevronLeftIcon />
           <span>Back</span>
@@ -147,12 +147,16 @@ const CompanyPage = async ({ params }: Props) => {
                   </span>
                 </p>
               </div>
-              <div className="flex items-center gap-5 text-4xl ">
+              <div className="flex items-center gap-5 text-4xl">
                 {(company.icon_link || []).map((iconLink, index) => {
                   const IconComponent = iconMappings[iconLink.name_icon]
                   return IconComponent ? (
-                    <Link key={index} href={iconLink.link} className="flex size-12 items-center justify-center rounded-full border">
-                      <IconComponent className="h-6 w-6"/>
+                    <Link
+                      key={index}
+                      href={iconLink.link}
+                      className="flex size-12 items-center justify-center rounded-full border"
+                    >
+                      <IconComponent className="h-6 w-6" />
                     </Link>
                   ) : null
                 })}
@@ -160,7 +164,7 @@ const CompanyPage = async ({ params }: Props) => {
             </div>
           </div>
 
-          <div className="w-full subtitle">
+          <div className="subtitle w-full">
             {company.about_company && (
               <div
                 className="prose min-w-full text-justify"
@@ -172,7 +176,7 @@ const CompanyPage = async ({ params }: Props) => {
           </div>
         </div>
       </div>
-      <Contacts/>
+      <Contacts />
     </div>
   )
 }

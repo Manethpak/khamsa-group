@@ -11,17 +11,17 @@ type Props = {
 const CompanyList = ({ data }: Props) => {
   return (
     <div className="flex flex-col gap-4">
-    {data.map((company) => (
-      <CompanyCard
-        key={company.name}
-        name={company.name!}
-        location={company.location!}
-        company_description={company.company_description!}
-        link={`/company-directory/` + company.slug}
-        date={formatDate(company.founded!)}
-      />
-    ))}
-  </div>
+      {data.map((company) => (
+        <CompanyCard
+          key={company.name}
+          name={company.name!}
+          location={company.location!}
+          company_description={company.company_description!}
+          link={`/company-directory/` + company.slug}
+          date={formatDate(company.founded!)}
+        />
+      ))}
+    </div>
   )
 }
 

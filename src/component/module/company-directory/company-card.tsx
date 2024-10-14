@@ -9,7 +9,7 @@ type CompanyCardProps = {
   date: string
 }
 
-const CompanyCard:React.FC<CompanyCardProps>  = ({
+const CompanyCard: React.FC<CompanyCardProps> = ({
   link,
   name,
   company_description,
@@ -26,12 +26,15 @@ const CompanyCard:React.FC<CompanyCardProps>  = ({
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex gap-3">
           <Link
-            className="rounded-full bg-secondPrimary hover:bg-deepGreen transition-colors px-6 py-2 text-white"
+            className="rounded-full bg-secondPrimary px-6 py-2 text-white transition-colors hover:bg-deepGreen"
             href={link}
           >
             View Profile
           </Link>
-          <Link href={link} className="rounded-full hover:bg-deepGreen hover:text-white border border-deepGreen px-6 py-2">
+          <Link
+            href={link}
+            className="rounded-full border border-deepGreen px-6 py-2 hover:bg-deepGreen hover:text-white"
+          >
             Contact
           </Link>
         </div>

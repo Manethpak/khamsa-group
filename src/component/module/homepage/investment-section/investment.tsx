@@ -30,7 +30,7 @@ const Investment = ({ data }: Props) => {
       .filter(Boolean)
   }, [data?.project])
 
-  const project = items.slice(0,10)
+  const project = items.slice(0, 10)
 
   return (
     <section
