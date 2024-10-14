@@ -19,7 +19,7 @@ export const valueData = {
   title: 'Our Values',
   mainTitle: 'Respect, Commitment, Integrity, and Honesty',
   image: {
-    src: '/images/ourvalue.jpg', // Dummy image path
+    src: '/images/value.jpg', // Dummy image path
     alt: 'Value Image', // Dummy alt text
   },
   description: `We all come from diverse backgrounds, united in our efforts to

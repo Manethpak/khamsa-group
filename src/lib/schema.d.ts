@@ -2689,6 +2689,7 @@ export interface components {
       logo?: string | components['schemas']['Files'] | null
       slug?: string | null
       name?: string | null
+      website?: string | null
       company_size?: string | null
       founded?: string | null
       location?: string | null
