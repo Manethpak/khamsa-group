@@ -97,7 +97,7 @@ const Company = ({ data }: Props) => {
             <div className="custom-swiper-next absolute bottom-0 right-10 flex size-14 items-center justify-center rounded-full border border-secondPrimary text-3xl font-thin text-secondPrimary xl:size-20">
               <MoveRight />
             </div>
-            <div className="custom-swiper-scroll absolute left-0  flex h-1 w-full max-w-6xl items-center rounded-md bg-[#E0E0E0]" />
+            <div className="custom-swiper-scroll absolute left-0 flex h-1 w-full max-w-6xl items-center rounded-md bg-[#E0E0E0]" />
           </div>
         </Swiper>
       </div>
