@@ -17,7 +17,7 @@ const CompanyList = ({ data }: Props) => {
           name={company.name!}
           location={company.location!}
           company_description={company.company_description!}
-          link={`/company-directory/` + company.slug}
+          link={'/company/' + company.slug!}
           date={formatDate(company.founded!)}
         />
       ))}
