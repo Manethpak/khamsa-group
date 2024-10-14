@@ -9,7 +9,7 @@ const BlogPage = async () => {
     <section className="flex w-full flex-col items-center justify-center py-20">
       <div className="subtitle flex w-full max-w-screen-2xl flex-col gap-20 px-5 md:px-10 lg:px-24">
         <Motion delay={0.75} className="title flex items-end justify-between">
-          <h1 className="heading-subtitle normal-case">Recent Blog posts</h1>
+          <h1 className="heading-subtitle normal-case">Recent Blog Posts</h1>
         </Motion>
         <Motion delay={1}>
           <BlogList data={blogs} />

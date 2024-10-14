@@ -27,7 +27,7 @@ const Contacts = () => {
           <div className="subtitle flex h-full w-full max-w-5xl flex-col justify-center gap-10">
             <div className="flex flex-col gap-7">
               <Motion delay={0.5} className="font-bold text-white">
-                What are You Waiting For?
+                What Are You Waiting For?
               </Motion>
               <Motion
                 delay={0.6}
