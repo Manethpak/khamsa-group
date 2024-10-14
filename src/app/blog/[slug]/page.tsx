@@ -54,7 +54,7 @@ const BlogPage = async ({ params }: Props) => {
           delay={0.75}
           className="relative flex w-full items-center justify-between border-b border-t py-7 text-[#C3C3C3]"
         >
-          <time className="text-dark-green flex flex-col gap-x-8 gap-y-2 text-base sm:flex-row">
+          <time className="flex flex-col gap-x-8 gap-y-2 text-base text-dark-green sm:flex-row">
             <li>Last update at {formatDate(blog.date_updated!)}</li>
           </time>
           <Share />

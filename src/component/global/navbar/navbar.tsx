@@ -94,6 +94,9 @@ const Navbar = () => {
           <div className="hidden md:block">
             <ul className="flex items-center gap-7">
               <li>
+                <Link href="/company">Company</Link>
+              </li>
+              <li>
                 <Link href="/projects">Projects</Link>
               </li>
               <li>
@@ -122,13 +125,18 @@ const Navbar = () => {
       </div>
       {/* Dropdown menu section */}
       <motion.div
-        className="absolute mt-20 h-fit w-full bg-white py-10 md:hidden"
+        className="absolute mt-20 h-auto w-full bg-white py-10 md:hidden"
         animate={open ? 'open' : 'closed'}
         variants={dropdownVariants}
         initial={{ opacity: 0, y: '-20px' }}
       >
         <div className="h-full">
           <ul className="flex flex-col items-center justify-center gap-7">
+            <li>
+              <Link href="/company" onClick={() => setOpen(!open)}>
+                Company
+              </Link>
+            </li>
             <li>
               <Link href="/projects" onClick={() => setOpen(!open)}>
                 Projects

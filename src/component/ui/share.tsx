@@ -36,7 +36,7 @@ const Share = () => {
               </LinkedinShareButton>
               <TelegramShareButton url={currentPageUrl}>
                 <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#229ED9] text-white">
-                  <FacebookIcon />
+                  <TelegramIcon />
                 </div>
                 Telegram
               </TelegramShareButton>

@@ -73,7 +73,7 @@ const FooterSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-1 lg:justify-items-center">
             <div>
               <h3 className="pt-4 text-[22px] font-bold lg:pl-20">Overview</h3>
-              <div className="text-gray-500 mt-4 flex flex-col space-y-2 text-sm">
+              <div className="text-gray-500 mt-4 flex flex-col space-y-4 text-sm">
                 {Footer.map((data) => (
                   <div key={data.title} className="hover:opacity-75 lg:pl-20">
                     <Link href={data.url}>{data.title}</Link>
@@ -83,7 +83,7 @@ const FooterSection = () => {
             </div>
           </div>
           <div>
-            <div className="grid grid-cols-1">
+            <div className="grid grid-cols-1 space-y-4">
               <h2 className="pt-4 text-[22px] font-bold">More information</h2>
 
               {link.map((link, index) => (
