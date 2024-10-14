@@ -10,6 +10,7 @@ import { Button } from '@headlessui/react'
 import { ChevronLeftIcon } from 'lucide-react'
 import FacebookIcon from '@/component/global/icon/facebook-icon'
 import LinkedInIcon from '@/component/global/icon/linkedin-icon'
+import Contacts from '@/component/module/about-page/contact/contact'
 
 type Props = { params: { slug: string } }
 
@@ -47,9 +48,9 @@ const CompanyPage = async ({ params }: Props) => {
   }
 
   return (
-    <div className="subtitle flex w-full flex-col items-center justify-center py-20">
-      <div className="h-fit w-full max-w-screen-2xl px-5 md:px-10 lg:px-24">
-        <Link href="/company-directory" className="flex w-fit">
+    <div className="subtitle flex w-full flex-col items-center justify-center ">
+      <div className="h-fit w-full max-w-screen-2xl px-5 md:px-10 lg:px-24 py-20">
+        <Link href="/company" className="flex w-fit">
           <ChevronLeftIcon />
           <span>Back</span>
         </Link>
@@ -98,7 +99,7 @@ const CompanyPage = async ({ params }: Props) => {
               </div>
             </div>
 
-            <div className="flex w-full max-w-xs flex-col gap-6 py-8 lg:px-5">
+            <div className="flex w-full max-w-xs flex-col gap-6 lg:px-5">
               <h1 className="text-3xl font-bold">{company.name}</h1>
               <div className="flex flex-wrap gap-2">
                 {company.tag?.map((tag) => (
@@ -113,20 +114,20 @@ const CompanyPage = async ({ params }: Props) => {
               <div className="flex flex-col gap-4">
                 <p>
                   Founded:{' '}
-                  <span className="font-bold">
+                  <span className="font-semibold">
                     {dateYearFormat(company.date!)}
                   </span>
                 </p>
                 <p>
                   Team size:{' '}
-                  <span className="font-bold">{company.company_size}</span>
+                  <span className="font-semibold">{company.company_size}</span>
                 </p>
                 {company.link?.map((link, index) => (
                   <div key={index}>
                     {index === 0 && (
                       <>
                         Website:{' '}
-                        <span className="font-bold">
+                        <span className="font-semibold">
                           <Link href={link.link}>{link.title}</Link>
                         </span>
                       </>
@@ -134,14 +135,14 @@ const CompanyPage = async ({ params }: Props) => {
                     {index === 1 && (
                       <>
                         Phone number:{' '}
-                        <span className="font-bold">{link.title}</span>
+                        <span className="font-semibold">{link.title}</span>
                       </>
                     )}
                   </div>
                 ))}
                 <p>
                   Location:{' '}
-                  <span className="font-bold capitalize">
+                  <span className="font-semibold capitalize">
                     {company.location}
                   </span>
                 </p>
@@ -159,7 +160,7 @@ const CompanyPage = async ({ params }: Props) => {
             </div>
           </div>
 
-          <div className="w-full max-w-4xl subtitle">
+          <div className="w-full subtitle">
             {company.about_company && (
               <div
                 className="prose min-w-full text-justify"
@@ -171,6 +172,7 @@ const CompanyPage = async ({ params }: Props) => {
           </div>
         </div>
       </div>
+      <Contacts/>
     </div>
   )
 }
