@@ -1,12 +1,12 @@
 import React from 'react'
-import Image from 'next/image'
-import { redirect } from 'next/navigation'
 import { Metadata, ResolvingMetadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import { fetchBlogBySlug, fetchBlogs } from '@/fetcher/blog/fetch-blog'
 import { getImageUrl } from '@/lib/directus'
 import { formatDate } from '@/lib/utils'
 import { Motion } from '@/component/ui/motion'
-import Link from 'next/link'
 import BlogCard from '@/component/module/blog-page/blog-card'
 import Share from '@/component/ui/share'
 
@@ -38,7 +38,7 @@ const BlogPage = async ({ params }: Props) => {
   const blogs = await fetchBlogs({ limit: 4 })
 
   if (!result[0]) {
-    redirect('/404')
+    notFound()
   }
 
   const blog = result[0]
@@ -54,9 +54,8 @@ const BlogPage = async ({ params }: Props) => {
           delay={0.75}
           className="relative flex w-full items-center justify-between border-b border-t py-7 text-[#C3C3C3]"
         >
-          <time className="subtitle flex flex-col gap-x-8 gap-y-2 sm:flex-row">
-            <li>Published {formatDate(blog.date_created!)}</li>
-            <li>Updated{formatDate(blog.date_updated!)}</li>
+          <time className="flex flex-col gap-x-8 gap-y-2 text-base text-dark-green sm:flex-row">
+            <li>Last update at {formatDate(blog.date_updated!)}</li>
           </time>
           <Share />
         </Motion>
@@ -78,8 +77,8 @@ const BlogPage = async ({ params }: Props) => {
         <Motion delay={1}>
           {blog.content && (
             <div
-              className=""
-              dangerouslySetInnerHTML={{ __html: blog.content! }}
+              className="prose-lg min-w-full"
+              dangerouslySetInnerHTML={{ __html: blog.content }}
             />
           )}
         </Motion>

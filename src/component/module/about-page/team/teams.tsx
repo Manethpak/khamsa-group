@@ -13,9 +13,9 @@ const Teams = ({ team }: Props) => {
     <div className="subtitle flex w-full flex-col items-center justify-center">
       <div className="flex h-full w-full max-w-screen-2xl flex-col gap-24 px-5 py-24 md:px-10 lg:px-24">
         <div className="flex w-full flex-col items-center gap-5">
-          <Motion delay={0.5}>Our team</Motion>
+          <Motion delay={0.5}>Our Team</Motion>
           <Motion delay={0.75} className="title">
-            Empowering Entrepreneur.
+            Empowering Entrepreneur
           </Motion>
           <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
             {team.map((data) => (

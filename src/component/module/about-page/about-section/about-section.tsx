@@ -39,7 +39,7 @@ const AboutSection = () => {
               className="flex max-h-[450px] w-full max-w-full justify-end md:min-h-[450px]"
             >
               <Image
-                src="/images/about.jpg"
+                src="/images/about.jpeg"
                 alt="view of ai farm factory"
                 width={620}
                 height={448}
