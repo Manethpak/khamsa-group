@@ -67,15 +67,15 @@ const Investment = ({ data }: Props) => {
               <Motion className="flex h-full max-w-fit flex-col gap-3">
                 <Image
                   src={data!.imageUrl}
-                  // src="/images/test.jpg"
                   alt={data!.title!}
-                  width={1200}
-                  height={1200}
+                  width={600}
+                  height={600}
+                  quality={95}
                   className="h-40 max-h-full min-h-full w-96 min-w-full max-w-full object-cover object-center sm:h-56 md:h-80"
                 />
                 <div className="flex h-48 flex-col gap-3 overflow-hidden">
-                  <h1 className="title">{data!.title}</h1>
-                  <p className="max-w-sm">{data!.subtitle}</p>
+                  <h1 className="title line-clamp-2">{data!.title}</h1>
+                  <p className="line-clamp-3 max-w-sm">{data!.subtitle}</p>
                 </div>
                 <Link href={`/project-detail/`} passHref>
                   <p>Read More</p>

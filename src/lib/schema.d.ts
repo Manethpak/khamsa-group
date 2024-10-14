@@ -2690,6 +2690,7 @@ export interface components {
       slug?: string | null
       name?: string | null
       company_description?: string | null
+      website?: string | null
       company_size?: string | null
       founded?: string | null
       location?: string | null
