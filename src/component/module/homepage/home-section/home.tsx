@@ -71,7 +71,7 @@ const HomeSection = ({ data }: Props) => {
             className="flex h-full max-h-[450px] w-full max-w-full justify-center lg:max-w-[650px]"
           >
             <Image
-              src="/images/heroContent.gif"
+              src="/images/value.jpg"
               alt="view of ai farm factory"
               width={620}
               height={448}
