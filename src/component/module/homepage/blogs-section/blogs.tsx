@@ -55,7 +55,7 @@ const BlogSection = ({ data }: Props) => {
                       <span className="pt-2">
                         {formatDate(sortedData[0].date!)}
                       </span>
-                      <MoveUpRight className="size-10" />
+                      <MoveUpRight className="size-5 sm:size-10" />
                     </div>
                   </div>
                 </div>
@@ -67,15 +67,15 @@ const BlogSection = ({ data }: Props) => {
           <div className="grid space-y-6 md:space-y-1 lg:space-y-5">
             {sortedData.slice(1, 5).map((blog) => (
               <Link href={`/blog/` + blog.slug} key={blog.title}>
-                <div className="flex gap-3 md:min-h-5 lg:max-h-[145px]">
+                <div className="flex justify-between gap-3 md:min-h-5 lg:max-h-[145px]">
                   <Image
                     src={getImageUrl(blog.image as string)}
                     alt={blog.title!}
                     width={1400}
                     height={1400}
-                    className="w-full max-w-56 scale-95 object-cover"
+                    className="w-full max-w-36 scale-95 object-cover sm:max-w-56"
                   />
-                  <div className="grid w-full max-w-md">
+                  <div className="grid w-full max-w-lg">
                     <h2 className="title line-clamp-2 h-fit text-base sm:text-xl">
                       {blog.title}
                     </h2>
