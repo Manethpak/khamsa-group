@@ -34,11 +34,11 @@ const Project = ({ data }: Props) => {
   return (
     <section
       id="investment"
-      className="subtitle flex flex-col items-center justify-center py-24"
+      className="subtitle flex flex-col items-center justify-center py-16"
     >
       <div className="flex w-full max-w-screen-2xl flex-col gap-10 pl-5 md:pl-10 lg:pl-24">
         <Motion className="">
-          <p className="heading-subtitle">{data.subtitle}</p>
+          <p className="heading-subtitle uppercase">{data.subtitle}</p>
         </Motion>
         <Swiper
           modules={[Virtual, Navigation, Pagination, Scrollbar]}

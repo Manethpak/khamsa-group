@@ -10,14 +10,14 @@ interface Props {
 const Office = ({ office }: Props) => {
   return (
     <div className="subtitle-about flex w-full flex-col items-center justify-center">
-      <div className="flex h-full w-full max-w-screen-2xl flex-col gap-5 px-5 text-center md:px-10 lg:px-24">
+      <div className="flex h-full w-full max-w-screen-2xl flex-col gap-5 px-5 py-10 text-center md:px-10 lg:px-24">
         <Motion delay={0.5}>OUR OFFICE</Motion>
         <Motion delay={0.75} className="title">
           Work, Play and Refresh
         </Motion>
         <Motion
           delay={1}
-          className="grid w-full grid-cols-2 grid-rows-6 gap-5 py-24 md:grid-cols-3"
+          className="grid w-full grid-cols-2 grid-rows-6 gap-3 py-16 md:grid-cols-3"
         >
           {office.map((data, index) => (
             <div
