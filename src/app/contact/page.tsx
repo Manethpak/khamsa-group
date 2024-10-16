@@ -52,7 +52,7 @@ const ContactPage = () => {
           <div className="flex w-full max-w-sm flex-col gap-6">
             <div className="flex w-full flex-col gap-6">
               <div className="space-y-3">
-                <h1 className="title">Get in touch</h1>
+                <h1 className="title">Get In Touch</h1>
                 <p>
                   We&apos;re always here to help. Contact us if you are
                   interested in our service. Let&apos;s cooperate and invest in
@@ -95,7 +95,7 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="flex flex-col gap-4">
-              <h2 className="title">Follow us on:</h2>
+              <h2 className="title">Follow Us:</h2>
               <div className="flex gap-4">
                 {(contact?.social_link || []).map((data, index) => {
                   const IconComponent = iconMapping[data.icon_name]
