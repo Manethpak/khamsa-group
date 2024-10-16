@@ -53,6 +53,8 @@ body::-webkit-scrollbar-button {
 
 .swiper-scrollbar-drag {
   border: 3px solid #1bab92;
+  border-radius: 3px;
+  display: relative;
 }
 
 .swiper-scrollbar-drag:hover {
