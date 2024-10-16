@@ -8,7 +8,6 @@ import { getImageUrl } from '@/lib/directus'
 import { Virtual, Navigation, Pagination, Scrollbar } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-// import 'swiper/css/scrollbar'
 import 'swiper/css/navigation'
 import { MoveRight } from 'lucide-react'
 
@@ -47,9 +46,9 @@ const Project = ({ data }: Props) => {
           navigation={{
             nextEl: '.custom-swiper-next',
           }}
-          scrollbar={{ 
-            draggable: true, 
-            el: '.custom-swiper-scroll'
+          scrollbar={{
+            draggable: true,
+            el: '.custom-swiper-scroll',
           }}
           virtual
           breakpoints={{
@@ -93,11 +92,11 @@ const Project = ({ data }: Props) => {
               </Link>
             </Motion>
           </SwiperSlide>
-          <div className="mt-5 relative flex h-14 w-full max-w-screen-2xl cursor-pointer items-center xl:h-20">
-            <div className="custom-swiper-next absolute bottom-0 right-5 sm:right-10 md:right-20 flex size-14 items-center justify-center rounded-full border border-secondPrimary text-3xl font-thin text-secondPrimary xl:size-20">
+          <div className="relative mt-5 flex h-14 w-full max-w-screen-2xl cursor-pointer items-center xl:h-20">
+            <div className="custom-swiper-next absolute bottom-0 right-5 flex size-14 items-center justify-center rounded-full border border-secondPrimary text-3xl font-thin text-secondPrimary sm:right-10 md:right-20 xl:size-20">
               <MoveRight />
             </div>
-            <div className="custom-swiper-scroll absolute h-1 w-3/4 sm:w-4/5 lg:w-10/12 rounded-md bg-[#E0E0E0]" />
+            <div className="custom-swiper-scroll absolute h-1 w-3/4 rounded-md bg-[#E0E0E0] sm:w-4/5 lg:w-10/12" />
           </div>
         </Swiper>
       </div>
