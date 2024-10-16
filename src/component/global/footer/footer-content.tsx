@@ -52,7 +52,7 @@ const FooterSection = () => {
             </div>
 
             <p className="text-gray-600 mt-4 max-w-xs text-sm">
-              Build the Future World We wish to see through New Creation,
+              Build the Future World We Wish to See Through New Creation,
               Innovation and Creativity.
             </p>
 
@@ -86,7 +86,7 @@ const FooterSection = () => {
           </div>
           <div>
             <div className="grid grid-cols-1 space-y-4">
-              <h2 className="pt-4 text-[22px] font-bold">More information</h2>
+              <h2 className="pt-4 text-[22px] font-bold">More Information</h2>
 
               {link.map((link, index) => (
                 <motion.div key={index}>
