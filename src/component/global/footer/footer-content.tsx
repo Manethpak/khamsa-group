@@ -40,13 +40,15 @@ const FooterSection = () => {
           <div>
             <div className="flex items-center gap-3">
               <Image
-                src={'/images/logo.avif'}
-                width={100}
-                height={200}
+                src="/logo.png"
                 alt="Khamsa Group Logo"
-                className="mr-2 h-16 w-16"
+                width={200}
+                height={200}
+                className="mr-2 size-16"
               />
-              <span className="gap-10 pb-0 text-2xl">Khamsa Group</span>
+              <span className="gap-10 pb-0 text-2xl">
+                Khamsa Group of Businesses
+              </span>
             </div>
 
             <p className="text-gray-600 mt-4 max-w-xs text-sm">

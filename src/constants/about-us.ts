@@ -15,6 +15,7 @@ export const ABOUT_US = [
       'is to be recognized as the premier asset management corporation for high-net-worth individuals in Asia by 2050.',
   },
 ]
+
 export const valueData = {
   title: 'Our Values',
   mainTitle: 'Respect, Commitment, Integrity, and Honesty',

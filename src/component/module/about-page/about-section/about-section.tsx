@@ -25,10 +25,10 @@ const AboutSection = () => {
             <div className="flex w-full max-w-2xl flex-col items-center justify-center gap-5 px-4">
               {ABOUT_US.map((data, index) => (
                 <Motion key={data.title} delay={index * 0.2} className="flex">
-                  <li>
-                    <strong className="font-medium">{data.title}</strong>
+                  <p>
+                    <span className="font-medium">{data.title}</span>
                     {data.subtitle}
-                  </li>
+                  </p>
                 </Motion>
               ))}
             </div>

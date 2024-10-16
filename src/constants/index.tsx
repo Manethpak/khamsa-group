@@ -150,7 +150,7 @@ export const Partner = [
   },
   {
     id: '5',
-    Image: '/images/logo.avif',
+    Image: '/logo.png',
   },
   {
     id: '6',
