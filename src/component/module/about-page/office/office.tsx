@@ -11,7 +11,7 @@ const Office = ({ office }: Props) => {
   return (
     <div className="subtitle-about flex w-full flex-col items-center justify-center">
       <div className="flex h-full w-full max-w-screen-2xl flex-col gap-5 px-5 text-center md:px-10 lg:px-24">
-        <Motion delay={0.5}>Our Office</Motion>
+        <Motion delay={0.5}>OUR OFFICE</Motion>
         <Motion delay={0.75} className="title">
           Work, Play and Refresh
         </Motion>

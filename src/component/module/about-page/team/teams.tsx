@@ -13,7 +13,7 @@ const Teams = ({ team }: Props) => {
     <div className="subtitle-about flex w-full flex-col items-center justify-center">
       <div className="flex h-full w-full max-w-screen-2xl flex-col gap-24 px-5 py-24 md:px-10 lg:px-24">
         <div className="flex w-full flex-col items-center gap-5">
-          <Motion delay={0.5}>Our Team</Motion>
+          <Motion delay={0.5}>OUR TEAM</Motion>
           <Motion delay={0.75} className="title">
             Empowering Entrepreneur
           </Motion>

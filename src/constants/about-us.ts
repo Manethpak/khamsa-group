@@ -17,7 +17,7 @@ export const ABOUT_US = [
 ]
 
 export const valueData = {
-  title: 'Our Values',
+  title: 'OUR VALUE',
   mainTitle: 'Respect, Commitment, Integrity, and Honesty',
   image: {
     src: '/images/value.jpg', // Dummy image path
