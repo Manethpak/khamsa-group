@@ -8,7 +8,9 @@ const Value = () => {
     <div className="subtitle flex w-full flex-col items-center justify-center">
       <div className="flex max-w-screen-2xl flex-col gap-10 px-5 py-12 md:px-10 lg:px-24">
         <div className="flex w-full flex-col items-center gap-5">
-          <Motion delay={0.5}>{valueData.title}</Motion>
+          <Motion delay={0.5} className="subtitle-about">
+            {valueData.title}
+          </Motion>
           <Motion delay={0.75} className="title">
             {valueData.mainTitle}
           </Motion>
