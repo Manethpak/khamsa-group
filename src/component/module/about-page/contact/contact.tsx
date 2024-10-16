@@ -23,15 +23,15 @@ const Contacts = () => {
       className="flex w-full flex-col items-center justify-center overflow-hidden bg-primary py-20"
     >
       <div className="flex w-full max-w-screen-2xl flex-col gap-20 px-5 md:px-10 lg:px-24">
-        <div className="flex h-full flex-col-reverse items-center justify-center sm:justify-between lg:flex-row lg:gap-12">
+        <div className="flex h-full flex-col-reverse items-center justify-center gap-y-10 sm:justify-between lg:flex-row lg:gap-12">
           <div className="subtitle flex h-full w-full max-w-5xl flex-col justify-center gap-10">
-            <div className="flex flex-col gap-7">
-              <Motion delay={0.5} className="font-bold text-white">
+            <div className="flex flex-col gap-5 lg:gap-7">
+              <Motion delay={0.5} className="text-white">
                 What Are You Waiting For?
               </Motion>
               <Motion
                 delay={0.6}
-                className="heading-title font-light leading-snug text-white"
+                className="heading-title font-semibold leading-snug text-white"
               >
                 Let&apos;s Invest in the Future Together
               </Motion>

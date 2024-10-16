@@ -35,11 +35,9 @@ export const Paginate: React.FC<Props> = ({ children, className }) => {
     >
       {slides.map((slideItems, index) => (
         <SwiperSlide key={index} className="flex">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto grid grid-cols-1 gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {slideItems.map((child, childIndex) => (
-              <div key={childIndex} className="bg-gray-100 p-4">
-                {child}
-              </div>
+              <div key={childIndex}>{child}</div>
             ))}
           </div>
         </SwiperSlide>

@@ -24,9 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <Link href={link} key={title} className="space-y-5">
-      <div
-        className={`${getColor}relative aspect-square max-h-[400px] min-h-[250px] w-full`}
-      >
+      <div className={`${getColor}relative aspect-square w-full`}>
         <Image
           src={imageUrl}
           alt={title}
@@ -35,9 +33,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           className="relative h-full w-full object-cover object-center"
         />
       </div>
-      <div className="flex h-fit flex-col gap-3 overflow-hidden">
-        <h1 className={`${getColor} title h-8 overflow-clip`}>{title}</h1>
-        <p className="h-40 max-w-sm overflow-clip px-1">{description}</p>
+      <div className="flex flex-col gap-3">
+        <h1 className={`${getColor} title line-clamp-2 sm:line-clamp-1`}>
+          {title}
+        </h1>
+        <p className="line-clamp-4 max-w-sm px-1 sm:line-clamp-2">
+          {description}
+        </p>
       </div>
       <div>Read More</div>
     </Link>

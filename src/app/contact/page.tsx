@@ -37,9 +37,9 @@ const ContactPage = () => {
   const [showArrow, setShowArrow] = useState<string | null>(null)
 
   return (
-    <div className="subtitle flex w-full flex-col items-center justify-center py-20">
+    <div className="subtitle flex w-full flex-col justify-center py-16">
       <Motion className="h-fit w-full max-w-screen-2xl px-5 md:px-10 lg:px-24">
-        <div className="flex h-full w-full flex-col-reverse gap-6 gap-y-14 lg:flex-row">
+        <div className="flex h-full w-full flex-col gap-6 gap-y-12 lg:flex-row">
           <div className="h-full w-full lg:w-fit">
             <iframe
               className="h-80 w-full lg:h-[580px] lg:w-[760px] lg:max-w-lg xl:max-w-full"

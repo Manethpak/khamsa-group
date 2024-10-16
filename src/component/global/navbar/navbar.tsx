@@ -80,7 +80,7 @@ const Navbar = () => {
     >
       {/* Navbar Section */}
       <div className="flex h-20 w-full max-w-screen-2xl items-center justify-between px-5 md:px-10 lg:h-20 lg:px-24">
-        <Link href="/" className="flex h-9 items-center gap-2">
+        <Link href="/" className="flex h-9 items-center gap-2 font-medium">
           <Image
             src="/logo.png"
             alt="Khamsa Group logo"

@@ -23,7 +23,10 @@ const BlogCard: React.FC<BlogCardProps> = ({
 }) => {
   const pathname = usePathname()
 
-  const getColor = pathname === '/blog' ? '' : 'text-white font-medium subtitle'
+  const getColor =
+    pathname === '/blog'
+      ? 'line-clamp-2 sm:line-clamp-1'
+      : 'text-white font-medium subtitle line-clamp-2'
 
   return (
     <Link href={link} key={title} className="space-y-5">
@@ -42,13 +45,13 @@ const BlogCard: React.FC<BlogCardProps> = ({
           {topic}
         </div>
       </div>
-      <div className="flex flex-col justify-between overflow-hidden lg:h-[15rem]">
-        <div className="space-y-2">
-          <h1 className="title line-clamp-2 h-fit">{title}</h1>
-          <p className="line-clamp-4 min-h-20 max-w-sm px-1">{description}</p>
-        </div>
-        <div>{date}</div>
+      <div className="flex flex-col gap-3 sm:h-28">
+        <h1 className={`${getColor} title`}>{title}</h1>
+        <p className="line-clamp-4 max-w-sm px-1 sm:line-clamp-2">
+          {description}
+        </p>
       </div>
+      <div>{date}</div>
     </Link>
   )
 }
