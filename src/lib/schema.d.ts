@@ -2694,6 +2694,7 @@ export interface components {
       company_size?: string | null
       founded?: string | null
       location?: string | null
+      phone?: string | null
       about_company?: string | null
       tag?: number[] | null
       link?: unknown

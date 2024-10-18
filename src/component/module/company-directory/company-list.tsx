@@ -15,10 +15,17 @@ const CompanyList = ({ data }: Props) => {
         <CompanyCard
           key={company.name}
           name={company.name!}
-          location={company.location!}
+          category={
+            (company.category &&
+              company.category
+                ?.map((category) => category.Category_id?.title)
+                .join(',')) ||
+            ''
+          }
           company_description={company.company_description!}
           link={'/company/' + company.slug!}
           date={formatDate(company.founded!)}
+          website={company?.website || '#'}
         />
       ))}
     </div>

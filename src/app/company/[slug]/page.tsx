@@ -31,6 +31,10 @@ const iconMappings = {
 const CompanyPage = async ({ params }: Props) => {
   const result = await fetchCompanyBySlug(params.slug)
 
+  function getHostname(url: string | URL) {
+    return new URL(url).hostname
+  }
+
   const company = {
     ...result[0],
     imgUrl: getImageUrl(result[0].image! as string),
@@ -41,7 +45,6 @@ const CompanyPage = async ({ params }: Props) => {
         }
       }
     }),
-    link: result[0].link as linkProps[],
     icon_link: result[0].icon_link as linkProps[],
     tag: result[0].tag,
     date: result[0].founded,
@@ -50,14 +53,14 @@ const CompanyPage = async ({ params }: Props) => {
   return (
     <div className="subtitle flex w-full flex-col items-center justify-center">
       <div className="h-fit w-full max-w-screen-2xl px-5 py-20 md:px-10 lg:px-24">
-        <Link href="/company" className="flex w-fit">
+        <Link href="/company" className="flex w-fit items-center">
           <ChevronLeftIcon />
           <span>Back</span>
         </Link>
 
         <div className="mt-4 flex h-fit w-full flex-col gap-6 md:gap-5">
           <div className="flex flex-col gap-4 lg:flex-row">
-            <div className="flex max-w-4xl flex-col items-center gap-2 overflow-y-auto lg:max-h-[500px] lg:flex-row">
+            <div className="custom-scrollbar flex max-w-4xl flex-col items-center gap-2 overflow-y-auto lg:max-h-[500px] lg:flex-row">
               <div
                 className={cn(
                   'sticky top-0 h-full w-full',
@@ -76,10 +79,10 @@ const CompanyPage = async ({ params }: Props) => {
 
               <div
                 className={cn(
-                  company?.moreImg?.length! > 0
+                  company?.moreImg?.length! > 3
                     ? 'flex w-full min-w-[180px] overflow-x-auto'
                     : 'hidden w-0',
-                  'max-h-fit flex-1 gap-3 self-start overflow-y-scroll lg:max-w-52 lg:flex-col'
+                  'max-h-fit flex-1 gap-3 self-start lg:max-w-52 lg:flex-col'
                 )}
               >
                 {company.moreImg?.map(
@@ -122,24 +125,24 @@ const CompanyPage = async ({ params }: Props) => {
                   Team size:{' '}
                   <span className="font-semibold">{company.company_size}</span>
                 </p>
-                {company.link?.map((link, index) => (
-                  <div key={index}>
-                    {index === 0 && (
-                      <>
-                        Website:{' '}
-                        <span className="font-semibold">
-                          <Link href={link.link}>{link.title}</Link>
-                        </span>
-                      </>
+                <p>
+                  Website:{' '}
+                  <span className="font-semibold">
+                    {company.website ? (
+                      <Link href={company.website} target="_blank">
+                        {getHostname(company.website)}
+                      </Link>
+                    ) : (
+                      'N/A'
                     )}
-                    {index === 1 && (
-                      <>
-                        Phone number:{' '}
-                        <span className="font-semibold">{link.title}</span>
-                      </>
-                    )}
-                  </div>
-                ))}
+                  </span>
+                </p>
+                <p>
+                  Phone number:{' '}
+                  <span className="font-semibold">
+                    {company.phone || 'N/A'}
+                  </span>
+                </p>
                 <p>
                   Location:{' '}
                   <span className="font-semibold capitalize">
@@ -167,7 +170,7 @@ const CompanyPage = async ({ params }: Props) => {
           <div className="subtitle w-full">
             {company.about_company && (
               <div
-                className="prose min-w-full text-justify"
+                className="w-full max-w-4xl text-justify"
                 dangerouslySetInnerHTML={{
                   __html: company.about_company!,
                 }}

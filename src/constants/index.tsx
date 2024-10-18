@@ -1293,7 +1293,6 @@ export const Contact = [
 export const Footer = [
   { title: 'Company', url: '/company' },
   { title: 'Projects', url: '/projects' },
-  { title: 'Our Journey', url: '/journey' },
   { title: 'About Us', url: '/about-us' },
   { title: 'Blogs', url: '/blog' },
   { title: 'Contact Us', url: '/contact' },

@@ -14,6 +14,7 @@ export async function fetchCompany(option?: Option) {
         'category.Category_id.title',
         'logo',
         'company_description',
+        'phone',
       ],
       limit: option?.limit || -1,
     })
