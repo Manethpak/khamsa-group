@@ -5,9 +5,9 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useContact } from '@/fetcher/contact/use-contact'
 import FacebookIcon from '@/component/global/icon/facebook-icon'
-import TelegramIcon from '@/component/global/icon/telegram-icon'
 import LinkedInIcon from '@/component/global/icon/linkedin-icon'
 import { ArrowRight } from 'lucide-react'
+import LinkTreeIcon from '@/component/global/icon/linktree-icon'
 
 interface Props {
   title: string
@@ -19,7 +19,7 @@ interface Props {
 const iconMapping = {
   facebook: FacebookIcon,
   linkedin: LinkedInIcon,
-  youtube: TelegramIcon,
+  linkTree: LinkTreeIcon,
 }
 
 const ContactPage = () => {
