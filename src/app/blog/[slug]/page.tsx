@@ -45,7 +45,7 @@ const BlogPage = async ({ params }: Props) => {
 
   return (
     <section className="flex w-full flex-col items-center justify-center gap-12 pt-20">
-      <div className="subtitle relative flex w-full max-w-screen-2xl flex-col gap-12 px-24 md:px-32 lg:px-40">
+      <div className="subtitle relative flex w-full max-w-screen-2xl flex-col gap-12 px-14 md:px-32 lg:px-40">
         <Motion delay={0.5} className="sm:title flex items-end justify-between">
           <h1 className="heading-title w-full max-w-fit">{blog.topic}</h1>
           <time>{formatDate(blog.date!)}</time>
@@ -54,7 +54,7 @@ const BlogPage = async ({ params }: Props) => {
           delay={0.75}
           className="relative flex w-full items-center justify-between border-b border-t py-7 text-[#C3C3C3]"
         >
-          <time className="flex flex-col gap-x-8 gap-y-2 text-base text-dark-green sm:flex-row">
+          <time className="subtitle flex flex-col gap-x-8 gap-y-2 px-3 text-base sm:flex-row">
             <li>Last update at {formatDate(blog.date_updated!)}</li>
           </time>
           <Share />
@@ -92,7 +92,9 @@ const BlogPage = async ({ params }: Props) => {
             <h1 className="heading-subtitle normal-case text-white">
               More topic
             </h1>
-            <Link href="/blog">See all</Link>
+            <Link href="/blog" className="text-lg lg:text-xl">
+              See all
+            </Link>
           </Motion>
           <Motion
             delay={1}

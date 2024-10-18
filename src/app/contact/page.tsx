@@ -70,7 +70,7 @@ const ContactPage = () => {
               </div>
 
               <div className="flex flex-col gap-3">
-                <h2 className="title">Number</h2>
+                <h2 className="title">Contact</h2>
                 {link.map((link, index) => (
                   <motion.div
                     onHoverStart={() => setShowArrow(link.title ?? '')}

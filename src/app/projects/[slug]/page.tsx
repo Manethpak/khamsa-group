@@ -65,9 +65,8 @@ const ProjectsPage = async ({ params }: Props) => {
           delay={0.75}
           className="relative flex w-full items-center justify-between border-b border-t py-7 text-[#C3C3C3]"
         >
-          <time className="subtitle flex flex-col gap-x-8 gap-y-2 sm:flex-row">
-            <li>Published {formatDate(project.date_created!)}</li>
-            <li>Updated{formatDate(project.date_updated!)}</li>
+          <time className="subtitle flex flex-col gap-x-8 gap-y-2 px-3 text-base sm:flex-row">
+            <li>Last update at {formatDate(project.date_updated!)}</li>
           </time>
           <Share />
         </Motion>
@@ -98,16 +97,18 @@ const ProjectsPage = async ({ params }: Props) => {
       <div className="flex w-full flex-col items-center justify-center bg-primary">
         <div className="flex w-full max-w-screen-2xl flex-col gap-14 px-5 py-14 text-white md:px-10 lg:px-24">
           <Motion
-            delay={0.75}
+            delay={0.2}
             className="title flex items-end justify-between text-white"
           >
             <h1 className="heading-subtitle normal-case text-white">
               More projects
             </h1>
-            <Link href="/projects">See all</Link>
+            <Link href="/projects" className="text-lg lg:text-xl">
+              See all
+            </Link>
           </Motion>
           <Motion
-            delay={1}
+            delay={0.5}
             className="grid grid-cols-2 gap-6 text-white sm:grid-cols-3 md:grid-cols-4"
           >
             {projects.map((project) => (

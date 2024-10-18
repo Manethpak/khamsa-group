@@ -45,7 +45,10 @@ const OurJourney = () => {
         {/* Boxes below the grid */}
         <div className="flex flex-col gap-x-24 gap-y-10 sm:mt-14 sm:flex-row">
           {/* First Box */}
-          <Motion delay={0.75} className="title w-full font-normal">
+          <Motion
+            delay={0.75}
+            className="w-full text-lg font-medium lg:text-xl"
+          >
             <p>{JOURNEY_DATA[selectedPhase].title}</p>
           </Motion>
 

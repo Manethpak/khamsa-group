@@ -46,8 +46,9 @@ const Navbar = () => {
     visible: { y: 0 },
     hidden: { y: '-100%' },
     open: {
-      y: '5px',
-      transition: { duration: 0.5, type: 'spring', stiffness: 150 },
+      y: '0px',
+      paddingTop: '5px',
+      transition: { duration: 1, type: 'spring', stiffness: 150 },
     },
   }
 
@@ -55,12 +56,12 @@ const Navbar = () => {
   const dropdownVariants = {
     open: {
       opacity: 1,
-      y: '-5px',
-      transition: { duration: 0.5, type: 'spring', stiffness: 150 },
+      y: '0px',
+      transition: { duration: 0.5, type: 'easeInOut', stiffness: 80 },
     },
     closed: {
       opacity: 0,
-      y: '-20px',
+      y: '-100%',
       transition: {
         duration: 0.5,
         type: 'spring',
@@ -76,10 +77,10 @@ const Navbar = () => {
       animate={containerControls}
       variants={navbarVariants}
       transition={{ duration: 0.35, ease: 'easeInOut' }}
-      className="subtitle sticky top-0 z-50 -mt-1 flex w-full flex-col items-center bg-white font-semibold"
+      className="subtitle sticky top-0 -mt-1 flex w-full flex-col items-center bg-white font-semibold"
     >
       {/* Navbar Section */}
-      <div className="flex h-20 w-full max-w-screen-2xl items-center justify-between px-5 md:px-10 lg:h-20 lg:px-24">
+      <div className="z-10 -mt-1 flex h-20 w-full max-w-screen-2xl items-center justify-between bg-white px-5 md:px-10 lg:h-20 lg:px-24">
         <Link href="/" className="flex h-9 items-center gap-2 font-medium">
           <Image
             src="/logo.png"
@@ -92,7 +93,7 @@ const Navbar = () => {
         </Link>
         <div>
           <div className="hidden md:block">
-            <ul className="flex items-center gap-7">
+            <ul className="flex items-center md:gap-4 lg:gap-7">
               <li>
                 <Link href="/company">Company</Link>
               </li>
@@ -125,13 +126,13 @@ const Navbar = () => {
       </div>
       {/* Dropdown menu section */}
       <motion.div
-        className="absolute mt-20 h-auto w-full bg-white py-10 md:hidden"
+        className="absolute top-0 h-auto w-full bg-white pb-1 pt-20 md:hidden"
         animate={open ? 'open' : 'closed'}
         variants={dropdownVariants}
         initial={{ opacity: 0, y: '-20px' }}
       >
         <div className="h-full">
-          <ul className="flex flex-col items-center justify-center gap-7">
+          <ul className="flex flex-col items-center justify-center gap-6">
             <li>
               <Link href="/company" onClick={() => setOpen(!open)}>
                 Company
@@ -152,7 +153,7 @@ const Navbar = () => {
                 Blogs
               </Link>
             </li>
-            <li className="flex h-10 w-24 items-center justify-center rounded-xl">
+            <li className="flex w-24 items-center justify-center rounded-xl pb-5">
               <Link href="/contact" onClick={() => setOpen(!open)}>
                 Contact
               </Link>

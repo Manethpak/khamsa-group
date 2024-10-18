@@ -5,16 +5,18 @@ type CompanyCardProps = {
   link: string
   name: string
   company_description: string
-  location: string
   date: string
+  website: string
+  category: string
 }
 
 const CompanyCard: React.FC<CompanyCardProps> = ({
   link,
   name,
   company_description,
-  location,
   date,
+  website,
+  category,
 }) => {
   return (
     <div
@@ -26,7 +28,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
           <h1 className="title">{name}</h1>
           <p className="">{company_description}</p>
         </div>
-        <p>{location}</p>
+        <p>{category}</p>
       </div>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex gap-3">
@@ -37,10 +39,11 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
             View Profile
           </Link>
           <Link
-            href={link}
+            href={website}
             className="rounded-full border border-deepGreen px-5 py-1 hover:bg-deepGreen hover:text-white"
+            target="_blank"
           >
-            Contact
+            Website
           </Link>
         </div>
         <div>

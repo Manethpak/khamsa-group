@@ -9,6 +9,7 @@ import {
   noto_serif_khmer,
   manrope,
 } from '@/utils/fonts'
+import ScrollToTop from '@/component/ui/scroll-to-top'
 
 export const metadata: Metadata = {
   title: 'Khamsa Group',
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body
         className={`${libre} ${noto_serif_khmer} ${noto_sans} ${noto_sans_khmer} ${manrope}`}
       >
+        <ScrollToTop />
         <Navbar />
         {children}
         <FooterContent />

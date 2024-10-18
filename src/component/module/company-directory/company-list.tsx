@@ -1,8 +1,7 @@
-import { Paginate } from '@/component/ui/pagination'
 import { Schema } from '@/lib/schema'
 import React from 'react'
 import CompanyCard from './company-card'
-import { formatDate } from '@/lib/utils'
+import { dateYearFormat } from '@/utils/date-format'
 
 type Props = {
   data: Schema['Company']
@@ -15,10 +14,17 @@ const CompanyList = ({ data }: Props) => {
         <CompanyCard
           key={company.name}
           name={company.name!}
-          location={company.location!}
+          category={
+            (company.category &&
+              company.category
+                ?.map((category) => category.Category_id?.title)
+                .join(',')) ||
+            ''
+          }
           company_description={company.company_description!}
           link={'/company/' + company.slug!}
-          date={formatDate(company.founded!)}
+          date={dateYearFormat(company.founded!)}
+          website={company?.website || '#'}
         />
       ))}
     </div>
