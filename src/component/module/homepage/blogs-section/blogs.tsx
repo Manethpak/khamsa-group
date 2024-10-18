@@ -62,7 +62,7 @@ const BlogSection = ({ data }: Props) => {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="0.5"
+                        strokeWidth="0.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         className="lucide lucide-move-up-right size-7 sm:size-10"

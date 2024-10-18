@@ -17,6 +17,7 @@ export async function fetchCompany(option?: Option) {
         'phone',
       ],
       limit: option?.limit || -1,
+      sort: ['founded'],
     })
   )
 }
