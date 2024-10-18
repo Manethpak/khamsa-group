@@ -38,13 +38,19 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
           >
             View Profile
           </Link>
-          <Link
-            href={website}
-            className="rounded-full border border-deepGreen px-5 py-1 hover:bg-deepGreen hover:text-white"
-            target="_blank"
-          >
-            Website
-          </Link>
+          {website && website !== 'N/A' ? (
+            <Link
+              href={website}
+              className="rounded-full border border-deepGreen px-5 py-1 hover:bg-deepGreen hover:text-white"
+              target="_blank"
+            >
+              Website
+            </Link>
+          ) : (
+            <span className="rounded-full border border-deepGreen px-5 py-1">
+              N/A
+            </span>
+          )}
         </div>
         <div>
           <span>{date}</span>
