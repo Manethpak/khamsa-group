@@ -24,7 +24,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
       className="subtitle w-full space-y-8 rounded border border-deepGreen bg-white p-8"
     >
       <div className="space-y-3">
-        <div className='space-y-1'>
+        <div className="space-y-1">
           <h1 className="title">{name}</h1>
           <p className="w-full max-w-3xl">{company_description}</p>
         </div>
