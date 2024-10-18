@@ -77,7 +77,7 @@ const Navbar = () => {
       animate={containerControls}
       variants={navbarVariants}
       transition={{ duration: 0.35, ease: 'easeInOut' }}
-      className="subtitle sticky top-0 -mt-1 flex w-full flex-col items-center bg-white font-semibold"
+      className="subtitle sticky top-0 z-10 -mt-1 flex w-full flex-col items-center bg-white font-semibold"
     >
       {/* Navbar Section */}
       <div className="z-10 -mt-1 flex h-20 w-full max-w-screen-2xl items-center justify-between bg-white px-5 md:px-10 lg:h-20 lg:px-24">

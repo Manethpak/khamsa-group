@@ -24,7 +24,7 @@ const CompanyList = ({ data }: Props) => {
           company_description={company.company_description!}
           link={'/company/' + company.slug!}
           date={dateYearFormat(company.founded!)}
-          website={company?.website || '#'}
+          website={company?.website as string}
         />
       ))}
     </div>
