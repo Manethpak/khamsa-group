@@ -1,13 +1,12 @@
-import CompanyCard from '@/component/module/company-directory/company-card'
 import CompanyList from '@/component/module/company-directory/company-list'
-import DropdownCategory from '@/component/module/company-directory/dropdown-category'
 import { Motion } from '@/component/ui/motion'
-import { fetchCategory } from '@/fetcher/category/fetch-category'
 import { fetchCompany } from '@/fetcher/company/fetch-company'
+
+export const revalidate = 300
 
 const CompanyDirectoryPage = async () => {
   const companies = await fetchCompany()
-  const categoryData = await fetchCategory()
+
   return (
     <section className="z-10 flex w-full flex-col items-center justify-center py-16">
       <div className="subtitle flex w-full max-w-screen-2xl flex-col gap-8 px-5 md:px-10 lg:px-24">
