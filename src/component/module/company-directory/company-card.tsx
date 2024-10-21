@@ -30,7 +30,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
         </div>
         <p>{category}</p>
       </div>
-      <div className="flex flex-wrap items-center justify-between gap-3">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex gap-3">
           <Link
             className="h-auto rounded-full bg-secondPrimary px-5 py-1 text-white transition-colors hover:bg-deepGreen"
@@ -52,7 +52,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
             </span>
           )}
         </div>
-        <div>
+        <div className="mt-3 sm:mt-0">
           <span>{date}</span>
         </div>
       </div>
