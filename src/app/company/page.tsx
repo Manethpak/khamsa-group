@@ -1,4 +1,4 @@
-import CompanyList from '@/component/module/company-directory/company-list'
+import CompanyList from '@/component/module/company-page/company-list'
 import { Motion } from '@/component/ui/motion'
 import { fetchCompany } from '@/fetcher/company/fetch-company'
 

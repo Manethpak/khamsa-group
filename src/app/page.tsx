@@ -1,27 +1,27 @@
-import HomeSection from '@/component/module/homepage/home-section/home'
-import OurSuccess from '@/component/module/homepage/stats/our-success'
-import OurJourney from '@/component/module/homepage/our-journey-section/our-journey'
-import Project from '@/component/module/homepage/project-section/project'
-import BlogSection from '@/component/module/homepage/blogs-section/blogs'
 import { fetchHero } from '@/fetcher/hero/fetch-hero'
 import { fetchBlogs } from '@/fetcher/blog/fetch-blog'
-import { fetchInvestment } from '@/fetcher/investment/fetch-investment'
 import { fetchSuccess } from '@/fetcher/about/success/fetch-success'
+import { fetchProject } from '@/fetcher/project/fetch-project'
+import HeroSection from '@/component/module/home-page/hero-section'
+import OurSuccessSection from '@/component/module/home-page/our-success-section'
+import ProjectSection from '@/component/module/home-page/project-section'
+import OurJourneySection from '@/component/module/home-page/our-journey-section'
+import BlogSection from '@/component/module/home-page/blogs-section'
 export const revalidate = 300
 
 export default async function Home() {
   const heroData = await fetchHero()
-  const blogs = await fetchBlogs({ limit: 5 })
-  const investmentData = await fetchInvestment()
+  const blogsData = await fetchBlogs({ limit: 5 })
+  const projectsData = await fetchProject({ limit: 10 })
   const successData = await fetchSuccess()
 
   return (
     <div>
-      <HomeSection data={heroData} />
-      <OurSuccess data={successData} />
-      <Project data={investmentData} />
-      <OurJourney />
-      <BlogSection data={blogs} />
+      <HeroSection data={heroData} />
+      <OurSuccessSection data={successData} />
+      <ProjectSection data={projectsData} />
+      <OurJourneySection />
+      <BlogSection data={blogsData} />
     </div>
   )
 }

@@ -8,7 +8,7 @@ interface Props {
   team: Schema['Team']
 }
 
-const Teams = ({ team }: Props) => {
+const TeamsSection = ({ team }: Props) => {
   return (
     <div className="subtitle-about flex w-full flex-col items-center justify-center">
       <div className="flex h-full w-full max-w-screen-2xl flex-col gap-24 px-5 py-14 md:px-10 lg:px-24">
@@ -44,4 +44,4 @@ const Teams = ({ team }: Props) => {
   )
 }
 
-export default Teams
+export default TeamsSection

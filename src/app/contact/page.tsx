@@ -1,13 +1,13 @@
 'use client'
-import { Motion } from '@/component/ui/motion'
 import Link from 'next/link'
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { useContact } from '@/fetcher/contact/use-contact'
 import FacebookIcon from '@/component/global/icon/facebook-icon'
 import LinkedInIcon from '@/component/global/icon/linkedin-icon'
-import { ArrowRight } from 'lucide-react'
 import LinkTreeIcon from '@/component/global/icon/linktree-icon'
+import React, { useState } from 'react'
+import { Motion } from '@/component/ui/motion'
+import { motion } from 'framer-motion'
+import { useContact } from '@/fetcher/contact/use-contact'
+import { ArrowRight } from 'lucide-react'
 
 interface Props {
   title: string

@@ -5,7 +5,6 @@ import { Schema } from '@/lib/schema'
 import { formatDate } from '@/lib/utils'
 import { getImageUrl } from '@/lib/directus'
 import { Motion } from '@/component/ui/motion'
-import { MoveUpRight } from 'lucide-react'
 
 type Props = {
   data: Schema['Blogs']

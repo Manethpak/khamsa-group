@@ -1,4 +1,5 @@
 'use client'
+import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -24,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <Link href={link} key={title} className="space-y-5">
-      <div className={`${getColor}relative aspect-square w-full`}>
+      <div className={cn(getColor, 'relative aspect-square w-full')}>
         <Image
           src={imageUrl}
           alt={title}
@@ -34,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
       </div>
       <div className="flex flex-col gap-3">
-        <h1 className={`${getColor} title line-clamp-2 sm:line-clamp-1`}>
+        <h1 className={cn(getColor, 'title line-clamp-2 sm:line-clamp-1')}>
           {title}
         </h1>
         <p className="line-clamp-4 max-w-sm px-1 sm:line-clamp-2">

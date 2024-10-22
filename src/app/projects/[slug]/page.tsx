@@ -1,18 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
-import { redirect } from 'next/navigation'
+import Link from 'next/link'
+import Share from '@/component/ui/share'
+import ProjectCard from '@/component/module/projects-page/project-card'
+import { notFound } from 'next/navigation'
 import { Metadata, ResolvingMetadata } from 'next'
-import { fetchBlogBySlug, fetchBlogs } from '@/fetcher/blog/fetch-blog'
 import { getImageUrl } from '@/lib/directus'
 import { formatDate } from '@/lib/utils'
 import { Motion } from '@/component/ui/motion'
-import Link from 'next/link'
-import Share from '@/component/ui/share'
 import {
   fetchProject,
   fetchProjectBySlug,
 } from '@/fetcher/project/fetch-project'
-import ProjectCard from '@/component/module/projects/project-card'
 
 type Props = {
   params: { slug: string }
@@ -37,12 +36,12 @@ export async function generateMetadata(
   }
 }
 
-const ProjectsPage = async ({ params }: Props) => {
+const ProjectsDetailPage = async ({ params }: Props) => {
   const result = await fetchProjectBySlug(params.slug)
   const projects = await fetchProject({ limit: 4 })
 
   if (!result[0]) {
-    redirect('/404')
+    notFound()
   }
 
   const project = result[0]
@@ -127,4 +126,4 @@ const ProjectsPage = async ({ params }: Props) => {
   )
 }
 
-export default ProjectsPage
+export default ProjectsDetailPage

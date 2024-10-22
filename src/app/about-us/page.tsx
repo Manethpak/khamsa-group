@@ -1,8 +1,8 @@
-import AboutSection from '@/component/module/about-page/about-section/about-section'
-import Contacts from '@/component/module/about-page/contact/contact'
-import Office from '@/component/module/about-page/office/office'
-import Teams from '@/component/module/about-page/team/teams'
-import Value from '@/component/module/about-page/value/value'
+import AboutSection from '@/component/module/about-page/about-section'
+import ContactSection from '@/component/module/about-page/contact-section'
+import OfficeSection from '@/component/module/about-page/office-section'
+import TeamsSection from '@/component/module/about-page/teams-section'
+import ValueSection from '@/component/module/about-page/value-section'
 import { fetchOffice } from '@/fetcher/about/office/fetch-office'
 import { fetchTeams } from '@/fetcher/about/teams/fetch-teams'
 import React from 'react'
@@ -14,10 +14,10 @@ const AboutPage = async () => {
   return (
     <section>
       <AboutSection />
-      <Value />
-      <Teams team={dataTeam} />
-      <Office office={dataOffice} />
-      <Contacts />
+      <ValueSection />
+      <TeamsSection team={dataTeam} />
+      <OfficeSection office={dataOffice} />
+      <ContactSection />
     </section>
   )
 }

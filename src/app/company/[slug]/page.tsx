@@ -1,14 +1,14 @@
 import React from 'react'
-import { fetchCompanyBySlug } from '@/fetcher/company/fetch-company'
-import Image from 'next/image'
-import { getImageUrl } from '@/lib/directus'
 import Link from 'next/link'
+import Image from 'next/image'
+import FacebookIcon from '@/component/global/icon/facebook-icon'
+import LinkedInIcon from '@/component/global/icon/linkedin-icon'
+import Contacts from '@/component/module/about-page/contact-section'
+import { fetchCompanyBySlug } from '@/fetcher/company/fetch-company'
+import { getImageUrl } from '@/lib/directus'
 import { cn } from '@/lib/utils'
 import { dateYearFormat } from '@/utils/date-format'
 import { ChevronLeftIcon } from 'lucide-react'
-import FacebookIcon from '@/component/global/icon/facebook-icon'
-import LinkedInIcon from '@/component/global/icon/linkedin-icon'
-import Contacts from '@/component/module/about-page/contact/contact'
 
 type Props = { params: { slug: string } }
 
@@ -26,7 +26,7 @@ const iconMappings = {
   linkedin: LinkedInIcon,
 }
 
-const CompanyPage = async ({ params }: Props) => {
+const CompanyDetailPage = async ({ params }: Props) => {
   const result = await fetchCompanyBySlug(params.slug)
 
   function getHostname(url: string | URL) {
@@ -182,4 +182,4 @@ const CompanyPage = async ({ params }: Props) => {
   )
 }
 
-export default CompanyPage
+export default CompanyDetailPage

@@ -7,7 +7,7 @@ import { Motion } from '@/component/ui/motion'
 interface Props {
   office: Schema['Office']
 }
-const Office = ({ office }: Props) => {
+const OfficeSection = ({ office }: Props) => {
   return (
     <div className="subtitle-about flex w-full flex-col items-center justify-center">
       <div className="flex h-full w-full max-w-screen-2xl flex-col gap-5 px-5 py-10 text-center md:px-10 lg:px-24">
@@ -39,4 +39,4 @@ const Office = ({ office }: Props) => {
   )
 }
 
-export default Office
+export default OfficeSection

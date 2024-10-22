@@ -1,7 +1,7 @@
-import ProjectList from '@/component/module/projects/project-list'
+import React from 'react'
+import ProjectList from '@/component/module/projects-page/project-list'
 import { Motion } from '@/component/ui/motion'
 import { fetchProject } from '@/fetcher/project/fetch-project'
-import React from 'react'
 
 const ProjectsPage = async () => {
   const projects = await fetchProject()

@@ -2,12 +2,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { Footer } from '@/constants'
-import { useContact } from '@/fetcher/contact/use-contact'
-import { motion } from 'framer-motion'
 import FacebookIcon from '@/component/global/icon/facebook-icon'
 import LinkedInIcon from '@/component/global/icon/linkedin-icon'
 import LinkTreeIcon from '../icon/linktree-icon'
+import { Footer } from '@/constants'
+import { useContact } from '@/fetcher/contact/use-contact'
+import { motion } from 'framer-motion'
 
 interface Props {
   title: string

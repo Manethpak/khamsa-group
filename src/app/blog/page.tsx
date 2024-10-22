@@ -1,7 +1,7 @@
+import React from 'react'
 import BlogList from '@/component/module/blog-page/blog-list'
 import { Motion } from '@/component/ui/motion'
 import { fetchBlogs } from '@/fetcher/blog/fetch-blog'
-import React from 'react'
 
 const BlogPage = async () => {
   const blogs = await fetchBlogs()

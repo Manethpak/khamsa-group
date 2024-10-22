@@ -11,7 +11,7 @@ import { Motion } from '@/component/ui/motion'
 
 type Props = { data: Schema['Hero'] }
 
-const HomeSection = ({ data }: Props) => {
+const HeroSection = ({ data }: Props) => {
   let [ref, { width }] = useMeasure()
   const xTranslation = useMotionValue(0)
 
@@ -160,4 +160,4 @@ const HomeSection = ({ data }: Props) => {
   )
 }
 
-export default HomeSection
+export default HeroSection

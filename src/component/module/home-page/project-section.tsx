@@ -11,26 +11,9 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import { MoveRight } from 'lucide-react'
 
-type Props = { data: Schema['Investment'] }
+type Props = { data: Schema['Project'] }
 
-const Project = ({ data }: Props) => {
-  const items = useMemo(() => {
-    return data
-      ?.project!.map((item) => {
-        if (typeof item === 'object' && item !== null) {
-          return {
-            title: item.title,
-            imageUrl: getImageUrl(item.image as string),
-            subtitle: item.description,
-            projectSlug: item.slug,
-          }
-        }
-      })
-      .filter(Boolean)
-  }, [data?.project])
-
-  const project = items.slice(0, 10)
-
+const ProjectSection = ({ data }: Props) => {
   return (
     <section
       id="investment"
@@ -38,7 +21,7 @@ const Project = ({ data }: Props) => {
     >
       <div className="flex w-full max-w-screen-2xl flex-col gap-10 pl-5 md:pl-10 lg:pl-24">
         <Motion className="">
-          <p className="heading-subtitle uppercase">{data.subtitle}</p>
+          <p className="heading-subtitle uppercase">WHAT WE DO</p>
         </Motion>
         <Swiper
           modules={[Virtual, Navigation, Pagination, Scrollbar]}
@@ -58,14 +41,14 @@ const Project = ({ data }: Props) => {
           }}
           className="w-full"
         >
-          {project.map((data, index) => (
+          {data.map((data, index) => (
             <SwiperSlide
               key={index}
               className="flex max-h-full max-w-full flex-col items-center justify-center gap-7"
             >
               <Motion className="flex h-full max-w-fit flex-col gap-3">
                 <Image
-                  src={data!.imageUrl}
+                  src={getImageUrl(data.image! as string)}
                   alt={data!.title!}
                   width={600}
                   height={600}
@@ -74,9 +57,9 @@ const Project = ({ data }: Props) => {
                 />
                 <div className="flex h-48 flex-col gap-3 overflow-hidden">
                   <h1 className="title line-clamp-2">{data!.title}</h1>
-                  <p className="line-clamp-3 max-w-sm">{data!.subtitle}</p>
+                  <p className="line-clamp-3 max-w-sm">{data!.description}</p>
                 </div>
-                <Link href={`/projects/${data!.projectSlug}`} passHref>
+                <Link href={`/projects/${data!.slug}`} passHref>
                   <p>Read More</p>
                 </Link>
               </Motion>
@@ -104,4 +87,4 @@ const Project = ({ data }: Props) => {
   )
 }
 
-export default Project
+export default ProjectSection

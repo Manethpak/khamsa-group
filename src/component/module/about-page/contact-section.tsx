@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { Motion } from '@/component/ui/motion'
 import { useAnimation, useInView, motion } from 'framer-motion'
 
-const Contacts = () => {
+const ContactSection = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const controls = useAnimation()
@@ -67,4 +67,4 @@ const Contacts = () => {
   )
 }
 
-export default Contacts
+export default ContactSection
