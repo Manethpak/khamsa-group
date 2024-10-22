@@ -1,4 +1,5 @@
 'use client'
+import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -31,7 +32,10 @@ const BlogCard: React.FC<BlogCardProps> = ({
   return (
     <Link href={link} key={title} className="space-y-5">
       <div
-        className={`${getColor} relative aspect-square max-h-[400px] min-h-[250px] w-full`}
+        className={cn(
+          getColor,
+          'relative aspect-square max-h-[400px] min-h-[250px] w-full'
+        )}
       >
         <Image
           src={imageUrl}
@@ -45,8 +49,8 @@ const BlogCard: React.FC<BlogCardProps> = ({
           {topic}
         </div>
       </div>
-      <div className="flex flex-col gap-3 sm:h-28">
-        <h1 className={`${getColor} title`}>{title}</h1>
+      <div className="flex flex-col gap-3">
+        <h1 className={cn(getColor, 'title')}>{title}</h1>
         <p className="line-clamp-4 max-w-sm px-1 sm:line-clamp-2">
           {description}
         </p>

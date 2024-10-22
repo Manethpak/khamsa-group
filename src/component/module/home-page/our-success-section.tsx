@@ -6,7 +6,7 @@ type Props = {
   data: Schema['Success'] // Assuming 'data' is an array of Success objects
 }
 
-const OurSuccess = ({ data }: Props) => {
+const OurSuccessSection = ({ data }: Props) => {
   return (
     <section className="flex w-full flex-col items-center justify-center">
       <div className="flex w-full max-w-screen-2xl flex-col gap-20">
@@ -26,4 +26,4 @@ const OurSuccess = ({ data }: Props) => {
   )
 }
 
-export default OurSuccess
+export default OurSuccessSection

@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 
 type PhaseKeys = keyof typeof JOURNEY_DATA
 
-const OurJourney = () => {
+const OurJourneySection = () => {
   const [selectedPhase, setSelectedPhase] = useState<PhaseKeys>('2021')
   const phases = Object.keys(JOURNEY_DATA) as PhaseKeys[]
 
@@ -64,4 +64,4 @@ const OurJourney = () => {
   )
 }
 
-export default OurJourney
+export default OurJourneySection

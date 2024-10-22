@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { AlignJustify, X } from 'lucide-react'
 import {
@@ -8,7 +9,6 @@ import {
   useMotionValueEvent,
   useScroll,
 } from 'framer-motion'
-import Link from 'next/link'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)

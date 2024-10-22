@@ -1,14 +1,14 @@
 import React from 'react'
-import { Metadata, ResolvingMetadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import BlogCard from '@/component/module/blog-page/blog-card'
+import Share from '@/component/ui/share'
 import { notFound } from 'next/navigation'
 import { fetchBlogBySlug, fetchBlogs } from '@/fetcher/blog/fetch-blog'
 import { getImageUrl } from '@/lib/directus'
 import { formatDate } from '@/lib/utils'
 import { Motion } from '@/component/ui/motion'
-import BlogCard from '@/component/module/blog-page/blog-card'
-import Share from '@/component/ui/share'
+import { Metadata, ResolvingMetadata } from 'next'
 
 type Props = {
   params: { slug: string }
