@@ -26,7 +26,7 @@ const iconMappings = {
   linkedin: LinkedInIcon,
 }
 
-const CompanyPage = async ({ params }: Props) => {
+const CompanyDetailPage = async ({ params }: Props) => {
   const result = await fetchCompanyBySlug(params.slug)
 
   function getHostname(url: string | URL) {
@@ -182,4 +182,4 @@ const CompanyPage = async ({ params }: Props) => {
   )
 }
 
-export default CompanyPage
+export default CompanyDetailPage

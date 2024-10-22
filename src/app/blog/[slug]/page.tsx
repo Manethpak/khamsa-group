@@ -33,7 +33,7 @@ export async function generateMetadata(
   }
 }
 
-const BlogPage = async ({ params }: Props) => {
+const BlogDetailPage = async ({ params }: Props) => {
   const result = await fetchBlogBySlug(params.slug)
   const blogs = await fetchBlogs({ limit: 4 })
 
@@ -118,4 +118,4 @@ const BlogPage = async ({ params }: Props) => {
   )
 }
 
-export default BlogPage
+export default BlogDetailPage

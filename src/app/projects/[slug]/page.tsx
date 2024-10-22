@@ -36,7 +36,7 @@ export async function generateMetadata(
   }
 }
 
-const ProjectsPage = async ({ params }: Props) => {
+const ProjectsDetailPage = async ({ params }: Props) => {
   const result = await fetchProjectBySlug(params.slug)
   const projects = await fetchProject({ limit: 4 })
 
@@ -126,4 +126,4 @@ const ProjectsPage = async ({ params }: Props) => {
   )
 }
 
-export default ProjectsPage
+export default ProjectsDetailPage
