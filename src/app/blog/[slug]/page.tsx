@@ -45,7 +45,7 @@ const BlogDetailPage = async ({ params }: Props) => {
 
   return (
     <section className="flex w-full flex-col items-center justify-center gap-12 pt-20">
-      <div className="subtitle relative flex w-full max-w-screen-2xl flex-col gap-12 px-14 md:px-32 lg:px-40">
+      <div className="subtitle relative flex w-full max-w-screen-2xl flex-col gap-12 px-5 sm:px-14 md:px-32 lg:px-40">
         <Motion delay={0.5} className="sm:title flex items-end justify-between">
           <h1 className="heading-title w-full max-w-fit">{blog.topic}</h1>
           <time>{formatDate(blog.date!)}</time>

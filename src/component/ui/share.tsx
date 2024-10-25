@@ -1,7 +1,6 @@
 'use client'
 import { usePathname } from 'next/navigation'
 import React, { useRef, useState } from 'react'
-import FacebookIcon from '@/component/global/icon/facebook-icon'
 import TelegramIcon from '@/component/global/icon/telegram-icon'
 import LinkedInIcon from '@/component/global/icon/linkedin-icon'
 import { LinkedinShareButton, TelegramShareButton } from 'react-share'
