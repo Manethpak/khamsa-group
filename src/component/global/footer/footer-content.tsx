@@ -6,8 +6,8 @@ import FacebookIcon from '@/component/global/icon/facebook-icon'
 import LinkedInIcon from '@/component/global/icon/linkedin-icon'
 import LinkTreeIcon from '../icon/linktree-icon'
 import { Footer } from '@/constants'
-import { useContact } from '@/fetcher/contact/use-contact'
 import { motion } from 'framer-motion'
+import { Schema } from '@/lib/schema'
 
 interface Props {
   title: string
@@ -16,15 +16,17 @@ interface Props {
   icon_name: keyof typeof iconMapping
 }
 
+type Prop = {
+  data: Schema['Contact']
+}
+
 const iconMapping = {
   facebook: FacebookIcon,
   linkedin: LinkedInIcon,
   linkTree: LinkTreeIcon,
 }
 
-const FooterSection = () => {
-  const { data } = useContact()
-
+const FooterSection = ({ data }: Prop) => {
   const contact = data as {
     address?: Props[]
     link?: Props[]

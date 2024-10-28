@@ -68,13 +68,14 @@ const HeroSection = ({ data }: Props) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.75 }}
-            className="flex h-full max-h-[450px] w-full max-w-full justify-center lg:max-w-[650px]"
+            className="flex h-full max-h-[450px] w-full max-w-full justify-center lg:h-full lg:max-w-[650px]"
           >
             <Image
-              src="/images/value.jpg"
-              alt="view of ai farm factory"
-              width={620}
-              height={448}
+              src={getImageUrl(data.image! as string)}
+              alt={data.image! as string}
+              width={1920}
+              height={1900}
+              quality={100}
               className="max-h-full w-full object-cover object-center"
             />
           </motion.div>
