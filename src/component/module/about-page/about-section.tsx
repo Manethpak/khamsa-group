@@ -3,10 +3,15 @@
 import { useAnimation, useInView, motion } from 'framer-motion'
 import Image from 'next/image'
 import React, { useEffect, useRef } from 'react'
-import { ABOUT_US } from '@/constants/about-us'
 import { Motion } from '@/component/ui/motion'
+import { Schema } from '@/lib/schema'
+import { getImageUrl } from '@/lib/directus'
 
-const AboutSection = () => {
+interface Props {
+  about: Schema['About']
+}
+
+const AboutSection = ({ about }: Props) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const controls = useAnimation()
@@ -23,14 +28,14 @@ const AboutSection = () => {
           <Motion className="heading-subtitle">About Us</Motion>
           <div className="flex w-full flex-col-reverse items-start justify-between gap-5 lg:flex-row lg:items-center">
             <div className="flex w-full max-w-2xl flex-col items-center justify-center gap-8 px-4">
-              {ABOUT_US.map((data, index) => (
-                <Motion key={data.title} delay={index * 0.2} className="flex">
-                  <p>
-                    <span className="font-semibold">{data.title}</span>
-                    {data.subtitle}
-                  </p>
+              {about.description! && (
+                <Motion delay={0.5}>
+                  <div
+                    className="space-y-5"
+                    dangerouslySetInnerHTML={{ __html: about.description! }}
+                  />
                 </Motion>
-              ))}
+              )}
             </div>
             <motion.div
               initial={{ opacity: 0 }}
@@ -39,14 +44,43 @@ const AboutSection = () => {
               className="flex max-h-[450px] w-full max-w-full justify-end md:min-h-[450px]"
             >
               <Image
-                src="/images/about.jpeg"
-                alt="view of ai farm factory"
-                width={620}
-                height={448}
+                src={getImageUrl(about.image_about! as string)}
+                alt={about.image_about! as string}
+                width={1200}
+                height={1200}
                 className="max-h-full w-full object-cover object-center lg:max-w-[620px]"
               />
             </motion.div>
           </div>
+        </div>
+      </div>
+      <div className="flex max-w-screen-2xl flex-col gap-10 px-5 py-12 md:px-10 lg:px-24">
+        <div className="flex w-full flex-col items-center gap-5">
+          <Motion delay={0.5} className="subtitle-about">
+            OUR VALUE
+          </Motion>
+          <Motion delay={0.75} className="title">
+            {about.title}
+          </Motion>
+        </div>
+
+        <div className="flex flex-col items-center gap-4 md:flex-row md:gap-10">
+          <Motion
+            delay={1}
+            className="flex w-full flex-1 justify-start self-start sm:min-w-[28rem]"
+          >
+            <Image
+              src={getImageUrl(about.image_value! as string)}
+              alt={about.image_about! as string}
+              width={1200}
+              height={1200}
+              className="h-auto max-w-full object-cover shadow-lg transition-shadow duration-300 ease-in-out hover:shadow-2xl"
+            />
+          </Motion>
+
+          <Motion delay={1.25} className="w-full">
+            <p className="text-left font-manrope">{about.subtitle}</p>
+          </Motion>
         </div>
       </div>
     </section>

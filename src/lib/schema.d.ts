@@ -2602,6 +2602,22 @@ export interface components {
       question?: string | null
       answer?: string | null
     }
+    ItemsAbout: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_updated?: string | null
+      image_about?: string | components['schemas']['Files'] | null
+      image_value?: string | components['schemas']['Files'] | null
+      subtitle?: string | null
+      title?: string | null
+      description?: string | null
+    }
     ItemsTeam: {
       id?: number
       status?: string
@@ -9907,6 +9923,7 @@ export type Schema = {
   Success: components['schemas']['ItemsSuccess'][]
   FAQ: components['schemas']['ItemsFAQ'][]
   Item: components['schemas']['ItemsItem'][]
+  About: components['schemas']['ItemsAbout']
   Team: components['schemas']['ItemsTeam'][]
   Office: components['schemas']['ItemsOffice'][]
   Subscription: components['schemas']['ItemsSubscription'][]

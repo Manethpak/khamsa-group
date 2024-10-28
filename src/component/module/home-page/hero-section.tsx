@@ -93,11 +93,11 @@ const HeroSection = ({ data }: Props) => {
             className="flex w-full min-w-max gap-24"
             style={{
               maskImage: `linear-gradient(
-            to right,
-            transparent,
-            #000 10% 90%,
-            transparent
-          )`,
+              to right,
+              transparent,
+              #000 10% 90%,
+              transparent
+            )`,
               whiteSpace: `nowrap`,
             }}
           >
