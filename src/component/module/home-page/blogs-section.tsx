@@ -43,32 +43,34 @@ const BlogSection = ({ data }: Props) => {
                     quality={100}
                     className="w-full object-cover object-center"
                   />
-                  <div className="mt-4 flex max-h-40 justify-between gap-1 overflow-hidden">
+                  <div className="mt-4 flex max-h-60 flex-col justify-between gap-2 overflow-hidden md:flex-row">
                     <div className="w-full space-y-6 md:space-y-8">
-                      <h1 className="heading-subtitle line-clamp-2 h-fit normal-case">
+                      <h1 className="line-clamp-2 h-fit w-full text-xl font-semibold normal-case md:text-2xl">
                         {sortedData[0].title}
                       </h1>
-                      <p className="line-clamp-2 px-2">
+                      <p className="line-clamp-2">
                         {sortedData[0].description}
                       </p>
                     </div>
-                    <div className="grid w-full max-w-36 place-items-end content-between">
-                      <span className="pt-2">
+                    <div className="flex w-full items-center justify-end gap-2 py-4 md:max-w-24 md:flex-col md:items-start md:justify-between md:py-0">
+                      <span className="font-semibold">
                         {formatDate(sortedData[0].date!)}
                       </span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="0.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        className="lucide lucide-move-up-right size-7 sm:size-10"
-                      >
-                        <path d="M13 5H19V11" />
-                        <path d="M19 5L5 19" />
-                      </svg>
+                      <span className="flex md:w-full md:justify-end">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="0.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          className="lucide lucide-move-up-right size-7 sm:size-10"
+                        >
+                          <path d="M13 5H19V11" />
+                          <path d="M19 5L5 19" />
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </div>
