@@ -3,6 +3,8 @@ import BlogList from '@/component/module/blog-page/blog-list'
 import { Motion } from '@/component/ui/motion'
 import { fetchBlogs } from '@/fetcher/blog/fetch-blog'
 
+export const revalidate = 300
+
 const BlogPage = async () => {
   const blogs = await fetchBlogs()
   return (
