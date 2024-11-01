@@ -98,7 +98,7 @@ const BlogDetailPage = async ({ params }: Props) => {
           </Motion>
           <Motion
             delay={1}
-            className="grid grid-cols-2 gap-6 text-white sm:grid-cols-3 md:grid-cols-4"
+            className="grid grid-cols-1 gap-6 text-white sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
           >
             {blogs.map((blog) => (
               <BlogCard
