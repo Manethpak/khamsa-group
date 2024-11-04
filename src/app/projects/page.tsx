@@ -2,7 +2,21 @@ import React from 'react'
 import ProjectList from '@/component/module/projects-page/project-list'
 import { Motion } from '@/component/ui/motion'
 import { fetchProject } from '@/fetcher/project/fetch-project'
+import { Metadata } from 'next'
 
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Khamsa Group',
+    description: 'MISSION: BUILD THE FUTURE WORLD',
+    openGraph: {
+      images: [
+        {
+          url: 'https://media.licdn.com/dms/image/v2/C560BAQFICX72oX0TIg/company-logo_200_200/company-logo_200_200/0/1675677526846/khamsagroup_logo?e=1738800000&v=beta&t=P6e65kyTcs7H8APK9NFfMUF1GnwU0T_Pmy0htDsYPio',
+        },
+      ],
+    },
+  }
+}
 const ProjectsPage = async () => {
   const projects = await fetchProject()
   return (
