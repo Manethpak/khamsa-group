@@ -1,24 +1,21 @@
 import CompanyList from '@/component/module/company-page/company-list'
 import { Motion } from '@/component/ui/motion'
 import { fetchCompany } from '@/fetcher/company/fetch-company'
-
 import { Metadata } from 'next'
 
 export const revalidate = 300
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Khamsa Group',
-    description:
-      'Khamsa Business Company is a dynamic enterprise focused on providing comprehensive business solutions that drive growth and efficiency. With expertise in consulting, technology, and resource management, Khamsa partners with businesses across various industries to streamline their operations and enhance profitability. ',
-    openGraph: {
-      images: [
-        {
-          url: 'http://localhost:3000/_next/image?url=https%3A%2F%2Fkhamsa.panel.dreamslab.dev%2Fassets%2F69f76cb4-57ad-4230-a10a-eb92b543be60&w=3840&q=100',
-        },
-      ],
-    },
-  }
+export const metadata: Metadata = {
+  title: 'Khamsa Group',
+  description:
+    'Khamsa Business Company is a dynamic enterprise focused on providing comprehensive business solutions that drive growth and efficiency. With expertise in consulting, technology, and resource management, Khamsa partners with businesses across various industries to streamline their operations and enhance profitability. ',
+  openGraph: {
+    images: [
+      {
+        url: 'https://media.licdn.com/dms/image/v2/C560BAQFICX72oX0TIg/company-logo_200_200/company-logo_200_200/0/1675677526846/khamsagroup_logo?e=1738800000&v=beta&t=P6e65kyTcs7H8APK9NFfMUF1GnwU0T_Pmy0htDsYPio',
+      },
+    ],
+  },
 }
 
 const CompanyDirectoryPage = async () => {

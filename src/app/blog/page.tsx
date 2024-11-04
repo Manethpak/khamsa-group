@@ -2,24 +2,20 @@ import React from 'react'
 import BlogList from '@/component/module/blog-page/blog-list'
 import { Motion } from '@/component/ui/motion'
 import { fetchBlogs } from '@/fetcher/blog/fetch-blog'
-import { Metadata, ResolvingMetadata } from 'next'
+import { Metadata } from 'next'
 
 export const revalidate = 300
 
-export async function generateMetadata(
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  return {
-    title: 'Recent Blog Posts',
-    description: 'Recent Blog Posts description',
-    openGraph: {
-      images: [
-        {
-          url: 'https://media.licdn.com/dms/image/v2/C560BAQFICX72oX0TIg/company-logo_200_200/company-logo_200_200/0/1675677526846/khamsagroup_logo?e=1738800000&v=beta&t=P6e65kyTcs7H8APK9NFfMUF1GnwU0T_Pmy0htDsYPio',
-        },
-      ],
-    },
-  }
+export const metadata: Metadata = {
+  title: 'Recent Blog Posts',
+  description: 'Recent Blog Posts description',
+  openGraph: {
+    images: [
+      {
+        url: 'https://media.licdn.com/dms/image/v2/C560BAQFICX72oX0TIg/company-logo_200_200/company-logo_200_200/0/1675677526846/khamsagroup_logo?e=1738800000&v=beta&t=P6e65kyTcs7H8APK9NFfMUF1GnwU0T_Pmy0htDsYPio',
+      },
+    ],
+  },
 }
 
 const BlogPage = async () => {
