@@ -8,7 +8,7 @@ export const revalidate = 300
 
 export const metadata: Metadata = {
   title: 'Recent Blog Posts',
-  description: 'Recent Blog Posts description',
+  description: 'Recent Blog Posts of Khamsa Group',
   openGraph: {
     images: [
       {
