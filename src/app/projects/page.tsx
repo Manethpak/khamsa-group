@@ -3,6 +3,7 @@ import ProjectList from '@/component/module/projects-page/project-list'
 import { Motion } from '@/component/ui/motion'
 import { fetchProject } from '@/fetcher/project/fetch-project'
 import { Metadata } from 'next'
+import { getImageUrl } from '@/lib/directus'
 
 export const revalidate = 300
 
@@ -10,11 +11,7 @@ export const metadata: Metadata = {
   title: 'Khamsa Group',
   description: 'MISSION: BUILD THE FUTURE WORLD',
   openGraph: {
-    images: [
-      {
-        url: 'https://khamsa.panel.dreamslab.dev/assets/0a88d30d-1ba7-48a7-a03e-5a2de222ba86',
-      },
-    ],
+    images: [getImageUrl('4acd7ab9-1666-4c9d-a8e7-bd5ecd68c4b5')],
   },
 }
 

@@ -8,6 +8,7 @@ import ProjectSection from '@/component/module/home-page/project-section'
 import OurJourneySection from '@/component/module/home-page/our-journey-section'
 import BlogSection from '@/component/module/home-page/blogs-section'
 import { Metadata } from 'next'
+import { getImageUrl } from '@/lib/directus'
 
 export const revalidate = 300
 
@@ -16,11 +17,7 @@ export const metadata: Metadata = {
   description:
     'We are bound to become the leading investment company to establish a connected global community with common values, cultures and shared prosperity.',
   openGraph: {
-    images: [
-      {
-        url: 'https://khamsa.panel.dreamslab.dev/assets/0a88d30d-1ba7-48a7-a03e-5a2de222ba86',
-      },
-    ],
+    images: [getImageUrl('4acd7ab9-1666-4c9d-a8e7-bd5ecd68c4b5')],
   },
 }
 

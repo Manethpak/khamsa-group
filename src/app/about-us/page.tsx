@@ -5,6 +5,7 @@ import TeamsSection from '@/component/module/about-page/teams-section'
 import { fetchAbout } from '@/fetcher/about/about-section/fetch-about'
 import { fetchOffice } from '@/fetcher/about/office/fetch-office'
 import { fetchTeams } from '@/fetcher/about/teams/fetch-teams'
+import { getImageUrl } from '@/lib/directus'
 import { Metadata } from 'next'
 import React from 'react'
 
@@ -13,11 +14,7 @@ export const metadata: Metadata = {
   description:
     'Khamsa Group of Business (KGB) is a diversified company operating in various, cutting-edge sectors such as biotechnology, nanotechnology, AI, metadata,value chains, knowledge-based economies, scarce resources, renewableenergy, IT and engineering, blockchain, data industries, and cybersecurity.',
   openGraph: {
-    images: [
-      {
-        url: 'https://www.khamsagroup.com/_next/image?url=https%3A%2F%2Fkhamsa.panel.dreamslab.dev%2Fassets%2F01192cfd-dab0-495c-b01d-dde16207749e&w=3840&q=75',
-      },
-    ],
+    images: [getImageUrl('2dd95f25-162b-476a-881e-985967c6059d')],
   },
 }
 
