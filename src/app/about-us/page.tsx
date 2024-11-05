@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     'Khamsa Group of Business (KGB) is a diversified company operating in various, cutting-edge sectors such as biotechnology, nanotechnology, AI, metadata,value chains, knowledge-based economies, scarce resources, renewableenergy, IT and engineering, blockchain, data industries, and cybersecurity.',
   openGraph: {
-    images: [getImageUrl('2dd95f25-162b-476a-881e-985967c6059d')],
+    images: [getImageUrl('4fe7ce7c-3802-40ca-b53c-e3b991a9d9ba')],
   },
 }
 
