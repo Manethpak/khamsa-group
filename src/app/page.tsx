@@ -13,11 +13,12 @@ export const revalidate = 300
 
 export const metadata: Metadata = {
   title: 'Khamsa Group of Businesses (KGB)',
-  description: `We are bound to become the leading investment company to establish a connected global community with common values, cultures and shared prosperity. `,
+  description:
+    'We are bound to become the leading investment company to establish a connected global community with common values, cultures and shared prosperity.',
   openGraph: {
     images: [
       {
-        url: 'https://media.licdn.com/dms/image/v2/C560BAQFICX72oX0TIg/company-logo_200_200/company-logo_200_200/0/1675677526846/khamsagroup_logo?e=1738800000&v=beta&t=P6e65kyTcs7H8APK9NFfMUF1GnwU0T_Pmy0htDsYPio',
+        url: 'https://khamsa.panel.dreamslab.dev/assets/0a88d30d-1ba7-48a7-a03e-5a2de222ba86',
       },
     ],
   },

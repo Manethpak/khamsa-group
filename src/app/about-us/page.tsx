@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: 'http://localhost:3000/_next/image?url=https%3A%2F%2Fkhamsa.panel.dreamslab.dev%2Fassets%2F01192cfd-dab0-495c-b01d-dde16207749e&w=3840&q=75',
+        url: 'https://www.khamsagroup.com/_next/image?url=https%3A%2F%2Fkhamsa.panel.dreamslab.dev%2Fassets%2F01192cfd-dab0-495c-b01d-dde16207749e&w=3840&q=75',
       },
     ],
   },
