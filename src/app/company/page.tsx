@@ -1,8 +1,19 @@
 import CompanyList from '@/component/module/company-page/company-list'
 import { Motion } from '@/component/ui/motion'
 import { fetchCompany } from '@/fetcher/company/fetch-company'
+import { getImageUrl } from '@/lib/directus'
+import { Metadata } from 'next'
 
 export const revalidate = 300
+
+export const metadata: Metadata = {
+  title: 'Khamsa Group',
+  description:
+    'Khamsa Business Company is a dynamic enterprise focused on providing comprehensive business solutions that drive growth and efficiency. With expertise in consulting, technology, and resource management, Khamsa partners with businesses across various industries to streamline their operations and enhance profitability. ',
+  openGraph: {
+    images: [getImageUrl('4acd7ab9-1666-4c9d-a8e7-bd5ecd68c4b5')],
+  },
+}
 
 const CompanyDirectoryPage = async () => {
   const companies = await fetchCompany()
