@@ -1,6 +1,6 @@
 export const JOURNEY_DATA = {
   '2021': {
-    title: 'OUR FOUNDATION',
+    title: 'Our Foundation',
     description: ` Established Khamsa Group of Businesses (Holding Company, Cambodia) 
     Founded key subsidiaries: Al Farm, Laoka, Factory Al, and UAVx`,
   },

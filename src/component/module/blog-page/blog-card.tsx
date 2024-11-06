@@ -49,13 +49,23 @@ const BlogCard: React.FC<BlogCardProps> = ({
           {topic}
         </div>
       </div>
-      <div className="flex flex-col gap-3">
-        <h1 className={cn(getColor, 'title')}>{title}</h1>
-        <p className="line-clamp-4 max-w-sm px-1 sm:line-clamp-2">
+      <div className="flex min-h-36 flex-col gap-3">
+        <h1
+          className={cn(
+            getColor,
+            'title line-clamp-3 h-fit text-base sm:line-clamp-2 sm:text-xl'
+          )}
+        >
+          {title}
+        </h1>
+        <p className="line-clamp-4 h-fit max-h-36 max-w-sm px-1 text-sm sm:line-clamp-4">
+          {' '}
           {description}
         </p>
       </div>
-      <div>{date}</div>
+      <p className="line-clamp-4 h-fit max-w-sm px-1 text-sm sm:line-clamp-4">
+        {date}
+      </p>
     </Link>
   )
 }

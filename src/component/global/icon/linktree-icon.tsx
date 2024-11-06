@@ -6,7 +6,7 @@ const LinkTreeIcon = (props: SVGProp) => {
     <svg
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="12"
+      strokeWidth="12"
       viewBox="0 0 256 256"
       height="1em"
       width="1em"

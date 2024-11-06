@@ -11,7 +11,7 @@
     @apply font-manrope text-base font-light text-deepGreen lg:text-lg;
   }
   .subtitle-about {
-    @apply font-manrope text-base font-semibold text-deepGreen lg:text-lg;
+    @apply font-manrope text-base font-semibold text-deepGreen;
   }
 
   .heading-subtitle {
