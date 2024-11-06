@@ -9,6 +9,7 @@ import { getImageUrl } from '@/lib/directus'
 import { cn } from '@/lib/utils'
 import { dateYearFormat } from '@/utils/date-format'
 import { ChevronLeftIcon } from 'lucide-react'
+import { Metadata, ResolvingMetadata } from 'next'
 
 type Props = { params: { slug: string } }
 
@@ -20,6 +21,23 @@ interface linkProps {
 }
 
 export const revalidate = 300
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const result = await fetchCompanyBySlug(params.slug)
+
+  const previousImages = (await parent).openGraph?.images || []
+
+  return {
+    title: result[0].name,
+    description: result[0].company_description,
+    openGraph: {
+      images: [getImageUrl(result[0].image as string), ...previousImages],
+    },
+  }
+}
 
 const iconMappings = {
   facebook: FacebookIcon,

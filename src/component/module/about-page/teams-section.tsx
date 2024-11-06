@@ -12,9 +12,11 @@ const TeamsSection = ({ team }: Props) => {
   return (
     <div className="subtitle-about flex w-full flex-col items-center justify-center">
       <div className="flex h-full w-full max-w-screen-2xl flex-col gap-24 px-5 py-14 md:px-10 lg:px-24">
-        <div className="flex w-full flex-col items-center gap-5">
-          <Motion delay={0.5}>OUR TEAM</Motion>
-          <Motion delay={0.75} className="title">
+        <div className="flex w-full flex-col items-center gap-3">
+          <Motion delay={0.5} className="title">
+            OUR TEAM
+          </Motion>
+          <Motion delay={0.75} className="subtitle-about">
             Empowering Entrepreneur
           </Motion>
           <div className="mt-6 grid w-full grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -22,7 +24,7 @@ const TeamsSection = ({ team }: Props) => {
               <Motion
                 delay={1}
                 key={data.name}
-                className="flex h-fit max-w-3xl flex-col items-center justify-center gap-5 rounded bg-polar py-10 text-lg"
+                className="flex h-fit max-w-3xl flex-col items-center justify-center gap-5 rounded bg-polar/50 py-10 text-lg"
               >
                 <Image
                   src={getImageUrl(data.image! as string)}

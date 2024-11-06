@@ -9,7 +9,19 @@ import OurJourneySection from '@/component/module/home-page/our-journey-section'
 import BlogSection from '@/component/module/home-page/blogs-section'
 import InvestmentSection from '@/component/module/home-page/investment-section'
 import { fetchCategory } from '@/fetcher/category/fetch-category'
+import { Metadata } from 'next'
+import { getImageUrl } from '@/lib/directus'
+
 export const revalidate = 300
+
+export const metadata: Metadata = {
+  title: 'Khamsa Group of Businesses (KGB)',
+  description:
+    'We are bound to become the leading investment company to establish a connected global community with common values, cultures and shared prosperity.',
+  openGraph: {
+    images: [getImageUrl('4acd7ab9-1666-4c9d-a8e7-bd5ecd68c4b5')],
+  },
+}
 
 export default async function Home() {
   const heroData = await fetchHero()

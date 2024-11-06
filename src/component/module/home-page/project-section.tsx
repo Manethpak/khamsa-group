@@ -56,8 +56,12 @@ const ProjectSection = ({ data }: Props) => {
                   className="h-40 max-h-full min-h-full w-96 min-w-full max-w-full object-cover object-center sm:h-56 md:h-80"
                 />
                 <div className="flex h-48 flex-col gap-3 overflow-hidden">
-                  <h1 className="title line-clamp-2">{data!.title}</h1>
-                  <p className="line-clamp-3 max-w-sm">{data!.description}</p>
+                  <h1 className="title line-clamp-3 h-fit text-base sm:line-clamp-2 sm:text-xl">
+                    {data!.title}
+                  </h1>
+                  <p className="line-clamp-4 h-fit text-sm">
+                    {data!.description}
+                  </p>
                 </div>
                 <Link href={`/projects/${data!.slug}`} passHref>
                   <p>Read More</p>

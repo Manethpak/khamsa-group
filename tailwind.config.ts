@@ -19,7 +19,7 @@ const config: Config = {
         },
         primary: '#8ACEC0',
         secondary: '#19154E',
-        polar: '#E6F9FA',
+        polar: '#B0E4DD',
         gray: '#5b5e76',
         secondPrimary: '#1BAB92',
       },

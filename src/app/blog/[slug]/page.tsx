@@ -35,7 +35,7 @@ export async function generateMetadata(
 
 const BlogDetailPage = async ({ params }: Props) => {
   const result = await fetchBlogBySlug(params.slug)
-  const blogs = await fetchBlogs({ limit: 4 })
+  const blogsData = await fetchBlogs({ limit: 4 })
 
   if (!result[0]) {
     notFound()
@@ -76,7 +76,7 @@ const BlogDetailPage = async ({ params }: Props) => {
         </Motion>
         <Motion delay={1}>
           {blog.content && (
-            <div
+            <p
               className="prose-lg min-w-full"
               dangerouslySetInnerHTML={{ __html: blog.content }}
             />
@@ -100,9 +100,9 @@ const BlogDetailPage = async ({ params }: Props) => {
             delay={1}
             className="grid grid-cols-1 gap-6 text-white sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
           >
-            {blogs.map((blog) => (
+            {blogsData.map((blog, index) => (
               <BlogCard
-                key={blog.title}
+                key={index}
                 title={blog.title!}
                 topic={blog.topic!}
                 description={blog.description!}

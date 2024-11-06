@@ -26,8 +26,8 @@ const AboutSection = ({ about }: Props) => {
       <div className="h-fit w-full max-w-screen-2xl px-5 md:px-10 lg:px-24">
         <div className="flex flex-col gap-8">
           <Motion className="heading-subtitle">About Us</Motion>
-          <div className="flex w-full flex-col-reverse items-start justify-between gap-5 lg:flex-row lg:items-center">
-            <div className="flex w-full max-w-2xl flex-col items-center justify-center gap-8 px-4">
+          <div className="flex w-full flex-col-reverse items-start justify-between gap-5 lg:flex-row lg:items-start">
+            <div className="flex w-full max-w-2xl flex-col items-center justify-start gap-8">
               {about.description! && (
                 <Motion delay={0.5}>
                   <div
@@ -41,7 +41,7 @@ const AboutSection = ({ about }: Props) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
-              className="flex max-h-[450px] w-full max-w-full justify-end md:min-h-[450px]"
+              className="flex max-h-[450px] w-full max-w-full justify-end md:min-h-[450px] xl:min-h-[250px]"
             >
               <Image
                 src={getImageUrl(about.image_about! as string)}
@@ -54,12 +54,12 @@ const AboutSection = ({ about }: Props) => {
           </div>
         </div>
       </div>
-      <div className="flex max-w-screen-2xl flex-col gap-10 px-5 py-12 md:px-10 lg:px-24">
-        <div className="flex w-full flex-col items-center gap-5">
-          <Motion delay={0.5} className="subtitle-about">
+      <div className="flex max-w-screen-2xl flex-col gap-10 px-5 pt-20 md:px-10 lg:px-24">
+        <div className="flex w-full flex-col items-center gap-3">
+          <Motion delay={0.5} className="title">
             OUR VALUE
           </Motion>
-          <Motion delay={0.75} className="title">
+          <Motion delay={0.75} className="subtitle-about">
             {about.title}
           </Motion>
         </div>
