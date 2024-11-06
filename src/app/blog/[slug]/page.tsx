@@ -63,7 +63,7 @@ const BlogDetailPage = async ({ params }: Props) => {
           <h1 className="heading-subtitle">{blog.title}</h1>
           <h2 className="">{blog.description}</h2>
         </Motion>
-        <Motion delay={0.95} className="container mx-auto ">
+        <Motion delay={0.95} className="container mx-auto">
           {blog.image && (
             <Image
               src={getImageUrl(blog.image! as string)}

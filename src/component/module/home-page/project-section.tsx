@@ -46,8 +46,10 @@ const ProjectSection = ({ data }: Props) => {
               key={index}
               className="flex max-h-full max-w-full flex-col items-center justify-center gap-7"
             >
-              <Motion >
-                <Link href={`/projects/${data!.slug}`} passHref 
+              <Motion>
+                <Link
+                  href={`/projects/${data!.slug}`}
+                  passHref
                   className="flex h-full max-w-fit flex-col gap-3"
                 >
                   <Image
