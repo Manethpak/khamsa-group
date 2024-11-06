@@ -45,7 +45,7 @@ const BlogDetailPage = async ({ params }: Props) => {
 
   return (
     <section className="flex w-full flex-col items-center justify-center gap-12 pt-20">
-      <div className="subtitle relative flex w-full max-w-screen-2xl flex-col gap-12 px-5 sm:px-14 md:px-32 lg:px-40">
+      <div className="subtitle relative flex w-full max-w-screen-2xl flex-col gap-12 px-5 sm:px-32 md:px-40 lg:px-72">
         <Motion delay={0.5} className="sm:title flex items-end justify-between">
           <h1 className="heading-title w-full max-w-fit">{blog.topic}</h1>
           <time>{formatDate(blog.date!)}</time>
@@ -63,14 +63,14 @@ const BlogDetailPage = async ({ params }: Props) => {
           <h1 className="heading-subtitle">{blog.title}</h1>
           <h2 className="">{blog.description}</h2>
         </Motion>
-        <Motion delay={0.95} className="container mx-auto p-4 md:p-6 lg:p-8">
+        <Motion delay={0.95} className="container mx-auto ">
           {blog.image && (
             <Image
               src={getImageUrl(blog.image! as string)}
               width={1200}
               height={630}
               alt={blog.title!}
-              className="mx-auto mb-10 w-full lg:max-w-5xl"
+              className="mx-auto mb-10 w-full"
             />
           )}
         </Motion>
