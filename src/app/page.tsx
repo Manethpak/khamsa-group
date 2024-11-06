@@ -7,6 +7,8 @@ import OurSuccessSection from '@/component/module/home-page/our-success-section'
 import ProjectSection from '@/component/module/home-page/project-section'
 import OurJourneySection from '@/component/module/home-page/our-journey-section'
 import BlogSection from '@/component/module/home-page/blogs-section'
+import InvestmentSection from '@/component/module/home-page/investment-section'
+import { fetchCategory } from '@/fetcher/category/fetch-category'
 import { Metadata } from 'next'
 import { getImageUrl } from '@/lib/directus'
 
@@ -25,6 +27,7 @@ export default async function Home() {
   const heroData = await fetchHero()
   const blogsData = await fetchBlogs({ limit: 5 })
   const projectsData = await fetchProject({ limit: 10 })
+  const categoryData = await fetchCategory()
   const successData = await fetchSuccess()
 
   return (
@@ -32,6 +35,7 @@ export default async function Home() {
       <HeroSection data={heroData} />
       <OurSuccessSection data={successData} />
       <ProjectSection data={projectsData} />
+      <InvestmentSection data={categoryData} />
       <OurJourneySection />
       <BlogSection data={blogsData} />
     </div>

@@ -2683,10 +2683,10 @@ export interface components {
       user_updated?: string | components['schemas']['Users'] | null
       /** Format: timestamp */
       date_updated?: string | null
-      image?: string | components['schemas']['Files'] | null
+      image_investment?: string | components['schemas']['Files'] | null
       title?: string | null
-      slug?: string | null
       subtitle?: string | null
+      slug?: string | null
 
       investment?: number | components['schemas']['ItemsInvestment'] | null
       company?: number | components['schemas']['ItemsCompany'] | null
