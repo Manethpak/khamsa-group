@@ -48,7 +48,7 @@ const ProjectsDetailPage = async ({ params }: Props) => {
 
   return (
     <section className="flex w-full flex-col items-center justify-center gap-12 pt-20">
-      <div className="subtitle relative flex w-full max-w-screen-2xl flex-col gap-12 px-5 sm:px-14 md:px-32 lg:px-40">
+      <div className="subtitle relative flex w-full max-w-screen-2xl flex-col gap-12 px-5 sm:px-32 md:px-40 lg:px-72">
         <Motion
           delay={0.5}
           className="sm:title flex items-end justify-between gap-5"
@@ -73,14 +73,14 @@ const ProjectsDetailPage = async ({ params }: Props) => {
           <h1 className="heading-subtitle">{project.title}</h1>
           <h2 className="">{project.description}</h2>
         </Motion>
-        <Motion delay={0.95} className="container mx-auto px-10 2xl:px-0">
+        <Motion delay={0.95} className="container mx-auto">
           {project.image && (
             <Image
               src={getImageUrl(project.image! as string)}
               width={1200}
               height={1200}
               alt={project.title!}
-              className="mx-auto w-full lg:max-w-[780px]"
+              className="mx-auto w-full"
             />
           )}
         </Motion>

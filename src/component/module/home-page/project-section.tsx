@@ -46,26 +46,30 @@ const ProjectSection = ({ data }: Props) => {
               key={index}
               className="flex max-h-full max-w-full flex-col items-center justify-center gap-7"
             >
-              <Motion className="flex h-full max-w-fit flex-col gap-3">
-                <Image
-                  src={getImageUrl(data.image! as string)}
-                  alt={data!.title!}
-                  width={600}
-                  height={600}
-                  quality={95}
-                  className="h-40 max-h-full min-h-full w-96 min-w-full max-w-full object-cover object-center sm:h-56 md:h-80"
-                />
-                <div className="flex h-48 flex-col gap-3 overflow-hidden">
-                  <h1 className="title line-clamp-3 h-fit text-base sm:line-clamp-2 sm:text-xl">
-                    {data!.title}
-                  </h1>
-                  <p className="line-clamp-4 h-fit text-sm">
-                    {data!.description}
-                  </p>
-                </div>
-                <Link href={`/projects/${data!.slug}`} passHref>
-                  <p>Read More</p>
+              <Motion>
+                <Link
+                  href={`/projects/${data!.slug}`}
+                  passHref
+                  className="flex h-full max-w-fit flex-col gap-3"
+                >
+                  <Image
+                    src={getImageUrl(data.image! as string)}
+                    alt={data!.title!}
+                    width={600}
+                    height={600}
+                    quality={95}
+                    className="h-40 max-h-full min-h-full w-96 min-w-full max-w-full object-cover object-center sm:h-56 md:h-80"
+                  />
+                  <div className="flex h-48 flex-col gap-3 overflow-hidden">
+                    <h1 className="title line-clamp-3 h-fit text-base sm:line-clamp-2 sm:text-xl">
+                      {data!.title}
+                    </h1>
+                    <p className="line-clamp-4 h-fit text-sm">
+                      {data!.description}
+                    </p>
+                  </div>
                 </Link>
+                <p>Read More</p>
               </Motion>
             </SwiperSlide>
           ))}
