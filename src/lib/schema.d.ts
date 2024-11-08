@@ -2573,6 +2573,7 @@ export interface components {
       slug?: string | null
       /** Format: date */
       date?: string | null
+      topic?: string | null
       image?: string | components['schemas']['Files'] | null
       invesment_item?: number | components['schemas']['ItemsInvesment'] | null
     }

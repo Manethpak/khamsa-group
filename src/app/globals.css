@@ -15,7 +15,7 @@
   }
 
   .heading-subtitle {
-    @apply font-manrope text-2xl font-semibold tracking-tight text-deepGreen lg:text-3xl;
+    @apply font-manrope text-2xl font-semibold tracking-normal text-deepGreen lg:text-3xl;
   }
 
   .title {

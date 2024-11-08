@@ -9,13 +9,21 @@ import {
   useMotionValueEvent,
   useScroll,
 } from 'framer-motion'
+import { Footer } from '@/constants'
+import { cn } from '@/lib/utils'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
   const [isHidden, setIsHidden] = useState(false)
+  const [activeLink, setActiveLink] = useState('') // Set "/" as the default active link
   const containerControls = useAnimationControls()
   const dropdownControls = useAnimationControls()
   const { scrollY } = useScroll()
+
+  // Update active link on component mount
+  useEffect(() => {
+    setActiveLink(window.location.pathname)
+  }, [])
 
   // Listen to scroll event and update hidden state
   useMotionValueEvent(scrollY, 'change', (latest) => {
@@ -27,7 +35,6 @@ const Navbar = () => {
     }
   })
 
-  // Update navbar controls based on open state and hidden state
   useEffect(() => {
     if (open) {
       containerControls.start('open')
@@ -41,7 +48,6 @@ const Navbar = () => {
     }
   }, [open, isHidden, containerControls, dropdownControls])
 
-  // Define animation variants for the navbar
   const navbarVariants = {
     visible: { y: 0 },
     hidden: { y: '-100%' },
@@ -52,7 +58,6 @@ const Navbar = () => {
     },
   }
 
-  // Define animation variants for the dropdown menu
   const dropdownVariants = {
     open: {
       opacity: 1,
@@ -79,9 +84,12 @@ const Navbar = () => {
       transition={{ duration: 0.35, ease: 'easeInOut' }}
       className="subtitle sticky top-0 z-10 -mt-1 flex w-full flex-col items-center bg-white font-semibold"
     >
-      {/* Navbar Section */}
       <div className="z-10 -mt-1 flex h-20 w-full max-w-screen-2xl items-center justify-between bg-white px-5 md:px-10 lg:h-20 lg:px-24">
-        <Link href="/" className="flex h-9 items-center gap-2 font-medium">
+        <Link
+          onClick={() => setActiveLink('/')}
+          href="/"
+          className="flex h-9 items-center gap-2 font-medium"
+        >
           <Image
             src="/logo.png"
             alt="Khamsa Group logo"
@@ -93,23 +101,23 @@ const Navbar = () => {
         </Link>
         <div>
           <div className="hidden md:block">
-            <ul className="flex items-center md:gap-4 lg:gap-7">
-              <li>
-                <Link href="/company">Company</Link>
-              </li>
-              <li>
-                <Link href="/projects">Projects</Link>
-              </li>
-              <li>
-                <Link href="/about-us">About Us</Link>
-              </li>
-              <li>
-                <Link href="/blog">Blogs</Link>
-              </li>
-              <li className="flex h-12 w-24 items-center justify-center rounded bg-secondPrimary text-white">
-                <Link href="/contact">Contact</Link>
-              </li>
-            </ul>
+            <div className="flex items-center md:gap-4 lg:gap-7">
+              {Footer.map((data, index) => (
+                <div key={index}>
+                  <Link
+                    href={data.url}
+                    className={cn(
+                      activeLink === data.url
+                        ? 'flex items-center justify-center rounded bg-secondPrimary px-3 py-2 text-white'
+                        : ''
+                    )}
+                    onClick={() => setActiveLink(data.url)}
+                  >
+                    {data.title}
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
           {open ? (
             <X
@@ -124,7 +132,6 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      {/* Dropdown menu section */}
       <motion.div
         className="absolute top-0 h-auto w-full bg-white pb-1 pt-20 md:hidden"
         animate={open ? 'open' : 'closed'}
@@ -132,33 +139,27 @@ const Navbar = () => {
         initial={{ opacity: 0, y: '-20px' }}
       >
         <div className="h-full">
-          <ul className="flex flex-col items-center justify-center gap-6">
-            <li>
-              <Link href="/company" onClick={() => setOpen(!open)}>
-                Company
-              </Link>
-            </li>
-            <li>
-              <Link href="/projects" onClick={() => setOpen(!open)}>
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link href="/about-us" onClick={() => setOpen(!open)}>
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog" onClick={() => setOpen(!open)}>
-                Blogs
-              </Link>
-            </li>
-            <li className="flex w-24 items-center justify-center rounded-xl pb-5">
-              <Link href="/contact" onClick={() => setOpen(!open)}>
-                Contact
-              </Link>
-            </li>
-          </ul>
+          <div className="flex flex-col items-center justify-center gap-6 py-5">
+            {Footer.map((data, index) => (
+              <div key={index}>
+                <Link
+                  onClick={() => {
+                    setOpen(!open)
+                    setActiveLink(data.url)
+                  }}
+                  href={data.url}
+                  className={cn(
+                    activeLink === data.url
+                      ? 'flex items-center justify-center rounded bg-secondPrimary px-3 py-2 text-white'
+                      : '',
+                    ''
+                  )}
+                >
+                  {data.title}
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </motion.div>
     </motion.div>

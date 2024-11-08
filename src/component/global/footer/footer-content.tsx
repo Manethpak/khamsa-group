@@ -94,7 +94,7 @@ const FooterSection = ({ data }: Prop) => {
                   <div>
                     <Link
                       href={link.link}
-                      className="text-gray-500 mt-4 flex flex-col space-y-2 text-sm"
+                      className="text-gray-500 flex flex-col space-y-2 text-sm"
                     >
                       {link.title}
                     </Link>

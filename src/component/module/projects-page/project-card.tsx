@@ -10,6 +10,7 @@ type ProjectCardProps = {
   title: string
   link: string
   description: string
+  topic: string
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -17,6 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   imageUrl,
   title,
   description,
+  topic,
 }) => {
   const pathname = usePathname()
 
@@ -31,8 +33,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           alt={title}
           width={1400}
           height={1400}
+          quality={100}
           className="relative h-full w-full object-cover object-center"
         />
+        <div className="absolute left-0 top-0 m-4 flex items-center justify-center rounded bg-secondPrimary/85 px-4 py-1 text-white">
+          {topic}
+        </div>
       </div>
       <div className="flex min-h-36 flex-col gap-3">
         <h1
@@ -43,13 +49,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         >
           {title}
         </h1>
-        <p className="line-clamp-4 h-fit max-w-sm px-1 text-sm sm:line-clamp-4">
+        <p className="line-clamp-4 h-fit px-1 text-justify text-sm sm:line-clamp-4">
           {description}
         </p>
       </div>
-      <div className="line-clamp-4 h-fit max-w-sm px-1 text-sm sm:line-clamp-2">
-        Read More
-      </div>
+      <div className="h-fit px-1 text-sm">Read More</div>
     </Link>
   )
 }

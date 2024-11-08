@@ -1,8 +1,16 @@
 import CompanyList from '@/component/module/company-page/company-list'
+import DropdownCategory from '@/component/module/company-page/dropdown-category'
 import { Motion } from '@/component/ui/motion'
-import { fetchCompany } from '@/fetcher/company/fetch-company'
+import {
+  fetchCategory,
+  fetchCompanyByCategorySlug,
+} from '@/fetcher/category/fetch-category'
 import { getImageUrl } from '@/lib/directus'
 import { Metadata } from 'next'
+
+type Props = {
+  params: { slug: string }
+}
 
 export const revalidate = 300
 
@@ -15,15 +23,19 @@ export const metadata: Metadata = {
   },
 }
 
-const CompanyDirectoryPage = async () => {
-  const companies = await fetchCompany()
+const CategoryPage = async ({ params }: Props) => {
+  const companies = await fetchCompanyByCategorySlug(params.slug)
+  const categoryData = await fetchCategory()
 
   return (
     <section className="z-10 flex w-full flex-col items-center justify-center py-16">
       <div className="subtitle flex w-full max-w-screen-2xl flex-col gap-8 px-5 md:px-10 lg:px-24">
-        <Motion delay={0.2} className="title flex items-end justify-between">
-          <h1 className="heading-subtitle normal-case">Company Directory</h1>
-        </Motion>
+        <div className="flex h-fit w-full flex-col gap-2 text-lg sm:flex-row sm:justify-between sm:text-xl">
+          <h1 className="heading-subtitle">Company Directory</h1>
+          <div className="flex justify-end">
+            <DropdownCategory category={categoryData} />
+          </div>
+        </div>
         <Motion delay={0.5}>
           <CompanyList data={companies} />
         </Motion>
@@ -32,4 +44,4 @@ const CompanyDirectoryPage = async () => {
   )
 }
 
-export default CompanyDirectoryPage
+export default CategoryPage

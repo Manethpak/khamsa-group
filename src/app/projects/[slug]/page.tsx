@@ -48,13 +48,13 @@ const ProjectsDetailPage = async ({ params }: Props) => {
 
   return (
     <section className="flex w-full flex-col items-center justify-center gap-12 pt-20">
-      <div className="subtitle relative flex w-full max-w-screen-2xl flex-col gap-12 px-5 sm:px-32 md:px-40 lg:px-72">
+      <div className="subtitle relative flex w-full max-w-screen-2xl flex-col gap-8 px-5 sm:px-32 md:px-40 lg:px-72">
         <Motion
           delay={0.5}
           className="sm:title flex items-end justify-between gap-5"
         >
           <h1 className="heading-title w-full max-w-fit text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-            {project.title}
+            {project.topic}
           </h1>
           <time className="md:2xl w-full max-w-fit text-xs sm:text-xl">
             {formatDate(project.date!)}
@@ -65,13 +65,13 @@ const ProjectsDetailPage = async ({ params }: Props) => {
           className="relative flex w-full items-center justify-between border-b border-t py-7 text-[#C3C3C3]"
         >
           <time className="subtitle flex flex-col gap-x-8 gap-y-2 px-3 text-base sm:flex-row">
-            <li>Last update at {formatDate(project.date_updated!)}</li>
+            <li>Last Update at {formatDate(project.date_updated!)}</li>
           </time>
           <Share />
         </Motion>
-        <Motion delay={0.85} className="space-y-5">
+        <Motion delay={0.85} className="space-y-5 text-justify">
           <h1 className="heading-subtitle">{project.title}</h1>
-          <h2 className="">{project.description}</h2>
+          <h2>{project.description}</h2>
         </Motion>
         <Motion delay={0.95} className="container mx-auto">
           {project.image && (
@@ -79,6 +79,7 @@ const ProjectsDetailPage = async ({ params }: Props) => {
               src={getImageUrl(project.image! as string)}
               width={1200}
               height={1200}
+              quality={100}
               alt={project.title!}
               className="mx-auto w-full"
             />
@@ -87,7 +88,7 @@ const ProjectsDetailPage = async ({ params }: Props) => {
         <Motion delay={1}>
           {project.content && (
             <div
-              className="flex w-full flex-col items-center justify-center"
+              className="flex w-full flex-col items-center justify-center text-justify"
               dangerouslySetInnerHTML={{ __html: project.content! }}
             />
           )}
@@ -114,6 +115,7 @@ const ProjectsDetailPage = async ({ params }: Props) => {
               <ProjectCard
                 key={project.title}
                 title={project.title!}
+                topic={project.topic!}
                 description={project.description!}
                 imageUrl={getImageUrl(project.image as string)}
                 link={`/projects/` + project.slug}

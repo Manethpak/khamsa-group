@@ -27,11 +27,11 @@ const AboutSection = ({ about }: Props) => {
         <div className="flex flex-col gap-8">
           <Motion className="heading-subtitle">About Us</Motion>
           <div className="flex w-full flex-col-reverse items-start justify-between gap-5 lg:flex-row lg:items-start">
-            <div className="flex w-full max-w-2xl flex-col items-center justify-start gap-8">
+            <div className="flex w-full max-w-2xl flex-col justify-start gap-8">
               {about.description! && (
                 <Motion delay={0.5}>
                   <div
-                    className="space-y-5"
+                    className="space-y-5 text-justify"
                     dangerouslySetInnerHTML={{ __html: about.description! }}
                   />
                 </Motion>
@@ -79,7 +79,7 @@ const AboutSection = ({ about }: Props) => {
           </Motion>
 
           <Motion delay={1.25} className="w-full">
-            <p className="text-left font-manrope">{about.subtitle}</p>
+            <p className="text-justify">{about.subtitle}</p>
           </Motion>
         </div>
       </div>

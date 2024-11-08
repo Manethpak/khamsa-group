@@ -1,7 +1,6 @@
 import React from 'react'
 import { Schema } from '@/lib/schema'
 import { Paginate } from '@/component/ui/pagination'
-import { formatDate } from '@/lib/utils'
 import { getImageUrl } from '@/lib/directus'
 import ProjectCard from './project-card'
 
@@ -16,6 +15,7 @@ const ProjectList = ({ data }: Props) => {
         <ProjectCard
           key={project.title}
           title={project.title!}
+          topic={project.topic!}
           description={project.description!}
           imageUrl={getImageUrl(project.image as string)}
           link={`/projects/` + project.slug}
