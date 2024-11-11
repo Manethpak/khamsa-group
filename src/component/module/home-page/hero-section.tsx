@@ -60,7 +60,7 @@ const HeroSection = ({ data }: Props) => {
             </div>
             <Motion delay={0.8}>
               <button className="h-14 w-full max-w-fit rounded bg-secondPrimary px-5 font-semibold text-white">
-                <Link href="#investment">Explore Our Investment</Link>
+                <Link href="/investment">Explore Our Investment</Link>
               </button>
             </Motion>
           </div>

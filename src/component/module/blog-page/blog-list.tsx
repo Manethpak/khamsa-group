@@ -1,4 +1,3 @@
-import { Motion } from '@/component/ui/motion'
 import React from 'react'
 import BlogCard from './blog-card'
 import { Schema } from '@/lib/schema'

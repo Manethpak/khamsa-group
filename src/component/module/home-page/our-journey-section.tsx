@@ -17,7 +17,7 @@ const OurJourneySection = ({ data }: Props) => {
   return (
     <section
       id="journey"
-      className="flex w-full flex-col items-center justify-center"
+      className="flex w-full flex-col items-center justify-center pt-10"
     >
       <div className="flex w-full max-w-screen-2xl flex-col gap-10 px-5 md:px-10 lg:px-24">
         <Motion delay={0.5} className="heading-subtitle uppercase">
