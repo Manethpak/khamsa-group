@@ -17,7 +17,7 @@ const ProjectSection = ({ data }: Props) => {
   return (
     <section
       id="investment"
-      className="subtitle flex flex-col items-center justify-center py-16"
+      className="subtitle flex flex-col items-center justify-center pt-16"
     >
       <div className="flex w-full max-w-screen-2xl flex-col gap-10 pl-5 md:pl-10 lg:pl-24">
         <Motion className="">
@@ -64,7 +64,7 @@ const ProjectSection = ({ data }: Props) => {
                     <h1 className="title line-clamp-3 h-fit text-base sm:line-clamp-2 sm:text-xl">
                       {data!.title}
                     </h1>
-                    <p className="line-clamp-4 h-fit text-sm">
+                    <p className="line-clamp-4 h-fit text-justify text-sm">
                       {data!.description}
                     </p>
                   </div>

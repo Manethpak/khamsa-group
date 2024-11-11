@@ -45,7 +45,7 @@ const BlogDetailPage = async ({ params }: Props) => {
 
   return (
     <section className="flex w-full flex-col items-center justify-center gap-12 pt-20">
-      <div className="subtitle relative flex w-full max-w-screen-2xl flex-col gap-12 px-5 sm:px-32 md:px-40 lg:px-72">
+      <div className="subtitle relative flex w-full max-w-screen-2xl flex-col gap-8 px-5 sm:px-32 md:px-40 lg:px-72">
         <Motion delay={0.5} className="sm:title flex items-end justify-between">
           <h1 className="heading-title w-full max-w-fit">{blog.topic}</h1>
           <time>{formatDate(blog.date!)}</time>
@@ -55,20 +55,21 @@ const BlogDetailPage = async ({ params }: Props) => {
           className="relative flex w-full items-center justify-between border-b border-t py-7 text-[#C3C3C3]"
         >
           <time className="subtitle flex flex-col gap-x-8 gap-y-2 px-3 text-base sm:flex-row">
-            <li>Last update at {formatDate(blog.date_updated!)}</li>
+            <li>Last Update at {formatDate(blog.date_updated!)}</li>
           </time>
           <Share />
         </Motion>
-        <Motion delay={0.85} className="space-y-5">
+        <Motion delay={0.85} className="space-y-5 text-justify">
           <h1 className="heading-subtitle">{blog.title}</h1>
-          <h2 className="">{blog.description}</h2>
+          <h2>{blog.description}</h2>
         </Motion>
         <Motion delay={0.95} className="container mx-auto">
           {blog.image && (
             <Image
               src={getImageUrl(blog.image! as string)}
               width={1200}
-              height={630}
+              height={1200}
+              quality={100}
               alt={blog.title!}
               className="mx-auto mb-10 w-full"
             />
@@ -77,7 +78,7 @@ const BlogDetailPage = async ({ params }: Props) => {
         <Motion delay={1}>
           {blog.content && (
             <p
-              className="prose-lg min-w-full"
+              className="prose-lg min-w-full text-justify"
               dangerouslySetInnerHTML={{ __html: blog.content }}
             />
           )}

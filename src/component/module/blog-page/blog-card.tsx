@@ -40,12 +40,12 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <Image
           src={imageUrl}
           alt={title}
-          width={400}
-          height={400}
+          width={1400}
+          height={1400}
           quality={100}
           className="h-full w-full object-cover object-center"
         />
-        <div className="absolute left-0 top-0 m-4 flex items-center justify-center rounded bg-secondPrimary px-4 py-1 text-white">
+        <div className="absolute left-0 top-0 m-4 flex items-center justify-center rounded bg-secondPrimary/85 px-4 py-1 text-white">
           {topic}
         </div>
       </div>
@@ -58,14 +58,12 @@ const BlogCard: React.FC<BlogCardProps> = ({
         >
           {title}
         </h1>
-        <p className="line-clamp-4 h-fit max-h-36 max-w-sm px-1 text-sm sm:line-clamp-4">
+        <p className="line-clamp-4 h-fit max-h-36 px-1 text-justify text-sm tracking-tighter sm:line-clamp-4">
           {' '}
           {description}
         </p>
       </div>
-      <p className="line-clamp-4 h-fit max-w-sm px-1 text-sm sm:line-clamp-4">
-        {date}
-      </p>
+      <p className="h-fit px-1 text-sm">{date}</p>
     </Link>
   )
 }

@@ -1291,7 +1291,7 @@ export const Contact = [
   },
 ]
 export const Footer = [
-  { title: 'Company', url: '/company' },
+  { title: 'Company', url: '/investment/all' },
   { title: 'Projects', url: '/projects' },
   { title: 'About Us', url: '/about-us' },
   { title: 'Blogs', url: '/blog' },
