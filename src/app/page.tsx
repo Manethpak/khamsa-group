@@ -11,6 +11,7 @@ import InvestmentSection from '@/component/module/home-page/investment-section'
 import { fetchCategory } from '@/fetcher/category/fetch-category'
 import { Metadata } from 'next'
 import { getImageUrl } from '@/lib/directus'
+import { fetchJourney } from '@/fetcher/our-journey/fetch-our-journey'
 
 export const revalidate = 300
 
@@ -29,6 +30,7 @@ export default async function Home() {
   const projectsData = await fetchProject({ limit: 10 })
   const categoryData = await fetchCategory()
   const successData = await fetchSuccess()
+  const Journey = await fetchJourney()
 
   return (
     <div>
@@ -36,7 +38,7 @@ export default async function Home() {
       <OurSuccessSection data={successData} />
       <ProjectSection data={projectsData} />
       <InvestmentSection data={categoryData} />
-      <OurJourneySection />
+      <OurJourneySection data={Journey} />
       <BlogSection data={blogsData} />
     </div>
   )
