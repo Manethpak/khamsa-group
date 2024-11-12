@@ -71,14 +71,14 @@ const BlogDetailPage = async ({ params }: Props) => {
               height={1200}
               quality={100}
               alt={blog.title!}
-              className="mx-auto mb-10 w-full"
+              className="mx-auto w-full"
             />
           )}
         </Motion>
         <Motion delay={1}>
           {blog.content && (
             <p
-              className="prose-lg min-w-full text-justify"
+              className="flex w-full flex-col items-center justify-center text-justify"
               dangerouslySetInnerHTML={{ __html: blog.content }}
             />
           )}
