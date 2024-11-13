@@ -66,7 +66,7 @@ export default function DropdownCategory({ category }: Props) {
               <ListboxOption
                 key={each.slug}
                 value={each.slug}
-                className="data-hover:bg-white/10 subtitle group flex cursor-default select-none items-center gap-2 rounded-lg px-3 py-1.5 data-[hover]:bg-primary"
+                className="data-hover:bg-white/10 subtitle group flex cursor-default select-none items-center gap-2 rounded-lg px-3 py-1.5 hover:bg-secondPrimary hover:text-white data-[hover]:bg-primary"
               >
                 <CheckIcon className="invisible size-4 group-data-[selected]:visible" />
                 <div className="font-medium">{each.title}</div>
