@@ -58,7 +58,7 @@ const FooterSection = ({ data }: Prop) => {
               and Creativity.
             </p>
 
-            <div className="text-gray-600 mt-8 flex gap-4">
+            <div className="text-gray-600 mt-5 flex gap-4">
               {contact?.social_link?.map(({ icon_name, link }, index) => {
                 const IconComponent = iconMapping[icon_name]
                 return (
@@ -73,6 +73,12 @@ const FooterSection = ({ data }: Prop) => {
                 )
               })}
             </div>
+            <p className="text-gray-800 mt-7 hidden text-sm lg:block">
+              © KhamsaGroup 2024 |{' '}
+              <Link href="#" className="text-gray-400">
+                Terms and Conditions
+              </Link>
+            </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-1 lg:justify-items-center">
             <div>
@@ -107,7 +113,7 @@ const FooterSection = ({ data }: Prop) => {
                   <div key={data.title} className="">
                     <Link
                       href={data.link}
-                      className="text-gray-500 mt-4 flex flex-col space-y-2 text-sm"
+                      className="text-gray-500 flex flex-col space-y-2 text-sm"
                     >
                       {' '}
                       {data.title}
@@ -116,14 +122,14 @@ const FooterSection = ({ data }: Prop) => {
                 ))}
               </div>
             </div>
+            <p className="text-gray-800 mt-5 text-sm lg:hidden">
+              © KhamsaGroup 2024 |{' '}
+              <Link href="#" className="text-gray-400">
+                Terms and Conditions
+              </Link>
+            </p>
           </div>
         </div>
-        <p className="text-gray-800 text-sm">
-          © KhamsaGroup 2024 |{' '}
-          <Link href="#" className="text-gray-400">
-            Terms and Conditions
-          </Link>
-        </p>
       </div>
     </footer>
   )
