@@ -19,32 +19,32 @@ const InvestmentSection = ({ data }: Props) => {
         </Motion>
         <Motion
           delay={0.75}
-          className="grid h-full w-full grid-cols-1 gap-x-10 gap-y-24 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid h-full w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
         >
           {category.map((data, index) => (
             <Link
               href={`/investment/${data!.slug}`}
               key={index}
-              className="flex flex-col gap-5"
+              className="flex flex-col"
             >
-              <div className="flex gap-3">
+              <div className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-full py-6 hover:rounded-md hover:bg-[#ECECEC]">
                 <Image
                   src={getImageUrl(data!.image_investment as string)}
                   alt={data!.title!}
                   width={64}
                   height={64}
-                  className="h-8 w-8"
+                  className="h-20 w-20 rounded-full bg-[#ECECEC] px-4 py-4"
                 />
 
                 <h3 className="title line-clamp-3 h-fit text-base sm:line-clamp-2 sm:text-xl">
                   {data!.title}
                 </h3>
+                <div>
+                  <p className="h-full text-justify text-sm sm:px-5 md:px-7 lg:px-7">
+                    {data!.subtitle}
+                  </p>
+                </div>
               </div>
-              <p className="h-full text-justify text-sm">{data!.subtitle}</p>
-              <p className="inline-flex h-full items-end justify-start pt-10 font-semibold group-hover:underline">
-                Learning more
-                <ChevronsRight className="ml-2 text-xl transition duration-300" />
-              </p>
             </Link>
           ))}
         </Motion>
