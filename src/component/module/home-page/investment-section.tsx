@@ -40,7 +40,7 @@ const InvestmentSection = ({ data }: Props) => {
                   {data!.title}
                 </h3>
                 <div>
-                  <p className="h-full text-justify text-sm">
+                  <p className="h-full text-justify text-sm sm:px-5 md:px-7 lg:px-7">
                     {data!.subtitle}
                   </p>
                 </div>
