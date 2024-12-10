@@ -11,6 +11,8 @@ import {
 } from '@/utils/fonts'
 import ScrollToTop from '@/component/ui/scroll-to-top'
 import { fetchContact } from '@/fetcher/contact/fetch-contact'
+import Script from 'next/script'
+import Head from 'next/head'
 
 export const metadata: Metadata = {
   title: 'Khamsa Group',
@@ -26,6 +28,15 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="!scroll-smooth bg-[#F7F7F7]">
+      <head>
+        {process.env.NODE_ENV === 'production' && (
+          <Script
+            defer
+            src="https://umami.dreamslab.dev/script.js"
+            data-website-id="7258e0cb-abb7-4343-afdc-5031c57aa380"
+          />
+        )}
+      </head>
       <body
         className={`${libre} ${noto_serif_khmer} ${noto_sans} ${noto_sans_khmer} ${manrope}`}
       >

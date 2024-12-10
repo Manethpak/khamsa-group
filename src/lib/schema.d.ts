@@ -2400,6 +2400,21 @@ export interface components {
       number?: string | null
       title?: string | null
     }
+    ItemsJourney: {
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      user_updated?: string | components['schemas']['Users'] | null
+      date_created?: string | null /** Format: timestamp */
+      date_updated?: string | null
+      number?: string | null
+      /** Format: timestamp */
+      phase?: string | null
+      title?: string | null
+      subtitle?: string | null
+    }
     ItemsFAQ: {
       id?: number
       status?: string
@@ -2690,6 +2705,23 @@ export interface components {
       slug?: string | null
 
       investment?: number | components['schemas']['ItemsInvestment'] | null
+      company?: number | components['schemas']['ItemsCompany'] | null
+    }
+    ItemsJourney: {
+      name: string
+      id?: number
+      status?: string
+      sort?: number | null
+      user_created?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date_created?: string | null
+      user_updated?: string | components['schemas']['Users'] | null
+      /** Format: timestamp */
+      date?: string | null
+      image_journey?: string | components['schemas']['Files'] | null
+      title?: string | null
+      subtitle?: string | null
+
       company?: number | components['schemas']['ItemsCompany'] | null
     }
     ItemsCompany: {
@@ -9932,6 +9964,7 @@ export type Schema = {
   Investment: components['schemas']['ItemsInvestment']
   Contact: components['schemas']['ItemsContact']
   Category: components['schemas']['ItemsCategory'][]
+  Journey: components['schemas']['ItemsJourney'][]
   Company: components['schemas']['ItemsCompany'][]
   Image: components['schemas']['ItemsImage'][]
   Project: components['schemas']['ItemsProject'][]
