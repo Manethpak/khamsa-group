@@ -119,8 +119,8 @@ const FooterSection = ({ data }: Prop) => {
           </div>
         </div>
         <p className="text-gray-800 text-sm">
-          © KhamsaGroup 2024 |{' '}
-          <Link href="#" className="text-gray-400">
+          © KhamsaGroup 2024 |
+          <Link href="/terms-and-conditions" className="text-gray-400">
             Terms and Conditions
           </Link>
         </p>
