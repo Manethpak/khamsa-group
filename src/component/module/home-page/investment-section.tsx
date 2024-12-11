@@ -5,7 +5,6 @@ import React from 'react'
 import { Motion } from '@/component/ui/motion'
 import { Schema } from '@/lib/schema'
 import { getImageUrl } from '@/lib/directus'
-import { ChevronsRight } from 'lucide-react'
 
 type Props = { data: Schema['Category'] }
 
@@ -27,15 +26,16 @@ const InvestmentSection = ({ data }: Props) => {
               key={index}
               className="flex flex-col"
             >
-              <div className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-full py-6 hover:rounded-md hover:bg-[#ECECEC]">
-                <Image
-                  src={getImageUrl(data!.image_investment as string)}
-                  alt={data!.title!}
-                  width={64}
-                  height={64}
-                  className="h-20 w-20 rounded-full bg-[#ECECEC] px-4 py-4"
-                />
-
+              <div className="flex h-full w-full flex-col items-center justify-center gap-3 py-6 hover:rounded-md hover:bg-[#ECECEC]">
+                <div className="rounded-full bg-[#ECECEC]">
+                  <Image
+                    src={getImageUrl(data!.image_investment as string)}
+                    alt={data!.title!}
+                    width={64}
+                    height={64}
+                    className="h-[75px] w-[75px] px-4 py-4"
+                  />
+                </div>
                 <h3 className="title line-clamp-3 h-fit text-base sm:line-clamp-2 sm:text-xl">
                   {data!.title}
                 </h3>
