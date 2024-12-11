@@ -130,12 +130,6 @@ const FooterSection = ({ data }: Prop) => {
             </p>
           </div>
         </div>
-        <p className="text-gray-800 text-sm">
-          © KhamsaGroup 2024 |
-          <Link href="/terms-and-conditions" className="text-gray-400">
-            Terms and Conditions
-          </Link>
-        </p>
       </div>
     </footer>
   )
