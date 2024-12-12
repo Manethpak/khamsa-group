@@ -75,7 +75,7 @@ const FooterSection = ({ data }: Prop) => {
             </div>
             <p className="text-gray-800 mt-7 hidden font-manrope text-sm lg:block">
               © KhamsaGroup 2024 |
-              <Link href="#" className="text-gray-400">
+              <Link href="/terms-and-conditions" className="text-gray-400">
                 Terms and Conditions
               </Link>
             </p>
@@ -129,9 +129,9 @@ const FooterSection = ({ data }: Prop) => {
                 ))}
               </div>
             </div>
-            <p className="text-gray-800 mt-5 text-sm lg:hidden">
+            <p className="text-gray-800 mt-5 font-manrope text-sm lg:hidden">
               © KhamsaGroup 2024 |{' '}
-              <Link href="#" className="text-gray-400">
+              <Link href="/terms-and-conditions" className="text-gray-400">
                 Terms and Conditions
               </Link>
             </p>
@@ -141,4 +141,5 @@ const FooterSection = ({ data }: Prop) => {
     </footer>
   )
 }
+
 export default FooterSection
