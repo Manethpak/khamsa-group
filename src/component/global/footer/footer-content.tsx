@@ -48,12 +48,12 @@ const FooterSection = ({ data }: Prop) => {
                 height={200}
                 className="mr-2 size-16"
               />
-              <span className="gap-10 pb-0 text-2xl">
+              <span className="gap-10 pb-0 font-manrope text-2xl">
                 Khamsa Group of Businesses
               </span>
             </div>
 
-            <p className="text-gray-600 mt-4 max-w-xs text-sm">
+            <p className="text-gray-600 mt-4 max-w-xs font-manrope text-sm">
               Shape the Future We Envision Through New Creations, Innovation,
               and Creativity.
             </p>
@@ -73,8 +73,8 @@ const FooterSection = ({ data }: Prop) => {
                 )
               })}
             </div>
-            <p className="text-gray-800 mt-7 hidden text-sm lg:block">
-              © KhamsaGroup 2024 |{' '}
+            <p className="text-gray-800 mt-7 hidden font-manrope text-sm lg:block">
+              © KhamsaGroup 2024 |
               <Link href="#" className="text-gray-400">
                 Terms and Conditions
               </Link>
@@ -82,10 +82,15 @@ const FooterSection = ({ data }: Prop) => {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-1 lg:justify-items-center">
             <div>
-              <h3 className="pt-4 text-[22px] font-bold lg:pl-20">Overview</h3>
+              <h3 className="pt-4 font-manrope text-[22px] font-bold lg:pl-20">
+                Overview
+              </h3>
               <div className="text-gray-500 mt-4 flex flex-col space-y-4 text-sm">
                 {Footer.map((data) => (
-                  <div key={data.title} className="hover:opacity-75 lg:pl-20">
+                  <div
+                    key={data.title}
+                    className="font-manrope hover:opacity-75 lg:pl-20"
+                  >
                     <Link href={data.url}>{data.title}</Link>
                   </div>
                 ))}
@@ -94,13 +99,15 @@ const FooterSection = ({ data }: Prop) => {
           </div>
           <div>
             <div className="grid grid-cols-1 space-y-4">
-              <h2 className="pt-4 text-[22px] font-bold">More Information</h2>
+              <h2 className="pt-4 font-manrope text-[22px] font-bold">
+                More Information
+              </h2>
               {link.map((link, index) => (
                 <motion.div key={index}>
                   <div>
                     <Link
                       href={link.link}
-                      className="text-gray-500 flex flex-col space-y-2 text-sm"
+                      className="text-gray-500 flex flex-col space-y-2 font-manrope text-sm"
                     >
                       {link.title}
                     </Link>
@@ -108,7 +115,7 @@ const FooterSection = ({ data }: Prop) => {
                   </div>
                 </motion.div>
               ))}
-              <div className="items-center sm:items-center">
+              <div className="items-center font-manrope sm:items-center">
                 {address.map((data) => (
                   <div key={data.title} className="">
                     <Link

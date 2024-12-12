@@ -1,37 +1,35 @@
 import { Motion } from '@/component/ui/motion'
-import { Condition } from '@/constants'
+import { Condition } from '@/constants/condition'
 import React from 'react'
 
 const TermCondition = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center py-36 text-start font-manrope text-lg">
+    <div className="flex w-full flex-col items-center justify-center py-36 text-start text-lg text-deepGreen">
       <Motion className="h-fit w-full max-w-[1000px] space-y-7 text-pretty px-10">
         <div className="flex h-full max-h-full flex-col gap-7">
-          <h1 className="heading-title text-4xl font-extrabold md:text-6xl">
+          <h1 className="font-manrope text-4xl font-bold md:text-6xl">
             Terms & Conditions
           </h1>
-          <p className="text-xl text-deepGreen md:text-2xl">
-            V 1.1 - Last edited on Sep 8, 2022
+          <p className="text-xl md:text-2xl">
+            V 2.0 - Last updated: December 11, 2024
           </p>
         </div>
         {Condition.map((data) => (
-          <div
-            key={data.title}
-            className="space-y-16 font-manrope text-deepGreen"
-          >
+          <div key={data.title} className="space-y-10">
+            <h2 className="font-manrope text-2xl font-bold md:text-5xl">
+              {data.subtitle}
+            </h2>
+            <h2 className="font-manrope text-2xl font-bold md:text-4xl">
+              {data.title1}
+            </h2>
+            <p>{data.des1}</p>
+
             <div className="space-y-5">{data.descriptions}</div>
             <div className="space-y-5">
-              <h1 className="text-2xl font-extrabold md:text-4xl">
+              <h1 className="font-manrope text-2xl font-bold md:text-4xl">
                 {data.title}
               </h1>
-              <h2 className="space-y-5">
-                {data.description}
-                <p className="italic">
-                  Note: These Terms of Service do not replace the Terms of
-                  Service for those Customers who have a separately negotiated
-                  agreement.
-                </p>
-              </h2>
+              <h2 className="space-y-5 font-manrope">{data.description}</h2>
             </div>
           </div>
         ))}
