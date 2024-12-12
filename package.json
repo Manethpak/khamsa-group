@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "next lint",
     "format": "prettier --check src",
     "format:fix": "prettier --write src",
     "gen:type": "npx directus-typescript-gen --host https://khamsa.panel.dreamslab.dev --outFile ./src/lib/schema.d.ts"
