@@ -26,7 +26,7 @@ const InvestmentSection = ({ data }: Props) => {
               key={index}
               className="flex flex-col"
             >
-              <div className="flex h-full w-full flex-col items-center justify-center gap-3 py-6 hover:rounded-md hover:bg-[#ECECEC]">
+              <div className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-md py-6 transition-colors duration-300 hover:bg-[#ECECEC]">
                 <div className="rounded-full bg-[#ECECEC]">
                   <Image
                     src={getImageUrl(data!.image_investment as string)}

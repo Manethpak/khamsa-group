@@ -35,19 +35,19 @@ export const Condition = [
         <p>
           <strong>1.1 “Affiliate​”</strong> means those mobile, means an entity
           that controls, is controlled by or is under common control with a
-          party, where "control" means ownership of 50% or more of the shares,
-          equity interest or other securities entitled to vote for election of
-          directors or other managing authority.
+          party, where &qoutcontrol&qout means ownership of 50% or more of the
+          shares, equity interest or other securities entitled to vote for
+          election of directors or other managing authority. &qout
         </p>
         <p>
           <strong>1.2 “​Country ”</strong>
           refers to: Cambodia
         </p>
         <p>
-          <strong>1.3 “Company ”</strong>(referred to as either "the Company",
-          "We", "Us" or "Our" in this Agreement) refers to Khamsa Group of
-          Businesses, Building#3, St39D, Anlungkung Village, Preysor District,
-          Dangkor Commune, Phnom Penh, Cambodia.
+          <strong>1.3 &qoutCompany&qout</strong>(referred to as either "the
+          Company", "We", "Us" or "Our" in this Agreement) refers to Khamsa
+          Group of Businesses, Building#3, St39D, Anlungkung Village, Preysor
+          District, Dangkor Commune, Phnom Penh, Cambodia.
         </p>
         <p>
           <strong>1.4 “Device”</strong> means any device that can access the
