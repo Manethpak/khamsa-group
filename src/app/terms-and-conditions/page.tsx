@@ -83,13 +83,9 @@ const TermCondition = () => {
           <p>
             <strong>Website</strong> refers to Khamsa Group of Businesses,
             accessible from{' '}
-            <a
-              href="https://www.khamsagroup.com"
-              rel="external nofollow noopener"
-              target="_blank"
-            >
+            <Link href="/" rel="external nofollow noopener" target="_blank">
               https://www.khamsagroup.com
-            </a>
+            </Link>
           </p>
         </li>
         <li>
