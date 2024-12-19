@@ -4,7 +4,6 @@ import Link from 'next/link'
 import React from 'react'
 
 type CompanyCardProps = {
-  link: string
   name: string
   company_description: string
   date: string
@@ -18,7 +17,6 @@ type CompanyCardProps = {
 }
 
 const CompanyMobileCard: React.FC<CompanyCardProps> = ({
-  link,
   name,
   company_description,
   date,
@@ -33,17 +31,17 @@ const CompanyMobileCard: React.FC<CompanyCardProps> = ({
   return (
     <div
       key={name}
-      className="w-full space-y-8 rounded border border-deepGreen p-3 md:hidden"
+      className="w-full space-y-8 rounded border border-deepGreen p-2 md:hidden"
     >
       <div className="space-y-5">
         <div className="space-y-1">
           <h1 className="font-manrope text-2xl font-bold">{name}</h1>
-          <div className="mx-auto flex gap-3 font-manrope">
-            <h3 className="rounded-lg bg-primary px-2">
+          <div className="mx-auto flex flex-col gap-3 font-manrope min-[420px]:flex-row">
+            <h3 className="w-fit rounded-lg bg-primary px-2">
               <span className="title">Founded:</span>
               {founded}
             </h3>
-            <h3 className="rounded-lg bg-primary px-2">
+            <h3 className="w-fit rounded-lg bg-primary px-2">
               <span className="title"> Team size:</span>
               {company_size}
             </h3>
@@ -52,14 +50,14 @@ const CompanyMobileCard: React.FC<CompanyCardProps> = ({
             {company_description}
           </p>
         </div>
-        <div className="flex w-full">
-          <div className="w-[80%]">
+        <div className="flex w-full justify-between gap-1">
+          <div className="">
             <p className="title">{category}</p>
-            <p>
+            <div className="flex flex-col min-[420px]:flex-row">
               <span className="title">Email:</span>
-              {email}
-            </p>
-            <p>
+              <p>{email}</p>
+            </div>
+            <p className="flex-col">
               <span className="title">Phone number:</span> {phone}
             </p>
           </div>
@@ -70,7 +68,7 @@ const CompanyMobileCard: React.FC<CompanyCardProps> = ({
             width={80}
             height={80}
             quality={100}
-            className="w-full max-w-20 px-3 py-3"
+            className="size-20 min-[420px]:w-fit"
           />
         </div>
       </div>
