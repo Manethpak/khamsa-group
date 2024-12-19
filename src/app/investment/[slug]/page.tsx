@@ -30,13 +30,10 @@ const CategoryPage = async ({ params }: Props) => {
   return (
     <section className="z-10 flex w-full flex-col items-center justify-center py-16">
       <div className="subtitle flex w-full max-w-screen-2xl flex-col gap-8 px-5 md:px-10 lg:px-24">
-        <div className="flex h-fit w-full flex-col gap-2 text-lg sm:flex-row sm:justify-between sm:text-xl">
-          <h1 className="heading-subtitle">Company Directory</h1>
-          <div className="flex justify-end">
-            <DropdownCategory category={categoryData} />
-          </div>
-        </div>
         <Motion delay={0.5}>
+          <DropdownCategory category={categoryData} />
+        </Motion>
+        <Motion delay={0.75}>
           <CompanyList data={companies} />
         </Motion>
       </div>
