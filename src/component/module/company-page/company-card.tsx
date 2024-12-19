@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { getImageUrl } from '@/lib/directus'
 
 type CompanyCardProps = {
-  link: string
   name: string
   company_description: string
   date: string
@@ -19,7 +18,6 @@ type CompanyCardProps = {
 }
 
 const CompanyCard: React.FC<CompanyCardProps> = ({
-  link,
   name,
   company_description,
   date,
@@ -111,7 +109,6 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
 
       <div>
         <CompanyMobileCard
-          link={link}
           name={name}
           company_description={company_description}
           email={email}
