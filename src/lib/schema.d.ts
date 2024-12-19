@@ -2744,6 +2744,7 @@ export interface components {
       founded?: string | null
       location?: string | null
       phone?: string | null
+      email?: string | null
       about_company?: string | null
       tag?: number[] | null
       link?: unknown

@@ -19,7 +19,7 @@
   }
 
   .title {
-    @apply font-manrope text-xl font-semibold tracking-tight text-deepGreen lg:text-2xl xl:text-3xl;
+    @apply font-manrope text-lg font-semibold tracking-tight text-deepGreen lg:text-2xl xl:text-3xl;
   }
 }
 .custom-scrollbar::-webkit-scrollbar {
