@@ -26,12 +26,13 @@ export default function DropdownCategory({ category }: Props) {
       {
         title: 'All',
         slug: 'all',
-        info: 'Explore the diverse subsidiary companies and extensive investment portfolio under Khamsa Group of Businesses, showcasing our strategic ventures, innovative projects, and contributions across various industries.',
+        description:
+          'Explore the diverse subsidiary companies and extensive investment portfolio under Khamsa Group of Businesses, showcasing our strategic ventures, innovative projects, and contributions across various industries.',
       },
       ...category.map((each) => ({
         title: each.title,
         slug: each.slug,
-        info: each.info,
+        description: each.description,
       })),
     ]
   }, [category])
@@ -53,7 +54,7 @@ export default function DropdownCategory({ category }: Props) {
           .map((each) => (
             <div key={each.slug} className="subtitle space-y-2">
               <h2 className="heading-subtitle text-xl">Info</h2>
-              <p className="md:text-justify">{each.info}</p>
+              <p className="md:text-justify">{each.description}</p>
             </div>
           ))}
       </div>

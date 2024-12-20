@@ -9,7 +9,7 @@ import { Schema } from '@/lib/schema'
 export async function fetchCategory() {
   return directus.request(
     readItems('Category', {
-      fields: ['*', 'info'],
+      fields: ['*', 'description'],
     })
   )
 }
