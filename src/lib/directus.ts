@@ -1,7 +1,7 @@
 import { createDirectus, rest } from '@directus/sdk'
 import { Schema } from './schema'
 
-const BASE_URL = 'https://khamsa.panel.dreamslab.dev'
+const BASE_URL = 'https://directus.khamsagroup.com'
 
 const directus = createDirectus<Schema>(BASE_URL).with(
   rest({
