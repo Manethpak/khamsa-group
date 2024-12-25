@@ -2703,7 +2703,7 @@ export interface components {
       title?: string | null
       subtitle?: string | null
       slug?: string | null
-      info?: string | null
+      description?: string | null
       investment?: number | components['schemas']['ItemsInvestment'] | null
       company?: number | components['schemas']['ItemsCompany'] | null
     }
