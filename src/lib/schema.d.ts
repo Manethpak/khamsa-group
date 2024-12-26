@@ -2726,7 +2726,7 @@ export interface components {
     }
     ItemsCompany: {
       id?: number
-      status?: string
+      active?: boolean
       sort?: number | null
       user_created?: string | components['schemas']['Users'] | null
       /** Format: timestamp */
@@ -2734,7 +2734,6 @@ export interface components {
       user_updated?: string | components['schemas']['Users'] | null
       /** Format: timestamp */
       date_updated?: string | null
-      image?: string | components['schemas']['Files'] | null
       logo?: string | components['schemas']['Files'] | null
       slug?: string | null
       name?: string | null
@@ -2745,11 +2744,9 @@ export interface components {
       location?: string | null
       phone?: string | null
       email?: string | null
-      about_company?: string | null
       tag?: number[] | null
       link?: unknown
       icon_link?: unknown
-      more_image?: (number | components['schemas']['ItemsInformation'])[]
       hero?: number | components['schemas']['ItemsHero'] | null
       category?:
         | {

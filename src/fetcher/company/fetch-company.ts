@@ -18,6 +18,7 @@ export async function fetchCompany(option?: Option) {
       ],
       limit: option?.limit || -1,
       sort: ['founded'],
+      filter: { active: { _eq: true } },
     })
   )
 }

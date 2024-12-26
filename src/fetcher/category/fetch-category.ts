@@ -37,6 +37,7 @@ export async function fetchCompanyByCategorySlug(
       // @ts-expect-error type has no knowledge of deep nested
       filter: {
         ...filter,
+        active: { _eq: true },
       },
       sort: ['-founded'],
     })
