@@ -63,8 +63,8 @@ const BlogSection = ({ data }: Props) => {
                           fill="none"
                           stroke="currentColor"
                           strokeWidth="0.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           className="lucide lucide-move-up-right size-7 sm:size-10"
                         >
                           <path d="M13 5H19V11" />
