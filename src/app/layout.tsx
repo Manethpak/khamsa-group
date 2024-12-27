@@ -12,7 +12,6 @@ import {
 import ScrollToTop from '@/component/ui/scroll-to-top'
 import { fetchContact } from '@/fetcher/contact/fetch-contact'
 import Script from 'next/script'
-import Head from 'next/head'
 
 export const metadata: Metadata = {
   title: 'Khamsa Group',
@@ -27,7 +26,7 @@ export default async function RootLayout({
   const contactData = await fetchContact()
 
   return (
-    <html lang="en" className="!scroll-smooth bg-[#F7F7F7]">
+    <html lang="en" className="!overflow-y-auto !scroll-smooth bg-[#F7F7F7]">
       <head>
         {process.env.NODE_ENV === 'production' && (
           <Script
