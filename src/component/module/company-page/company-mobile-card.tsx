@@ -51,14 +51,23 @@ const CompanyMobileCard: React.FC<CompanyCardProps> = ({
           </p>
         </div>
         <div className="flex w-full justify-between gap-1">
-          <div className="">
+          <div>
             <p className="title">{category}</p>
             <div className="flex flex-col min-[420px]:flex-row">
               <span className="title">Email:</span>
-              <p>{email}</p>
+              {email && email !== 'N/A' ? (
+                <span>{email}</span>
+              ) : (
+                <span>N/A</span>
+              )}
             </div>
-            <p className="flex-col">
-              <span className="title">Phone number:</span> {phone}
+            <p className="items-center text-start">
+              <span className="title">Phone number:</span>
+              {phone && phone !== 'N/A' ? (
+                <span>{phone}</span>
+              ) : (
+                <span>N/A</span>
+              )}
             </p>
           </div>
 

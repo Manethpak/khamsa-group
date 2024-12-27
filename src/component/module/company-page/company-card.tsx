@@ -89,13 +89,21 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
                     <span className="font-manrope text-lg font-bold">
                       Phone number:
                     </span>
-                    {phone}
+                    {phone && phone !== 'N/A' ? (
+                      <span>{phone}</span>
+                    ) : (
+                      <span>N/A</span>
+                    )}
                   </p>
                   <p>
                     <span className="font-manrope text-lg font-bold">
                       Email:
-                    </span>{' '}
-                    {email}
+                    </span>
+                    {email && email !== 'N/A' ? (
+                      <span>{email}</span>
+                    ) : (
+                      <span>N/A</span>
+                    )}
                   </p>
                 </div>
               </div>
