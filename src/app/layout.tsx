@@ -12,6 +12,7 @@ import {
 import ScrollToTop from '@/component/ui/scroll-to-top'
 import { fetchContact } from '@/fetcher/contact/fetch-contact'
 import Script from 'next/script'
+import ScrollToTopButton from '@/component/global/scroll-to-top/scroll-top-button'
 
 export const metadata: Metadata = {
   title: 'Khamsa Group',
@@ -43,6 +44,7 @@ export default async function RootLayout({
         <Navbar />
         {children}
         <FooterContent data={contactData} />
+        <ScrollToTopButton />
       </body>
     </html>
   )
