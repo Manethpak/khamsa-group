@@ -55,7 +55,7 @@ const ContactSection = ({ data }: Prop) => {
           <div className="flex w-full max-w-sm flex-col gap-6">
             <div className="flex w-full flex-col gap-6">
               <div className="space-y-3">
-                <h1 className="title">Get In Touch</h1>
+                <h1 className="title">Get in Touch</h1>
                 <p className="text-justify">
                   We&apos;re always here to help. Contact us if you are
                   interested in our service. Let&apos;s cooperate and invest in
