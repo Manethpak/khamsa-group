@@ -54,7 +54,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
                     <span className="font-manrope text-lg font-bold">
                       Founded:
                     </span>
-                    {founded}
+                    {date}
                   </h3>
                   <h3 className="rounded-lg bg-primary px-2">
                     <span className="font-manrope text-lg font-bold">
@@ -67,7 +67,10 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
               <p className="line-clamp-5 h-fit w-full whitespace-normal tracking-wide sm:max-w-5xl">
                 {company_description}
               </p>
-              <p className="font-manrope text-lg font-bold">{category}</p>
+              <p className="space-x-5 font-manrope text-lg font-bold">
+                {' '}
+                {category}
+              </p>
             </div>
             <div className="flex items-center justify-between gap-3">
               <div className="mt-5 flex items-center gap-3">
@@ -86,7 +89,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
                 )}
                 <div className="flex flex-col gap-x-3 xl:flex-row">
                   <p>
-                    <span className="font-manrope text-lg font-bold">
+                    <span className="mr-1 font-manrope text-lg font-bold">
                       Phone number:
                     </span>
                     {phone && phone !== 'N/A' ? (
@@ -96,7 +99,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
                     )}
                   </p>
                   <p>
-                    <span className="font-manrope text-lg font-bold">
+                    <span className="mr-1 font-manrope text-lg font-bold">
                       Email:
                     </span>
                     {email && email !== 'N/A' ? (
@@ -106,9 +109,6 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
                     )}
                   </p>
                 </div>
-              </div>
-              <div className="items-center sm:mt-0">
-                <span>{date}</span>
               </div>
             </div>
           </div>

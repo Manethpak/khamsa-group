@@ -11,8 +11,10 @@ import {
 } from 'framer-motion'
 import { Footer } from '@/constants'
 import { cn } from '@/lib/utils'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
+  const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const [isHidden, setIsHidden] = useState(false)
   const [activeLink, setActiveLink] = useState('') // Set "/" as the default active link
@@ -22,8 +24,8 @@ const Navbar = () => {
 
   // Update active link on component mount
   useEffect(() => {
-    setActiveLink(window.location.pathname)
-  }, [])
+    setActiveLink(pathname)
+  }, [pathname])
 
   // Listen to scroll event and update hidden state
   useMotionValueEvent(scrollY, 'change', (latest) => {

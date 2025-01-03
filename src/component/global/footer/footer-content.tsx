@@ -74,7 +74,7 @@ const FooterSection = ({ data }: Prop) => {
               })}
             </div>
             <p className="text-gray-800 mt-7 hidden font-manrope text-sm lg:block">
-              © KhamsaGroup 2024 |
+              © KhamsaGroup 2024 |{' '}
               <Link href="/terms-and-conditions" className="text-gray-400">
                 Terms and Conditions
               </Link>

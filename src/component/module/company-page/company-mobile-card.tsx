@@ -38,11 +38,11 @@ const CompanyMobileCard: React.FC<CompanyCardProps> = ({
           <h1 className="font-manrope text-2xl font-bold">{name}</h1>
           <div className="mx-auto flex flex-col gap-3 font-manrope min-[420px]:flex-row">
             <h3 className="w-fit rounded-lg bg-primary px-2">
-              <span className="title">Founded:</span>
-              {founded}
+              <span className="title mr-1">Founded:</span>
+              {date}
             </h3>
             <h3 className="w-fit rounded-lg bg-primary px-2">
-              <span className="title"> Team size:</span>
+              <span className="title mr-1"> Team size:</span>
               {company_size}
             </h3>
           </div>
@@ -53,8 +53,8 @@ const CompanyMobileCard: React.FC<CompanyCardProps> = ({
         <div className="flex w-full justify-between gap-1">
           <div>
             <p className="title">{category}</p>
-            <div className="flex flex-col min-[420px]:flex-row">
-              <span className="title">Email:</span>
+            <div className="flex flex-col min-[420px]:flex-row min-[420px]:items-center">
+              <span className="title mr-1">Email:</span>
               {email && email !== 'N/A' ? (
                 <span>{email}</span>
               ) : (
@@ -82,9 +82,6 @@ const CompanyMobileCard: React.FC<CompanyCardProps> = ({
         </div>
       </div>
       <div className="flex justify-between">
-        <div className="mt-3 sm:mt-0">
-          <span>{date}</span>
-        </div>
         <div className="flex gap-3">
           {website && website !== 'N/A' ? (
             <Link

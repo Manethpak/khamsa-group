@@ -18,7 +18,7 @@ const CompanyList = ({ data }: Props) => {
             (company.category &&
               company.category
                 ?.map((category) => category.Category_id?.title)
-                .join(',')) ||
+                .join(', ')) ||
             ''
           }
           company_description={company.company_description!}
