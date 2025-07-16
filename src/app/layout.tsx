@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   description: 'Khamsa Group',
 }
 
+export const revalidate = 300
+
 export default async function RootLayout({
   children,
 }: Readonly<{
