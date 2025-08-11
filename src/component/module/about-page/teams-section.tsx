@@ -22,12 +22,12 @@ const TeamsSection = ({ team }: Props) => {
             Empowering Entrepreneur
           </Motion>
           <div className="mt-6 w-full space-y-5">
-            <div className="grid w-full grid-cols-2 gap-5">
+            <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2">
               {firstRow.map((data) => (
                 <Motion
                   delay={1}
                   key={data.name}
-                  className="flex h-fit max-w-3xl flex-col items-center justify-center gap-5 rounded bg-polar/50 py-10 text-lg"
+                  className="flex h-full max-w-3xl flex-col items-center justify-center gap-5 rounded bg-polar/50 py-10 text-lg"
                 >
                   <Image
                     src={getImageUrl(data.image! as string)}
@@ -49,7 +49,7 @@ const TeamsSection = ({ team }: Props) => {
                   <Motion
                     delay={1}
                     key={data.name}
-                    className="flex h-fit max-w-3xl flex-col items-center justify-center gap-5 rounded bg-polar/50 py-10 text-lg"
+                    className="flex h-full max-w-3xl flex-col items-center justify-center gap-5 rounded bg-polar/50 py-10 text-lg"
                   >
                     <Image
                       src={getImageUrl(data.image! as string)}
