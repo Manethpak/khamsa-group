@@ -1,6 +1,5 @@
-import directus from '@/lib/directus'
-import { readItems } from '@directus/sdk'
+import successData from '@/data/success.json'
 
 export async function fetchSuccess() {
-  return directus.request(readItems('Success'))
+  return successData
 }

@@ -1,13 +1,7 @@
-import { createDirectus, rest } from '@directus/sdk'
-import { Schema } from './schema'
-
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL!
-
-const directus = createDirectus<Schema>(BASE_URL).with(
-  rest({
-    onRequest: (options) => ({ ...options, cache: 'no-store' }),
-  })
-)
+/**
+ * Image utility for the static Khamsa Group website
+ * Previously used for Directus CDN, now serves local assets
+ */
 
 type Preset = {
   key?: string
@@ -16,14 +10,22 @@ type Preset = {
   quality?: number
 }
 
+/**
+ * Get image URL - now returns local asset paths
+ * Images are stored in /public/assets/
+ *
+ * @param id - Image ID (UUID) or path
+ * @param preset - Ignored for static images (use Next.js Image component for optimization)
+ */
 export function getImageUrl(id: string, preset?: Preset) {
-  const url = new URL('/assets/' + id, BASE_URL)
+  if (!id) return ''
 
-  for (const [key, value] of Object.entries(preset || {})) {
-    url.searchParams.set(key, value.toString())
+  // If it's already a path (contains / or .), return as-is
+  if (id.includes('/') || id.includes('.')) {
+    return id.startsWith('/') ? id : `/${id}`
   }
 
-  return url.href
+  // Return path to local asset
+  // Note: preset parameters are ignored for static images
+  return `/assets/${id}`
 }
-
-export default directus

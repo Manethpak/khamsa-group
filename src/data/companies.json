@@ -1,0 +1,330 @@
+[
+  {
+    "id": 15,
+    "user_created": "7d89b259-d2b4-499d-a5d5-05b60876bba9",
+    "date_created": "2024-08-30T06:58:54.171Z",
+    "user_updated": "3b74ce72-b6d9-4fec-96d6-b5fdd8f79a61",
+    "date_updated": "2025-01-02T06:44:18.801Z",
+    "slug": "laoka-coffee",
+    "name": "Laoka Co., Ltd.,",
+    "icon_link": [
+      {
+        "name_icon": "linkedin",
+        "link": "https://www.linkedin.com/company/laoka-corp/"
+      }
+    ],
+    "tag": [
+      "retail",
+      "agriculture"
+    ],
+    "founded": "2019-04-01",
+    "location": "Phnom Penh, Cambodia",
+    "company_size": "5+",
+    "logo": "05533b48-ef44-4c89-9574-6ad6af80b248",
+    "company_description": "Laoka Co., Ltd., dedicated to significantly expanding its plantations by 2030, with plans to cover various regions across Cambodia. This expansion underscores KGB's commitment to enhancing agricultural productivity and increasing export capacity",
+    "website": null,
+    "phone": "+855 90988168",
+    "email": "laokafarm@gmail.com",
+    "active": true,
+    "hero": 1,
+    "category": [
+      {
+        "id": 69,
+        "Company_id": 15,
+        "Category_id": 24
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "user_created": "28e6d29d-36aa-4153-9d5e-95a3738fa94d",
+    "date_created": "2024-08-28T09:16:01.661Z",
+    "user_updated": "3b74ce72-b6d9-4fec-96d6-b5fdd8f79a61",
+    "date_updated": "2025-01-02T06:44:27.486Z",
+    "slug": "ai-farm",
+    "name": "AI Farm Co., Ltd.",
+    "icon_link": [
+      {
+        "name_icon": "facebook",
+        "link": "https://www.facebook.com/aifarm.dev/"
+      },
+      {
+        "name_icon": "linkedin",
+        "link": "https://kh.linkedin.com/company/aifarm?trk=similar-pages"
+      }
+    ],
+    "tag": [
+      "robot",
+      "drone",
+      "ai",
+      "manufacturing",
+      "service",
+      "production"
+    ],
+    "founded": "2019-08-01",
+    "location": "Preysar, Dangkor, Phnom Penh, Cambodia",
+    "company_size": "100+",
+    "logo": "622f6107-a860-49c5-8131-6590ba41d203",
+    "company_description": "Specialize in manufactures of robots and AI-based automated components for MSMEs in Cambodia and beyond, offering a diverse range of products tailored to the manufacturing sector",
+    "website": "http://www.aifarm.dev/",
+    "phone": "+855 10686878",
+    "email": "info@aifarm.dev",
+    "active": true,
+    "hero": 1,
+    "category": [
+      {
+        "id": 12,
+        "Company_id": 2,
+        "Category_id": 2
+      },
+      {
+        "id": 70,
+        "Company_id": 2,
+        "Category_id": 22
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "user_created": "7d89b259-d2b4-499d-a5d5-05b60876bba9",
+    "date_created": "2024-08-30T03:36:18.498Z",
+    "user_updated": "3b74ce72-b6d9-4fec-96d6-b5fdd8f79a61",
+    "date_updated": "2024-12-26T09:53:47.162Z",
+    "slug": "uavx",
+    "name": "UAVx Co., Ltd.",
+    "icon_link": [
+      {
+        "name_icon": "linkedin",
+        "link": "https://www.linkedin.com/company/uavx/posts/?feedView=all"
+      },
+      {
+        "name_icon": "facebook",
+        "link": "https://www.facebook.com/uavxlab"
+      }
+    ],
+    "tag": [
+      "drone",
+      "UAV"
+    ],
+    "founded": "2022-06-22",
+    "location": "Phnom Penh, Cambodia",
+    "company_size": "10+",
+    "logo": "74211d2f-3ab7-4e37-a730-d8a2659dd16c",
+    "company_description": "o\tUAVx Co., Ltd. is dedicated to advancing aerial technologies, including drones and UAVs, UAVx Co., Ltd. focuses on research and development in flying objects, aiming to provide cost-effective aerial technology solutions.",
+    "website": null,
+    "phone": null,
+    "email": null,
+    "active": true,
+    "hero": 1,
+    "category": [
+      {
+        "id": 67,
+        "Company_id": 11,
+        "Category_id": 3
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "user_created": "7d89b259-d2b4-499d-a5d5-05b60876bba9",
+    "date_created": "2024-08-30T07:15:25.061Z",
+    "user_updated": "3b74ce72-b6d9-4fec-96d6-b5fdd8f79a61",
+    "date_updated": "2025-01-02T06:44:56.637Z",
+    "slug": "chiptree",
+    "name": "Chiptree Co., Ltd. ",
+    "icon_link": [
+      {
+        "name_icon": "linkedin",
+        "link": "https://www.linkedin.com/company/chiptree/posts/?feedView=all"
+      },
+      {
+        "name_icon": "facebook",
+        "link": "https://www.facebook.com/chiptree.dev"
+      }
+    ],
+    "tag": [
+      "IoT solution",
+      "IoT product"
+    ],
+    "founded": "2022-08-03",
+    "location": "Phnom Penh, Cambodia",
+    "company_size": "20+",
+    "logo": "3081583b-809f-4427-9d70-87374a9a7104",
+    "company_description": "Chiptree Co., Ltd. is focus on semiconductor manufacturing and IoT solutions. We provide PCB design and consulting services across various sectors, including healthcare and smart cities.",
+    "website": null,
+    "phone": "+855 15686933",
+    "email": "chiptree.kh@gmail.com",
+    "active": true,
+    "hero": 1,
+    "category": [
+      {
+        "id": 48,
+        "Company_id": 18,
+        "Category_id": 9
+      },
+      {
+        "id": 71,
+        "Company_id": 18,
+        "Category_id": 19
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "user_created": "7d89b259-d2b4-499d-a5d5-05b60876bba9",
+    "date_created": "2024-08-30T02:27:04.520Z",
+    "user_updated": "3b74ce72-b6d9-4fec-96d6-b5fdd8f79a61",
+    "date_updated": "2024-12-26T09:53:47.118Z",
+    "slug": "robot-young-academy",
+    "name": "RobotYoung Academy",
+    "icon_link": [
+      {
+        "name_icon": "linkedin",
+        "link": "https://www.linkedin.com/company/82602984/admin/page-posts/published/"
+      },
+      {
+        "name_icon": "facebook",
+        "link": "https://www.facebook.com/robotyoung"
+      }
+    ],
+    "tag": [
+      "education"
+    ],
+    "founded": "2022-11-22",
+    "location": "Connexion Asia, Koh Pich City, Corner of Koh Pich Street, and Park Ave, Phnom Penh, Kingdom of Cambodia Phnom Penh, Cambodia 12000",
+    "company_size": "10+",
+    "logo": "4cdcfc09-6d8a-4187-864b-8341273f8cd5",
+    "company_description": "RobotYoung Academy provides educational tools and resources for students and young innovators in the fields of robotics and AI, offering pre-assembled kits and hands-on learning experiences.",
+    "website": "https://www.robotyoung.com/",
+    "phone": "+855 15999187",
+    "email": null,
+    "active": true,
+    "hero": 1,
+    "category": [
+      {
+        "id": 64,
+        "Company_id": 8,
+        "Category_id": 21
+      },
+      {
+        "id": 65,
+        "Company_id": 8,
+        "Category_id": 6
+      },
+      {
+        "id": 66,
+        "Company_id": 8,
+        "Category_id": 2
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "user_created": "28e6d29d-36aa-4153-9d5e-95a3738fa94d",
+    "date_created": "2024-08-28T08:43:25.071Z",
+    "user_updated": "3b74ce72-b6d9-4fec-96d6-b5fdd8f79a61",
+    "date_updated": "2024-12-26T09:53:47.144Z",
+    "slug": "dreamslab",
+    "name": "Dreamslab Co., Ltd.",
+    "icon_link": [
+      {
+        "name_icon": "facebook",
+        "link": "https://www.facebook.com/dreamslab.dev/"
+      },
+      {
+        "name_icon": "linkedin",
+        "link": "https://www.linkedin.com/company/dreamslabx/about/"
+      }
+    ],
+    "tag": [
+      "Software Development",
+      "Software Solution"
+    ],
+    "founded": "2023-02-01",
+    "location": "Phnom Penh, Cambodia",
+    "company_size": "20+",
+    "logo": "8ec0448e-6c4d-47b9-838c-588930e6d222",
+    "company_description": "Dreamslab Co. Ltd. is a cutting-edge software solutions company specializing in innovative technology solutions that drive digital transformation for businesses across various industries.",
+    "website": "https://www.dreamslab.dev/",
+    "phone": "+855 86881189",
+    "email": "info@dreamslab.dev",
+    "active": true,
+    "hero": 1,
+    "category": [
+      {
+        "id": 63,
+        "Company_id": 1,
+        "Category_id": 1
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "user_created": "7d89b259-d2b4-499d-a5d5-05b60876bba9",
+    "date_created": "2024-10-18T06:44:11.223Z",
+    "user_updated": "3b74ce72-b6d9-4fec-96d6-b5fdd8f79a61",
+    "date_updated": "2024-12-26T09:53:47.200Z",
+    "slug": "factory-ai",
+    "name": "Factory AI Co., Ltd.",
+    "icon_link": [
+      {
+        "name_icon": "linkedin",
+        "link": "https://www.linkedin.com/showcase/factoryaidev/"
+      },
+      {
+        "name_icon": "facebook",
+        "link": "https://www.facebook.com/factoryai.dev?mibextid=LQQJ4d&rdid=h773vUIUXLrBHZxp&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FxkhgzBajY179M9Vu%2F%3Fmibextid%3DLQQJ4d"
+      }
+    ],
+    "tag": [
+      "ai"
+    ],
+    "founded": "2023-06-01",
+    "location": " Phnom Penh, Cambodia",
+    "company_size": "15+",
+    "logo": "ca900bdd-4393-48dd-98e8-20c9e273ee77",
+    "company_description": "Factory AI focused on integrating AI with industrial automation, Factory AI aims to democratize computer programming through user-friendly tools and educational resources",
+    "website": null,
+    "phone": "+855 10686878",
+    "email": "info@factoryai.io",
+    "active": true,
+    "hero": 1,
+    "category": [
+      {
+        "id": 62,
+        "Company_id": 25,
+        "Category_id": 1
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "user_created": "3b74ce72-b6d9-4fec-96d6-b5fdd8f79a61",
+    "date_created": "2024-12-26T09:27:45.929Z",
+    "user_updated": "3b74ce72-b6d9-4fec-96d6-b5fdd8f79a61",
+    "date_updated": "2025-01-02T06:46:05.136Z",
+    "slug": "bytefarm",
+    "name": "ByteFarm Co., Ltd.",
+    "icon_link": null,
+    "tag": [
+      "blockchain"
+    ],
+    "founded": "2024-09-01",
+    "location": null,
+    "company_size": "5+",
+    "logo": "f9cbfcec-0ad1-494b-8493-3c4f4e75951e",
+    "company_description": "ByteFarm Co., Ltd. is a pioneer in the fields of data science and blockchain technology, offering cutting-edge data tokenization and monetization services.",
+    "website": "https://www.bytefarm.dev",
+    "phone": null,
+    "email": "info@dreamslab.dev",
+    "active": true,
+    "hero": 1,
+    "category": [
+      {
+        "id": 68,
+        "Company_id": 26,
+        "Category_id": 6
+      }
+    ]
+  }
+]

@@ -1,6 +1,5 @@
-import directus from '@/lib/directus'
-import { readSingleton } from '@directus/sdk'
+import contactData from '@/data/contact.json'
 
 export async function fetchContact() {
-  return directus.request(readSingleton('Contact'))
+  return contactData
 }

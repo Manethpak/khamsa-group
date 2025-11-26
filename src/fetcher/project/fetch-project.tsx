@@ -1,33 +1,27 @@
-import directus from '@/lib/directus'
-import { readItem, readItems } from '@directus/sdk'
+import projectsData from '@/data/projects.json'
 
 type Option = {
   limit?: number
 }
 
 export async function fetchProject(option?: Option) {
-  return directus.request(
-    readItems('Project', {
-      fields: [
-        'title',
-        'image',
-        'slug',
-        'date',
-        'description',
-        'content',
-        'topic',
-      ],
-      limit: option?.limit || -1,
-      sort: ['-date'],
-    })
+  const projects = projectsData as any[]
+
+  // Sort by date (newest first)
+  const sorted = [...projects].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   )
+
+  // Apply limit
+  if (option?.limit && option.limit > 0) {
+    return sorted.slice(0, option.limit)
+  }
+
+  return sorted
 }
 
 export async function fetchProjectBySlug(slug: string) {
-  return directus.request(
-    readItems('Project', {
-      fields: ['*'],
-      filter: { slug },
-    })
-  )
+  const projects = projectsData as any[]
+  const project = projects.filter((p) => p.slug === slug)
+  return project
 }

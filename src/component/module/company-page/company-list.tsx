@@ -17,17 +17,17 @@ const CompanyList = ({ data }: Props) => {
           category={
             (company.category &&
               company.category
-                ?.map((category) => category.Category_id?.title)
+                ?.map((category: any) => category.Category_id?.title)
                 .join(', ')) ||
             ''
           }
           company_description={company.company_description!}
-          date={dateYearFormat(company.founded!)}
+          date={dateYearFormat(company.founded ? String(company.founded) : '')}
           website={company?.website as string}
           phone={company?.phone as string}
           email={company?.email as string}
           logo={company?.logo as string}
-          founded={company?.founded as string}
+          founded={company?.founded ? String(company.founded) : ''}
           company_size={company?.company_size as string}
         />
       ))}

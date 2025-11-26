@@ -1,11 +1,5 @@
-import directus from '@/lib/directus'
-import { readSingleton } from '@directus/sdk'
+import investmentData from '@/data/investment.json'
 
 export async function fetchInvestment() {
-  return directus.request(
-    readSingleton('Investment', {
-      // @ts-expect-error
-      fields: ['*', 'items.*', 'category.*', 'project.*', 'subtitle'],
-    })
-  )
+  return investmentData
 }

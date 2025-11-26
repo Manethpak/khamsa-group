@@ -1,4 +1,3 @@
-import useSWR from 'swr'
 import { fetchOffice } from './fetch-office'
 
 type Option = {
@@ -6,5 +5,5 @@ type Option = {
 }
 
 export function useOffice(option?: Option) {
-  return useSWR(['/office', option], () => fetchOffice(option))
+  return fetchOffice(option)
 }

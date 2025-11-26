@@ -1,6 +1,5 @@
-import directus from '@/lib/directus'
-import { readItems } from '@directus/sdk'
+import journeyData from '@/data/our-journey.json'
 
 export async function fetchJourney() {
-  return directus.request(readItems('Journey'))
+  return journeyData
 }
