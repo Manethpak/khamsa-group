@@ -3,6 +3,8 @@
  * Previously used for Directus CDN, now serves local assets
  */
 
+import assetMapping from './assetMapping.json'
+
 type Preset = {
   key?: string
   width?: number
@@ -25,7 +27,10 @@ export function getImageUrl(id: string, preset?: Preset) {
     return id.startsWith('/') ? id : `/${id}`
   }
 
+  // Look up the mapped file name with extension
+  const fileName = (assetMapping as Record<string, string>)[id] || id
+
   // Return path to local asset
   // Note: preset parameters are ignored for static images
-  return `/assets/${id}`
+  return `/assets/${fileName}`
 }
